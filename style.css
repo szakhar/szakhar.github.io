@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #000;
+  transition: all .2s;
+}
+
+a:hover,
+a:active {
+  color: #888;
+}
+
+table {
+    margin: 30px auto;
+    /* padding: 30px; */
+    width: 50%;
+    padding: 30px 30px;
+    border: 1px solid #555;
+    border-radius: 4px;
+}
+
+td,
+th {
+  padding: 25px;
+}
+
+.photo {
+    height: 150px;
+    border-radius: 50%;
+}
+
+li {
+    line-height: 1.4;
+}
+
+.social-media {
+  list-style: none;
+}
+
+.social-media li {
+  display: inline;
+}
+
+.social-media li:not(:last-child) {
+  margin-right: 15px;
+}
