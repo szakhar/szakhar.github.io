@@ -1,0 +1,42 @@
+body {
+    font-size: 18px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    width: 759px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    background-color: #a32b2e;
+    color: #fff;
+    
+}
+
+.header-img {
+    padding: 20px 0 5px 0;
+}
+
+.cars-list {
+    margin: 0 auto;
+}
+
+.cars-list img {
+    border: 3px dashed #000;
+}
+
+.paragraph-2 {
+    padding-bottom: 20px;
+}
+
+.footer {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
