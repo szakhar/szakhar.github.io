@@ -18,7 +18,7 @@ body {
 }
 
 .heading-1 {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
     font-weight: 700;
     display: inline-block;
 }
@@ -33,7 +33,7 @@ body {
 .header__user-photo {
     width: 6.5rem;
     margin-right: 2.5rem;
-    transition: transform .3s ease;
+    transition: transform .4s ease;
 }
 .header__user-photo img {
     width: 100%;
@@ -67,5 +67,38 @@ body {
 
 .lessons__link:hover,
 .lessons__link:active {
-    color: goldenrod;
+    color: #5d21d2;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1.8rem;
+}
+
+.footer__logo {
+    height: 5rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer__logo:hover {
+    animation: pulsate 1s infinite;
+}
+
+
+/* Animation Pulsate */
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
