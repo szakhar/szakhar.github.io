@@ -141,6 +141,7 @@ hr {
 }
 
 .content__title {
+    font-size: 18px;
     background-color: #bdbdbd;
     text-align: center;
     margin-bottom: 8px;
