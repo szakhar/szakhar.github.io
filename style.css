@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    font-weight: 600;
+}
+
+.heading-1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.header__user-photo {
+    width: 6.5rem;
+    margin-right: 2.5rem;
+    transition: transform .3s ease;
+}
+.header__user-photo img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.header__user-photo:hover {
+    transform: scale(1.2);
+}
+
+.lessons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lessons__item {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    padding: 1rem;
+}
+
+
+.lessons__link:link,
+.lessons__link:visited {
+    text-decoration: none;
+    color: #333;
+    transition: color .2s ease;
+}
+
+.lessons__link:hover,
+.lessons__link:active {
+    color: goldenrod;
+}
