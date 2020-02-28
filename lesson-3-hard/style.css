@@ -1,0 +1,154 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    background-color: #990909;
+    font-size: 18px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+hr {
+    width: 35%;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    min-width: 1200px;
+    max-width: 1440px;
+    padding: 15px;
+}
+
+.title {
+    display: block;
+    margin: 0 auto 5px auto;
+}
+
+.gallery-list {
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery-list a:link,
+.gallery-list a:visited {
+    color: #fff;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.gallery-list a:hover,
+.gallery-list a:active {
+    color: orangered;
+}
+
+.gallery-list__item img {
+    width: 100%;
+    padding: 30px 30px 0 30px;
+    transition: all .3s;
+}
+
+/* Робить фон чорним, щоб при наведенні зображення темніло */
+.gallery-list__item {
+    background-color: #000;
+}
+
+.gallery-list__item img:hover {
+    opacity: .6;
+}
+
+.content {
+    margin-bottom: 25px;
+}
+
+.content td {
+    vertical-align: top;
+}
+
+.content__left {
+    width: 20%;
+    background-color: #7d0909;
+}
+
+.content__left:hover {
+    padding: 20px;
+    transition: padding .3s;
+}
+
+.content__left ul {
+    list-style: none;
+}
+
+.content__left li {
+    margin-bottom: 15px;
+}
+
+.content__left a:link,
+.content__left a:visited {
+    color: #e95b11;
+    transition: all .2s;
+}
+
+.content__left a:hover,
+.content__left a:active {
+    color: red;
+}
+
+.content__center {
+    width: 60%;
+    color: #fff;
+    padding: 20px 1px 0 1px;
+}
+
+.content__center:hover {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #efefef;
+    line-height: 1.5;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.content__right {
+    width: 12%;
+}
+
+.content__right-box {
+    background-color: #e3dddd;
+    padding: 1px;
+}
+
+.content__right-box p {
+    padding: 15px 0 5px 0;
+}
+
+.content__right-box p:last-child {
+    padding-bottom: 17px;
+}
+
+.content__title {
+    background-color: #bdbdbd;
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #e95b11;
+    color: #fff;
+    text-align: center;
+}
