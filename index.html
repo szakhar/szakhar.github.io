@@ -37,10 +37,13 @@ body {
 }
 
 .header__user-photo {
-    height: 6.5rem;
-    border-radius: 50%;
+    width: 6.5rem;
     margin-right: 2.5rem;
     transition: all .3s;
+}
+.header__user-photo img {
+    width: 100%;
+    border-radius: 50%;
 }
 
 .header__user-photo:hover {
@@ -75,7 +78,9 @@ body {
 </style>
 <body>
     <div class="header">
-        <img src="img/photo.jpg" alt="Sasha Zakharchuk" class="header__user-photo">
+        <div class="header__user-photo">
+            <img src="img/photo.jpg" alt="Sasha Zakharchuk">
+        </div>
         <h1 class="heading-1">Sasha Zakharchuk</h1>
     </div>
     <div class="lessons">
