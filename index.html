@@ -3,79 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oleksandr Zakharchuk</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap&subset=cyrillic" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Oleksandr Zakharchuk - Beetroot course</title>
 </head>
-<style>
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%; /* 1rem = 10px */
-}
-
-body {
-  font-family: sans-serif;
-  color: #333;
-}
-
-.heading-1 {
-    font-size: 3.5rem;
-    display: inline-block;
-}
-
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 4rem 0;
-}
-
-.header__user-photo {
-    width: 6.5rem;
-    margin-right: 2.5rem;
-    transition: all .3s;
-}
-.header__user-photo img {
-    width: 100%;
-    border-radius: 50%;
-}
-
-.header__user-photo:hover {
-    transform: scale(1.2);
-}
-
-.lessons {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.lessons__item {
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    letter-spacing: .8px;
-    padding: 1rem;
-}
-
-
-.lessons__link:link,
-.lessons__link:visited {
-  text-decoration: none;
-  color: #000;
-  transition: all .2s;
-}
-
-.lessons__link:hover,
-.lessons__link:active {
-  color: goldenrod;
-}
-</style>
 <body>
     <div class="header">
         <div class="header__user-photo">
@@ -85,9 +16,17 @@ body {
     </div>
     <div class="lessons">
         <ul class="lessons__list">
-            <li class="lessons__item"><a class="lessons__link" href="lesson-1">Lesson 1</a></li>
-            <li class="lessons__item"><a class="lessons__link" href="lesson-2">Lesson 2</a></li>
-            <li class="lessons__item"><a class="lessons__link" href="lesson-3">Lesson 3</a></li>
+            <li class="lessons__item">
+                <a class="lessons__link" href="lesson-1">Lesson 1</a>
+            </li>
+            <li class="lessons__item">
+                <a class="lessons__link" href="lesson-2">Lesson 2</a>
+            </li>
+            <li class="lessons__item">
+                <a class="lessons__link" href="lesson-3">Lesson 3</a>
+                <br>
+                <a class="lessons__link" href="lesson-3-hard">Lesson 3 Hard</a>
+            </li>
         </ul>
     </div>
 </body>
