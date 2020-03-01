@@ -81,6 +81,7 @@ body {
     height: 5rem;
     display: block;
     margin: 0 auto;
+    transition: all .3s;
 }
 
 .footer__logo:hover {
