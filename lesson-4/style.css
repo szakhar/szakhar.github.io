@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    background-color: #121116;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-weight: 400;
+}
+
+a:link,
+a:visited {
+    color: #00c7fc;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #009fc9;
+}
+
+hr {
+    width: 23rem;
+    height: .1rem;
+    background-color: #fff;
+    margin: 2.1rem auto;
+}
+
+.heading-1 {
+    font-size: 2rem;
+    letter-spacing: .22rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: inherit;
+}
+
+.container {
+    padding: 3.8rem;
+    /* Вирівнюю весь контейнер по горизонталі та повертикалі поцентру */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-50%);
+}
+
+.header__logo {
+    height: 36px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5.1rem;
+}
+
+.social {
+    list-style: none;
+    text-align: center;
+}
+
+.social__item {
+    display: inline;
+    margin: 0 1.75rem;
+}
+
+.social__item img {
+    vertical-align: middle;
+}
+
+.footer {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 8.9rem;
+}
