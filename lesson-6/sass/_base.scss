@@ -1,19 +1,15 @@
 // FONTS
-
 $font-primary: 'Montserrat';
 $font-secondary: 'PT Sans';
 
 
-
 // COLORS
-
 $color-primary: #0ec8cb;
 $color-grey: #f7f7f7;
 
 
 
 // BASE
-
 *,
 *::before,
 *::after {
@@ -54,9 +50,7 @@ a {
 }
 
 
-
 // MIXINS
-
 // @include clearfix;
 @mixin clearfix {
 
