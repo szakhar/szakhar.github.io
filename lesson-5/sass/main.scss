@@ -1,0 +1,152 @@
+// FONTS
+$font-primary: 'Montserrat', sans-serif;
+
+
+// COLORS
+$color-primary: #1275b9;
+$color-grey: #9d9d9d;
+
+
+// GRID
+$gutter-horizontal: 5rem;
+
+
+// MIXINS
+
+// @include clearfix;
+@mixin clearfix {
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+  
+}
+
+
+// HEADING
+
+%heading {
+    font-family: $font-primary;
+    font-weight: 400;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .heading-3 {
+    @extend %heading;
+    font-size: 1.4rem;
+    color: #000;
+    margin-bottom: 1.2rem;
+  }
+
+
+// BASE
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+::selection {
+  background-color: $color-primary;
+  color: #fff;
+}
+
+body {
+    background-color: #fff;
+    font-family: $font-primary;
+    font-size: 1.3rem;
+    color: $color-grey;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.section-services {
+    width: 110rem;
+    padding: 0 9.5rem 0 9.5rem;
+    // Вирівнюю по центру по вертикалі і горизонталі
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.service-box {
+    float: left;
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    
+    &:not(:last-child) {
+        margin-right: $gutter-horizontal;
+    }
+
+    &__icon {
+        display: block;
+        margin: 0 auto 1.2rem auto;
+        padding: 3rem;
+        background-color: $color-primary;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border: 2px solid $color-primary;
+        border-radius: 50%;
+        transition: background-color .4s,
+                    background-image .3s;
+
+        &--1 {
+            width: 2.4rem;
+            height: 3rem;
+            background-image: url(../img/tablet-white.png);
+        }
+
+        &--2 {
+            width: 2.6rem;
+            height: 2.6rem;
+            background-image: url(../img/settings-white.png);
+        }
+
+        &--3 {
+            width: 2.8rem;
+            height: 2.4rem;
+            background-image: url(../img/dashboard-white.png);
+        }
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    &:hover {
+
+        .service-box {
+
+            &__icon {
+                background-color: #fff;
+
+                &--1 {
+                    background-image: url(../img/tablet.png);
+                }
+        
+                &--2 {
+                    background-image: url(../img/settings.png);
+                }
+        
+                &--3 {
+                    background-image: url(../img/dashboard.png);
+                }
+            }
+        }
+    }
+
+    @include clearfix;
+}
+
+
