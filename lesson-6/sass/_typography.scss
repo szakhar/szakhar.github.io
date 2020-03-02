@@ -1,0 +1,32 @@
+%heading {
+    font-family: $font-primary;
+    font-weight: 400;
+    letter-spacing: .48rem;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+  }
+
+.heading-1 {
+    @extend %heading;
+    font-size: 4.8rem;
+    color: $color-primary;
+    margin-bottom: 2.6rem;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: 2.1rem;
+    color: #1b1b1b;
+    line-height: 1.2;
+    letter-spacing: normal;
+    margin-bottom: 2.6rem;
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #898f99;
+    margin-bottom: 2.1rem;
+}
