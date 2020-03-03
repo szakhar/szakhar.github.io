@@ -64,24 +64,17 @@
         }
 
         input[type=checkbox] {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%) scale(1.7);
+            transform: translateY(-20%) scale(1.7);
             cursor: inherit;
     
-            &:checked + p {
+            &:checked + .shopping-list__text {
                 text-decoration: line-through;
                 color: #cdc6c6;
             }
     
             @media only screen and (max-width: 550px) {
-                transform: translateY(-50%) scale(1.5);
+                transform: translateY(-14%) scale(1.5);
             }
-        }
-    
-        p {
-            display: inline-block;
-            margin-left: 1rem;
         }
 
         span {
@@ -96,6 +89,12 @@
                 content: " )";
             }
         }
+    }
+
+    &__text {
+        display: inline;
+        margin-left: 1rem;
+        vertical-align: middle;
     }
 }
 

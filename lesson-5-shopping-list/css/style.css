@@ -85,19 +85,14 @@ body {
     .shopping-list__item:active {
       background-color: #eb7e7f; }
     .shopping-list__item input[type=checkbox] {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%) scale(1.7);
+      transform: translateY(-20%) scale(1.7);
       cursor: inherit; }
-      .shopping-list__item input[type=checkbox]:checked + p {
+      .shopping-list__item input[type=checkbox]:checked + .shopping-list__text {
         text-decoration: line-through;
         color: #cdc6c6; }
       @media only screen and (max-width: 550px) {
         .shopping-list__item input[type=checkbox] {
-          transform: translateY(-50%) scale(1.5); } }
-    .shopping-list__item p {
-      display: inline-block;
-      margin-left: 1rem; }
+          transform: translateY(-14%) scale(1.5); } }
     .shopping-list__item span {
       font-size: 1.5rem;
       color: #cdc6c6; }
@@ -105,6 +100,10 @@ body {
         content: "( "; }
       .shopping-list__item span::after {
         content: " )"; }
+  .shopping-list__text {
+    display: inline;
+    margin-left: 1rem;
+    vertical-align: middle; }
 
 .footer {
   width: 60%;
