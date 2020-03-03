@@ -1,0 +1,51 @@
+// FONTS
+$font-primary: 'Trebuchet MS', Trebuchet, Arial, sans-serif;
+
+
+// COLORS
+$color-primary: #7a7593;
+$color-primary-light: #88839e;
+$color-primary-dark: #625e77;
+$color-secondary: #eb7e7f;
+$color-grey: #4a4f56;
+
+
+
+// BASE
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+::selection {
+  background-color: $color-primary;
+  color: #fff;
+}
+
+body {
+    background-color: #fff;
+    font-family: $font-primary;
+    color: #f9f9f9;
+    font-weight: 400;
+}
+
+
+// MIXINS
+// @include clearfix;
+@mixin clearfix {
+
+  &::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+
+}
