@@ -1,0 +1,20 @@
+%heading {
+    font-family: $font-primary;
+    font-weight: 400;
+  }
+
+.heading-1 {
+    @extend %heading;
+    font-size: 3.1rem;
+    color: #fff;
+    margin-bottom: 3.2rem;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: 2.5rem;
+    color: #fff;
+    letter-spacing: .4px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
