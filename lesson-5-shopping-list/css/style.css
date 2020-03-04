@@ -20,6 +20,9 @@ body {
   color: #f9f9f9;
   font-weight: 400; }
 
+label {
+  display: block; }
+
 .heading-1, .heading-2 {
   font-family: "Trebuchet MS", Trebuchet, Arial, sans-serif;
   font-weight: 400;
@@ -67,23 +70,22 @@ body {
 
 .shopping-list {
   list-style: none; }
-  .shopping-list label:nth-child(odd) .shopping-list__item {
-    background-color: #88839e; }
-  .shopping-list label:nth-child(even) .shopping-list__item {
-    background-color: #7a7593; }
   .shopping-list__item {
-    padding: 1.5rem;
     background-color: #7a7593;
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
     transition: background-color border .3s ease-out;
     cursor: pointer; }
-    .shopping-list__item:hover {
-      background-color: #625e77;
-      border-top: 3px solid #fff;
-      border-bottom: 3px solid #fff; }
-    .shopping-list__item:active {
-      background-color: #eb7e7f; }
+    .shopping-list__item:nth-child(odd) {
+      background-color: #88839e; }
+    .shopping-list__item label {
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      padding: 1.5rem; }
+      .shopping-list__item label:hover {
+        background-color: #625e77;
+        border-top: 3px solid #fff;
+        border-bottom: 3px solid #fff; }
+      .shopping-list__item label:active {
+        background-color: #eb7e7f; }
     .shopping-list__item input[type=checkbox] {
       transform: translateY(-20%) scale(1.7);
       cursor: inherit; }

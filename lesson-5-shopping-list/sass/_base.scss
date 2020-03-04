@@ -1,15 +1,12 @@
 // FONTS
 $font-primary: 'Trebuchet MS', Trebuchet, Arial, sans-serif;
 
-
 // COLORS
 $color-primary: #7a7593;
 $color-primary-light: #88839e;
 $color-primary-dark: #625e77;
 $color-secondary: #eb7e7f;
 $color-grey: #4a4f56;
-
-
 
 // BASE
 *,
@@ -35,6 +32,10 @@ body {
     font-family: $font-primary;
     color: #f9f9f9;
     font-weight: 400;
+}
+
+label {
+  display: block;
 }
 
 
