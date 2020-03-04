@@ -107,6 +107,11 @@ body {
       opacity: .7; }
     @media only screen and (max-width: 46.875em) {
       .weather-list__item {
+        width: 50%; }
+        .weather-list__item:last-child {
+          width: 100%; } }
+    @media only screen and (max-width: 31.25em) {
+      .weather-list__item {
         width: 100%; } }
   .weather-list__icon {
     font-size: 4.1rem;
