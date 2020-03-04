@@ -1,0 +1,47 @@
+// FONTS
+$font-primary: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+
+
+// COLORS
+$color-primary: #3399cc;
+$color-secondary: #2b81ac;
+
+
+// BASE
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+::selection {
+  background-color: $color-primary;
+  color: #fff;
+}
+
+body {
+    background-color: $color-primary;
+    font-family: $font-primary;
+    color: #f9f9f9;
+    font-weight: 400;
+}
+
+
+// MIXINS
+// @include clearfix;
+@mixin clearfix {
+
+  &::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+
+}
