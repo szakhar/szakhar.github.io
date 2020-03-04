@@ -36,31 +36,29 @@
 .shopping-list {
     list-style: none;
 
-    label {
-        &:nth-child(odd) .shopping-list__item {
-            background-color: $color-primary-light;
-        }
-        &:nth-child(even) .shopping-list__item {
-            background-color: $color-primary;
-        }
-    }
-
     &__item {
-        padding: 1.5rem;
         background-color: $color-primary;
-        border-top: 3px solid transparent;
-        border-bottom: 3px solid transparent;
         transition: background-color border .3s ease-out;
         cursor: pointer;
 
-        &:hover {
-            background-color: #625e77;
-            border-top: 3px solid #fff;
-            border-bottom: 3px solid #fff;
+        &:nth-child(odd) {
+            background-color: $color-primary-light;
         }
 
-        &:active {
-            background-color: $color-secondary;
+        label {
+            border-top: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            padding: 1.5rem;
+
+            &:hover {
+                background-color: #625e77;
+                border-top: 3px solid #fff;
+                border-bottom: 3px solid #fff;
+            }
+    
+            &:active {
+                background-color: $color-secondary;
+            }
         }
 
         input[type=checkbox] {
