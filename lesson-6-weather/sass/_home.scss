@@ -105,6 +105,15 @@
 
         // 750px
         @media only screen and (max-width: 46.875em) {
+            width: 50%;
+
+            &:last-child {
+                width: 100%;
+            }
+        }
+
+        // 500px
+        @media only screen and (max-width: 31.25em) {
             width: 100%;
         }
     }
