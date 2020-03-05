@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1rem = 10px */ }
+
+::selection {
+  background-color: #fdde7e;
+  color: #333; }
+
+body {
+  background-color: #fdde7e;
+  font-family: "PT Sans", sans-serif;
+  color: #333;
+  font-weight: 400; }
+
+.heading-2 {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400; }
+
+.heading-2 {
+  font-size: 4.5rem;
+  color: #333;
+  margin-bottom: 1.7rem;
+  letter-spacing: -.1rem; }
+
+.cards {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 1rem; }
+  @media only screen and (max-width: 48.75em) {
+    .cards {
+      height: auto;
+      flex-direction: column;
+      align-items: stretch;
+      margin: 3rem 20%; } }
+  @media only screen and (max-width: 31.25em) {
+    .cards {
+      margin: 3rem 8%; } }
+  .cards__item {
+    background-color: #fff;
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border-radius: .45rem;
+    padding: 3.1rem;
+    flex-basis: 36rem; }
+    .cards__item:not(:last-child) {
+      margin-right: 3rem; }
+    @media only screen and (max-width: 59.375em) {
+      .cards__item:not(:last-child) {
+        margin-right: 1.5rem; } }
+    @media only screen and (max-width: 48.75em) {
+      .cards__item {
+        margin-bottom: 3rem;
+        border-radius: .8rem; }
+        .cards__item:not(:last-child) {
+          margin-right: 0; } }
+    .cards__item--2 {
+      padding: 4.8rem 0 6rem 0; }
+      @media only screen and (max-width: 53.125em) {
+        .cards__item--2 {
+          flex-basis: 70%; } }
+      .cards__item--2 .cards__price {
+        margin-bottom: 2.8rem; }
+      .cards__item--2 .cards__img {
+        margin-bottom: 3.6rem; }
+  .cards__price {
+    font-size: 6rem;
+    color: #02995b;
+    font-weight: bold;
+    margin-bottom: .8rem; }
+  .cards__img {
+    height: 13.4rem;
+    margin-bottom: 2.6rem; }
+  .cards__text {
+    font-size: 2.2rem;
+    line-height: 1.2; }
