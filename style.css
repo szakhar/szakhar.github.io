@@ -18,7 +18,6 @@ body {
     color: #333;
     font-weight: 600;
     background-color: #f5f4fb;
-    /* background-color: rgba(0,0,0, .08); */
 }
 
 a:link,
@@ -28,26 +27,10 @@ a:visited {
     transition: color .2s ease;
 }
 
-/* hr {
-    background-color: rgb(70,51,148, .6);
-    display: block;
-    width: 120%;
-    height: 1px;
-    border: none;
-    margin: 1rem auto;
-} */
-
-/* a:hover,
-a:active {
-    color: #5d21d2;
-} */
-
 .heading-1 {
     font-size: 3.3rem;
     color: rgba(0,0,0, .75);
     font-weight: 700;
-    /* margin-bottom: .3rem; */
-    /* display: inline-block; */
 }
 
 .heading-2 {
@@ -60,13 +43,42 @@ a:active {
 
 .container {
     width: 40%;
+    min-width: 40rem;
     margin: 4rem auto 1rem auto;
-    /* background-color: #5840bb; */
     background-image: linear-gradient(to bottom, rgb(79, 57, 167), rgb(70, 51, 148));
-    /* border: .8rem solid #5840bb; */
     padding: 1.3rem;
     box-shadow: 0 1rem 2rem rgba(0,0,0, .4);
     border-radius: 3rem;
+}
+
+@media only screen and (max-width: 1300px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
 }
 
 .header {
@@ -79,7 +91,6 @@ a:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-wrap: wrap; */
 }
 
 .header a:link,
@@ -146,6 +157,24 @@ a:active {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+}
+
+@media only screen and (max-width: 1300px) {
+    .lessons__list {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .lessons__list {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .lessons__list {
+        width: 90%;
+    }
 }
 
 .lessons__item {
