@@ -1,0 +1,12 @@
+%heading {
+    font-family: $font-primary;
+    font-weight: 400;
+  }
+
+.heading-2 {
+    @extend %heading;
+    font-size: 4.5rem;
+    color: $color-grey-dark;
+    margin-bottom: 1.7rem;
+    letter-spacing: -.1rem;
+}
