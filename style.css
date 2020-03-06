@@ -1,5 +1,9 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
+/**********************************************
+*** GENERAL. CSS RESET
+**********************************************/
+
 *,
 *::before,
 *::after {
@@ -18,6 +22,14 @@ body {
     color: #333;
     font-weight: 600;
     background-color: #f5f4fb;
+    margin: 0 1rem;
+}
+
+/* 420px */
+@media only screen and (max-width: 26.25em) {
+    body {
+        margin: 0;
+    }
 }
 
 a:link,
@@ -31,6 +43,14 @@ a:visited {
     font-size: 3.3rem;
     color: rgba(0,0,0, .75);
     font-weight: 700;
+}
+
+/* 550px */
+@media only screen and (max-width: 34.375em) {
+    .heading-1 {
+        line-height: 3.5rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .heading-1:hover {
@@ -47,7 +67,7 @@ a:visited {
 }
 
 .container {
-    width: 40%;
+    max-width: 57.5rem;
     min-width: 40rem;
     margin: 4rem auto 1rem auto;
     background-image: linear-gradient(to bottom, rgb(79, 57, 167), rgb(70, 51, 148));
@@ -56,35 +76,10 @@ a:visited {
     border-radius: 3rem;
 }
 
-@media only screen and (max-width: 1300px) {
-    .container {
-        width: 50%;
-    }
-}
 
-@media only screen and (max-width: 1200px) {
-    .container {
-        width: 55%;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    .container {
-        width: 65%;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .container {
-        width: 75%;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .container {
-        width: 90%;
-    }
-}
+/**********************************************
+*** HEADER
+**********************************************/
 
 .header {
     background-color: rgba(255,255,255, .95);
@@ -137,7 +132,7 @@ a:visited {
 
 .header__social a {
     margin-right: .5rem;
-    /* Контейнер для іконок */
+    /***** КОНТЕЙНЕР ДЛЯ ІКОНОК *****/
     width: 2.4rem;
     height: 2.4rem;
 }
@@ -152,6 +147,11 @@ a:visited {
     -webkit-animation: icon3d 350ms infinite;
     animation: icon3d 350ms infinite;
 }
+
+
+/**********************************************
+*** LESSONS
+**********************************************/
 
 .lessons {
     display: flex;
@@ -169,21 +169,17 @@ a:visited {
     align-items: stretch;
 }
 
-@media only screen and (max-width: 1300px) {
-    .lessons__list {
-        width: 80%;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
+/* 550px */
+@media only screen and (max-width: 34.375em) {
     .lessons__list {
         width: 85%;
     }
 }
 
-@media only screen and (max-width: 900px) {
+/* 450px */
+@media only screen and (max-width: 28.125em) {
     .lessons__list {
-        width: 90%;
+        width: 95%;
     }
 }
 
@@ -225,6 +221,11 @@ a:visited {
     margin-right: 1.5rem;
 }
 
+
+/**********************************************
+*** FOOTER
+**********************************************/
+
 .footer {
     width: 100%;
     padding: 3rem 0;
@@ -242,13 +243,11 @@ a:visited {
 }
 
 
+/**********************************************
+*** ANIMATION
+**********************************************/
 
-/* ==========================================================================
-   Animation
-   ========================================================================== */
-
-
-/* Animation Pulsate */
+/***** ANIMATION PULSATE *****/
 @keyframes pulsate {
     0% {
         transform: scale(1);
