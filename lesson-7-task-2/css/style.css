@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1rem = 10px */ }
+
+::selection {
+  background-color: #1d1d1d;
+  color: #fff; }
+
+body {
+  background-color: #e2e7ec;
+  font-family: "Raleway", sans-serif;
+  color: #1d1d1d;
+  font-weight: 500; }
+
+.heading-2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400; }
+
+.heading-2 {
+  font-size: 2.2rem;
+  color: #1d1d1d;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.55px;
+  text-transform: uppercase;
+  margin-bottom: 1.7rem; }
+  .heading-2--light {
+    color: #fff;
+    font-size: 3rem;
+    line-height: 3.6rem;
+    letter-spacing: 0.75px; }
+
+.container {
+  max-width: 114rem;
+  min-width: 45rem;
+  margin: 4.8% auto; }
+  @media only screen and (max-width: 51.25em) {
+    .container {
+      margin: 1% auto; } }
+  @media only screen and (max-width: 48.125em) {
+    .container {
+      margin: .5% auto; } }
+  @media only screen and (max-width: 46.25em) {
+    .container {
+      margin: 0 auto; } }
+
+.blog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 7rem; }
+  @media only screen and (max-width: 48.125em) {
+    .blog {
+      margin-bottom: 4rem; } }
+
+.post {
+  min-height: 54rem;
+  background-color: #fff;
+  margin: 1rem;
+  flex-basis: 36rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  @media only screen and (max-width: 48.125em) {
+    .post {
+      margin: 0 1rem 3rem 1rem;
+      flex-basis: 45rem; } }
+  .post__date,
+  .post__header .heading-2 {
+    margin: 0 2rem 0 2.8rem; }
+  .post__img {
+    width: 100%;
+    margin-bottom: 2.5rem; }
+  .post__date {
+    display: block;
+    font-size: 1.3rem;
+    color: #818181;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem; }
+  .post__user-photo {
+    width: 5.4rem;
+    margin: 2.5rem 2.8rem; }
+    @media only screen and (max-width: 48.125em) {
+      .post__user-photo {
+        margin: 7rem 2.8rem 2.5rem 2.8rem; } }
+  .post--1 {
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.95)), url(../img/photo-1.png);
+    background-size: cover;
+    background-position: center center;
+    padding: 0 20rem 1.5rem 4.2rem;
+    flex-basis: 74rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
+    @media only screen and (max-width: 46.25em) {
+      .post--1 {
+        flex-basis: 100%; } }
+    @media only screen and (max-width: 42.5em) {
+      .post--1 {
+        padding: 0 5rem 1.5rem 4.2rem; } }
+    @media only screen and (max-width: 34.375em) {
+      .post--1 {
+        padding: 0 2rem 1.5rem 2rem; } }
+    .post--1 .post__date,
+    .post--1 .post__header .heading-2 {
+      margin: 0; }
+    .post--1 .post__date {
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 1.7rem; }
+
+.load-post {
+  color: #99a5b0;
+  font-size: 1.3rem;
+  letter-spacing: 0.32px;
+  margin-bottom: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .load-post__loader {
+    border: 4px solid #a9b3bc;
+    border-radius: 50%;
+    border-top: 4px solid #808f9d;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+    margin-right: 1.3rem; }
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
