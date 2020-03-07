@@ -162,25 +162,9 @@ a:visited {
 }
 
 .lessons__list {
-    width: 75%;
-
     display: flex;
     flex-direction: column;
     align-items: stretch;
-}
-
-/* 550px */
-@media only screen and (max-width: 34.375em) {
-    .lessons__list {
-        width: 85%;
-    }
-}
-
-/* 450px */
-@media only screen and (max-width: 28.125em) {
-    .lessons__list {
-        width: 95%;
-    }
 }
 
 .lessons__item {
