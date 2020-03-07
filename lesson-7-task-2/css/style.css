@@ -91,7 +91,7 @@ body {
       .post__user-photo {
         margin: 7rem 2.8rem 2.5rem 2.8rem; } }
   .post--1 {
-    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.95)), url(../img/photo-1.png);
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.95)), url(../img/photo-1.jpg);
     background-size: cover;
     background-position: center center;
     padding: 0 20rem 1.5rem 4.2rem;
