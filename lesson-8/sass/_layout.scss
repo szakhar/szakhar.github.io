@@ -1,0 +1,20 @@
+.main-box {
+    max-width: 144rem;
+    min-width: 34rem;
+    margin: 0 auto;
+    padding: 13rem 12.3rem 12rem;
+    background-color: #fff;
+    box-shadow: 0 .4rem 6.8rem rgba(0,0,0, .1);
+
+    @media only screen and (max-width: 59.375em) { // 950px
+        padding: 8rem 8.3rem 8rem;
+    }
+
+    @media only screen and (max-width: 50em) { // 800px
+        padding: 6rem 6.3rem 6rem;
+    }
+
+    @media only screen and (max-width: 34.375em) { // 550px
+        padding: 4.5rem 4.3rem 4rem;
+    }
+}

@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1rem = 10px */ }
+  @media only screen and (max-width: 43.75em) {
+    html {
+      font-size: 56.25%;
+      /* 1rem = 9px */ } }
+
+::selection {
+  background-color: #eaa258;
+  color: #171717; }
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #171717;
+  font-weight: 300;
+  background-color: #fff;
+  padding: 10rem; }
+  @media only screen and (max-width: 71.875em) {
+    body {
+      padding: 7rem; } }
+  @media only screen and (max-width: 59.375em) {
+    body {
+      padding: 5rem; } }
+  @media only screen and (max-width: 50em) {
+    body {
+      padding: 3rem; } }
+  @media only screen and (max-width: 34.375em) {
+    body {
+      padding: 1.5rem; } }
+
+/* ================================================
+     @FONT-FACE
+   ================================================ */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Playfair Display"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Regular.woff") format("woff"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf") format("ttf"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Regular.eot") format("eot"); }
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Lato"), url("../fonts/Lato/Lato-Light.woff") format("woff"), url("../fonts/Lato/Lato-Light.ttf") format("ttf"), url("../fonts/Lato/Lato-Light.eot") format("eot"); }
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: local("Lato"), url("../fonts/Lato/Lato-LightItalic.woff") format("woff"), url("../fonts/Lato/Lato-LightItalic.ttf") format("ttf"), url("../fonts/Lato/Lato-LightItalic.eot") format("eot"); }
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Lato"), url("../fonts/Lato/Lato-Bold.woff") format("woff"), url("../fonts/Lato/Lato-Bold.ttf") format("ttf"), url("../fonts/Lato/Lato-Bold.eot") format("eot"); }
+
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+.heading-1 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  line-height: normal; }
+
+.heading-1 {
+  font-size: 4rem;
+  letter-spacing: 0.08rem;
+  margin-bottom: 2.3rem; }
+
+.paragraph {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.7rem; }
+
+.big-first-letter::first-letter {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 11rem;
+  float: left;
+  margin-right: 3rem;
+  line-height: .7; }
+
+q {
+  display: block;
+  quotes: "“" "";
+  font-size: 2.6rem;
+  font-style: italic;
+  margin-top: -.8rem;
+  letter-spacing: .1rem; }
+  q::before {
+    content: open-quote;
+    font-size: 8rem;
+    margin-right: 2.6rem;
+    line-height: 0;
+    vertical-align: -1.3rem; }
+
+.btn {
+  display: block;
+  padding: 2.2rem 7rem;
+  border: 0.2rem solid #eaa258;
+  font-size: 1.8rem;
+  background-color: #fff;
+  color: #eaa258;
+  font-weight: bold;
+  letter-spacing: .36rem;
+  text-transform: uppercase;
+  margin-top: 3.6rem;
+  transition: background-color .4s ease-in-out, color .4s ease-in-out; }
+  .btn:hover {
+    background-color: #eaa258;
+    color: #fff; }
+
+.main-box {
+  max-width: 144rem;
+  min-width: 34rem;
+  margin: 0 auto;
+  padding: 13rem 12.3rem 12rem;
+  background-color: #fff;
+  box-shadow: 0 0.4rem 6.8rem rgba(0, 0, 0, 0.1); }
+  @media only screen and (max-width: 59.375em) {
+    .main-box {
+      padding: 8rem 8.3rem 8rem; } }
+  @media only screen and (max-width: 50em) {
+    .main-box {
+      padding: 6rem 6.3rem 6rem; } }
+  @media only screen and (max-width: 34.375em) {
+    .main-box {
+      padding: 4.5rem 4.3rem 4rem; } }
