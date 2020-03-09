@@ -1,0 +1,113 @@
+/* ================================================
+     @FONT-FACE
+   ================================================ */
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Playfair Display'),
+         url('../fonts/PlayfairDisplay/PlayfairDisplay-Regular.woff') format('woff'),
+         url('../fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf') format('ttf'),
+         url('../fonts/PlayfairDisplay/PlayfairDisplay-Regular.eot') format('eot');
+}
+  
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato'),
+         url('../fonts/Lato/Lato-Light.woff') format('woff'),
+         url('../fonts/Lato/Lato-Light.ttf') format('ttf'),
+         url('../fonts/Lato/Lato-Light.eot') format('eot');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Lato'),
+         url('../fonts/Lato/Lato-LightItalic.woff') format('woff'),
+         url('../fonts/Lato/Lato-LightItalic.ttf') format('ttf'),
+         url('../fonts/Lato/Lato-LightItalic.eot') format('eot');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato'),
+         url('../fonts/Lato/Lato-Bold.woff') format('woff'),
+         url('../fonts/Lato/Lato-Bold.ttf') format('ttf'),
+         url('../fonts/Lato/Lato-Bold.eot') format('eot');
+}
+
+
+
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+
+%heading {
+    font-family: $font-secondary;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 4rem;
+    letter-spacing: 0.08rem;
+    margin-bottom: 2.3rem;
+}
+
+.paragraph {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 4.7rem;
+}
+
+.big-first-letter::first-letter {
+    font-family: $font-secondary;
+    font-size: 11rem;
+    float: left;
+    margin-right: 3rem;
+    line-height: .7;
+}
+
+q {
+    display: block;
+    quotes: "“" "";
+    font-size: 2.6rem;
+    font-style: italic;
+    margin-top: -.8rem;
+    letter-spacing: .1rem;
+
+    &::before {
+        content: open-quote;
+        font-size: 8rem;
+        margin-right: 2.6rem;
+        line-height: 0;
+        vertical-align: -1.3rem;
+    }
+}
+
+.btn {
+    display: block;
+    padding: 2.2rem 7rem;
+    border: .2rem solid $color-secondary;
+    font-size: 1.8rem;
+    background-color: #fff;
+    color: $color-secondary;
+    font-weight: bold;
+    letter-spacing: .36rem;
+    text-transform: uppercase;
+    margin-top: 3.6rem;
+    transition: background-color .4s ease-in-out,
+                color .4s ease-in-out;
+
+    &:hover {
+        background-color: $color-secondary;
+        color: #fff;
+    }
+}
