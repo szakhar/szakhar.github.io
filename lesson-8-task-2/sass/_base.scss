@@ -1,0 +1,53 @@
+//   FONTS
+// ==================================================
+
+$font-primary: Georgia, sans-serif;
+
+
+//   COLORS
+// ==================================================
+
+$color-primary: #181818;
+$color-secondary: #f9be2d;
+$color-grey-light-1: #b4b4b4;
+$color-grey-light-2: #8f8f8f;
+$color-grey-light-3: #767676;
+
+
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+
+    @media only screen and (max-width: 62.5em) { // 1000px
+        font-size: 50%; /* 1rem = 8px */
+    }
+
+    @media only screen and (max-width: 50em) { // 800px
+        font-size: 43.75%; /* 1rem = 7px */
+    }
+}
+
+::selection {
+    background-color: $color-secondary;
+    color: #fff;
+}
+
+body {
+    font-family: $font-primary;
+    color: #000;
+    font-weight: 400;
+    background-color: #464f54;
+}
