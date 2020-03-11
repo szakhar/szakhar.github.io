@@ -1,0 +1,63 @@
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+
+   %heading {
+    font-family: $font-primary;
+    font-weight: 400;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-family: 'Hind', sans-serif;
+    font-size: 7.8rem;
+    font-weight: 700;
+    color: #2A2A2A;
+    letter-spacing: .38rem;
+    text-transform: uppercase;
+    
+    @media only screen and (max-width: 43.75em) { // 700px
+        font-size: 6rem;
+    }
+}
+
+.paragraph {
+    font-size: 2.7rem;
+    line-height: 4rem;
+    margin-bottom: 2.3rem;
+}
+
+
+/* ================================================
+     @FONT-FACE
+   ================================================ */
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Playfair Display'),
+         url('../fonts/Playfair_Display/PlayfairDisplay-Regular.woff') format('woff'),
+         url('../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf') format('ttf'),
+         url('../fonts/Playfair_Display/PlayfairDisplay-Regular.eot') format('eot');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Proxima Nova'),
+         url('../fonts/Proxima_Nova/ProximaNova_Regular.woff') format('woff'),
+         url('../fonts/Proxima_Nova/ProximaNova_Regular.ttf') format('ttf'),
+         url('../fonts/Proxima_Nova/ProximaNova_Regular.eot') format('eot');
+}
+
+@font-face {
+    font-family: 'Hind';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Hind'),
+         url('../fonts/Hind/Hind-Bold.woff') format('woff'),
+         url('../fonts/Hind/Hind-Bold.ttf') format('ttf'),
+         url('../fonts/Hind/Hind-Bold.eot') format('eot');
+}
