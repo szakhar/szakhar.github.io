@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css');
+
+//   FONTS
+// ==================================================
+
+$font-primary: 'Lato', sans-serif;
+
+
+//   COLORS
+// ==================================================
+
+$color-primary: #18b5dc;
+$color-grey: #3c3c3c;
+
+
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+::selection {
+    background-color: $color-primary;
+    color: #fff;
+}
+
+body {
+    background-color: #f6f6f6;
+    font-family: $font-primary;
+    font-size: 1.6rem;
+    color: $color-grey;
+    font-weight: 400;
+    padding: 10.8rem .5rem 10.8rem;
+
+    @media only screen and (max-width: 600px) {
+        padding: 6rem .5rem 6rem;
+    }
+}

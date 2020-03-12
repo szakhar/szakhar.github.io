@@ -1,0 +1,35 @@
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+
+%heading {
+    font-family: $font-primary;
+    font-weight: 400;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 3.4rem;
+    font-weight: bold;
+    color: $color-grey;
+    letter-spacing: .544rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    &::after {
+        content: "";
+        width: 4.5rem;
+        height: .4rem;
+        display: block;
+        background-color: #dddbdb;
+        margin: 1.8rem auto 0;
+    }
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #282528;
+    margin-bottom: .4rem;
+}

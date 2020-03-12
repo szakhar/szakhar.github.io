@@ -1,5 +1,4 @@
 .container {
-    max-width: 117rem;
     margin: 10rem auto;
 
     @media only screen and (max-width: 53.125em) { // 850px
@@ -35,10 +34,11 @@
    ================================================ */
 
 .posts {
+    max-width: 117rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 4rem;
+    margin: 0 auto 4rem;
 
     &__item {
         flex-basis: 37rem;
