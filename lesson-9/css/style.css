@@ -73,7 +73,6 @@ body {
     transform: translateY(-3px); }
 
 .container {
-  max-width: 117rem;
   margin: 10rem auto; }
   @media only screen and (max-width: 53.125em) {
     .container {
@@ -100,10 +99,11 @@ body {
      POSTS
    ================================================ */
 .posts {
+  max-width: 117rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 4rem; }
+  margin: 0 auto 4rem; }
   .posts__item {
     flex-basis: 37rem;
     flex-shrink: 0;
