@@ -31,6 +31,10 @@ body {
     body {
       padding: 6rem .5rem 6rem; } }
 
+a:link,
+a:visited {
+  text-decoration: none; }
+
 /* ================================================
      TYPOGRAPHY
    ================================================ */
@@ -93,6 +97,8 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: opacity .3s ease-in-out, visibility .3s ease-in-out; }
+    .team__social a:not(:last-child) {
+      margin-right: .4rem; }
   .team__box-icon {
     width: 4.2rem;
     height: 4.2rem;
@@ -101,8 +107,6 @@ body {
     justify-content: center;
     align-items: center;
     transition: transform .3s, background-color .3s; }
-    .team__box-icon:not(:last-child) {
-      margin-right: 2rem; }
     .team__box-icon:hover {
       transform: translateY(-0.5rem);
       background-color: rgba(255, 255, 255, 0.2); }
