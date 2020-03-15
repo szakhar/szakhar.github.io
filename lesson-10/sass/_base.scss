@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700,900&display=swap');
+
+//   FONTS
+// ==================================================
+
+$font-primary: 'Raleway', sans-serif;
+
+
+//   COLORS
+// ==================================================
+
+$color-primary: #ff6033;
+$color-grey: #262626;
+
+
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+
+    @media only screen and (max-width: 56.25em) { // 900px
+        font-size: 56.25%; /* 1rem = 9px */
+    }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: #fff;
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-grey;
+    font-weight: 300;
+}
