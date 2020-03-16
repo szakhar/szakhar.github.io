@@ -68,7 +68,11 @@ body {
   font-weight: 300;
   color: #fff;
   text-transform: uppercase;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: transform .2s, background-color .2s; }
+  .btn:hover {
+    background-color: #ff5324;
+    transform: translateY(-0.3rem); }
 
 .logo {
   display: block;

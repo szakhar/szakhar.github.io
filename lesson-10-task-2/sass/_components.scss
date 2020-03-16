@@ -1,0 +1,34 @@
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+
+%heading {
+    font-family: $font-primary;
+}
+
+.heading-1,
+.heading-2 {
+    font-size: 2.4rem;
+    font-weight: inherit;
+    letter-spacing: .48px;
+}
+
+.logo {
+    display: block;
+    position: absolute;
+    top: 2.5rem; left: 2rem;
+}
+
+.btn {
+    outline: none;
+    border: 1px solid rgba(255,255,255, .26);
+    background-color: rgba(76,82,90, .4);
+    padding: 1.2rem 5.5rem;
+    font-size: 1.4rem;
+    color: rgba(255,255,255, .45);
+    transition: background-color .3s;
+
+    &:hover {
+        background-color: rgba(76,82,90, .25);
+    }
+}
