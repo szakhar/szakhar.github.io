@@ -1,0 +1,101 @@
+.card {
+    background-color: $color-primary;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 7.8rem 6.2rem 7.5rem 3.6rem;
+    border-radius: 1rem;
+
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__gallery {
+
+    }
+
+    &__slider {
+        // display: flex;
+    }
+
+    &__item {
+        display: inline-block;
+        width: 1rem;
+        height: .9rem;
+
+        &--1 {
+            width: 1.2rem;
+            height: 1.2rem;
+            border: .2rem solid #fff;
+            background-color: #1f273f;
+        }
+
+        &--2 {
+            background-color: #fff;
+        }
+
+        &--3 {
+            background-color: #ed3333;
+        }
+
+        &--4 {
+            background-color: #29e3ea;
+        }
+    }
+
+    &__info {
+        margin-left: 7.9rem;
+    }
+
+    &__description {
+        font-size: 1.4rem;
+        color: rgba(225, 225, 225, 0.54);
+        letter-spacing: 0.28px;
+
+        margin: 1.1rem 0 2.6rem 0;
+    }
+
+    &__rating {
+        margin-bottom: 2.7rem;
+    }
+
+    &__star {
+        width: 1.2rem;
+        height: 1.2rem;
+
+        &--empty {
+
+        }
+    }
+
+    &__options {
+        margin-bottom: 2.8rem;
+    }
+
+    &__select {
+        -webkit-appearance: none; // Забирає стрілку
+        appearance: none;
+        background: $color-grey-light url(../img/select-arrow.png) right 15% center no-repeat;
+        background-color: transparent;
+        font-size: 1.4rem;
+        color: rgba(255,255,255, .45);
+        letter-spacing: 0.28px;
+        padding: .8rem 2.5rem .8rem 1.2rem;
+        border: 0; // Забирає дефолтний завкруглений бордер
+        outline: none; // Забирає синю обводку
+        border-radius: 0px;
+        outline: 1px solid rgba(255,255,255, .26);
+
+        &:not(:last-child) {
+            margin-right: .1rem;
+        }
+    
+        &--qty {
+            padding: .8rem 3.1rem .8rem 1.2rem;
+        }
+    }
+}
