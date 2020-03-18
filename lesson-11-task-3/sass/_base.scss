@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+
+//   FONTS
+// ==================================================
+
+$font-primary: 'Montserrat', sans-serif;
+
+
+//   COLORS
+// ==================================================
+
+$color-primary: #efe4aa;
+$color-grey: #9eabad;
+
+
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: inherit;
+    // Для елементів форм потрібно
+    border: none;
+    outline: none;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+::selection {
+    background-color: $color-primary;
+    color: #212121;
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-grey;
+    font-size: 1.3rem;
+    font-weight: 500;
+
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a:link,
+a:visited {
+    color: #9eabad;
+    transition: color .3s;
+}
+
+a:hover,
+a:active {
+    color: #444;
+}

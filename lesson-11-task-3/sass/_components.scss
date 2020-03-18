@@ -1,0 +1,53 @@
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+
+%heading {
+    font-family: $font-primary;
+    font-weight: 400;
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6e7f7b;
+}
+
+.btn {
+    background-color: #25b86a;
+    width: 100%;
+    padding: 1.4rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    transition: background-color .3s;
+
+    &:hover,
+    &:active {
+        background-color: #21a65f;
+    }
+
+    &--reset {
+        background-color: transparent;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $color-grey;
+        text-decoration: underline;
+        padding: 0;
+        padding: 2.3rem 0;
+        transition: color .3s;
+
+        &:hover,
+        &:active {
+            background-color: transparent;
+            color: #444;
+        }
+    }
+}
+
+hr {
+    margin: .1rem 0 3.1rem;
+    background-color: #e3e6e7;
+    height: .1rem;
+}
