@@ -1,0 +1,125 @@
+.container {
+    min-width: 1200px;
+    max-width: 1200px;
+    margin: 8.8rem auto 0;
+}
+
+.contact {
+    margin: 0 1.5rem;
+
+    &__heading-1,
+    &__description {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__heading-1 {
+        margin-bottom: 3rem;
+    }
+
+    &__description {
+        max-width: 35rem;
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+        margin-bottom: 4.3rem;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__form,
+    &__contacts {
+        flex-basis: calc(50% - 8.5rem);
+    }
+
+    &__input,
+    &__textarea {
+        width: 100%;
+        display: block;
+        border: none;
+        outline: none;
+        padding: 0 1.8rem;
+        border-left: .5rem solid transparent;
+        background-color: rgba($color-primary, .5);
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+        transition: border-left .3s,
+                    background-color .3s;
+
+        &::placeholder {
+            color: #fff;
+        }
+
+        &:focus,
+        &:active {
+            border-left: .5rem solid #355b82;
+            background-color: rgba($color-primary, 1);
+        }
+    }
+
+    &__input {
+        height: 5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__textarea {
+        height: 25rem;
+        padding-top: 1.8rem;
+    }
+
+    &__contacts {
+    }
+
+    &__item {
+    }
+
+    &__heading-4 {
+        margin-bottom: .3rem;
+    }
+
+    &__paragraph {
+        margin-bottom: 2rem;
+    }
+}
+
+.footer {
+    min-width: 1200px;
+    height: 9rem;
+    background-color: #262626;
+    color: #b9b9b9;
+    margin-top: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__column {
+
+        &--left {
+            font-size: 1.6rem;
+        }
+
+        img {
+            max-height: 2.7rem;
+        }
+
+        &--right {
+            font-size: 1.5rem;
+
+            span {
+                color: #ff2b58;
+            }
+        }
+    }
+
+    &__logo {
+    }
+}
