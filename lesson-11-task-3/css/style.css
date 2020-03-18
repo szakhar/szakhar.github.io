@@ -133,13 +133,14 @@ hr {
     border-radius: 0;
     padding-left: .9rem;
     background-image: linear-gradient(45deg, transparent 50%, #9eabad 50%), linear-gradient(135deg, #9eabad 50%, transparent 50%);
-    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px);
-    background-size: 5px 5px, 5px 5px;
+    background-position: calc(100% - 18px) calc(1em + 4px), calc(100% - 13px) calc(1em + 4px);
+    background-size: 6px 6px, 6px 6px;
     background-repeat: no-repeat; }
     .form__select--month {
       width: calc(64% - .8rem); }
     .form__select--year {
-      width: calc(36% - .8rem); }
+      width: calc(36% - .8rem);
+      background-position: calc(100% - 15px) calc(1em + 4px), calc(100% - 10px) calc(1em + 4px); }
   .form__cvv-box {
     display: flex;
     align-items: center; }
