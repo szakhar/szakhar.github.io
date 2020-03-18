@@ -76,11 +76,11 @@
             linear-gradient(45deg, transparent 50%, $color-grey 50%),
             linear-gradient(135deg, $color-grey 50%, transparent 50%);
         background-position:
-            calc(100% - 20px) calc(1em + 2px),
-            calc(100% - 15px) calc(1em + 2px);
+            calc(100% - 18px) calc(1em + 4px),
+            calc(100% - 13px) calc(1em + 4px);
         background-size:
-            5px 5px,
-            5px 5px;
+            6px 6px,
+            6px 6px;
         background-repeat: no-repeat;
 
         &--month {
@@ -89,6 +89,9 @@
 
         &--year {
             width: calc(36% - .8rem);
+            background-position:
+            calc(100% - 15px) calc(1em + 4px),
+            calc(100% - 10px) calc(1em + 4px);
         }
     }
 
