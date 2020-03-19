@@ -58,18 +58,22 @@ a:active {
   font-size: 2rem;
   font-weight: bold;
   color: #fff;
-  transition: background-color .3s; }
+  transition: background-color .3s, transform .3s; }
   .btn:hover, .btn:active {
     background-color: #21a65f; }
+  .btn:active {
+    transform: scale(1.02); }
   .btn--reset {
     background-color: transparent;
     font-size: 1.2rem;
     font-weight: 600;
     color: #9eabad;
-    text-decoration: underline;
     padding: 0;
     padding: 2.3rem 0;
     transition: color .3s; }
+    .btn--reset span {
+      padding-bottom: -1.1rem;
+      border-bottom: 1px solid #dae0e0; }
     .btn--reset:hover, .btn--reset:active {
       background-color: transparent;
       color: #444; }
