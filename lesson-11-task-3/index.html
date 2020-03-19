@@ -21,7 +21,7 @@
     <div class="form">
         <div class="form__card-box">
             <label for="card" class="form__label">Credit card number</label>
-            <input id="card" type="text" value="4321" class="form__input">
+            <input id="card" type="text" value="4321" class="form__input" data-mask="0000 0000 0000 0000">
         </div>
 
         <div class="form__expiration-box">
@@ -63,7 +63,7 @@
         <div class="form__cvv-box">
             <div class="form__cvv">
                 <label for="cvv" class="form__label">CVV</label>
-                <input id="cvv" type="text" value="" class="form__input">
+                <input id="cvv" value="" class="form__input" data-mask="0000">
             </div>
             <div class="form__cvv-info">
                 3 or 4 digits - <a href="#">view example</a>
@@ -74,10 +74,14 @@
         
         <div class="form__button-group">
             <button class="btn" type="submit">Pay</button>
-            <button class="btn btn--reset" type="reset">Cancel order</button>
+            <button class="btn btn--reset" type="reset">
+                <span>Cancel order</span>
+            </button>
         </div>
     </div>
 </section>
 
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
 </body>
 </html>
