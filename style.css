@@ -210,6 +210,11 @@ a:visited {
     border-radius: 1.2rem 1.2rem 0 0;
 }
 
+.lessons__item--middle {
+    margin-bottom: .1rem;
+    border-radius: 0;
+}
+
 .lessons__item--bottom {
     border-radius: 0 0 1.2rem 1.2rem;
 }
