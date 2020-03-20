@@ -13,6 +13,7 @@
         top: -4.6rem;
         left: 50%;
         transform: translateX(-50%);
+        animation: rotateMail 3s;
     }
 
     &__link {
@@ -91,3 +92,19 @@
     }
 }
 
+@keyframes rotateMail { /* ANIMATION PULSATE */
+    0% {
+        transform: translateX(-1500%)
+                  rotate(3000deg);
+    }
+
+    50% {
+        transform: translateX(-750%)
+                  rotate(1500deg);
+    }
+
+    100% {
+        transform: translateX(-50%)
+                  rotate(0);
+    }
+}
