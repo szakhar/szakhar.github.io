@@ -68,7 +68,8 @@ body {
     position: absolute;
     top: -4.6rem;
     left: 50%;
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    animation: rotateMail 3s; }
   .popup__link:hover .popup__close {
     transform: scale(1.06) rotate(180deg); }
   .popup__link:active .popup__close {
@@ -116,3 +117,12 @@ body {
     color: #787d87;
     text-align: center;
     letter-spacing: -.5px; }
+
+@keyframes rotateMail {
+  /* ANIMATION PULSATE */
+  0% {
+    transform: translateX(-1500%) rotate(3000deg); }
+  50% {
+    transform: translateX(-750%) rotate(1500deg); }
+  100% {
+    transform: translateX(-50%) rotate(0); } }
