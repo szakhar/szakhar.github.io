@@ -218,24 +218,18 @@ body {
     justify-content: center;
     align-items: center; }
   .services__icon {
-    width: 5rem;
-    height: 5rem;
     flex-basis: 24.6%;
     display: flex;
     justify-content: center;
     align-items: center; }
     .services__icon--basket {
-      width: 4.7rem;
-      height: 4.4rem; }
+      font-size: 4.4rem; }
     .services__icon--hand {
-      width: 5.5rem;
-      height: 4.9rem; }
+      font-size: 4.7rem; }
     .services__icon--planet {
-      width: 5.4rem;
-      height: 5.4rem; }
+      font-size: 5.4rem; }
     .services__icon--carrot {
-      width: 5.5rem;
-      height: 5.5rem; }
+      font-size: 5.5rem; }
   .services__header {
     position: relative; }
   .services__heading-2 {

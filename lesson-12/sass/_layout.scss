@@ -184,31 +184,25 @@
     }
 
     &__icon {
-        width: 5rem;
-        height: 5rem;
         flex-basis: 24.6%;
         display: flex;
         justify-content: center;
         align-items: center;
 
         &--basket {
-            width: 4.7rem;
-            height: 4.4rem;
+            font-size: 4.4rem;
         }
 
         &--hand {
-            width: 5.5rem;
-            height: 4.9rem;
+            font-size: 4.7rem;
         }
 
         &--planet {
-            width: 5.4rem;
-            height: 5.4rem;
+            font-size: 5.4rem;
         }
 
         &--carrot {
-            width: 5.5rem;
-            height: 5.5rem;
+            font-size: 5.5rem;
         }
     }
 
