@@ -1,0 +1,93 @@
+.popup {
+    width: 666px;
+    margin: 10.4rem auto;
+    position: relative;
+    background-color: #353a45;
+    border-radius: 24px;
+    box-shadow: 0px 2.6rem 4.9rem rgba(35,70,133, 0.28);
+    padding: 7.7rem 6.1rem 6.5rem;
+
+    &__mail-icon {
+        display: block;
+        position: absolute;
+        top: -4.6rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__link {
+
+        &:hover .popup__close {
+            transform: scale(1.06)
+                       rotate(180deg);
+        }
+
+        &:active .popup__close {
+            transform: scale(.95)
+                       rotate(0);
+        }
+    }
+
+    &__close {
+        display: block;
+        font-size: 4rem;
+        position: absolute;
+        top: 1.1rem;
+        right: 1.1rem;
+        transition: transform .3s;
+    }
+
+    &__heading-1 {
+        text-align: center;
+        margin-bottom: 2.3rem;
+    }
+
+    &__description {
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 4.1rem;
+    }
+
+    &__form-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3.5rem;
+    }
+
+    &__input,
+    &__btn {
+        border: none;
+        outline: none;
+        height: 5.2rem;
+    }
+
+    &__input {
+        background-color: #ffffff;
+        border: solid .1rem #c4c4c4;
+        border-radius: 1rem;
+        box-shadow: inset 0px .5rem .5rem 0 rgba(0, 0, 0, 0.05);
+        font-size: 2rem;
+        color: #777;
+        flex-basis: calc(69.4% - .65rem);
+        padding: 0 1.7rem;
+
+        &::placeholder {
+            font-size: 2rem;
+            color: #a9a9a9;
+        }
+    }
+
+    &__btn {
+        flex-basis: calc(30.6% - .65rem);
+    }
+
+    &__footer-text {
+        font-size: 2rem;
+        font-style: italic;
+        color: #787d87;
+        text-align: center;
+        letter-spacing: -.5px;
+    }
+}
+
