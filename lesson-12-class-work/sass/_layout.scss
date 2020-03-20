@@ -1,0 +1,38 @@
+.phone-box {
+    width: 367px;
+    height: 777px;
+    margin: 50px auto;
+    padding: 136px 0 108px 43px;
+    background: url(../svg/IPhone_with_icons.svg) center/cover no-repeat;
+    background-size: 496px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.body-icons {
+    // border: 1px solid green;
+    // height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bottom-icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    height: 60px;
+    margin-right: 14px;
+    margin-bottom: 26px;
+    transition: transform .3s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}

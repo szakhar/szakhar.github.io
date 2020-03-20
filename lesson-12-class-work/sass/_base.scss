@@ -1,0 +1,29 @@
+//   FONTS
+// ==================================================
+
+$font-primary: sans-serif;
+
+
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    font-family: $font-primary;
+    color: #000;
+    font-weight: 400;
+}
