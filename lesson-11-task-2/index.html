@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <title>Lesson 11 Task 2</title>
+</head>
+<body>
+
+<div class="form">
+    <!-- Важливо щоб radio були винесені окремо для того, щоб можна було достукатись до #sign-in, #join-us -->
+    <input id="sign" type="radio" name="top-nav" class="form__input-radio" checked>
+    <input id="join" type="radio" name="top-nav" class="form__input-radio">
+    <div class="form__top-nav">
+            <label for="sign" id="form__tab-sign">Sign in</label>
+            <label for="join" id="form__tab-join">Join us</label>
+    </div>
+
+    <div class="form__tabs-item" id="sign-in">
+        <form action="" method="get">
+        <div class="form__box">
+            <div class="form__controls">
+                <label for="username" class="form__label">Username</label>
+                <input id="username" name="username" type="text" minlength="3" class="form__input">
+                <div class="form__error">short username</div>
+            </div>
+
+            <div class="form__controls">
+                <label for="password" class="form__label">Password</label>
+                <input id="password" name="pswd" type="password" class="form__input" required>
+                <div class="form__error">required</div>
+            </div>
+
+            <div class="form__controls--checkbox">
+                <input id="keep" type="checkbox" name="keep-check" class="form__checkbox" checked>
+                <label for="keep" class="form__label form__label--checkbox">
+                    <span>&#10004;</span>
+                    Keep me signed in
+                </label>
+            </div>
+
+            <button type="submit" class="btn form__btn">Sign in</button>
+
+            <div class="form__bottom-nav">
+                <a href="#">Forgot password</a>
+                <a href="#">Create an account</a>
+            </div>
+        </div>
+        </form>
+    </div>
+
+    <div class="form__tabs-item" id="join-us">
+        <form action="" method="get">
+        <div class="form__box">
+            <div class="form__controls">
+                <label for="username" class="form__label">Username</label>
+                <input id="username" name="username" type="text" minlength="3" class="form__input">
+                <div class="form__error">short username</div>
+            </div>
+
+            <div class="form__controls">
+                <label for="password" class="form__label">Password</label>
+                <input id="password" name="pswd" type="password" class="form__input" required>
+                <div class="form__error">required</div>
+            </div>
+
+            <div class="form__controls form__controls--repeat">
+                <label for="password" class="form__label">Repeat Password</label>
+                <input id="password" name="pswd-repeat" type="password" class="form__input" required>
+                <div class="form__error">required</div>
+            </div>
+
+            <button type="submit" class="btn form__btn">Join in</button>
+        </div>
+        </form>
+    </div>
+
+    <img src="img/shadow.png" alt="Shadow" class="form__shadow">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
+//   FONTS
+// ==================================================
+
+$font-primary: 'Quicksand', sans-serif;
+
+
+//   COLORS
+// ==================================================
+
+$color-primary: #23ae92;
+$color-grey: #999;
+
+
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+::selection {
+    background-color: $color-primary;
+    color: #fff;
+}
+
+body {
+    background-color: #e5eeee;
+    font-family: $font-primary;
+    color: $color-grey;
+    font-weight: 400;
+    letter-spacing: .05rem;
+}
