@@ -1,0 +1,161 @@
+.form {
+    width: 40rem;
+    margin: 5.2rem auto;
+    padding: 5rem 7rem .1rem;
+    position: relative; // Потрібно для тіні
+
+    background: url(../img/bg.jpg) center / cover no-repeat;
+
+    &__top-nav {
+
+        label {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e1c2f1;
+            margin-right: 2.2rem;
+        }
+    }
+
+    &__tabs-item {
+        display: none;
+    }
+
+    &__input-radio {
+        display: none;
+    }
+
+    // Переключає між табами контент
+    #sign:checked ~ #sign-in,
+    #join:checked ~ #join-us {
+        display: block;
+    }
+
+    // Робить активне посиланн табу
+    #sign:checked ~ .form__top-nav #form__tab-sign,
+    #join:checked ~ .form__top-nav #form__tab-join {
+        color: #fbf6e4;
+        padding-bottom: .3rem;
+        border-bottom: 2px solid #e66a64;
+    }
+
+    &__box {
+        margin: 5.6rem auto;
+    }
+
+    &__label {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #fbf6e4;
+        margin-bottom: .9rem;
+
+        &--checkbox {
+            font-size: 1.3rem;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            
+            span {
+                width: 1.6rem;
+                height: 1.6rem;
+                background-color: $color-primary;
+                border: .2rem solid $color-primary;
+                margin-right: .5rem;
+                // Ховає галочку
+                font-size: 0;
+                display: flex; // Робить на одному рядку і центрує галочку всередині
+                justify-content: center;
+                align-items: center;
+                transition: font-size .2s ease-out;
+            }
+        }
+    }
+
+    &__controls {
+        margin-bottom: 1.6rem;
+
+        &--checkbox {
+            margin-bottom: 4.6rem;
+        }
+
+        &--repeat {
+            margin-bottom: 3.5rem;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        height: 4.2rem;
+        border: solid 2px rgba(191, 185, 204, 0.54);
+        background-color: transparent;
+        // Текст всередині input
+        font-size: 1.5rem;
+        color: rgba(191, 185, 204, 1);
+        padding: 0 1rem;
+        transition: border .3s;
+
+        &:invalid + .form__error {
+            visibility: visible;
+        }
+
+        &:focus {
+            border: solid 2px $color-primary;
+        }
+    }
+
+    &__error {
+        font-size: 1.2rem;
+        color: gold;
+        visibility: hidden;
+        padding: .3rem 0 0 .3rem;
+    }
+
+    &__checkbox {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        opacity: 0;
+
+        &:hover + .form__label--checkbox span {
+            background-color: #e46b67;
+        }
+
+        &:checked + .form__label--checkbox span {
+            font-size: 1.2rem; // Робить видимим галочку чекбокса
+        }
+
+        &:focus + .form__label--checkbox span {
+            border: .2rem solid #e46b67;
+        }
+    }
+
+    &__shadow {
+        display: block;
+        position: absolute;
+        bottom: -5.2rem;
+        left: -3rem;
+        z-index: -10;
+    }
+
+    &__bottom-nav {
+        margin-top: 3.3rem;
+        display: flex;
+        justify-content: space-between;
+
+        a:link,
+        a:visited {
+            font-size: 1.3rem;
+            color: #b9b9cc;
+            text-decoration: none;
+            padding-bottom: .3rem;
+            border-bottom: 1px solid rgba(#96c1da, .15);
+            transition: color .3s;
+        }
+
+        a:hover,
+        a:active {
+            color: rgba(#b9b9cc, .7);
+        }
+    }
+}

@@ -1,0 +1,42 @@
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+
+%heading {
+    font-family: $font-primary;
+    font-weight: 400;
+}
+
+.heading-2 {
+    @extend %heading;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    height: 4.2rem;
+    background-color: #23ae92;
+    border: 2px solid #23ae92;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fbf6e4;
+    transition: transform .3s,
+                box-shadow .3s,
+                background-color .3s;
+
+    &:hover {
+        background-color: #e46b67;
+        box-shadow: 0 1.5rem 1.5rem rgba(0,0,0, .3);
+        transform: scale(1.03)
+                   translateY(-.1rem);
+    }
+
+    &:active {
+        transform: scale(1);
+    }
+}
