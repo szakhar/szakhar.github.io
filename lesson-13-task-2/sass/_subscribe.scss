@@ -1,0 +1,43 @@
+.subscribe {
+    padding: 14rem 0 16.3rem;
+    background: url(../img/subscribe-bg.jpg) center / cover no-repeat;
+
+    &__heading-3 {
+        font-size: 4rem;
+        color: $color-grey;
+        margin-bottom: 2.1rem;
+    }
+
+    &__description {
+        max-width: 54.4rem;
+        font-size: 1.7rem;
+        line-height: 2.7rem;
+        color: $color-grey;
+        margin-bottom: 1.8rem;
+    }
+
+    &__input {
+        width: 57rem;
+        height: 5.5rem;
+        border: solid 1px $color-grey;
+        background-color: transparent;
+        margin-right: 2.8rem;
+
+        &::placeholder {
+            opacity: 0.5;
+            font-size: 1.5rem;
+            color: rgba(38,38,38, 0.5);
+            padding-left: 1.5rem;
+        }
+    }
+
+    &__btn {
+        height: 5.5rem;
+        padding: 0 3.4rem;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+        background-color: #96b92c;
+        font-size: 2rem;
+        color: #ffffff;
+    }
+
+}
