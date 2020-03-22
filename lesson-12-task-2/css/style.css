@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+::selection {
+  background-color: #3c3c3c;
+  color: #fff;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #3c3c3c;
+  font-weight: 300;
+}
+
+.fieldset {
+  padding: 5.1rem 17.6rem 0;
+  border: 0.2rem solid #3c3c3c;
+  text-align: center;
+}
+.fieldset--light {
+  border: 0.2rem solid #fff;
+}
+
+legend {
+  padding: 0 10.4rem;
+}
+
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+.heading-3, .heading-2, .heading-1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.heading-1 {
+  font-size: 5.4rem;
+  letter-spacing: 0.864rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.heading-2 {
+  font-size: 3.4rem;
+  letter-spacing: 0.544rem;
+  text-transform: uppercase;
+  color: #3c3c3c;
+}
+.heading-2--light {
+  color: #fff;
+}
+
+.heading-3 {
+  font-size: 2rem;
+  letter-spacing: 0.32rem;
+  text-transform: uppercase;
+  color: #3c3c3c;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  text-align: center;
+  color: #3c3c3c;
+  margin-bottom: 2.1rem;
+}
+.paragraph--light {
+  color: #fff;
+}
+
+/* ================================================
+     COMPONENTS
+   ================================================ */
+.container {
+  width: 90.2rem;
+  margin: 0 auto;
+}
+
+.logo__img--footer {
+  width: 3.5rem;
+  height: 3.7rem;
+}
+
+.btn {
+  outline: none;
+  width: 395px;
+  height: 58px;
+  border: solid 2px #3c3c3c;
+  background-color: #3c3c3c;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.256rem;
+  text-transform: uppercase;
+  color: #fff;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.btn:hover {
+  background-color: #232323;
+}
+.btn:active {
+  background-color: #232323;
+  transform: translateY(0.2rem);
+}
+
+/* ================================================
+     ANIMATION
+   ================================================ */
+@keyframes scrollss {
+  /* ANIMATION SCROLL */
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* ================================================
+     HERO
+   ================================================ */
+.hero {
+  height: 100vh;
+  background: url(../img/hero.jpg) center/cover no-repeat;
+  position: relative;
+}
+.hero__content {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero__logo {
+  margin-bottom: 15%;
+}
+.hero__heading-1 {
+  margin-bottom: 6%;
+}
+.hero__description {
+  font-size: 15px;
+  line-height: 2.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09rem;
+  text-align: center;
+  color: #fff;
+}
+.hero__scroll {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollss 1s infinite;
+}
+
+.about {
+  padding: 14.4rem 0 15.8rem;
+}
+
+/* ================================================
+     SERVICES
+   ================================================ */
+.services {
+  background: url(../img/services-bg.jpg) center/cover no-repeat;
+  padding: 11.2rem 0 11.8rem;
+}
+
+/* ================================================
+     WHAT WE DO
+   ================================================ */
+.we-do {
+  padding: 10.3rem 0 10.4rem;
+}
+.we-do__icon {
+  font-size: 8.3rem;
+  text-align: center;
+  margin: 5.6rem 0 3.3rem;
+}
+.we-do__icon--development {
+  font-size: 7.5rem;
+}
+.we-do__icon--management {
+  font-size: 9.1rem;
+  margin-top: -0.6rem;
+}
+.we-do__heading-3 {
+  margin-bottom: 2.7rem;
+}
+.we-do__paragraph {
+  font-size: 1.4rem;
+}
+
+/* ================================================
+     GALLERY
+   ================================================ */
+.gallery__list {
+  display: grid;
+  grid-template-columns: calc(28.5% - 1rem) 43% calc(28.5% - 1rem);
+  grid-template-rows: repeat(2, 23.7rem);
+  grid-gap: 1rem;
+}
+.gallery__item {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.gallery__item:nth-child(1) {
+  background-image: url("../img/gallery-01.jpg");
+}
+.gallery__item:nth-child(1):hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/gallery-01.jpg");
+}
+.gallery__item:nth-child(2) {
+  background-image: url("../img/gallery-02.jpg");
+}
+.gallery__item:nth-child(2):hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/gallery-02.jpg");
+}
+.gallery__item:nth-child(3) {
+  background-image: url("../img/gallery-03.jpg");
+}
+.gallery__item:nth-child(3):hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/gallery-03.jpg");
+}
+.gallery__item:nth-child(4) {
+  background-image: url("../img/gallery-04.jpg");
+}
+.gallery__item:nth-child(4):hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/gallery-04.jpg");
+}
+.gallery__item:nth-child(5) {
+  background-image: url("../img/gallery-05.jpg");
+}
+.gallery__item:nth-child(5):hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/gallery-05.jpg");
+}
+.gallery__item:nth-child(6) {
+  background-image: url("../img/gallery-06.jpg");
+}
+.gallery__item:nth-child(6):hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/gallery-06.jpg");
+}
+.gallery__title {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0.544rem;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  bottom: 3.8rem;
+  left: 4.1rem;
+}
+
+/* ================================================
+     CONTACT US
+   ================================================ */
+.contact-us {
+  padding: 12.4rem 0 6.2rem;
+}
+.contact-us__heading-2 {
+  font-size: 3.05rem;
+}
+.contact-us__btn {
+  margin: 2.2rem 0 4.8rem;
+}
+
+/* ================================================
+     FOOTER
+   ================================================ */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6.5rem;
+}
+.footer__logo {
+  margin-right: 3.6rem;
+}
+.footer__copyright {
+  font-size: 1.4rem;
+  font-weight: 400;
+}

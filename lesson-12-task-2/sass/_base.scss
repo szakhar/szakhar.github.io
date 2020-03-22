@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+//   FONTS
+// ==================================================
+
+$font-primary: 'Lato', sans-serif;
+
+
+//   COLORS
+// ==================================================
+
+$color-grey: #3c3c3c;
+
+
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+::selection {
+    background-color: $color-grey;
+    color: #fff;
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-grey;
+    font-weight: 300;
+}
+
+.fieldset {
+    padding: 5.1rem 17.6rem 0;
+    border: .2rem solid $color-grey;
+    text-align: center;
+
+    &--light {
+        border: .2rem solid #fff;
+    }
+}
+
+legend {
+    padding: 0 10.4rem;
+}
