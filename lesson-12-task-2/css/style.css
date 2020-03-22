@@ -89,7 +89,7 @@ legend {
      COMPONENTS
    ================================================ */
 .container {
-  width: 90.2rem;
+  max-width: 90.2rem;
   margin: 0 auto;
 }
 

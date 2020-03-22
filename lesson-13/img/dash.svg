@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="53" height="7" viewBox="0 0 53 7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fc0;
+        stroke: #fc0;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="16.5" y="1.5" width="20" height="4"/>
+  <rect id="Rectangle_4_copy" data-name="Rectangle 4 copy" class="cls-1" x="41.5" y="1.5" width="10" height="4"/>
+  <rect id="Rectangle_4_copy_2" data-name="Rectangle 4 copy 2" class="cls-1" x="1.5" y="1.5" width="10" height="4"/>
+</svg>
