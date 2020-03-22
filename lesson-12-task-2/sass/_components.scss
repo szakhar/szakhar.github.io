@@ -1,0 +1,114 @@
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+
+%heading {
+    font-family: $font-primary;
+    font-weight: 700;
+    text-align: center;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 5.4rem;
+    letter-spacing: .864rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: 3.4rem;
+    letter-spacing: .544rem;
+    text-transform: uppercase;
+    color: $color-grey;
+
+    &--light {
+        color: #fff;
+    }
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 2rem;
+    letter-spacing: .32rem;
+    text-transform: uppercase;
+    color: #3c3c3c;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    text-align: center;
+    color: $color-grey;
+    margin-bottom: 2.1rem;
+
+    &--light {
+        color: #fff;
+    }
+}
+
+
+/* ================================================
+     COMPONENTS
+   ================================================ */
+
+.container {
+    width: 90.2rem;
+    margin: 0 auto;
+}
+
+.logo {
+
+    &__img {
+
+        &--footer {
+            width: 3.5rem;
+            height: 3.7rem;
+        }
+    }
+}
+
+.btn {
+    outline: none;
+    width: 395px;
+    height: 58px;
+    border: solid 2px $color-grey;
+    background-color: $color-grey;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .256rem;
+    text-transform: uppercase;
+    color: #fff;
+    transition: background-color .2s,
+                transform .2s;
+
+    &:hover {
+        background-color: darken($color-grey, 10%);
+    }
+
+    &:active {
+        background-color: darken($color-grey, 10%);
+        transform: translateY(.2rem);
+    }
+}
+
+
+/* ================================================
+     ANIMATION
+   ================================================ */
+
+@keyframes scrollss { /* ANIMATION SCROLL */
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

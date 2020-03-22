@@ -1,0 +1,172 @@
+
+/* ================================================
+     HERO
+   ================================================ */
+
+.hero {
+    height: 100vh;
+    background: url(../img/hero.jpg) center / cover no-repeat;
+    position: relative;
+
+    &__content {
+        position: absolute;
+        top: 30%; left: 50%;
+        transform: translate(-50%, -30%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-bottom: 15%;
+    }
+
+    &__heading-1 {
+        margin-bottom: 6%;
+    }
+
+    &__description {
+        font-size: 15px;
+        line-height: 2.9rem;
+        text-transform: uppercase;
+        letter-spacing: .09rem;
+        text-align: center;
+        color: #fff;
+    }
+
+    &__scroll {
+        position: absolute;
+        bottom: 8%; left: 50%;
+        transform: translateX(-50%);
+
+        animation: scrollss 1s infinite;
+    }
+}
+
+.about {
+    padding: 14.4rem 0 15.8rem;
+}
+
+/* ================================================
+     SERVICES
+   ================================================ */
+
+.services {
+    background: url(../img/services-bg.jpg) center / cover no-repeat;
+    padding: 11.2rem 0 11.8rem;
+}
+
+
+/* ================================================
+     WHAT WE DO
+   ================================================ */
+
+.we-do {
+    padding: 10.3rem 0 10.4rem;
+
+    &__icon {
+        font-size: 8.3rem;
+        text-align: center;
+        margin: 5.6rem 0 3.3rem;
+
+        &--development {
+            font-size: 7.5rem;
+        }
+
+        &--management {
+            font-size: 9.1rem;
+            margin-top: -.6rem;
+        }
+    }
+
+    &__heading-3 {
+        margin-bottom: 2.7rem;
+    }
+
+    &__paragraph {
+        font-size: 1.4rem;
+    }
+}
+
+
+/* ================================================
+     GALLERY
+   ================================================ */
+
+.gallery {
+
+    &__list {
+        display: grid;
+        grid-template-columns: calc(28.5% - 1rem) 43% calc(28.5% - 1rem);
+        grid-template-rows: repeat(2, 23.7rem);
+        grid-gap: 1rem;
+    }
+
+    &__item {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+
+        // В петлі заповнює всі ячейки бекграундами
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+                background-image: url('../img/gallery-0#{$i}.jpg');
+
+                &:hover {
+                    background-image: linear-gradient(rgba(0,0,0, 0.2), rgba(0,0,0, 0.2)),
+                                      url('../img/gallery-0#{$i}.jpg');
+                }
+            }
+        }
+    }
+
+    &__title {
+        font-size: 34px;
+        font-weight: 700;
+        letter-spacing: .544rem;
+        text-transform: uppercase;
+        color: #fff;
+        position: absolute;
+        bottom: 3.8rem; left: 4.1rem;
+    }
+}
+
+
+/* ================================================
+     CONTACT US
+   ================================================ */
+
+.contact-us {
+    padding: 12.4rem 0 6.2rem;
+
+    &__heading-2 {
+        font-size: 3.05rem;
+    }
+
+    &__btn {
+        margin: 2.2rem 0 4.8rem;
+    }
+}
+
+
+/* ================================================
+     FOOTER
+   ================================================ */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6.5rem;
+
+    &__logo {
+        margin-right: 3.6rem;
+    }
+
+    &__copyright {
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+}
