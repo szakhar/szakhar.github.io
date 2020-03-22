@@ -38,6 +38,10 @@
         background-color: #96b92c;
         font-size: 2rem;
         color: #ffffff;
+
+        &:hover {
+            background-color: darken(#96b92c, 5%);
+        }
     }
 
 }
