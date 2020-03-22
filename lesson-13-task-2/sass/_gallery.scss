@@ -67,6 +67,10 @@
         font-size: 2rem;
         font-weight: 300;
         color: #ffffff;
+
+        &:hover {
+            background-color: darken(#5585a2, 5%);
+        }
     }
 
 }

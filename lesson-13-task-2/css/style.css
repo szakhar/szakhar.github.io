@@ -370,6 +370,9 @@ body {
   font-weight: 300;
   color: #ffffff;
 }
+.gallery__btn:hover {
+  background-color: #4c7791;
+}
 
 .subscribe {
   padding: 14rem 0 16.3rem;
@@ -407,6 +410,9 @@ body {
   background-color: #96b92c;
   font-size: 2rem;
   color: #ffffff;
+}
+.subscribe__btn:hover {
+  background-color: #85a427;
 }
 
 .blog {
