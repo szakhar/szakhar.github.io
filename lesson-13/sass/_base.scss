@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700|Raleway:400,500|Roboto:900&display=swap');
+
+//   FONTS
+// ==================================================
+
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Raleway', sans-serif;
+$font-thirty: 'Open Sans', sans-serif;
+
+
+//   COLORS
+// ==================================================
+
+$color-primary: #ffcc00;
+$color-grey: #333;
+$color-grey-2: #666;
+
+
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-grey;
+}
+
+body {
+    font-family: $font-secondary;
+    color: $color-grey;
+    font-weight: 500;
+}

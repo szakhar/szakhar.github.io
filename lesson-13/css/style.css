@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:700|Raleway:400,500|Roboto:900&display=swap");
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+::selection {
+  background-color: #ffcc00;
+  color: #333;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+.heading-2, .heading-1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+}
+
+.heading-1 {
+  font-size: 6rem;
+  color: #ffcc00;
+}
+
+.heading-2 {
+  font-size: 3.6rem;
+  letter-spacing: 0.072rem;
+  color: #666;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #666;
+  border: 1px solid #ffcc00;
+  background-color: transparent;
+  transition: background-color 0.2s, color 0.2s;
+}
+.btn:hover {
+  background-color: #ffcc00;
+  color: #fff;
+}
+
+.team {
+  width: 117rem;
+  margin: 11.1rem auto 10rem;
+}
+.team__sub-title {
+  font-size: 1.8rem;
+  letter-spacing: 0.036rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #898f8f;
+  margin-bottom: 1rem;
+}
+.team__heading-1 {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+.team__border {
+  max-width: 45rem;
+  height: 1px;
+  background-color: #ffcc00;
+  position: relative;
+  margin: 0 auto 4.8rem auto;
+}
+.team__border::after {
+  content: "";
+  width: 3.1rem;
+  height: 1.9rem;
+  background: url(../img/border-img.png) center no-repeat;
+  background-color: #fff;
+  position: absolute;
+  top: -0.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.team__border--vertical {
+  width: 1px;
+  max-height: 100%;
+  background-color: #ffcc00;
+}
+.team__profile {
+  min-height: 56rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 4rem;
+}
+.team__avatar {
+  flex-basis: 35.7%;
+  margin-top: 7.5rem;
+}
+.team__img {
+  background: url(../img/image-border.png) center/cover no-repeat;
+  max-width: 41.8rem;
+  padding: 1.65rem;
+}
+.team__info {
+  flex-basis: 36%;
+  margin-top: 9.1rem;
+}
+.team__heading-2 {
+  text-align: center;
+}
+.team__heading-2::after {
+  content: "";
+  display: block;
+  max-width: 10rem;
+  height: 1px;
+  background-color: #ffcc00;
+  margin: 2.9rem auto 3.1rem;
+}
+.team__specialty {
+  font-size: 2.4rem;
+  font-weight: normal;
+  text-align: center;
+  color: #666;
+  margin-bottom: 3rem;
+}
+.team__description {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  text-align: center;
+  color: #333;
+}
+.team__description::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 0.4rem;
+  background: url(../img/dash.svg) center no-repeat;
+  margin: 1.7rem auto 2.7rem;
+}
+.team__icons-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+.team__icon-box {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  color: #ccc;
+  transition: background-color 0.2s, color 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team__icon-box:not(:last-child) {
+  margin-right: 0.5rem;
+}
+.team__icon-box:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+.team__btn {
+  display: block;
+  margin: 0 auto;
+  padding: 0.4rem 1.1rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination__item {
+  width: 1rem;
+  height: 1rem;
+  background-color: #ffcc00;
+  border-radius: 50%;
+}
+.pagination__item:not(:last-child) {
+  margin-right: 0.9rem;
+}
+.pagination__item--active {
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 1px solid #ffcc00;
+  background-color: transparent;
+}

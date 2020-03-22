@@ -1,0 +1,41 @@
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+
+%heading {
+    font-family: $font-primary;
+    font-weight: 900;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 6rem;
+    color: #ffcc00;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: 3.6rem;
+    letter-spacing: .072rem;
+    color: $color-grey-2;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    font-family: $font-thirty;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-grey-2;
+    border: 1px solid $color-primary;
+    background-color: transparent;
+    transition: background-color .2s,
+                color .2s;
+
+    &:hover {
+        background-color: $color-primary;
+        color: #fff;
+    }
+}
+
