@@ -3,6 +3,7 @@
     // max-width: 117rem;
     margin: 11.1rem auto 10rem;
     // padding: 0 1.5rem;
+    position: relative;
 
     &__sub-title {
         font-size: 1.8rem;
@@ -139,6 +140,25 @@
         display: block;
         margin: 0 auto;
         padding: .4rem 1.1rem;
+    }
+
+    &__arrow {
+        width: 1.4rem;
+        height: 2.3rem;
+        position: absolute;
+        transition: transform .2s;
+
+        &--left {
+            top: 57%; left: 2.3%;
+        }
+
+        &--right {
+            top: 57%; right: 2.3%;
+        }
+
+        &:hover {
+            transform: scale(1.3);
+        }
     }
 }
 
