@@ -5,14 +5,27 @@
    .services {
     background-color: #70bfff;
     padding: 17.9rem 0 13.2rem;
+    overflow-x: hidden;
+
+    @media only screen and (max-width: 37.5em) { // 600px
+        padding: 17.9rem 0 9rem;
+    }
 
     &__box {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+
+        @media only screen and (max-width: 50em) { // 800px
+            flex-direction: column;
+        }
     }
 
     &__list {
+        @media only screen and (max-width: 50em) { // 800px
+            order: 2;
+            z-index: 20;
+        }
     }
 
     &__item {
@@ -65,11 +78,27 @@
         position: relative;
         top: -4.5rem; left: 5.5rem;
         z-index: 20;
+
+        @media only screen and (max-width: 68.75em) { // 1100px
+            left: 1.5rem;
+        }
+
+        @media only screen and (max-width: 50em) { // 800px
+            left: 0;
+        }
+
+        @media only screen and (max-width: 43.75em) { // 700px
+            font-size: 7rem;
+        }
     }
 
     &__img {
         position: absolute;
         top: -26.5rem; left: 13.5rem;
         z-index: 10;
+
+        @media only screen and (max-width: 40.625em) { // 650px
+            width: 100%;
+        }
     }
 }

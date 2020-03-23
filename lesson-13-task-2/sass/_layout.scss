@@ -20,6 +20,10 @@
     &__offer {
         position: absolute;
         top: 35%;
+
+        @media only screen and (max-width: 34.375em) { // 550px
+            top: 40%;
+        }
     }
 
     &__description {
@@ -61,6 +65,10 @@
 
 .nav {
 
+    @media only screen and (max-width: 34.375em) { // 550px
+        display: none;
+    }
+
     &__link:link,
     &__link:visited {
         font-size: 1.6rem;
@@ -82,6 +90,69 @@
         @extend %active;
     }
 }
+
+.burger {
+
+    &__link {
+        display: none;
+
+        &:hover {
+
+            .burger__menu::before {
+                top: -2rem;
+            }
+
+            .burger__menu::after {
+                top: 2rem;
+            }
+        }
+
+        @media only screen and (max-width: 34.375em) { // 550px
+            display: block;
+        }
+    }
+
+    &__menu {
+        width: 6rem;
+        height: .4rem;
+        background-color: $color-primary;
+        position: relative;
+        margin-top: 4.3rem;
+
+        &::before,
+        &::after {
+            content: "";
+            width: 6rem;
+            height: .4rem;
+            background-color: $color-primary;
+            position: absolute;
+            left: 0;
+            transition: all .3s;
+        }
+
+        &::before {
+            top: -1.5rem;
+        }
+
+        &::after {
+            top: 1.5rem;
+        }
+    }
+}
+
+// .nav-burger__content {
+//     position: fixed;
+//     top: 0; left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: #212121;
+//     z-index: 100;
+//     color: #fff;
+// }
+
+// :target .nav-burger__content {
+//     display: block;
+// }
 
 .about {
     background-color: #00C4C4;
