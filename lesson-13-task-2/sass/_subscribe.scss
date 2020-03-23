@@ -25,12 +25,28 @@
         margin-bottom: 1.8rem;
     }
 
+    &__form {
+        display: flex;
+        align-items: flex-end;
+
+        @media only screen and (max-width: 37.5em) { // 600px
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+
     &__input {
-        width: 57rem;
+        max-width: 57rem;
+        width: 100%;
         height: 5.5rem;
         border: solid 1px $color-grey;
         background-color: transparent;
         margin-right: 2.8rem;
+
+        @media only screen and (max-width: 37.5em) { // 600px
+            margin-bottom: 1rem;
+        }
 
         @media only screen and (max-width: 34.375em) { // 550px
             width: 100%;

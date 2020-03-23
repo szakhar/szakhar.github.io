@@ -531,12 +531,29 @@ a:visited {
   color: #262626;
   margin-bottom: 1.8rem;
 }
+.subscribe__form {
+  display: flex;
+  align-items: flex-end;
+}
+@media only screen and (max-width: 37.5em) {
+  .subscribe__form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
 .subscribe__input {
-  width: 57rem;
+  max-width: 57rem;
+  width: 100%;
   height: 5.5rem;
   border: solid 1px #262626;
   background-color: transparent;
   margin-right: 2.8rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .subscribe__input {
+    margin-bottom: 1rem;
+  }
 }
 @media only screen and (max-width: 34.375em) {
   .subscribe__input {
