@@ -45,3 +45,9 @@ body {
     color: $color-grey;
     font-weight: 300;
 }
+
+a:link,
+a:visited {
+    color: #333;
+    text-decoration: none;
+}

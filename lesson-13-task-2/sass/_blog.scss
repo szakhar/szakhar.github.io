@@ -90,11 +90,15 @@
         margin: 0 auto;
 
         @media only screen and (max-width: 53.125em) { // 850px
-            margin: 6rem auto;
+            margin: 6rem auto 0;
+        }
+
+        @media only screen and (max-width: 43.75em) { // 700px
+            padding: 5rem 0;
         }
 
         @media only screen and (max-width: 37.5em) { // 600px
-            margin: 4rem auto;
+            margin: 4rem auto 0;
         }
     }
 

@@ -1,11 +1,20 @@
 .subscribe {
     padding: 14rem 0 16.3rem;
-    background: url(../img/subscribe-bg.jpg) center / cover no-repeat;
+    background: url(../img/subscribe-bg.jpg) center no-repeat;
+
+    @media only screen and (max-width: 37.5em) { // 600px
+        background-position: top -4rem right .5%;
+        padding: 14rem 0 5rem;
+    }
 
     &__heading-3 {
         font-size: 4rem;
         color: $color-grey;
         margin-bottom: 2.1rem;
+
+        @media only screen and (max-width: 37.5em) { // 600px
+            margin-top: 29rem;
+        }
     }
 
     &__description {
@@ -22,6 +31,10 @@
         border: solid 1px $color-grey;
         background-color: transparent;
         margin-right: 2.8rem;
+
+        @media only screen and (max-width: 34.375em) { // 550px
+            width: 100%;
+        }
 
         &::placeholder {
             opacity: 0.5;
