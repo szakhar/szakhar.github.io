@@ -14,7 +14,11 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  /* 1rem = 10px */
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 56.25%;
+  }
 }
 
 ::selection {
@@ -29,16 +33,32 @@ body {
 }
 
 .fieldset {
-  padding: 5.1rem 17.6rem 0;
+  margin: 0 1.5rem;
+  padding: 5.1rem 2rem 0;
   border: 0.2rem solid #3c3c3c;
   text-align: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .fieldset {
+    padding: 3.8rem 2rem 0;
+  }
+}
+@media only screen and (max-width: 28.125em) {
+  .fieldset {
+    padding: 3.2rem 2rem 0;
+  }
 }
 .fieldset--light {
   border: 0.2rem solid #fff;
 }
 
 legend {
-  padding: 0 10.4rem;
+  padding: 0 12.5%;
+}
+@media only screen and (max-width: 28.125em) {
+  legend {
+    padding: 0 9%;
+  }
 }
 
 /* ================================================
@@ -53,6 +73,7 @@ legend {
 .heading-1 {
   font-size: 5.4rem;
   letter-spacing: 0.864rem;
+  line-height: 1.2;
   text-transform: uppercase;
   color: #fff;
 }
@@ -62,6 +83,11 @@ legend {
   letter-spacing: 0.544rem;
   text-transform: uppercase;
   color: #3c3c3c;
+}
+@media only screen and (max-width: 28.125em) {
+  .heading-2 {
+    font-size: 2.7rem;
+  }
 }
 .heading-2--light {
   color: #fff;
@@ -75,11 +101,13 @@ legend {
 }
 
 .paragraph {
+  max-width: 54.6rem;
+  width: 100%;
+  margin: 0 auto 2.1rem;
   font-size: 1.6rem;
   line-height: 2.5rem;
   text-align: center;
   color: #3c3c3c;
-  margin-bottom: 2.1rem;
 }
 .paragraph--light {
   color: #fff;
@@ -89,10 +117,16 @@ legend {
      COMPONENTS
    ================================================ */
 .container {
-  width: 90.2rem;
+  max-width: 93rem;
+  width: 100%;
   margin: 0 auto;
 }
 
+@media only screen and (max-height: 37.5em) {
+  .logo__img {
+    width: 70%;
+  }
+}
 .logo__img--footer {
   width: 3.5rem;
   height: 3.7rem;
@@ -100,8 +134,9 @@ legend {
 
 .btn {
   outline: none;
-  width: 395px;
-  height: 58px;
+  max-width: 39.5rem;
+  width: 100%;
+  height: 5.8rem;
   border: solid 2px #3c3c3c;
   background-color: #3c3c3c;
   font-size: 1.6rem;
@@ -122,16 +157,16 @@ legend {
 /* ================================================
      ANIMATION
    ================================================ */
-@keyframes scrollss {
+@keyframes scroll {
   /* ANIMATION SCROLL */
   0% {
-    transform: translateY(0);
+    transform: translate(-50%, 0);
   }
   50% {
-    transform: translateY(10%);
+    transform: translate(-50%, 10%);
   }
   100% {
-    transform: translateY(0);
+    transform: translate(-50%, 0);
   }
 }
 /* ================================================
@@ -143,6 +178,7 @@ legend {
   position: relative;
 }
 .hero__content {
+  width: 100%;
   position: absolute;
   top: 30%;
   left: 50%;
@@ -151,15 +187,37 @@ legend {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 1rem;
 }
 .hero__logo {
-  margin-bottom: 15%;
+  margin-bottom: 8rem;
+}
+@media only screen and (max-height: 37.5em) {
+  .hero__logo {
+    margin-bottom: 3rem;
+  }
 }
 .hero__heading-1 {
-  margin-bottom: 6%;
+  margin-bottom: 3.5rem;
+}
+@media only screen and (max-height: 37.5em) {
+  .hero__heading-1 {
+    font-size: 4.5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .hero__heading-1 {
+    font-size: 3.5rem;
+    margin-bottom: 8%;
+  }
+}
+@media only screen and (max-height: 37.5em) {
+  .hero__heading-1 {
+    margin-bottom: 2rem;
+  }
 }
 .hero__description {
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 2.9rem;
   text-transform: uppercase;
   letter-spacing: 0.09rem;
@@ -171,11 +229,26 @@ legend {
   bottom: 8%;
   left: 50%;
   transform: translateX(-50%);
-  animation: scrollss 1s infinite;
+  animation: scroll 1s infinite;
+}
+@media only screen and (max-height: 34.375em) {
+  .hero__scroll {
+    bottom: 5%;
+  }
+}
+@media only screen and (max-height: 21.875) {
+  .hero__scroll {
+    bottom: 2%;
+  }
 }
 
 .about {
-  padding: 14.4rem 0 15.8rem;
+  padding: 10% 0 11%;
+}
+@media only screen and (max-width: 43.75em) {
+  .about {
+    padding: 15% 0 16%;
+  }
 }
 
 /* ================================================
@@ -183,32 +256,61 @@ legend {
    ================================================ */
 .services {
   background: url(../img/services-bg.jpg) center/cover no-repeat;
-  padding: 11.2rem 0 11.8rem;
+  padding: 7.8% 0 8.4%;
+}
+@media only screen and (max-width: 43.75em) {
+  .services {
+    padding: 12.8% 0 13.4%;
+  }
 }
 
 /* ================================================
      WHAT WE DO
    ================================================ */
 .we-do {
-  padding: 10.3rem 0 10.4rem;
+  padding: 7.15% 0 7.18%;
+}
+@media only screen and (max-width: 75em) {
+  .we-do {
+    padding: 9.15% 0 9.18%;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .we-do {
+    padding: 14.15% 0 14.18%;
+  }
 }
 .we-do__icon {
   font-size: 8.3rem;
   text-align: center;
   margin: 5.6rem 0 3.3rem;
 }
+@media only screen and (max-width: 31.25em) {
+  .we-do__icon:first-child {
+    margin: 4rem 0 3.3rem;
+  }
+}
 .we-do__icon--development {
   font-size: 7.5rem;
+  margin-top: 10.6rem;
 }
 .we-do__icon--management {
   font-size: 9.1rem;
-  margin-top: -0.6rem;
+  margin-top: 9.5rem;
 }
 .we-do__heading-3 {
   margin-bottom: 2.7rem;
 }
 .we-do__paragraph {
   font-size: 1.4rem;
+}
+.we-do fieldset {
+  padding: 5.1rem 2rem 7.7rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .we-do fieldset {
+    padding: 5.1rem 2rem 5rem;
+  }
 }
 
 /* ================================================
@@ -217,10 +319,15 @@ legend {
 .gallery__list {
   display: grid;
   grid-template-columns: calc(28.5% - 1rem) 43% calc(28.5% - 1rem);
-  grid-template-rows: repeat(2, 23.7rem);
   grid-gap: 1rem;
 }
+@media only screen and (max-width: 53.125em) {
+  .gallery__list {
+    grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  }
+}
 .gallery__item {
+  height: 23.7rem;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -263,7 +370,7 @@ legend {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/gallery-06.jpg");
 }
 .gallery__title {
-  font-size: 34px;
+  font-size: 3.4rem;
   font-weight: 700;
   letter-spacing: 0.544rem;
   text-transform: uppercase;
@@ -272,15 +379,45 @@ legend {
   bottom: 3.8rem;
   left: 4.1rem;
 }
+@media only screen and (max-width: 75em) {
+  .gallery__title {
+    font-size: 2.6rem;
+  }
+}
 
 /* ================================================
      CONTACT US
    ================================================ */
 .contact-us {
-  padding: 12.4rem 0 6.2rem;
+  padding: 8.6% 0 4.3%;
+}
+@media only screen and (max-width: 56.25em) {
+  .contact-us {
+    padding: 12.6% 0 7%;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .contact-us {
+    padding: 12.6% 0 8.3%;
+  }
+}
+@media only screen and (max-width: 34.375em) {
+  .contact-us {
+    padding: 12.6% 0 10.3%;
+  }
+}
+@media only screen and (max-width: 25) {
+  .contact-us {
+    padding: 12.6% 0 15.3%;
+  }
 }
 .contact-us__heading-2 {
   font-size: 3.05rem;
+}
+@media only screen and (max-width: 23.75) {
+  .contact-us__heading-2 {
+    font-size: 2.7rem;
+  }
 }
 .contact-us__btn {
   margin: 2.2rem 0 4.8rem;
@@ -294,6 +431,12 @@ legend {
   justify-content: center;
   align-items: center;
   margin-bottom: 6.5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .footer {
+    margin-top: -1rem;
+    margin-bottom: 4.5rem;
+  }
 }
 .footer__logo {
   margin-right: 3.6rem;
