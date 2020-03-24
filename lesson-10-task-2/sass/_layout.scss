@@ -1,0 +1,172 @@
+.card {
+    max-width: 68.6rem;
+    width: 100%;
+    background-color: $color-primary;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 7.8rem 5.8rem 7.5rem 3.6rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 65px rgba(0,0,0, .82);
+
+    @media only screen and (max-width: 650px) {
+        padding: 7.8rem 6% 7.5rem 4%;
+    }
+
+    @media only screen and (max-width: 500px) {
+        padding: 7.8rem 6% 4.5rem 4%;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media only screen and (max-width: 500px) {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+
+    &__gallery {
+        @media only screen and (max-width: 600px) {
+            flex-basis: 50%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            margin-bottom: 9rem;
+        }
+    }
+
+    &__img {
+        // Щоб зображення зменшувалось при зменшенні екрану
+        width: 100%;
+        height: auto;
+    }
+
+    &__slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        bottom: 5%;
+        left: 25.5%;
+
+        @media only screen and (max-width: 600px) {
+            left: 22%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            top: -5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__item {
+        width: 1rem;
+        height: .9rem;
+        border-radius: 50%;
+
+        &:not(:last-child) {
+            margin-right: .8rem;
+        }
+
+        &--1 {
+            width: 1.5rem;
+            height: 1.5rem;
+            border: .2rem solid #fff;
+            background-color: #1f273f;
+        }
+
+        &--2 {
+            background-color: #fff;
+        }
+
+        &--3 {
+            background-color: #ed3333;
+        }
+
+        &--4 {
+            background-color: #29e3ea;
+        }
+    }
+
+    &__info {
+        flex-shrink: 1;
+    }
+
+    &__description {
+        font-size: 1.4rem;
+        color: rgba(225, 225, 225, 0.54);
+        letter-spacing: 0.28px;
+
+        margin: 1.1rem 0 2.6rem 0;
+    }
+
+    &__rating {
+        float: left;
+        margin-bottom: 2.7rem;
+    }
+
+    &__radio {
+        display: none;
+        // Background яким заповнюються зірочки коли вибрані
+        &:checked ~ .card__star,
+        &:checked ~ .card__star ~ .card__star,
+        // Коли наводжу на зірочку і вибираю рейтинг то з'являється цей background
+        &:not(:checked) ~ .card__star:hover,
+        &:not(:checked) ~ .card__star:hover ~ .card__star {
+            background:
+                url(../img/star-checked.png)
+                center center no-repeat;
+        }
+    }
+
+    &__star {
+        float: right;
+        display: inline-block;
+        margin-right: .1rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        background:
+                url(../img/star.png)
+                center center no-repeat;
+        cursor: pointer;
+    }
+
+    &__options {
+        margin-bottom: 2.8rem;
+
+        // Clearfix 5 star rating
+        &::before {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+
+    &__select {
+        -webkit-appearance: none; // Забирає стрілку
+        appearance: none;
+        background: $color-grey-light url(../img/select-arrow.png) right 15% center no-repeat;
+        background-color: transparent;
+        font-size: 1.4rem;
+        color: rgba(255,255,255, .45);
+        letter-spacing: 0.28px;
+        padding: .8rem 2.5rem .8rem 1.2rem;
+        outline: none; // Забирає синю обводку
+        border-radius: 0px;
+        border: 1px solid rgba(255,255,255, .26);
+
+        &:not(:last-child) {
+            margin-right: .1rem;
+        }
+    
+        &--qty {
+            padding: .8rem 3.1rem .8rem 1.2rem;
+        }
+    }
+}

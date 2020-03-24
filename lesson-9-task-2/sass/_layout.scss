@@ -1,0 +1,86 @@
+.header {
+
+}
+
+.description {
+    max-width: 56rem;
+    margin: 3.3rem auto 5.65rem;
+    text-align: center;
+    line-height: 2.4rem;
+}
+
+.team {
+    // max-width: 117rem;
+    // margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: 27rem;
+    margin-left: 3rem; // Потрібно для того, щоб не зїджало трохи вліво на малих екранах
+
+    &__item {
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+
+        &:hover {
+
+            .team__social {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+        margin-bottom: 1.6rem;
+    }
+
+    &__social {
+        background-color: $color-primary;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 27rem;
+        height: 26.9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .3s ease-in-out,
+                    visibility .3s ease-in-out;
+
+        a:not(:last-child) { margin-right: .4rem; } // Робить відступ між блоками крім останнього
+    }
+
+    &__box-icon {
+        width: 4.2rem;
+        height: 4.2rem;
+        background-color: rgba(#fff, .3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform .3s,
+                    background-color .3s;
+
+        &:hover {
+            transform: translateY(-.5rem);
+            background-color: rgba(#fff, .2);
+        }
+    }
+
+    &__social-icon {
+        font-family: 'FontAwesome';
+        font-size: 2.4rem;
+        color: #fff;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    &__prof {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #646464;
+    }
+}

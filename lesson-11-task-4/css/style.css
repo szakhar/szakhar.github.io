@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1rem = 10px */ }
+
+::selection {
+  background-color: #538fff;
+  color: #fff; }
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  background-image: linear-gradient(to bottom, #bac5db, #bac5db), linear-gradient(to top, #47a5e8, #9272c0); }
+
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+.heading-1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400; }
+
+.heading-1 {
+  font-size: 4.8rem;
+  font-weight: bold;
+  color: #538fff; }
+
+.btn {
+  background-color: #538fff;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  text-align: center;
+  color: #ffffff;
+  transition: background-color .3s, transform .3s, box-shadow .3s; }
+  .btn:hover {
+    background-color: rgba(83, 143, 255, 0.9);
+    transform: translateY(-0.18rem) scale(1.02);
+    box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.15); }
+  .btn:active {
+    transform: translateY(0) scale(0.95);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+
+.popup {
+  width: 666px;
+  margin: 10.4rem auto;
+  position: relative;
+  background-color: #353a45;
+  border-radius: 24px;
+  box-shadow: 0px 2.6rem 4.9rem rgba(35, 70, 133, 0.28);
+  padding: 7.7rem 6.1rem 6.5rem; }
+  .popup__mail-icon {
+    display: block;
+    position: absolute;
+    top: -4.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rotateMail 3s; }
+  .popup__link:hover .popup__close {
+    transform: scale(1.06) rotate(180deg); }
+  .popup__link:active .popup__close {
+    transform: scale(0.95) rotate(0); }
+  .popup__close {
+    display: block;
+    font-size: 4rem;
+    position: absolute;
+    top: 1.1rem;
+    right: 1.1rem;
+    transition: transform .3s; }
+  .popup__heading-1 {
+    text-align: center;
+    margin-bottom: 2.3rem; }
+  .popup__description {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 4.1rem; }
+  .popup__form-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.5rem; }
+  .popup__input, .popup__btn {
+    border: none;
+    outline: none;
+    height: 5.2rem; }
+  .popup__input {
+    background-color: #ffffff;
+    border: solid .1rem #c4c4c4;
+    border-radius: 1rem;
+    box-shadow: inset 0px 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.05);
+    font-size: 2rem;
+    color: #777;
+    flex-basis: calc(69.4% - .65rem);
+    padding: 0 1.7rem; }
+    .popup__input::placeholder {
+      font-size: 2rem;
+      color: #a9a9a9; }
+  .popup__btn {
+    flex-basis: calc(30.6% - .65rem); }
+  .popup__footer-text {
+    font-size: 2rem;
+    font-style: italic;
+    color: #787d87;
+    text-align: center;
+    letter-spacing: -.5px; }
+
+@keyframes rotateMail {
+  /* ANIMATION PULSATE */
+  0% {
+    transform: translateX(-1500%) rotate(3000deg); }
+  50% {
+    transform: translateX(-750%) rotate(1500deg); }
+  100% {
+    transform: translateX(-50%) rotate(0); } }

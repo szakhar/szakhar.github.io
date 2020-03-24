@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: inherit;
+  border: none;
+  outline: none; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1rem = 10px */ }
+
+::selection {
+  background-color: #efe4aa;
+  color: #212121; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #9eabad;
+  font-size: 1.3rem;
+  font-weight: 500;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+a:link,
+a:visited {
+  color: #9eabad;
+  transition: color .3s; }
+
+a:hover,
+a:active {
+  color: #444; }
+
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+.heading-3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400; }
+
+.heading-3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #6e7f7b; }
+
+.btn {
+  background-color: #25b86a;
+  width: 100%;
+  padding: 1.4rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  transition: background-color .3s, transform .3s; }
+  .btn:hover, .btn:active {
+    background-color: #21a65f; }
+  .btn:active {
+    transform: scale(1.02); }
+  .btn--reset {
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #9eabad;
+    padding: 0;
+    padding: 2.3rem 0;
+    transition: color .3s; }
+    .btn--reset span {
+      padding-bottom: -1.1rem;
+      border-bottom: 1px solid #dae0e0; }
+    .btn--reset:hover, .btn--reset:active {
+      background-color: transparent;
+      color: #444; }
+
+hr {
+  margin: .1rem 0 3.1rem;
+  background-color: #e3e6e7;
+  height: .1rem; }
+
+.container {
+  width: 336px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.header {
+  background-color: #efe4aa;
+  padding: 1.8rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header__heading-3 {
+    margin-bottom: .3rem; }
+  .header__subtitle {
+    font-size: 10px;
+    color: #a6a28d;
+    text-transform: uppercase; }
+  .header__price {
+    font-size: 36px;
+    color: #637570;
+    letter-spacing: -.2rem; }
+
+.form {
+  margin: 4.4rem 2.4rem 0; }
+  .form__label {
+    display: block;
+    margin-bottom: .9rem; }
+  .form__input, .form__select {
+    height: 4.4rem;
+    background-color: #fff;
+    border: .2rem solid #bac8cb;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #727f82; }
+    .form__input:focus, .form__select:focus {
+      border: .2rem solid #82d4e7; }
+  .form__input {
+    width: 100%;
+    caret-color: #f7d36a;
+    padding: 0 .9rem;
+    margin-bottom: 2.9rem; }
+  .form__select-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.6rem; }
+  .form__select {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    padding-left: .9rem;
+    background-image: linear-gradient(45deg, transparent 50%, #9eabad 50%), linear-gradient(135deg, #9eabad 50%, transparent 50%);
+    background-position: calc(100% - 18px) calc(1em + 4px), calc(100% - 13px) calc(1em + 4px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat; }
+    .form__select--month {
+      width: calc(64% - .8rem); }
+    .form__select--year {
+      width: calc(36% - .8rem);
+      background-position: calc(100% - 15px) calc(1em + 4px), calc(100% - 10px) calc(1em + 4px); }
+  .form__cvv-box {
+    display: flex;
+    align-items: center; }
+  .form__cvv {
+    flex-basis: 34%;
+    margin-right: 1rem; }
+  .form__cvv-info {
+    font-size: 1.2rem;
+    margin-top: -.8rem; }
+  .form__button-group {
+    text-align: center; }

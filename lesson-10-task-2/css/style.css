@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:100&display=swap");
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1rem = 10px */ }
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: #e1e1e1;
+  font-weight: 100;
+  background-image: url(../img/bg.jpg);
+  background-color: #c5c5c8;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+.heading-1,
+.heading-2 {
+  font-size: 2.4rem;
+  font-weight: inherit;
+  letter-spacing: .48px; }
+
+.logo {
+  display: block;
+  position: absolute;
+  top: 2.5rem;
+  left: 2rem; }
+
+.btn {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  background-color: rgba(76, 82, 90, 0.4);
+  padding: 1.2rem 5.5rem;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.45);
+  transition: background-color .3s; }
+  .btn:hover {
+    background-color: rgba(76, 82, 90, 0.25); }
+
+.card {
+  max-width: 68.6rem;
+  width: 100%;
+  background-color: #152334;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 7.8rem 5.8rem 7.5rem 3.6rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 65px rgba(0, 0, 0, 0.82); }
+  @media only screen and (max-width: 650px) {
+    .card {
+      padding: 7.8rem 6% 7.5rem 4%; } }
+  @media only screen and (max-width: 500px) {
+    .card {
+      padding: 7.8rem 6% 4.5rem 4%; } }
+  .card__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media only screen and (max-width: 500px) {
+      .card__box {
+        flex-direction: column;
+        justify-content: flex-start; } }
+  @media only screen and (max-width: 600px) {
+    .card__gallery {
+      flex-basis: 50%; } }
+  @media only screen and (max-width: 500px) {
+    .card__gallery {
+      margin-bottom: 9rem; } }
+  .card__img {
+    width: 100%;
+    height: auto; }
+  .card__slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5%;
+    left: 25.5%; }
+    @media only screen and (max-width: 600px) {
+      .card__slider {
+        left: 22%; } }
+    @media only screen and (max-width: 500px) {
+      .card__slider {
+        top: -5%;
+        left: 50%;
+        transform: translateX(-50%); } }
+  .card__item {
+    width: 1rem;
+    height: .9rem;
+    border-radius: 50%; }
+    .card__item:not(:last-child) {
+      margin-right: .8rem; }
+    .card__item--1 {
+      width: 1.5rem;
+      height: 1.5rem;
+      border: .2rem solid #fff;
+      background-color: #1f273f; }
+    .card__item--2 {
+      background-color: #fff; }
+    .card__item--3 {
+      background-color: #ed3333; }
+    .card__item--4 {
+      background-color: #29e3ea; }
+  .card__info {
+    flex-shrink: 1; }
+  .card__description {
+    font-size: 1.4rem;
+    color: rgba(225, 225, 225, 0.54);
+    letter-spacing: 0.28px;
+    margin: 1.1rem 0 2.6rem 0; }
+  .card__rating {
+    float: left;
+    margin-bottom: 2.7rem; }
+  .card__radio {
+    display: none; }
+    .card__radio:checked ~ .card__star,
+    .card__radio:checked ~ .card__star ~ .card__star,
+    .card__radio:not(:checked) ~ .card__star:hover,
+    .card__radio:not(:checked) ~ .card__star:hover ~ .card__star {
+      background: url(../img/star-checked.png) center center no-repeat; }
+  .card__star {
+    float: right;
+    display: inline-block;
+    margin-right: .1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url(../img/star.png) center center no-repeat;
+    cursor: pointer; }
+  .card__options {
+    margin-bottom: 2.8rem; }
+    .card__options::before {
+      content: "";
+      display: table;
+      clear: both; }
+  .card__select {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #e1e1e1 url(../img/select-arrow.png) right 15% center no-repeat;
+    background-color: transparent;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.28px;
+    padding: .8rem 2.5rem .8rem 1.2rem;
+    outline: none;
+    border-radius: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.26); }
+    .card__select:not(:last-child) {
+      margin-right: .1rem; }
+    .card__select--qty {
+      padding: .8rem 3.1rem .8rem 1.2rem; }

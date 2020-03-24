@@ -1,0 +1,187 @@
+.team {
+    width: 117rem;
+    // max-width: 117rem;
+    margin: 11.1rem auto 10rem;
+    // padding: 0 1.5rem;
+    position: relative;
+
+    &__sub-title {
+        font-size: 1.8rem;
+        letter-spacing: .036rem;
+        text-transform: uppercase;
+        text-align: center;
+        color: #898f8f;
+        margin-bottom: 1rem;
+    }
+
+    &__heading-1 {
+        text-align: center;
+        margin-bottom: 4.5rem;
+    }
+
+    &__border {
+        max-width: 45rem;
+        height: 1px;
+        background-color: $color-primary;
+        position: relative;
+        margin: 0 auto 4.8rem auto;
+
+        &::after {
+            content: "";
+            width: 3.1rem;
+            height: 1.9rem;
+            background: url(../img/border-img.png) center no-repeat;
+            background-color: #fff;
+            position: absolute;
+            top: -.9rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &--vertical {
+            width: 1px;
+            max-height: 100%;
+            background-color: $color-primary;
+        }
+    }
+
+    &__profile {
+        min-height: 56rem;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 4rem;
+    }
+
+    &__avatar {
+        flex-basis: 35.7%;
+        margin-top: 7.5rem;
+    }
+
+    &__img {
+        background: url(../img/image-border.png) center / cover no-repeat;
+        max-width: 41.8rem;
+        padding: 1.65rem;
+    }
+
+    &__info {
+        flex-basis: 36%;
+        margin-top: 9.1rem;
+    }
+
+    &__heading-2 {
+        text-align: center;
+        
+        &::after {
+            content: "";
+            display: block;
+            max-width: 10rem;
+            height: 1px;
+            background-color: $color-primary;
+            margin: 2.9rem auto 3.1rem;
+        }
+    }
+
+    &__specialty {
+        font-size: 2.4rem;
+        font-weight: normal;
+        text-align: center;
+        color: $color-grey-2;
+        margin-bottom: 3rem;
+    }
+
+    &__description {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        text-align: center;
+        color: $color-grey;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 5rem;
+            height: .4rem;
+            background: url(../img/dash.svg) center no-repeat;
+            margin: 1.7rem auto 2.7rem;
+        }
+    }
+
+    &__icons-list {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2.5rem;
+    }
+
+    &__icon-box {
+        width: 3rem;
+        height: 3rem;
+        border: 2px solid #ccc;
+        border-radius: 50%;
+        padding: .5rem;
+        font-size: 1.4rem;
+        color: #ccc;
+        transition: background-color .2s,
+                    color .2s;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-right: .5rem;
+        }
+
+        &:hover {
+            background-color: #ccc;
+            color: #fff;
+        }
+    }
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        padding: .4rem 1.1rem;
+    }
+
+    &__arrow {
+        width: 1.4rem;
+        height: 2.3rem;
+        position: absolute;
+        transition: transform .2s;
+
+        &--left {
+            top: 57%; left: 2.3%;
+        }
+
+        &--right {
+            top: 57%; right: 2.3%;
+        }
+
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__item {
+        width: 1rem;
+        height: 1rem;
+        background-color: $color-primary;
+        border-radius: 50%;
+
+        &:not(:last-child) {
+            margin-right: .9rem;
+        }
+    }
+
+    &__item--active {
+        width: 1.1rem;
+        height: 1.1rem;
+        border: 1px solid $color-primary;
+        background-color: transparent;
+    }
+}

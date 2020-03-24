@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <title>Lesson 11 Task 3</title>
+</head>
+<body>
+
+<section class="container">
+    <header class="header">
+        <div class="header__box">
+            <h3 class="heading-3 header__heading-3">Harold Finch</h3>
+            <div class="header__subtitle">Your Total</div>
+        </div>
+        
+        <div class="header__price">$88</div>
+    </header>
+
+    <div class="form">
+        <div class="form__card-box">
+            <label for="card" class="form__label">Credit card number</label>
+            <input id="card" type="text" value="4321" class="form__input" data-mask="0000 0000 0000 0000">
+        </div>
+
+        <div class="form__expiration-box">
+            <label for="exp-month" class="form__label">Expiration date</label>
+            <div class="form__select-box">
+                <select name="exp-month" id="exp-month" class="form__select form__select--month">
+                    <option disabled selected>Month</option>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                </select>
+
+                <select name="exp-year" class="form__select form__select--year">
+                    <option disabled selected>Year</option>
+                    <option>2000</option>
+                    <option>2001</option>
+                    <option>2002</option>
+                    <option>2003</option>
+                    <option>2004</option>
+                    <option>2005</option>
+                    <option>2006</option>
+                    <option>2007</option>
+                    <option>2008</option>
+                    <option>2009</option>
+                    <option>2010</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form__cvv-box">
+            <div class="form__cvv">
+                <label for="cvv" class="form__label">CVV</label>
+                <input id="cvv" value="" class="form__input" data-mask="0000">
+            </div>
+            <div class="form__cvv-info">
+                3 or 4 digits - <a href="#">view example</a>
+            </div>
+        </div>
+
+        <hr>
+        
+        <div class="form__button-group">
+            <button class="btn" type="submit">Pay</button>
+            <button class="btn btn--reset" type="reset">
+                <span>Cancel order</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+</body>
+</html>

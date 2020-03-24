@@ -1,0 +1,25 @@
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+
+%heading {
+    font-family: $font-primary;
+    font-weight: 400;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 9rem;
+    font-weight: bold;
+    color: #262626;
+}
+
+.heading-4 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: 2rem;
+}

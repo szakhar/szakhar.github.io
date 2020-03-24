@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1rem = 10px */ }
+
+::selection {
+  background-color: #23ae92;
+  color: #fff; }
+
+body {
+  background-color: #e5eeee;
+  font-family: "Quicksand", sans-serif;
+  color: #999;
+  font-weight: 400;
+  letter-spacing: .05rem; }
+
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+.heading-2 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400; }
+
+input,
+button {
+  border: none;
+  outline: none; }
+
+.btn {
+  width: 100%;
+  height: 4.2rem;
+  background-color: #23ae92;
+  border: 2px solid #23ae92;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fbf6e4;
+  transition: transform .3s, box-shadow .3s, background-color .3s; }
+  .btn:hover {
+    background-color: #e46b67;
+    box-shadow: 0 1.5rem 1.5rem rgba(0, 0, 0, 0.3);
+    transform: scale(1.03) translateY(-0.1rem); }
+  .btn:active {
+    transform: scale(1); }
+
+.form {
+  width: 40rem;
+  margin: 5.2rem auto;
+  padding: 5rem 7rem .1rem;
+  position: relative;
+  background: url(../img/bg.jpg) center/cover no-repeat; }
+  .form__top-nav label {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e1c2f1;
+    margin-right: 2.2rem; }
+  .form__tabs-item {
+    display: none; }
+  .form__input-radio {
+    display: none; }
+  .form #sign:checked ~ #sign-in,
+  .form #join:checked ~ #join-us {
+    display: block; }
+  .form #sign:checked ~ .form__top-nav #form__tab-sign,
+  .form #join:checked ~ .form__top-nav #form__tab-join {
+    color: #fbf6e4;
+    padding-bottom: .3rem;
+    border-bottom: 2px solid #e66a64; }
+  .form__box {
+    margin: 5.6rem auto; }
+  .form__label {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fbf6e4;
+    margin-bottom: .9rem; }
+    .form__label--checkbox {
+      font-size: 1.3rem;
+      margin-bottom: 0;
+      display: flex;
+      align-items: center; }
+      .form__label--checkbox span {
+        width: 1.6rem;
+        height: 1.6rem;
+        background-color: #23ae92;
+        border: 0.2rem solid #23ae92;
+        margin-right: .5rem;
+        font-size: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: font-size .2s ease-out; }
+  .form__controls {
+    margin-bottom: 1.6rem; }
+    .form__controls--checkbox {
+      margin-bottom: 4.6rem; }
+    .form__controls--repeat {
+      margin-bottom: 3.5rem; }
+  .form__input {
+    width: 100%;
+    height: 4.2rem;
+    border: solid 2px rgba(191, 185, 204, 0.54);
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: #bfb9cc;
+    padding: 0 1rem;
+    transition: border .3s; }
+    .form__input:invalid + .form__error {
+      visibility: visible; }
+    .form__input:focus {
+      border: solid 2px #23ae92; }
+  .form__error {
+    font-size: 1.2rem;
+    color: gold;
+    visibility: hidden;
+    padding: .3rem 0 0 .3rem; }
+  .form__checkbox {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    opacity: 0; }
+    .form__checkbox:hover + .form__label--checkbox span {
+      background-color: #e46b67; }
+    .form__checkbox:checked + .form__label--checkbox span {
+      font-size: 1.2rem; }
+    .form__checkbox:focus + .form__label--checkbox span {
+      border: .2rem solid #e46b67; }
+  .form__shadow {
+    display: block;
+    position: absolute;
+    bottom: -5.2rem;
+    left: -3rem;
+    z-index: -10; }
+  .form__bottom-nav {
+    margin-top: 3.3rem;
+    display: flex;
+    justify-content: space-between; }
+    .form__bottom-nav a:link,
+    .form__bottom-nav a:visited {
+      font-size: 1.3rem;
+      color: #b9b9cc;
+      text-decoration: none;
+      padding-bottom: .3rem;
+      border-bottom: 1px solid rgba(150, 193, 218, 0.15);
+      transition: color .3s; }
+    .form__bottom-nav a:hover,
+    .form__bottom-nav a:active {
+      color: rgba(185, 185, 204, 0.7); }

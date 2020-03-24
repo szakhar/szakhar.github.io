@@ -1,0 +1,42 @@
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+
+%heading {
+    font-family: $font-primary;
+    font-weight: 400;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 4.8rem;
+    font-weight: bold;
+    color: #538fff;
+}
+
+.btn {
+    background-color: #538fff;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    text-align: center;
+    color: #ffffff;
+    transition: background-color .3s,
+                transform .3s,
+                box-shadow .3s;
+
+    &:hover {
+        background-color: rgba(#538fff, .9);
+        transform: translateY(-.18rem)
+                   scale(1.02);
+        box-shadow: 0 1.5rem 1rem rgba(0,0,0, .15);
+    }
+
+    &:active {
+        transform: translateY(0)
+                   scale(.95);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0, .15);
+    }
+}
