@@ -9,6 +9,7 @@
     position: relative;
 
     &__content {
+        width: 100%;
         position: absolute;
         top: 30%; left: 50%;
         transform: translate(-50%, -30%);
@@ -16,23 +17,45 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 0 1rem;
     }
 
     &__logo {
-        margin-bottom: 15%;
+        margin-bottom: 8rem;
+
+        @media only screen and (max-height: 37.5em) { // height 600px
+            margin-bottom: 3rem;
+        }
     }
 
     &__heading-1 {
-        margin-bottom: 6%;
+        margin-bottom: 3.5rem;
+
+        @media only screen and (max-height: 37.5em) { // height 600px
+            font-size: 4.5rem;
+        }
+
+        @media only screen and (max-width: 37.5em) { // 600px
+            font-size: 3.5rem;
+            margin-bottom: 8%;
+        }
+
+        @media only screen and (max-height: 37.5em) { // height 600px
+            margin-bottom: 2rem;
+        }
     }
 
     &__description {
-        font-size: 15px;
+        font-size: 1.5rem;
         line-height: 2.9rem;
         text-transform: uppercase;
         letter-spacing: .09rem;
         text-align: center;
         color: #fff;
+
+        @media only screen and (max-width: 56.25em) { // 900px
+            // font-size: 1.6rem;
+        }
     }
 
     &__scroll {
@@ -41,11 +64,23 @@
         transform: translateX(-50%);
 
         animation: scroll 1s infinite;
+
+        @media only screen and (max-height: 34.375em) { // 550px
+            bottom: 5%;
+        }
+
+        @media only screen and (max-height: 21.875) { // 350px
+            bottom: 2%;
+        }
     }
 }
 
 .about {
-    padding: 14.4rem 0 15.8rem;
+    padding: 10% 0 11%;
+
+    @media only screen and (max-width: 43.75em) { // 700px
+        padding: 15% 0 16%;
+    }
 }
 
 /* ================================================
@@ -54,7 +89,11 @@
 
 .services {
     background: url(../img/services-bg.jpg) center / cover no-repeat;
-    padding: 11.2rem 0 11.8rem;
+    padding: 7.8% 0 8.4%;
+
+    @media only screen and (max-width: 43.75em) { // 700px
+        padding: 12.8% 0 13.4%;
+    }
 }
 
 
@@ -63,20 +102,35 @@
    ================================================ */
 
 .we-do {
-    padding: 10.3rem 0 10.4rem;
+    padding: 7.15% 0 7.18%;
+
+    @media only screen and (max-width: 75em) { // 1200px
+        padding: 9.15% 0 9.18%;
+    }
+
+    @media only screen and (max-width: 43.75em) { // 700px
+        padding: 14.15% 0 14.18%;
+    }
 
     &__icon {
         font-size: 8.3rem;
         text-align: center;
         margin: 5.6rem 0 3.3rem;
 
+        @media only screen and (max-width: 31.25em) { // 500px
+            &:first-child {
+                margin: 4rem 0 3.3rem;
+            }
+        }
+
         &--development {
             font-size: 7.5rem;
+            margin-top: 10.6rem;
         }
 
         &--management {
             font-size: 9.1rem;
-            margin-top: -.6rem;
+            margin-top: 9.5rem;
         }
     }
 
@@ -86,6 +140,14 @@
 
     &__paragraph {
         font-size: 1.4rem;
+    }
+
+    fieldset {
+        padding: 5.1rem 2rem 7.7rem;
+
+        @media only screen and (max-width: 37.5em) { // 600px
+            padding: 5.1rem 2rem 5rem;
+        }
     }
 }
 
@@ -99,11 +161,15 @@
     &__list {
         display: grid;
         grid-template-columns: calc(28.5% - 1rem) 43% calc(28.5% - 1rem);
-        grid-template-rows: repeat(2, 23.7rem);
         grid-gap: 1rem;
+
+        @media only screen and (max-width: 53.125em) { // 850px
+            grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+        }
     }
 
     &__item {
+        height: 23.7rem;
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -123,13 +189,17 @@
     }
 
     &__title {
-        font-size: 34px;
+        font-size: 3.4rem;
         font-weight: 700;
         letter-spacing: .544rem;
         text-transform: uppercase;
         color: #fff;
         position: absolute;
         bottom: 3.8rem; left: 4.1rem;
+
+        @media only screen and (max-width: 75em) { // 1200px
+            font-size: 2.6rem;
+        }
     }
 }
 
@@ -139,10 +209,30 @@
    ================================================ */
 
 .contact-us {
-    padding: 12.4rem 0 6.2rem;
+    padding: 8.6% 0 4.3%;
+
+    @media only screen and (max-width: 56.25em) { // 900px
+        padding: 12.6% 0 7%;
+    }
+
+    @media only screen and (max-width: 43.75em) { // 700px
+        padding: 12.6% 0 8.3%;
+    }
+
+    @media only screen and (max-width: 34.375em) { // 550px
+        padding: 12.6% 0 10.3%;
+    }
+
+    @media only screen and (max-width: 25) { // 400px
+        padding: 12.6% 0 15.3%;
+    }
 
     &__heading-2 {
         font-size: 3.05rem;
+
+        @media only screen and (max-width: 23.75) { // 380px
+            font-size: 2.7rem;
+        }
     }
 
     &__btn {
@@ -160,6 +250,11 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 6.5rem;
+
+    @media only screen and (max-width: 37.5em) { // 600px
+        margin-top: -1rem;
+        margin-bottom: 4.5rem;
+    }
 
     &__logo {
         margin-right: 3.6rem;
