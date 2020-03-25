@@ -93,66 +93,138 @@
 
 .burger {
 
-    &__link {
+    &__btn-box {
+        margin-top: 2rem;
         display: none;
-
-        &:hover {
-
-            .burger__menu::before {
-                top: -2rem;
-            }
-
-            .burger__menu::after {
-                top: 2rem;
-            }
-        }
+        position: relative;
 
         @media only screen and (max-width: 34.375em) { // 550px
             display: block;
         }
     }
 
-    &__menu {
-        width: 6rem;
-        height: .4rem;
-        background-color: $color-primary;
-        position: relative;
-        margin-top: 4.3rem;
+    &__checkbox {
+        display: none;
 
-        &::before,
-        &::after {
-            content: "";
-            width: 6rem;
-            height: .4rem;
-            background-color: $color-primary;
-            position: absolute;
+        &:checked + .burger__btn .burger__icon {
+            background-color: transparent;
+        }
+
+        &:checked + .burger__btn {
+            transform: translateY(-90px);
+
+            .burger__icon::before,
+            .burger__icon::after {
+                background-color: #fff;
+            }
+
+            .burger__icon {
+
+                &::before {
+                    transform: rotate(135deg);
+                    top: 0;
+                }
+
+                &::after {
+                    transform: rotate(-135deg);
+                    top: 0;
+                }
+            }
+        }
+
+        &:checked ~ .burger__menu {
+            visibility: visible;
+            opacity: 1;
             left: 0;
-            transition: all .3s;
-        }
-
-        &::before {
-            top: -1.5rem;
-        }
-
-        &::after {
-            top: 1.5rem;
         }
     }
+
+    &__btn {
+        display: block;
+        // Потрібно щоб кнопка була зверху і більша поверхня натискання хрестика
+        position: relative;
+        z-index: 60;
+
+        // Потрібно щоб площа натискання менюшки і хрестика була більша за сам обєкт
+        width: 8rem;
+        height: 6rem;
+        // background-color: goldenrod;
+        cursor: pointer;
+        
+        // Вирівнює по центру патичок меню
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .2s;
+    }
+
+    &__icon {
+        // Абсолют позиціонується від патичка
+        position: relative;
+        
+        &,
+        &::before,
+        &::after {
+          display:block;
+          background-color: $color-primary;
+          width: 60px;
+          height: 4px;
+          transition: all .2s;
+        }
+        
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+        }
+        
+        &::before {
+          top: -15px;
+        }
+        
+        &::after {
+          top: 15px
+        }
+    }
+
+    &__menu {
+        position: fixed;
+        top: 0; left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: $color-primary;
+        z-index: 50;
+        color: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s;
+    }
+
+    &__list {
+        // Потрібно для позиціонування
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35%;
+    }
+
+    &__link:link,
+    &__link:visited {
+        font-size: 3.5rem;
+        color: #fff;
+        padding: 1.8rem 3rem;
+        margin-bottom: 1.2rem;
+        transition: all .2s;
+    }
+
+    &__link:hover,
+    &__link:active {
+        background-color: rgba(goldenrod, .6);
+    }
 }
-
-// .nav-burger__content {
-//     position: fixed;
-//     top: 0; left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: #212121;
-//     z-index: 100;
-//     color: #fff;
-// }
-
-// :target .nav-burger__content {
-//     display: block;
-// }
 
 .about {
     background-color: #00C4C4;
