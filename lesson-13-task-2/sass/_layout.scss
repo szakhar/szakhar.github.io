@@ -10,16 +10,29 @@
 
 .hero {
     height: 100vh;
-    max-height: 100rem;
     background-image: url(../img/offer-bg.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
 
+    @media only screen and (max-width: 600px) { // 900px
+        background: linear-gradient(rgba(255,255,255, .5), rgba(255,255,255, .5)),
+                      url(../img/offer-bg.jpg);
+        background-position: bottom 20% right 40%;
+    }
+
+    @media only screen and (min-height: 46.875em) { // height 750px
+        height: 75vh;
+    }
+
     &__offer {
-        position: absolute;
-        top: 35%;
+        margin-top: 13%;
+
+        @media only screen and (max-width: 56.25em) { // 900px
+            width: 100%;
+            text-align: center;
+        }
 
         @media only screen and (max-width: 34.375em) { // 550px
             top: 40%;
@@ -28,6 +41,10 @@
 
     &__description {
         max-width: 37rem;
+        
+        @media only screen and (max-width: 56.25em) { // 900px
+            margin: 0 auto;
+        }
     }
 }
 
@@ -59,6 +76,10 @@
 
         @media only screen and (max-width: 62.5em) { // 1000px
             bottom: 3%;
+        }
+
+        @media only screen and (max-width: 28.125em) { // 450px
+            display: none;
         }
     }
 }
@@ -94,7 +115,7 @@
 .burger {
 
     &__btn-box {
-        margin-top: 2rem;
+        margin: 2rem 0 4rem;
         display: none;
         position: relative;
 

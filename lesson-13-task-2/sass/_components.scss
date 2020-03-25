@@ -16,6 +16,7 @@
 
     @media only screen and (max-width: 56.25em) { // 900px
         font-size: 6rem;
+        
     }
 }
 
@@ -29,6 +30,10 @@
     @media only screen and (max-width: 62.5em) { // 1000px
         font-size: 7rem;
     }
+
+    @media only screen and (max-width: 43.75em) { // 1000px
+        text-align: center;
+    }
 }
 
 .heading-4 {
@@ -41,6 +46,11 @@
 .paragraph {
     font-size: 1.7rem;
     line-height: 2.7rem;
+
+    @media only screen and (max-width: 43.75em) { // 1000px
+        text-align: center;
+        padding: 0 2rem;
+    }
 
     &:not(:last-child) {
         margin-bottom: 1.1rem;
