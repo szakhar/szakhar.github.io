@@ -10,12 +10,12 @@
 <body>
 
 <div class="hero">
-    <div class="container">
+    <ul class="container">
         <header class="header">
             <img src="img/logo.png" alt="Cahee" class="logo">
 
             <nav class="nav">
-                <a href="#" class="active nav__link">Home</a>
+                <a href="#" class="nav__link active">Home</a>
                 <a href="#" class="nav__link">About</a>
                 <a href="#" class="nav__link">Services</a>
                 <a href="#" class="nav__link">Gallery</a>
@@ -23,12 +23,24 @@
                 <a href="#" class="nav__link">Contact</a>
             </nav>
 
-            <a href="#menu" class="burger__link">
-                <nav class="burger__menu"></nav>
-            </a>
-            <!-- <div class="nav-burger__content">
-                mmd
-            </div> -->
+            <!-- Burget Menu -->
+            <div class="burger__btn-box">
+                <input id="brgr-btn" type="checkbox" class="burger__checkbox">
+                <label for="brgr-btn" class="burger__btn">
+                    <span class="burger__icon"></span>
+                </label>
+                <div class="burger__background"></div>
+                <div class="burger__menu">
+                    <nav class="burger__list">
+                        <a href="#" class="burger__link">Home</a>
+                        <a href="#" class="burger__link">About</a>
+                        <a href="#" class="burger__link">Services</a>
+                        <a href="#" class="burger__link">Gallery</a>
+                        <a href="#" class="burger__link">Blog</a>
+                        <a href="#" class="burger__link">Contact</a>
+                    </nav>
+                </div>
+            </div>
 
         </header>
 
