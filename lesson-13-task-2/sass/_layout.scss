@@ -22,8 +22,8 @@
         background-position: bottom 20% right 40%;
     }
 
-    @media only screen and (min-height: 46.875em) { // height 750px
-        height: 75vh;
+    @media only screen and (min-height: 800px) { // height 750px
+        max-height: 800px;
     }
 
     &__offer {

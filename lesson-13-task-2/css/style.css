@@ -154,9 +154,9 @@ a:visited {
     background-position: bottom 20% right 40%;
   }
 }
-@media only screen and (min-height: 46.875em) {
+@media only screen and (min-height: 800px) {
   .hero {
-    height: 75vh;
+    max-height: 800px;
   }
 }
 .hero__offer {
