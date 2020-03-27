@@ -11,6 +11,10 @@
     font-weight: 300;
     background: url(../img/bg.jpg) no-repeat center/cover;
 
+    @media only screen and (max-width: 37.5em) { // 600px
+        background: url(../img/bg-600w.jpg) no-repeat center/cover;
+    }
+
 
     /* ================================================
         TYPOGRAPHY
