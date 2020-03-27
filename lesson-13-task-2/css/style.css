@@ -150,7 +150,7 @@ a:visited {
 }
 @media only screen and (max-width: 600px) {
   .hero {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/offer-bg.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/offer-bg-600w.jpg) center/cover no-repeat;
     background-position: bottom 20% right 40%;
   }
 }
@@ -864,6 +864,11 @@ a:visited {
   /* ================================================
       CONTACTS
   ================================================ */
+}
+@media only screen and (max-width: 37.5em) {
+  .contacts {
+    background: url(../img/bg-600w.jpg) no-repeat center/cover;
+  }
 }
 .contacts .heading-1, .contacts .heading-2, .contacts .heading-4 {
   font-family: "Raleway", sans-serif;

@@ -18,7 +18,8 @@
 
     @media only screen and (max-width: 600px) { // 900px
         background: linear-gradient(rgba(255,255,255, .5), rgba(255,255,255, .5)),
-                      url(../img/offer-bg.jpg);
+                    url(../img/offer-bg-600w.jpg)
+                    center / cover no-repeat;
         background-position: bottom 20% right 40%;
     }
 
