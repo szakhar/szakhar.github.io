@@ -1,0 +1,41 @@
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+
+%heading {
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 2rem;
+
+  &--light {}
+}
+
+.ba-button {
+  // Для вирівнювання тексту посередині кнопки
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 20.3rem;
+  height: 5.4rem;
+  border-radius: 2.7rem;
+  box-shadow: 2.4px 4.4px 1.8rem rgba(133,192,247, .31);
+  background-color: #6fcffb;
+
+  font-family: 'bebas_neuebold', sans-serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+  letter-spacing: 1.44px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .3s;
+
+  &:hover {
+    background-color: darken(#6fcffb, 10%);
+  }
+}
