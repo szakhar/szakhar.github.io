@@ -127,6 +127,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
+  z-index: 30;
 }
 .ba-pricing__popular::before {
   content: "";
