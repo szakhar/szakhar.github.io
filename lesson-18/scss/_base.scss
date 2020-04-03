@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+@import url("../fonts/stylesheet.css");
+
+/* Layout */
+.ba-container{
+  padding-left: 20px;
+  padding-right: 20px;
+  // max-width: 1200px;
+  width: 1110px
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+  transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+  display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+  transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+
+body{
+    background-color: #9789f9;
+}
+
+
+
+
+
+//   FONTS
+// ==================================================
+
+$font-primary: 'Roboto', sans-serif;
+
+
+//   COLORS
+// ==================================================
+
+$color-primary: #9789f9;
+$color-grey: #181818;
+
+
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+::selection {
+    background-color: $color-primary;
+    color: #fff;
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-grey;
+    font-weight: 300;
+}

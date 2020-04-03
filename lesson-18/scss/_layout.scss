@@ -1,0 +1,272 @@
+
+.ba-pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+
+  &__popular {
+    width: 4.6rem;
+    height: 4.6rem;
+    background-color: #fd8d7b;
+    border-radius: 50%;
+    position: absolute;
+    top: 2rem; right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'bebas_neue_regularregular', sans-serif;
+    font-weight: normal;
+    font-size: 2.4rem;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 13px;
+      height: 13px;
+      background-color: inherit;
+      border-radius: 50%;
+      position: absolute;
+      top: -.6rem; right: -.6rem;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 4px;
+      height: 4px;
+      background-color: inherit;
+      border-radius: 50%;
+      position: absolute;
+      top: -1rem; right: -1.2rem;
+    }
+
+    &:hover span {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    span {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: 1rem; left: 5.5rem;
+      background-color: #3b4040;
+      border-radius: 2rem;
+      padding: .7rem 2.2rem;
+      font-family: 'bebas_neue_regularregular', sans-serif;
+      font-size: 1.6rem;
+      font-weight: normal;
+      letter-spacing: 1.28px;
+      color: #fff;
+      transition: all .2s;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        background-color: #3b4040;
+        position: absolute;
+        top: 50%; left: -.35rem;
+        transform: translateY(-50%) rotate(135deg);
+      }
+    }
+  }
+
+  &__col {
+    background-color: #f5f4f9;
+    max-width: 32.7rem;
+    width: 100%;
+    padding: 3.2rem 0;
+    box-shadow: 2.424px 4.373px 59px rgba(122, 107, 231, 0.004);
+
+    &:not(:last-child) {
+      margin-right: 2.2rem;
+    }
+
+    // Іконка для першого елемента
+    &:first-child {
+      .ba-price {
+        &__body {
+          &::before {
+            background: url(../img/palette.svg) center 3.5rem no-repeat;
+            background-size: 3rem 3rem;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+
+    // Іконка для останнього елемента
+    &:last-child {
+      .ba-price {
+        &__body {
+          &::before {
+            background: url(../img/hummer.svg) center 3.5rem no-repeat;
+            background-size: 3.1rem 3.1rem;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+
+    &--center {
+      max-width: 37rem;
+      width: 100%;
+      padding: 4.2rem 0;
+      position: relative;
+
+      .ba-price {
+        &__rate {
+          &::after {
+            margin-left: -5px;
+          }
+        }
+
+        &__position {
+          margin-bottom: 3.9rem;
+        }
+
+        &__body {
+          padding: 7.2rem 0 4.9rem;
+
+          &::before {
+            content: "";
+            background: url(../img/paint-bucket.svg) center 3.5rem no-repeat;
+            background-size: 3.6rem 3.6rem;
+            background-color: #fff;
+            border-radius: 28rem/27rem 26rem 0 0;
+            left: -18%;
+          }
+
+          ul {
+            padding-bottom: 4.1rem;
+
+            li {
+              transform: translateX(25.5%);
+            }
+          }
+        }
+
+        &__discount {
+          display: block;
+          text-align: center;
+          position: absolute;
+          bottom: -.9rem; left: 50%;
+          transform: translateX(-50%);
+      
+          &:link,
+          &:visited {
+            font-size: 1.1rem;
+            color: #a9a9a9;
+            text-decoration: none;
+            transition: all .2s;
+          }
+      
+          &:hover,
+          &:active {
+            color: darken(#a9a9a9, 15%);
+          }
+        }
+
+        .ba-button {
+          background-color: #fd8d7b;
+          position: absolute;
+          bottom: 2.3rem; left: 50%;
+          transform: translateX(-50%);
+          z-index: 30;
+
+          &:hover {
+            background-color: darken(#fd8d7b, 8%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.ba-price {
+  position: relative;
+  
+  &__rate {
+    font-family: 'bebas_neuethin', sans-serif;
+    font-size: 6rem;
+    font-weight: normal;
+    letter-spacing: 4.8px;
+    color: $color-grey;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1.2rem;
+
+    &::before {
+        content: "$";
+        font-size: 2.4rem;
+        vertical-align: super;
+        margin: 0 -4px 0 0;
+    }
+
+    &::after {
+      content: "/HR";
+      font-family: 'bebas_neuelight', sans-serif;
+      font-size: 1.6rem;
+      font-weight: normal;
+      vertical-align: baseline;
+      letter-spacing: 1.28px;
+      margin-left: -1px;
+    }
+  }
+
+  &__position {
+    font-family: 'bebas_neue_regularregular', sans-serif;
+    font-size: 2.4rem;
+    font-weight: normal;
+    letter-spacing: 1.92px;
+    text-align: center;
+    margin-bottom: 2.8rem;
+  }
+
+  &__body {
+    font-size: 1.6rem;
+    position: relative;
+    overflow-x: hidden;
+    padding: 5.1rem 0 2.9rem;
+
+    &::before {
+      background-color: #fff;
+      content: "";
+      display: block;
+      width: 50rem;
+      height: 30rem;
+      border-radius: 25rem/28rem 27.7rem 0 0;
+      position: absolute;
+      top: 0; left: -27%;
+    }
+
+    ul {
+      list-style: none;
+      background-color: #fff;
+      margin-top: 5rem;
+      padding-bottom: 3.4rem;
+      position: relative;
+      // top: 0; left: 0;
+      z-index: 10;
+
+      li {
+        margin-bottom: 3.6rem;
+        transform: translateX(29.5%);
+      }
+    }
+
+  }
+
+  .ba-button {
+    position: absolute;
+    bottom: -5.5rem; left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+  }
+}
