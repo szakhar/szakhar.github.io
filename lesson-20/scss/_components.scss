@@ -1,0 +1,47 @@
+/* ================================================
+     COMPONENTS
+   ================================================ */
+
+%container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @media only screen and (max-width: 480px) {
+        padding: 0 15px;
+    }
+}
+
+%container-hotel {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+%border-none {
+    border: none;
+    outline: none;
+    height: 100%;
+}
+
+.btn {
+    @extend %border-none;
+    width: 225px;
+    height: 60px;
+    background-color: #5474fd;
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    color: #fff;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: darken(#5474fd, 5%);
+    }
+
+    &:active {
+        background-color: darken(#5474fd, 7%);
+    }
+}

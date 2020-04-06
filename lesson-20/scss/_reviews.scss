@@ -1,0 +1,81 @@
+.reviews {
+    background: url(../img/reviews-bg.jpg) center / cover no-repeat;
+    padding: 118px 0 200px;
+
+    &__box {
+        @extend %container;
+    }
+
+    &__heading-2 {
+        text-align: center;
+        letter-spacing: .4px;
+        margin-bottom: 93px;
+
+        @media only screen and (max-width: 600px) {
+           font-size: 32px;
+           margin-bottom: 65px;
+        }
+
+        @media only screen and (max-width: 500px) {
+            font-size: 28px;
+            line-height: 1.5;
+            margin-bottom: 60px;
+        }
+    }
+
+    &__item {
+        background-color: #333;
+        display: flex;
+
+        @media only screen and (max-width: 900px) {
+            flex-direction: column;
+        }
+    }
+
+    &__photo {
+        background: url(../img/reviews-photo.jpg) center / cover no-repeat;
+        width: 40.1%;
+
+        @media only screen and (max-width: 900px) {
+            width: 100%;
+            height: 320px;
+            background-position: center -20px;
+        }
+    }
+
+    &__review {
+        padding: 50.6px 54px 42px 59px;
+        width: 59.9%;
+
+        @media only screen and (max-width: 900px) {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 550px) {
+            padding: 20.6px 29px 35px 34px;
+        }
+    }
+
+    &__name {
+        font-size: 20px;
+        color: #fefefe;
+        letter-spacing: -.7px;
+        text-transform: uppercase;
+        padding-bottom: 41px;
+    }
+
+    &__text {
+        position: relative;
+        text-indent: 29px;
+        line-height: 1.625;
+        letter-spacing: -.58px;
+    }
+
+    &__quote {
+        color: $color-primary;
+        font-size: 18px;
+        position: absolute;
+        top: -12px; left: -27.5px;
+    }
+
+}
