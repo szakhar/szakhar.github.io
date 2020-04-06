@@ -502,6 +502,7 @@ img {
 @media only screen and (max-width: 650px) {
   .instruction {
     padding: 94px 0 82px;
+    background-image: none;
   }
 }
 .instruction__box {
@@ -582,7 +583,7 @@ img {
     font-size: 30px;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 820px) {
   .instruction__desc {
     font-size: 26px;
   }
