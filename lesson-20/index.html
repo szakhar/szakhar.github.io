@@ -3,6 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Search Engine -->
+    <meta name="description" content="Exam work on the course of Beetroot Academy">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="image" content="https://szakhar.github.io/img/lessons/lesson-20.jpg">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="Lesson 20 Exam">
+    <meta itemprop="description" content="Exam work on the course of Beetroot Academy">
+    <meta itemprop="image" content="https://szakhar.github.io/img/lessons/lesson-20.jpg">
+    <!-- Open Graph general (Facebook, Pinterest) -->
+    <meta name="og:title" content="Lesson 20 Exam">
+    <meta name="og:description" content="Exam work on the course of Beetroot Academy">
+    <meta name="og:image" content="https://szakhar.github.io/img/lessons/lesson-20.jpg">
+    <meta name="og:url" content="https://szakhar.github.io/img/lessons20/">
+    <meta name="og:site_name" content="Lesson 20 Exam">
+    <meta name="og:type" content="website">
+
     <link type="text/css" rel="stylesheet" href="fonts/icons/icons.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
@@ -21,7 +37,7 @@
 
     <form action="" method="post">
         <div class="header__search-form">
-            <input type="text" class="header__search-input" name="search-input" minlength="3" placeholder="Search Your Travel Destination">
+            <input type="search" class="header__search-input" name="q" minlength="3" placeholder="Search Your Travel Destination">
             <button class="header__search-btn">Search <i class="icon-search"></i></button>
             <div class="header__error">short word</div>
         </div>
@@ -39,9 +55,13 @@
     <div class="nav__box">
         <a href="" class="nav__logo">Bhromaon</a>
 
-        <div class="nav__burger">
-            <div class="nav__burger-line"></div>
-        </div>
+        <!-- Burget Menu -->
+        <input id="burger-toggle" type="checkbox" class="nav__burger-check">
+        <label for="burger-toggle" for="brg-mn" class="nav__burger-box">
+            <span class="nav__burger-icon"></span>
+        </label>
+        <div class="nav__burger-bg"></div>
+        <label for="burger-toggle" class="nav__burger-close">x</label><!-- / burget menu -->
 
         <ul class="nav__list">
             <li class="nav__item"><a href="#">Who We Are</a></li>
@@ -161,5 +181,6 @@
     </div>
 </footer><!-- / footer -->
 
+<script src="js/script.js"></script>
 </body>
 </html>

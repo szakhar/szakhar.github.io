@@ -105,7 +105,7 @@ img {
 .btn {
   width: 225px;
   height: 60px;
-  background-color: #5474fd;
+  background-image: linear-gradient(45deg, #496bfe 38%, #5474fd 38%);
   font-family: "Aleo", serif;
   font-size: 16px;
   font-weight: normal;
@@ -114,12 +114,27 @@ img {
   text-transform: uppercase;
 }
 .btn:hover {
-  background-color: #3b60fd;
+  background-image: linear-gradient(45deg, #3f63fe 38%, #4f70fd 38%);
 }
 .btn:active {
-  background-color: #3157fd;
+  background-image: linear-gradient(45deg, #355bfe 38%, #4568fd 38%);
 }
 
+/* ================================================
+     ANIMATION
+   ================================================ */
+@keyframes scroll {
+  /* ANIMATION SCROLL */
+  0% {
+    transform: translate(0, 0) rotate(90deg);
+  }
+  50% {
+    transform: translate(0, 9%) rotate(90deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(90deg);
+  }
+}
 .header {
   background: url(../img/hero-bg.jpg) top/cover no-repeat;
   background-color: #232323;
@@ -177,7 +192,7 @@ img {
   position: relative;
 }
 .header__search-form:hover {
-  box-shadow: 0 9px 10px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 9px 10px rgba(0, 0, 0, 0.4);
 }
 .header__search-input {
   max-width: 77.4%;
@@ -200,9 +215,6 @@ img {
   letter-spacing: 2.5px;
   text-align: center;
   color: #999;
-}
-.header__search-input:focus {
-  background-color: #f0f0f0;
 }
 .header__error {
   position: absolute;
@@ -258,12 +270,23 @@ img {
 .header__angle {
   display: block;
   font-size: 33px;
-  transform: rotate(90deg);
+  animation: scroll 1.2s infinite;
 }
 
 .nav {
   background-color: #5474fd;
   padding: 29px 0 27px;
+}
+@media only screen and (min-width: 480px) {
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
+    .nav {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 50;
+    }
+  }
 }
 .nav__box {
   display: flex;
@@ -282,6 +305,8 @@ img {
     justify-content: space-between;
   }
   .nav__box .nav__list {
+    visibility: visible;
+    opacity: 0;
     display: none;
   }
 }
@@ -299,42 +324,109 @@ img {
 }
 @media only screen and (max-width: 560px) {
   .nav__logo {
-    margin-bottom: 0;
+    margin-bottom: 0px;
+    margin-top: 5px;
   }
 }
-.nav__burger {
-  width: 42px;
-  height: 42px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+.nav__burger-check {
   display: none;
 }
 @media only screen and (max-width: 560px) {
-  .nav__burger {
-    display: flex;
+  .nav__burger-check:checked ~ .nav__burger-bg {
+    visibility: visible;
+    opacity: 1;
+  }
+  .nav__burger-check:checked ~ .nav__burger-close {
+    visibility: visible;
+    opacity: 1;
+  }
+  .nav__burger-check:checked ~ .nav__list {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+  }
+  .nav__burger-check:checked ~ .nav__list li {
+    display: block;
+    margin-right: 0;
+  }
+  .nav__burger-check:checked ~ .nav__list li:not(:last-child) {
+    margin-bottom: 40px;
   }
 }
-.nav__burger-line {
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
+.nav__burger-box {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 560px) {
+  .nav__burger-box {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.nav__burger-icon {
   position: relative;
 }
-.nav__burger-line::before, .nav__burger-line::after {
-  content: "";
+.nav__burger-icon, .nav__burger-icon::before, .nav__burger-icon::after {
+  display: block;
+  background-color: #e8e8e8;
   width: 100%;
   height: 2px;
-  background-color: #fff;
+}
+.nav__burger-icon::before, .nav__burger-icon::after {
+  content: "";
   position: absolute;
   left: 0;
 }
-.nav__burger-line::before {
+.nav__burger-icon::before {
   top: 14px;
 }
-.nav__burger-line::after {
+.nav__burger-icon::after {
   bottom: 14px;
+}
+.nav__burger-bg {
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(35, 35, 35, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  transition: all 0.3s;
+}
+.nav__burger-close {
+  visibility: hidden;
+  opacity: 0;
+  padding: 10px;
+  font-size: 52px;
+  line-height: 0.5;
+  color: rgba(232, 232, 232, 0.6);
+  transform: scale(1, 0.85);
+  transition: all 0.2s;
+  cursor: pointer;
+  position: fixed;
+  top: 5%;
+  right: 8%;
+  z-index: 30;
+}
+.nav__burger-close:hover {
+  color: rgba(232, 232, 232, 0.8);
 }
 .nav__list {
   list-style: none;
@@ -509,7 +601,7 @@ img {
   display: flex;
   justify-content: center;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 820px) {
   .instruction__box {
     justify-content: space-between;
   }
@@ -539,7 +631,7 @@ img {
     margin-right: 100px;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 820px) {
   .instruction__item:not(:last-child) {
     margin-right: 0;
   }
@@ -553,7 +645,7 @@ img {
     font-size: 68px;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 820px) {
   .instruction__icon {
     font-size: 64px;
   }
@@ -685,19 +777,21 @@ img {
   background-color: #333;
   display: flex;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .reviews__item {
     flex-direction: column;
+    margin: 0 auto;
+    max-width: 445px;
   }
 }
 .reviews__photo {
   background: url(../img/reviews-photo.jpg) center/cover no-repeat;
   width: 40.1%;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .reviews__photo {
     width: 100%;
-    height: 320px;
+    height: 284px;
     background-position: center -20px;
   }
 }
@@ -705,7 +799,7 @@ img {
   padding: 50.6px 54px 42px 59px;
   width: 59.9%;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .reviews__review {
     width: 100%;
   }
