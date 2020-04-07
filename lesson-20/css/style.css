@@ -277,7 +277,7 @@ img {
   background-color: #5474fd;
   padding: 29px 0 27px;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 750px) {
   @supports ((position: -webkit-sticky) or (position: sticky)) {
     .nav {
       position: -webkit-sticky;
