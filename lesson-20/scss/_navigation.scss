@@ -2,6 +2,14 @@
     background-color: #5474fd;
     padding: 29px 0 27px;
 
+    @media only screen and (min-width: 480px) {
+        @supports (position: sticky) {
+            position: sticky;
+            top: 0; left: 0;
+            z-index: 50;
+        }
+    }
+
     &__box {
         @extend %container;
         display: flex;
@@ -18,7 +26,9 @@
             justify-content: space-between;
 
             .nav__list {
-                display: none;
+                visibility: visible;
+                opacity: 0;
+                display: none; // потрібно бо меню повністю не ховається і заважає
             }
         }
     }
@@ -35,41 +45,83 @@
         }
 
         @media only screen and (max-width: 560px) {
-            margin-bottom: 0;
+            margin-bottom: 0px;
+            margin-top: 5px; // Для вирівнювання лого по висоті
         }
     }
 
-    &__burger {
-        width: 42px;
-        height: 42px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
+    &__burger-check {
         display: none;
 
         @media only screen and (max-width: 560px) {
-            display: flex;
+            
+            &:checked ~ .nav__burger-bg {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            &:checked ~ .nav__burger-close {
+                visibility: visible;
+                opacity: 1;
+            }
+    
+            &:checked ~ .nav__list {
+                visibility: visible;
+                opacity: 1;
+                display: block; // потрібно бо меню повністю не ховається і заважає
+                width: 100%;
+                font-size: 24px;
+                text-align: center;
+
+                position: fixed;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 30;
+    
+                li {
+                    display: block;
+                    margin-right: 0;
+    
+                    &:not(:last-child) {
+                        margin-bottom: 40px;
+                    }
+                }
+            }
         }
     }
 
-    &__burger-line {
-        // display: none;
-        width: 100%;
-        height: 2px;
-        background-color: #fff;
+    &__burger-box {
+        visibility: hidden;
+        opacity: 0;
+        display: none; // потрібно щоб блок не заважав на сторінці і сховати його
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+
+        @media only screen and (max-width: 560px) {
+            visibility: visible;
+            opacity: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__burger-icon {
         position: relative;
 
-        // @media only screen and (max-width: 560px) {
-        //     display: block;
-        // }
+        &,
+        &::before,
+        &::after {
+            display: block;
+            background-color: $color-grey;
+            width: 100%;
+            height: 2px;
+        }
 
         &::before,
         &::after {
             content: "";
-            width: 100%;
-            height: 2px;
-            background-color: #fff;
             position: absolute;
             left: 0;
         }
@@ -80,6 +132,38 @@
 
         &::after {
             bottom: 14px;
+        }
+    }
+
+    &__burger-bg {
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#232323, .9);
+        position: fixed;
+        top: 0; left: 0;
+        z-index: 20;
+        transition: all .3s;
+    }
+
+    &__burger-close {
+        visibility: hidden;
+        opacity: 0;
+        padding: 10px;
+        font-size: 52px;
+        line-height: 0.5;
+        color: rgba($color-grey, .6);
+        transform: scale(1,.85); // зменшує висоту букви
+        transition: all .2s;
+        cursor: pointer;
+
+        position: fixed;
+        top: 5%; right: 8%;
+        z-index: 30;
+
+        &:hover {
+            color: rgba($color-grey, .8);
         }
     }
 
