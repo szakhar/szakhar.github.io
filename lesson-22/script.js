@@ -195,6 +195,6 @@ if(result == 2 || result == 4) {
 
 // Завдання 10
 let date = new Date(prompt(`Введіть дату в такому форматі (2020.01.30)`));
-
+ 
 date.setDate(date.getDate() + 3);
 alert(date.getDate() + '.' + (date.getMonth()+1) + '.' + date.getFullYear());
