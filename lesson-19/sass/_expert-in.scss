@@ -1,0 +1,90 @@
+#expert-in {
+  padding-top: 10em;
+  padding-bottom: 11em;
+  background-color: #f1f8ff;
+  .expert-in__title {
+    margin: 0 auto;
+    width: 207px;
+    height: 45px;
+    font-family: Lato;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 0.71;
+    letter-spacing: normal;
+    text-align: center;
+    color: $color-primary;
+    background-image: linear-gradient(to right, #3695ff, #3564fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  .expert-in__block {
+    margin-top: 113px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .expert-in__block__box {
+      padding-bottom: 80px;
+      flex-basis: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .expert-in__block_text {
+        font-size: 16px;
+        font-family: $font-primary;
+        color: rgb(90, 90, 90);
+        line-height: 2.188;
+        text-align: center;
+        width: 355px;
+        line-height: 2.19;
+        letter-spacing: normal;
+        color: #5a5a5a;
+      }
+      .expert-in__block_title {
+        margin-bottom: 33px;
+        font-size: 24px;
+        font-family: $font-primary;
+        color: rgb(54, 119, 253);
+        font-weight: bold;
+        line-height: 1;
+        text-align: center;
+      }
+      .expert-in__block_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px #b7c0c9;
+        width: 139px;
+        height: 139px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 50%;
+        margin-bottom: 50px;
+        &.expert-in__block_img:hover {
+          transition-duration: 0, 6s;
+          background-color: #c6cfd6;
+          border: solid 1px #b7c0c9;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    .expert-in__block {
+      justify-content: space-around;
+    }
+    .expert-in__block__box {
+      padding-bottom: 30px;
+    }
+    .expert-in__title {
+      font-size: 60px;
+      width: 270px;
+    }
+  }
+  @media screen and (max-width: 742px) {
+    .expert-in__block__box {
+      padding-bottom: 20px;
+    }
+  }
+}
