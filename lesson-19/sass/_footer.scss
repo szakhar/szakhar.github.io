@@ -1,0 +1,134 @@
+#footer {
+    .clients__page {
+	background-color: #f1f8ff ;
+    }
+    .clients__main {
+        .clients__title {
+            text-align: center;
+            padding: 100px 0 77px 0;
+            font-family: 'Lato', sans-serif;
+            font-size: 50px;
+            font-weight: 300;
+            color: #3677fd;
+            
+            .span {
+                font-family: 'Lato', sans-serif;
+                font-size: 50px;
+                font-weight: 300;
+                color: #3677fd;
+            }
+        }    
+    }
+
+	.clients__block {
+	    display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: center;
+        padding: 0 0 100px;
+
+        .clients_list {
+            width: 193px;
+            height: 53px;
+            display: block;
+            @media screen and (max-width: 840px){
+                    width: 270px;
+                    height: 70px;    
+            }
+        }
+		    &-one {
+                background: url(../img/Microsoft.png) center no-repeat;
+                &:hover {
+                background: url(../img/MSFT_logo_png_color.png) center no-repeat;
+                }
+            }
+            &-two {
+            background: url(../img/samsung.png) center no-repeat;
+                &:hover {
+            background: url(../img/Samsung-logo-2015-Nobg_color.png) center no-repeat;
+                }
+            }
+		
+		    &-tree {
+            background: url(../img/ibm.png) center no-repeat;
+                &:hover {
+            background: url(../img/ibm_logo_color.png) center no-repeat;
+                }
+            }
+		    &-four {
+            background: url(../img/google.png) center no-repeat;
+                &:hover {
+            background: url(../img/Google_2015_logo.svg_color.png) center no-repeat;
+                }
+            }
+    }
+        
+        .basis {
+                // flex: 1 1 192px;
+                // height: 70px;
+                margin: 5px;
+                cursor: pointer;
+        }
+    .footer {
+        width: 100%;
+        background: url(../img/bg_footer.png), linear-gradient(51deg, #3695ff 0%, #3564fc 100%);
+        background-size: cover;
+        padding: 100px auto;
+    }
+    .footer__color {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 70px 0;
+    }
+	.light {
+		display: flex;
+		font-family: 'Lato', sans-serif;
+		font-size: 50px;
+		font-weight: 300;
+		color: #fff;
+        line-height: 1.2;
+        @media screen and (max-width:910px) {
+           font-size: 20px; 
+        }
+    }
+	.bold {
+		display: flex;
+		color: #fff	;
+		font-family: 'Lato', sans-serif;
+		font-size: 50px;
+		font-weight: 700;
+		// margin-right: 10px;
+        line-height: 1.2;
+        @media screen and (max-width:910px) {
+            font-size: 20px;
+        }
+    }
+    .button {
+        margin-left:54px;
+    
+        input {
+		width: 205px;
+		height: 60px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+		background-color: #fff;
+		color: #3564fc;
+		font-family: 'Lato';
+		font-size: 16px;
+		font-weight: 700;
+		border: none;
+		border-radius: 30px;
+		cursor: pointer;
+        transition: all 0.3s linear;
+
+		    &:hover {
+                color: #fff;
+                background-image: linear-gradient(51deg, #3695ff 0%, #3564fc 100%);
+                transform: scale(1.09);
+                box-shadow: 0 0 15px white;
+            }
+        }
+    }
+}       

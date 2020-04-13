@@ -1,0 +1,41 @@
+#latest-works {
+    padding-bottom: 191px;
+    h2.h2_latest {
+        font-size: 50px;
+        font-weight: 300;
+        text-align: center;
+        padding-bottom: 104px;
+        padding-top: 91px;
+        background-image: linear-gradient(to right, #3695ff, #3564fc);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    .box_latest-1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row;
+        .works:hover {
+            opacity: 0.4;
+            transform: scale(1.05);
+            transition-duration: 1s;
+        }
+        .works_padtop {
+            padding-bottom: 53px;
+        }
+        .works_padtop_1 {
+            @media screen and (max-width: 751px) {
+                padding-top: 53px;
+            }
+        }
+        @media screen and (max-width: 1114px) {
+            display: flex;
+            justify-content: center;
+        }
+        @media screen and (max-width: 1112px) {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+}
