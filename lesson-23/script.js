@@ -1,5 +1,6 @@
 
 // Завдання 1
+
 let totalNum = 0;
 const formTask1 = document.querySelector('[name="form1"]');
 
@@ -144,6 +145,7 @@ formTask5.addEventListener('submit', function(event) {
 
 
 // Завдання 6
+
 const buttonTask6 = document.querySelector('#button-task6');
 
 buttonTask6.addEventListener('click', function() {
