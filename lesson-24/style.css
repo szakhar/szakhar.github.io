@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    background-color: goldenrod;
+    background-color: OliveDrab;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -35,7 +35,7 @@ h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
     font-weight: 900;
-    color: #333;
+    color: snow;
     text-align: center;
     margin: 40px 0 50px;
 }
@@ -65,6 +65,7 @@ h3 {
     background-color: snow;
     padding: 30px;
     border-radius: 15px;
+    box-shadow: 0 4px 5px rgba(0,0,0, .15);
 }
 
 .form-box:not(:last-child) {
@@ -112,7 +113,7 @@ select {
 button {
     border: none;
     outline: none;
-    background-color: OliveDrab;
+    background-color: goldenrod;
     border-radius: 4px;
     padding: 10px;
 
@@ -126,7 +127,7 @@ button {
 }
 
 button:hover {
-    background-color: darkolivegreen;
+    background-color: darkgoldenrod;
     transform: translateY(-1px);
 }
 
@@ -183,4 +184,12 @@ button:active {
 
 #btn-this:hover {
     background-color: RebeccaPurple;
+}
+
+.nums-box {
+    display: inline-block;
+}
+
+.time-box {
+    margin-bottom: 10px;
 }
