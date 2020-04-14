@@ -186,7 +186,8 @@ button:active {
     background-color: RebeccaPurple;
 }
 
-.nums-box {
+.nums-box,
+.perfect-box {
     display: inline-block;
 }
 
