@@ -85,9 +85,6 @@ formTask4.addEventListener('submit', function(event) {
 
 // Завдання 5
 
-// Перевіряє чи число являється цілим
-function isInt(n) { return Number(n) === n && n % 1 === 0 }
-
 // Перевіряє чи число являється досконалим
 function perfect(num) {
     let resultArr = [];
@@ -96,15 +93,15 @@ function perfect(num) {
 
     for(let i = 2; num != 1; i++) {
         num = startNum / i;
-        if(isInt(num)) resultArr.push(num);
+        if(Number.isInteger(num)) resultArr.push(num);
     }
 
     for(let j = 0; j < resultArr.length; j++) {
         result += resultArr[j];
     }
 
-    if(startNum === result) return 'досконале';
-    else return 'не досконале';
+    if(startNum === result) return true;
+    else return false;
 }
 
 
@@ -115,13 +112,26 @@ formTask5.addEventListener('submit', function(event) {
     const num = +event.currentTarget.numTask5.value;
 
 
-    const viewResult = document.querySelector('.result-form5');
-    viewResult.innerHTML = `<div class="inline-box"><h3 class="h-inline">Ваше число:</h3>${perfect(num)}</div>`;
+    const result = document.querySelector('.result-form5');
+    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Ваше число:</h3><div class="perfect-box"></div></div>`;
+    const perfectBox = document.querySelector('.perfect-box');
+    if(perfect(num)) perfectBox.innerHTML += 'досконале';
+    else perfectBox.innerHTML += 'не досконале';
 });
 
 
 
 // Завдання 6
+
+const perfectNums = (startNum, finishNum) => {
+    if(startNum !== 0 && finishNum !== 0) {
+        let result = '';
+        for(let i = startNum; i <= finishNum; i++) {
+            if(perfect(i)) result += `${i} `;
+        }
+        return result;
+    }
+}
 
 const formTask6 = document.querySelector('[name="form6"]');
 
@@ -132,13 +142,10 @@ formTask6.addEventListener('submit', function(event) {
     let num2 = +event.currentTarget.num2Task6.value;
 
     const result = document.querySelector('.result-form6');
-
-    if(num1 !== 0 && num2 !== 0) {
+    if (perfectNums(num1, num2)) {
         result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Досконалі числа:</h3><div class="nums-box"></div></div>`;
         const numsBox = document.querySelector('.nums-box');
-        for(let i = num1; i <= num2; i++) {
-            if(perfect(i) === 'досконале') numsBox.innerHTML += `${i} `;
-        }
+        numsBox.innerHTML += perfectNums(num1, num2);
     } else {
         result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Помилка. Введіть числа більше нуля.</h3></div>`;
     }
@@ -226,6 +233,14 @@ formTask9.addEventListener('submit', function(event) {
 
 // Завдання 10
 
+function differenceTime( h1, m1, s1, h2, m2, s2 ) {
+    const secondsOne = getSeconds(h1, m1, s1);
+    const secondsTwo = getSeconds(h2, m2, s2);
+
+    const seconds = Math.abs(secondsOne - secondsTwo);
+    return convertSeconds(seconds);
+}
+
 const formTask10 = document.querySelector('[name="form10"]');
 
 formTask10.addEventListener('submit', function(event) {
@@ -235,14 +250,8 @@ formTask10.addEventListener('submit', function(event) {
     const num3 = +event.currentTarget.num3Task10.value;
     const num4 = +event.currentTarget.num4Task10.value;
     const num5 = +event.currentTarget.num5Task10.value;
-    const num6 = +event.currentTarget.num6Task10.value;
-
-    const secondsOne = getSeconds(num1, num2, num3);
-    const secondsTwo = getSeconds(num4, num5, num6);
-
-    const seconds = Math.abs(secondsOne - secondsTwo);
-    const differenceTime = convertSeconds(seconds);
+    const num6 = +event.currentTarget.num6Task10.value;    
 
     const result = document.querySelector('.result-form10');
-    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Різниця в часі:</h3>${differenceTime}</div>`;
+    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Різниця в часі:</h3>${differenceTime(num1,num2,num3,num4,num5,num6)}</div>`;
 });
