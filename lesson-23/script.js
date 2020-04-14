@@ -60,7 +60,10 @@ formTask3.addEventListener('submit', function(event) {
     const num = +event.currentTarget.numTask3.value;
 
     for(let i = 2; i <= num; i++) {
-        resultTask3.push(num / i);
+
+        resultTask3.push(i);
+        // if (num % i === 0) resultTask3.push(i);
+        // resultTask3.push(num / i);
     }
 
     const viewResult = document.querySelector('.result-form3');
@@ -86,7 +89,7 @@ formTask4.addEventListener('submit', function(event) {
 
     let count = 0;
     do {
-        num /= 10
+        num /= 10;
         count++;
     }
     while(num >= 1);
@@ -125,6 +128,7 @@ formTask5.addEventListener('submit', function(event) {
 
     // Рахує - парні та непарні числа
     for(let j = 0; j < arr.length; j++) {
+        // arr[j]%2 == 0 // парне
         if(arr[j] & 1) {
             odd += 1; // Непарні
         } else {
