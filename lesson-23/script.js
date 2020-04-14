@@ -59,11 +59,8 @@ formTask3.addEventListener('submit', function(event) {
     event.preventDefault();
     const num = +event.currentTarget.numTask3.value;
 
-    for(let i = 2; i <= num; i++) {
-
-        resultTask3.push(i);
-        // if (num % i === 0) resultTask3.push(i);
-        // resultTask3.push(num / i);
+    for(let i = 2; i < num; i++) {
+        if (num % i === 0) resultTask3.push(i);
     }
 
     const viewResult = document.querySelector('.result-form3');
