@@ -118,6 +118,11 @@ li label {
 li label {
     display: flex;
     align-items: flex-start;
+    transition: background-color .1s ease-in;
+}
+
+li label:hover {
+    background-color: rgba(208, 105, 43, .4);
 }
 
 input[type="checkbox"] {
