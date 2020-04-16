@@ -1,34 +1,39 @@
 
+// Вивід результату на екран
+
+function viewResult(nameForm, title, viewResult) {
+    const result = document.querySelector(`.result-form${nameForm}`);
+    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">${title}</h3>${viewResult}</div>`;
+}
+
+
+
 // Завдання 1
 
 let totalNum = 0;
-const formTask1 = document.querySelector('[name="form1"]');
 
-formTask1.addEventListener('submit', function(event) {
+form1.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const num1 = +event.currentTarget.num1Task1.value;
-    const num2 = +event.currentTarget.num2Task1.value;
+    const num1 = +form1.elements.num1Task1.value;
+    const num2 = +form1.elements.num2Task1.value;
 
     for(let i = num1; i <= num2; i++) {
         totalNum += i;
     }
 
-    const result = document.querySelector('.result-form1');
-    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Сума всіх чисел:</h3>${totalNum}</div>`;
+    viewResult(1, 'Сума всіх чисел:', totalNum);
     totalNum = 0;
 });
 
 
 // Завдання 2
 
-const formTask2 = document.querySelector('[name="form2"]');
-
-formTask2.addEventListener('submit', function(event) {
+form2.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    let num1 = +event.currentTarget.num1Task2.value;
-    let num2 = +event.currentTarget.num2Task2.value;
+    let num1 = +form2.elements.num1Task2.value;
+    let num2 = +form2.elements.num2Task2.value;
 
     while (num1 != 0 && num2 != 0) {
         if (num1 > num2)
@@ -43,8 +48,7 @@ formTask2.addEventListener('submit', function(event) {
 
     const resultNum = num1 + num2;
 
-    const result = document.querySelector('.result-form2');
-    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Найбільше спільне кратне:</h3>${resultNum}</div>`;
+    viewResult(2, 'Найбільше спільне кратне:', resultNum);
 });
 
 
@@ -53,11 +57,10 @@ formTask2.addEventListener('submit', function(event) {
 // Завдання 3
 
 let resultTask3 = [];
-const formTask3 = document.querySelector('[name="form3"]');
 
-formTask3.addEventListener('submit', function(event) {
+form3.addEventListener('submit', function(event) {
     event.preventDefault();
-    const num = +event.currentTarget.numTask3.value;
+    const num = +form3.numTask3.value;
 
     for(let i = 2; i < num; i++) {
         if (num % i === 0) resultTask3.push(i);
@@ -77,12 +80,10 @@ formTask3.addEventListener('submit', function(event) {
 
 // Завдання 4
 
-const formTask4 = document.querySelector('[name="form4"]');
-
-formTask4.addEventListener('submit', function(event) {
+form4.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    let num = +event.currentTarget.numTask4.value;
+    let num = +form4.elements.numTask4.value;
 
     let count = 0;
     do {
@@ -91,8 +92,7 @@ formTask4.addEventListener('submit', function(event) {
     }
     while(num >= 1);
 
-    const viewResult = document.querySelector('.result-form4');
-    viewResult.innerHTML = `<div class="inline-box"><h3 class="h-inline">Кількість цифр:</h3>${count}</div>`;
+    viewResult(4, 'Кількість цифр:', count);
 });
 
 
@@ -105,11 +105,9 @@ let zero = 0;
 let even = 0; // Парні
 let odd = 0; // Непарні
 
-const formTask5 = document.querySelector('[name="form5"]');
-
-formTask5.addEventListener('submit', function(event) {
+form5.addEventListener('submit', function(event) {
     event.preventDefault();
-    const nums = event.currentTarget.numsTask5.value;
+    const nums = form5.numsTask5.value;
     let arr = nums.split(',');
 
     // Рахує - позитивні, негативні числа та нулі
@@ -133,12 +131,16 @@ formTask5.addEventListener('submit', function(event) {
         }
     }
 
+    function result (title, result) {
+        return `<div class="inline-box"><h3 class="h-inline">${title}</h3>${result}</div>`;
+    }
+    
     const viewResult = document.querySelector('.result-form5');
-    viewResult.innerHTML = `<div class="inline-box"><h3 class="h-inline">Позитивних:</h3>${positive}</div>`;
-    viewResult.innerHTML += `<div class="inline-box"><h3 class="h-inline">Негативних:</h3>${negative}</div>`;
-    viewResult.innerHTML += `<div class="inline-box"><h3 class="h-inline">Нулів:</h3>${zero}</div>`;
-    viewResult.innerHTML += `<div class="inline-box"><h3 class="h-inline">Парних:</h3>${even}</div>`;
-    viewResult.innerHTML += `<div class="inline-box"><h3 class="h-inline">Непарних:</h3>${odd}</div>`;
+    viewResult.innerHTML = result('Позитивних:', positive);
+    viewResult.innerHTML += result('Негативних:', negative);
+    viewResult.innerHTML += result('Нулів:', zero);
+    viewResult.innerHTML += result('Парних:', even);
+    viewResult.innerHTML += result('Непарних:', odd);
     
     positive = 0; negative = 0; zero = 0; even = 0; odd = 0;
 });
@@ -174,8 +176,7 @@ buttonTask6.addEventListener('click', function() {
 
         more = confirm(`Результат: ${resultSum}. Ще?`);
 
-        const result = document.querySelector('.result-form6');
-        result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Результат:</h3>${resultSum}</div>`;
+        viewResult(6, 'Результат:', resultSum);
     }
 
 });
@@ -184,19 +185,16 @@ buttonTask6.addEventListener('click', function() {
 
 // Завдання 7
 
-const formTask7 = document.querySelector('[name="form7"]');
-
-formTask7.addEventListener('submit', function(event) {
+form7.addEventListener('submit', function(event) {
     event.preventDefault();
-    const num = event.currentTarget.num1Task7.value;
-    const count = +event.currentTarget.num2Task7.value;
+    const num = form7.elements.num1Task7.value;
+    const count = +form7.elements.num2Task7.value;
 
     let arr = num.split('');
     
     for( let i = 0; i < count; i++ ) arr.push( arr.shift() );
 
-    const result = document.querySelector('.result-form7');
-    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Результат:</h3>${arr.join('')}</div>`;
+    viewResult(7, 'Результат:', arr.join(''));
 });
 
 

@@ -1,4 +1,13 @@
 
+// Вивід результату на екран
+
+function viewResult(nameForm, title, viewResult='') {
+    const result = document.querySelector(`.result-form${nameForm}`);
+    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">${title}</h3>${viewResult}</div>`;
+}
+
+
+
 // Завдання 1
 
 function returnNumber(n1, n2) {
@@ -7,16 +16,13 @@ function returnNumber(n1, n2) {
     else return 0;
 }
 
-const formTask1 = document.querySelector('[name="form1"]');
-
-formTask1.addEventListener('submit', function(event) {
+form1.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const num1 = +event.currentTarget.num1Task1.value;
-    const num2 = +event.currentTarget.num2Task1.value;
+    const num1 = +form1.elements.num1Task1.value;
+    const num2 = +form1.elements.num2Task1.value;
 
-    const result = document.querySelector('.result-form1');
-    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">${returnNumber(num1, num2)}</h3></div>`;
+    viewResult(1, returnNumber(num1, num2));
 });
 
 
@@ -27,15 +33,12 @@ function factorial(num) {
     else return num * factorial(num - 1);
 }
 
-const formTask2 = document.querySelector('[name="form2"]');
-
-formTask2.addEventListener('submit', function(event) {
+form2.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    let num = +event.currentTarget.numTask2.value;
+    let num = +form2.elements.numTask2.value;
 
-    const result = document.querySelector('.result-form2');
-    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Факторіал:</h3>${factorial(num)}</div>`;
+    viewResult(2, 'Факторіал:', factorial(num));
 });
 
 
@@ -46,16 +49,14 @@ function joinNum(num1, num2, num3) {
     return num1 + '' + num2 + '' + num3;
 }
 
-const formTask3 = document.querySelector('[name="form3"]');
-
-formTask3.addEventListener('submit', function(event) {
+form3.addEventListener('submit', function(event) {
     event.preventDefault();
-    const num1 = +event.currentTarget.num1Task3.value;
-    const num2 = +event.currentTarget.num2Task3.value;
-    const num3 = +event.currentTarget.num3Task3.value;
+    
+    const num1 = +form3.elements.num1Task3.value;
+    const num2 = +form3.elements.num2Task3.value;
+    const num3 = +form3.elements.num3Task3.value;
 
-    const result = document.querySelector('.result-form3');
-    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Об'єднане число:</h3>${joinNum(num1, num2, num3)}</div>`;
+    viewResult(3, `Об'єднане число:`, joinNum(num1, num2, num3));
 });
 
 
@@ -69,16 +70,13 @@ function checkSquare(num1 = '', num2 = '') {
     else return 'Введіть хоть одне число.';
 }
 
-const formTask4 = document.querySelector('[name="form4"]');
-
-formTask4.addEventListener('submit', function(event) {
+form4.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    let num1 = +event.currentTarget.num1Task4.value;
-    let num2 = +event.currentTarget.num2Task4.value;
+    let num1 = +form4.elements.num1Task4.value;
+    let num2 = +form4.elements.num2Task4.value;
 
-    const result = document.querySelector('.result-form4');
-    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Площа прямокутника або квадрата:</h3>${checkSquare(num1, num2)}</div>`;
+    viewResult(4, `Площа прямокутника або квадрата:`, checkSquare(num1, num2));
 });
 
 
@@ -104,12 +102,10 @@ function perfect(num) {
     else return false;
 }
 
-
-const formTask5 = document.querySelector('[name="form5"]');
-
-formTask5.addEventListener('submit', function(event) {
+form5.addEventListener('submit', function(event) {
     event.preventDefault();
-    const num = +event.currentTarget.numTask5.value;
+
+    const num = +form5.elements.numTask5.value;
 
 
     const result = document.querySelector('.result-form5');
@@ -133,13 +129,11 @@ const perfectNums = (startNum, finishNum) => {
     }
 }
 
-const formTask6 = document.querySelector('[name="form6"]');
-
-formTask6.addEventListener('submit', function(event) {
+form6.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    let num1 = +event.currentTarget.num1Task6.value;
-    let num2 = +event.currentTarget.num2Task6.value;
+    let num1 = +form6.elements.num1Task6.value;
+    let num2 = +form6.elements.num2Task6.value;
 
     const result = document.querySelector('.result-form6');
     if (perfectNums(num1, num2)) {
@@ -163,16 +157,13 @@ function getTime(hours = '00', minutes = '00', seconds = '00') {
     return `${hours} : ${minutes} : ${seconds}`;
 }
 
-const formTask7 = document.querySelector('[name="form7"]');
-
-formTask7.addEventListener('submit', function(event) {
+form7.addEventListener('submit', function(event) {
     event.preventDefault();
-    const num1 = +event.currentTarget.num1Task7.value;
-    const num2 = +event.currentTarget.num2Task7.value;
-    const num3 = +event.currentTarget.num3Task7.value;
+    const num1 = +form7.elements.num1Task7.value;
+    const num2 = +form7.elements.num2Task7.value;
+    const num3 = +form7.elements.num3Task7.value;
 
-    const result = document.querySelector('.result-form7');
-    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Ваш час:</h3>${getTime(num1, num2, num3)}</div>`;
+    viewResult(7, 'Ваш час:', getTime(num1, num2, num3));
 });
 
 
@@ -186,16 +177,13 @@ function getSeconds(hours = 0, minutes = 0, seconds = 0) {
     return (hours * 3600) + (minutes * 60) + seconds;
 }
 
-const formTask8 = document.querySelector('[name="form8"]');
-
-formTask8.addEventListener('submit', function(event) {
+form8.addEventListener('submit', function(event) {
     event.preventDefault();
-    const num1 = +event.currentTarget.num1Task8.value;
-    const num2 = +event.currentTarget.num2Task8.value;
-    const num3 = +event.currentTarget.num3Task8.value;
+    const num1 = +form8.elements.num1Task8.value;
+    const num2 = +form8.elements.num2Task8.value;
+    const num3 = +form8.elements.num3Task8.value;
 
-    const result = document.querySelector('.result-form8');
-    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Ваш час в секундах:</h3>${getSeconds(num1, num2, num3)}</div>`;
+    viewResult(8, 'Ваш час в секундах:', getSeconds(num1, num2, num3));
 });
 
 
@@ -219,14 +207,11 @@ function convertSeconds(secondsInput = 0) {
     }
 }
 
-const formTask9 = document.querySelector('[name="form9"]');
-
-formTask9.addEventListener('submit', function(event) {
+form9.addEventListener('submit', function(event) {
     event.preventDefault();
-    const num = +event.currentTarget.numTask9.value;
+    const num = +form9.elements.numTask9.value;
 
-    const result = document.querySelector('.result-form9');
-    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Ваш час:</h3>${convertSeconds(num)}</div>`;
+    viewResult(9, 'Ваш час:', convertSeconds(num));
 });
 
 
@@ -241,17 +226,14 @@ function differenceTime( h1, m1, s1, h2, m2, s2 ) {
     return convertSeconds(seconds);
 }
 
-const formTask10 = document.querySelector('[name="form10"]');
-
-formTask10.addEventListener('submit', function(event) {
+form10.addEventListener('submit', function(event) {
     event.preventDefault();
-    const num1 = +event.currentTarget.num1Task10.value;
-    const num2 = +event.currentTarget.num2Task10.value;
-    const num3 = +event.currentTarget.num3Task10.value;
-    const num4 = +event.currentTarget.num4Task10.value;
-    const num5 = +event.currentTarget.num5Task10.value;
-    const num6 = +event.currentTarget.num6Task10.value;    
+    const num1 = +form10.num1Task10.value;
+    const num2 = +form10.num2Task10.value;
+    const num3 = +form10.num3Task10.value;
+    const num4 = +form10.num4Task10.value;
+    const num5 = +form10.num5Task10.value;
+    const num6 = +form10.num6Task10.value;    
 
-    const result = document.querySelector('.result-form10');
-    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">Різниця в часі:</h3>${differenceTime(num1,num2,num3,num4,num5,num6)}</div>`;
+    viewResult(10, 'Різниця в часі:', differenceTime(num1,num2,num3,num4,num5,num6));
 });
