@@ -111,6 +111,7 @@ li label {
 
 .list {
     background-color: goldenrod;
+    font-size: 18px;
     color: #fff;
     margin-top: -20px;
 }
@@ -126,9 +127,15 @@ li label:hover {
 }
 
 input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
     margin-right: 10px;
 }
 
 ul li:nth-child(even) {
     background-color: darkgoldenrod;
+}
+
+input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
 }
