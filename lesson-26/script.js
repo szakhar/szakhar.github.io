@@ -9,7 +9,10 @@ let car = {
     year: 1995,
     mSpeed: 120,
     showCarInfo: function() {
-        return `<div class="inline-box"><h3 class="h-inline">Марка:</h3> ${this.brand}<br><h3 class="h-inline">Модель:</h3> ${this.model}<br><h3 class="h-inline">Рік:</h3> ${this.year}<br><h3 class="h-inline">Середня швидкість:</h3> ${this.mSpeed} км/год.</div>`;
+        return `<div class="inline-box"><h3 class="h-inline">Марка:</h3> ${this.brand}<br>
+                <h3 class="h-inline">Модель:</h3> ${this.model}<br>
+                <h3 class="h-inline">Рік:</h3> ${this.year}<br>
+                <h3 class="h-inline">Середня швидкість:</h3> ${this.mSpeed} км/год.</div>`;
     },
     calcMSpeed: function(distance) {
         let countBreak = 0;
@@ -70,6 +73,8 @@ form1.addEventListener('submit', function(event) {
 
 
 
+
+
 // Task 2 - Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, и следующие функции для работы с этим объектом:
 // Task 2.1 - Функция сложения 2-х объектов-дробей;
 // Task 2.2 - Функция вычитания 2-х объектов-дробей;
@@ -86,27 +91,22 @@ let fractions = {
         numer: 3,
         denom: 4
     },
-    addition: function() {
+    calcFr: function(sym) {
         const resFr1Numer = this.fr1.numer * this.fr2.denom;
         const resFr1Denom = this.fr1.denom * this.fr2.denom;
         const resFr2Numer = this.fr2.numer * this.fr1.denom;
-        const resFr2Denom = this.fr2.denom * this.fr1.denom;
 
-        const numer = resFr1Numer + resFr2Numer;
-        const denom = resFr1Denom + resFr2Denom;
-
-        return numer + '/' + denom;
+        let numer = 0;
+        if(sym == '+') numer = resFr1Numer + resFr2Numer;
+        else numer = resFr1Numer - resFr2Numer;
+  
+        return numer + '/' + resFr1Denom;
+    },
+    addition: function() {
+        return this.calcFr('+');
     },
     subtraction: function() {
-        const resFr1Numer = this.fr1.numer * this.fr2.denom;
-        const resFr1Denom = this.fr1.denom * this.fr2.denom;
-        const resFr2Numer = this.fr2.numer * this.fr1.denom;
-        const resFr2Denom = this.fr2.denom * this.fr1.denom;
-
-        const numer = resFr1Numer - resFr2Numer;
-        const denom = resFr1Denom - resFr2Denom;
-
-        return numer + '/' + denom;
+        return this.calcFr('-');
     },
     multi: function() {
         const numer = this.fr1.numer * this.fr2.numer;
@@ -155,26 +155,32 @@ let fractions = {
     }
 }
 
+// Виводить результати дробів
+function resultFr(task, fn, sym='+', def=true) {
+    const res = document.querySelector(`.result-form2${task}`);
+    if(def) {
+        res.innerHTML = `<p>${fractions.fr1.numer}/${fractions.fr1.denom} ${sym} ${fractions.fr2.numer}/${fractions.fr2.denom} = <strong>${fn}</strong></p><br>`;
+    } else {
+        res.innerHTML = `<p>26/8 = <strong>${fn}</strong></p><br>`;
+    }
+}
 
 // Task 2.1
-const resultAddition = document.querySelector('.result-form21');
-resultAddition.innerHTML = `<p>${fractions.fr1.numer}/${fractions.fr1.denom} + ${fractions.fr2.numer}/${fractions.fr2.denom} = <strong>${fractions.addition()}</strong></p><br>`;
+resultFr(1, fractions.addition());
 
 // Task 2.2
-const resultSubtraction = document.querySelector('.result-form22');
-resultSubtraction.innerHTML = `<p>${fractions.fr1.numer}/${fractions.fr1.denom} - ${fractions.fr2.numer}/${fractions.fr2.denom} = <strong>${fractions.subtraction()}</strong></p><br>`;
+resultFr(2, fractions.subtraction(), '-');
 
 // Task 2.3
-const resultMulti = document.querySelector('.result-form23');
-resultMulti.innerHTML = `<p>${fractions.fr1.numer}/${fractions.fr1.denom} * ${fractions.fr2.numer}/${fractions.fr2.denom} = <strong>${fractions.multi()}</strong></p><br>`;
+resultFr(3, fractions.multi(), '*');
 
 // Task 2.4
-const resultDivide = document.querySelector('.result-form24');
-resultDivide.innerHTML = `<p>${fractions.fr1.numer}/${fractions.fr1.denom} / ${fractions.fr2.numer}/${fractions.fr2.denom} = <strong>${fractions.divide()}</strong></p><br>`;
+resultFr(4, fractions.divide(), ':');
 
 // Task 2.5
-const resultAbbr = document.querySelector('.result-form25');
-resultAbbr.innerHTML = `<p>26/16 = <strong>${fractions.abbr(26,16)}</strong></p><br>`;
+resultFr(5, fractions.abbr(26,8), '', false);
+
+
 
 
 
@@ -191,26 +197,25 @@ let time = {
     showTime: function() {
         return `${this.hours}:${this.minutes}:${this.seconds}`;
     },
-    changeTimeSeconds: function(seconds) {
-        const secondsTime = getSeconds(time.hours, time.minutes, time.seconds);
+    calcTime: function(seconds) {
+        const secondsTime = getSeconds(this.hours, this.minutes, this.seconds);
         const finalTime = convertSeconds(seconds + secondsTime);
         return finalTime;
+    },
+    changeTimeSeconds: function(seconds) {
+        return this.calcTime(seconds);
     },
     changeTimeMinutes: function(minutes) {
         const seconds = minutes * 60;
-        const secondsTime = getSeconds(time.hours, time.minutes, time.seconds);
-        const finalTime = convertSeconds(seconds + secondsTime);
-        return finalTime;
+        return  this.calcTime(seconds);
     },
     changeTimeHours: function(hours) {
         const seconds = hours * 60 * 60;
-        const secondsTime = getSeconds(time.hours, time.minutes, time.seconds);
-        const finalTime = convertSeconds(seconds + secondsTime);
-        return finalTime;
+        return  this.calcTime(seconds);
     }
 };
 
-// Переводить час в секунди
+// Переводить час в секунди. Функція з попередньої домашки.
 function getSeconds(hours = 0, minutes = 0, seconds = 0) {
     if (isNaN(hours)) hours = 0;
     if (isNaN(minutes)) minutes = 0;
@@ -218,16 +223,14 @@ function getSeconds(hours = 0, minutes = 0, seconds = 0) {
     return (hours * 3600) + (minutes * 60) + seconds;
 }
 
-// Переводить секунди в години/хвилини/секунди
+// Переводить секунди в години/хвилини/секунди. Функція з попередньої домашки.
 function convertSeconds(secondsInput = 0) {
     if (isNaN(secondsInput) || secondsInput === 0) {
         return `Помилка. Введіть час в секундах.`;
     } else {
         const seconds = Math.floor(secondsInput % 60);
-
         const minutesTmp = secondsInput / 60;
         const minutes = Math.floor(minutesTmp % 60);
-
         const hoursTmp = minutesTmp / 60;
         const hours = Math.floor(hoursTmp % 60);
 
@@ -235,21 +238,29 @@ function convertSeconds(secondsInput = 0) {
     }
 }
 
+// Вивід результату
+function resultVw(task, fn, def=true) {
+    const result = document.querySelector(`.result-form${task}`);
+    if(def) {
+        result.innerHTML = `<div class="inline-box"><h3 class="h-inline">${fn}</h3></div>`;
+    } else {
+        result.innerHTML = `${fn}`;
+    }
+}
 
 // Task 3.1
 
 const showTime = document.querySelector('.btn-show-time');
 const hideTime = document.querySelector('.btn-hide-time');
-const result3 = document.querySelector('.result-form3');
 
 showTime.addEventListener('click', function() {
-    result3.innerHTML = `<div class="inline-box"><h3 class="h-inline">${time.showTime()}</h3></div>`;
+    resultVw('3', time.showTime());
     showTime.style.display = 'none';
     hideTime.style.display = 'block';
 });
 
 hideTime.addEventListener('click', function() {
-    result3.innerHTML = '';
+    resultVw('3', '', false);
     showTime.style.display = 'block';
     hideTime.style.display = 'none';
 });
@@ -259,11 +270,8 @@ hideTime.addEventListener('click', function() {
 
 form32.addEventListener('submit', function(event) {
     event.preventDefault();
-
     const seconds = +form32.seconds.value;
-
-    const result = document.querySelector('.result-form3-2');
-    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">${time.changeTimeSeconds(seconds)}</h3></div>`;
+    resultVw('3-2', time.changeTimeSeconds(seconds));
 });
 
 
@@ -271,11 +279,8 @@ form32.addEventListener('submit', function(event) {
 
 form33.addEventListener('submit', function(event) {
     event.preventDefault();
-
     const minutes = +form33.minutes.value;
-
-    const result = document.querySelector('.result-form3-3');
-    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">${time.changeTimeMinutes(minutes)}</h3></div>`;
+    resultVw('3-3', time.changeTimeMinutes(minutes));
 });
 
 
@@ -283,9 +288,6 @@ form33.addEventListener('submit', function(event) {
 
 form34.addEventListener('submit', function(event) {
     event.preventDefault();
-
     const hours = +form34.hours.value;
-
-    const result = document.querySelector('.result-form3-4');
-    result.innerHTML = `<div class="inline-box"><h3 class="h-inline">${time.changeTimeHours(hours)}</h3></div>`;
+    resultVw('3-4', time.changeTimeHours(hours));
 });
