@@ -183,7 +183,7 @@ const check = [
     {
         name: 'Chocolate bar',
         qt: 7,
-        price: 4 
+        price: 3 
     },
 ];
 
@@ -213,7 +213,7 @@ resultVw('2-1', showCheck(check));
 function calcSum(list) {
     let total = 0;
     for (let item of list) {
-        total += item.price;
+        total += item.price * item.qt;
     }
     return total;
 }
@@ -226,12 +226,12 @@ function calcSum(list) {
 function maxItem(list) {
     let arr = [];
     for (item of list) {
-        arr.push(item.price);
+        arr.push(item.price * item.qt);
     }
     const maxPrice = Math.max.apply(null, arr);
     
     for (item of list) {
-        if(maxPrice === item.price)
+        if(maxPrice / item.qt === item.price)
             return `${item.name} $${item.price}`;
     }
 }
