@@ -95,11 +95,20 @@ btnHideList.addEventListener('click', function() {
 
 // Може існує якийсь ефективніший спосіб ніж провіряти значення об'єкта?
 function addItem(name, quantity = 1, buy = 0) {
-    for (let list of shoppingList) {
-        if(list.name === name) {
-            return list.quantity += quantity;
-        }
-    }
+    // for (let list of shoppingList) {
+    //     if(list.name === name) {
+    //         return list.quantity += quantity;
+    //     }
+    // }
+
+    // return shoppingList.push({
+    //     name,
+    //     quantity,
+    //     buy
+    // });
+    
+    const item = shoppingList.find(item => item.name === name);
+    if(item) return item.quantity += quantity;
 
     return shoppingList.push({
         name,
@@ -129,11 +138,16 @@ form12.addEventListener('submit', function(event) {
 
 // Провірка чи існує продукт і міняє його статус
 function checkBuy(name) {
-    for (let list of shoppingList) {
-        if(list.name === name && list.buy === 0) {
-            return list.buy = 1;
-        }
-    }
+    // for (let list of shoppingList) {
+    //     if(list.name === name && list.buy === 0) {
+    //         return list.buy = 1;
+    //     }
+    // }
+    shoppingList.find(item => {
+        if (item.name === name && item.buy === 0)
+            return item.buy = 1;
+    });
+
 }
 
 form13.addEventListener('submit', function(event) {
@@ -223,19 +237,32 @@ function calcSum(list) {
 // Task 2.3 Получение самой дорогой покупки в чеке;
 
 // Це точно не найефективніший спосіб це робити.
+// function maxItem(list) {
+//     let arr = [];
+//     for (item of list) {
+//         arr.push(item.price * item.qt);
+//     }
+//     const maxPrice = Math.max.apply(null, arr);
+    
+//     for (item of list) {
+//         if(maxPrice / item.qt === item.price)
+//             return `${item.name} $${item.price}`;
+//     }
+// }
+
 function maxItem(list) {
     let arr = [];
     for (item of list) {
         arr.push(item.price * item.qt);
     }
-    const maxPrice = Math.max.apply(null, arr);
+
+    arr.sort((a, b) => a - b).reverse();
     
     for (item of list) {
-        if(maxPrice / item.qt === item.price)
+        if(arr[0] / item.qt === item.price)
             return `${item.name} $${item.price}`;
-    }
+    } 
 }
-
 
 
 // Task 2.4 Подсчет средней стоимости одного товара в чеке.
