@@ -201,23 +201,45 @@ form24.addEventListener('submit', e => {
 // Task 3.1 Реализовать класс EmpTable для генерации HTML-кода таблицы со списком работников банка. Массив работников необходимо передавать через конструктор, а получать HTML-код с помощью метода getHtml().
 // Task 3.2 Создать объект класса EmpTable и вывести на экран результат работы метода getHtml().
 
-// class Employee {
-//     firstName = '';
-//     lastName = '';
-//     age = '';
-//     department = '';
-// }
+class Employee {
+    
+    constructor(firstName, lastName, age, department) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.department = department;
+    }
 
-// let employeesBank = []
+}
 
-// class EmpTable {
+let employeesBank = [
+    new Employee('John', 'Butler', 30, 'Marketing'),
+    new Employee('Emma', 'Gray', 24, 'Design'),
+    new Employee('James', 'Hart', 34, 'Management'),
+    new Employee('Lucas', 'Hall', 29, 'Production'),
+    new Employee('Henry', 'Brown', 38, 'Finance'),
+    new Employee('Olivia', 'Baker', 21, 'Marketing'),
+];
 
-//     constructor(arr) {
+class EmpTable {
 
-//     }
+    constructor(employees) {
+        this.employees = employees;
+    }
 
-//     get getHtml() {
+    get getHtml() {
+        let result = ''
+        for(let item of this.employees) {
+            result += `<div class="inline-box"><h3 class="h-inline">
+                       ${item.firstName} ${item.lastName}</h3> ${item.age} years old.<br>
+                       Department: <h3 class="h-inline">${item.department}</h3></div><br>`;
+        }
+        return result;
+    }
 
-//     }
+}
 
-// }
+const table = new EmpTable(employeesBank);
+
+const result32 = resultSel(32);
+result32.innerHTML = table.getHtml;
