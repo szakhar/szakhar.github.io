@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: darkgoldenrod;
+    color: #fff;
+}
+
+body {
+    background-color: YellowGreen;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    margin: 30px;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    color: snow;
+    text-align: center;
+    margin: 40px 0 50px;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 16px 0 8px;
+    color: #333;
+}
+
+.container {
+    width: 550px;
+    margin: 0 auto;
+}
+
+.form-box {
+    background-color: snow;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 5px rgba(0,0,0, .15);
+}
+
+.form-box:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.form-box p {
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+    border : 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    margin-right: 1px;
+}
+
+input {
+    width: 64px;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.long {
+    width: 224px;
+}
+
+select {
+    border: none;
+    outline: none;
+    border : 1px solid #ccc;
+    border-radius: 4px;
+    width: 40px;
+    height: 34px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    margin-right: 1px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: ForestGreen;
+    border-radius: 4px;
+    padding: 10px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: .4px;
+    transition: all .2s;
+    margin-left: 3px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: Green;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.h-inline {
+    display: inline;
+    margin-right: 2px;
+    line-height: 1.4;
+}
+
+.inline-box {
+    margin: 16px 0 -8px 0;
+}
+
+.table {
+    display: none;
+    flex-wrap: wrap;
+}
+
+.table__item {
+    padding: 25px 20px 5px;
+}
+
+.btn {
+    margin-left: 0;
+}
+
+.result-text-form10 {
+    display: none;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.mark {
+    display: none;
+    font-weight: bold;
+}
+
+.nums-box,
+.perfect-box {
+    display: inline-block;
+}
+
+.time-box {
+    margin-bottom: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.icons {
+    width: 45px;
+}
+
+
+.traffic-box {
+    display: flex;
+    align-items: center;
+}
+
+.traffic-light {
+    width: 75px;
+    height: 190px;
+    background-color: #212121;
+    border-radius: 8px;
+    padding: 10px 0;
+    margin-right: 20px;
+}
+
+.light {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.light--red {
+    background-color: Brown;
+}
+
+.light--yellow {
+    background-color: GoldenRod;
+}
+
+.light--green {
+    background-color: DarkOliveGreen;
+}
+
+img {
+    width: 100%;
+}
+
+.popup-bg {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, .88);
+    transition: all .2s ease-in;
+}
+
+.popup {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 410px;
+    background-color: goldenrod;
+    color: #111;
+    transition: all .2s ease-in;
+}
+
+.popup-close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px; right: 20px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.popup-close::before,
+.popup-close::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 13px; left: 2px;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    opacity: .8;
+    transition: all .8s;
+}
+
+.popup-close::before {
+    transform: rotate(45deg);
+}
+
+.popup-close::after {
+    transform: rotate(135deg);
+}
+
+.popup-close:hover::before,
+.popup-close:hover::after {
+    transform: rotate(0);
+    opacity: .6;
+}
+
+.popup-close:active::before,
+.popup-close:active::after {
+    transform: rotate(0);
+    width: 0;
+    opacity: .1;
+}
+
+.popup img {
+    opacity: .9;
+}
+
+.popup p {
+    padding: 9px 0 0 14px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.red {
+    background-color: Red;
+}
+
+.yellow {
+    background-color: Gold;
+}
+
+.green {
+    background-color: ForestGreen;
+}
