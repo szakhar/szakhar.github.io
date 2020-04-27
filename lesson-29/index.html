@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Lesson 29</title>
+</head>
+<body>
+
+<h1>DOM DOM DOM &nbsp;<img class="icons" src="img/home.svg" alt="DOM"></h1>
+
+<div class="container">
+
+    <div class="form-box">
+        <h2>Task 1</h2>
+        <p>Список пісень.</p>
+        <button class="btn btn-show-songs" type="button">Показати</button>
+        <button class="btn btn-hide-songs hide" type="button">Сховати</button>
+        <div class="songs-list"></div>
+    </div>
+
+    <div class="form-box">
+        <h2>Task 2</h2>
+        <p>Popup.</p>
+        <button class="btn btn-show-songs" onclick="openPopup()" type="button">Відкрити</button>
+    </div>
+
+    <div class="popup-bg"></div>
+    <div class="popup">
+        <div class="popup-close" onclick="openPopup()"></div>
+        <img src="img/photo-01.jpg" alt="Fiat 500">
+        <p>Popup text. More text in this popup...</p>
+    </div>
+
+    <div class="form-box">
+        <h2>Task 3</h2>
+        <p>Світлофор.</p>
+        <div class="traffic-box">
+            <div class="traffic-light">
+                <div class="light light--red"></div>
+                <div class="light light--yellow"></div>
+                <div class="light light--green"></div>
+            </div>
+            <button class="btn btn-show-songs" onclick="nextColor()" type="button">Next &#8594;</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
