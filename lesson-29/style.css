@@ -256,6 +256,7 @@ img {
     height: 100%;
     background-color: rgba(0,0,0, .88);
     transition: all .2s ease-in;
+    z-index: 30;
 }
 
 .popup {
@@ -269,6 +270,7 @@ img {
     background-color: goldenrod;
     color: #111;
     transition: all .2s ease-in;
+    z-index: 30;
 }
 
 .popup-close {
@@ -276,7 +278,7 @@ img {
     height: 30px;
     position: absolute;
     top: 20px; right: 20px;
-    z-index: 10;
+    z-index: 40;
     cursor: pointer;
 }
 
