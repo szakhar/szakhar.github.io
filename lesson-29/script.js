@@ -94,26 +94,31 @@ closePopupBg.addEventListener('click', function(event) {
 // Task 3. Создать HTML-страницу со светофором и кнопкой,
 // которая переключает светофор на следующий цвет.
 
+function isColor(color) {
+    return color.classList.contains('active');
+}
+
+function addRemoveColor(firstColor, secondColor = 0) {
+    if(secondColor === 0) {
+        firstColor.classList.add('active');
+    } else {
+        firstColor.classList.remove('active');
+        secondColor.classList.add('active');
+    }
+}
+
 function nextColor() {
 
     const trafficItems = document.querySelectorAll('.light');
     const red = trafficItems[0], yellow = trafficItems[1], green = trafficItems[2];
 
-    const isRed = red.classList.contains('red');
-    const isYellow = yellow.classList.contains('yellow');
-    const isGreen = green.classList.contains('green');
-
-    if (!isRed && !isYellow && !isGreen) {
-        red.classList.add('red');
-    } else if (isRed) {
-        red.classList.remove('red');
-        yellow.classList.add('yellow');
-    } else if (isYellow) {
-        yellow.classList.remove('yellow');
-        green.classList.add('green');
-    } else {
-        green.classList.remove('green');
-        red.classList.add('red');
-    }
+    if (!isColor(red) && !isColor(yellow) && !isColor(green))
+        addRemoveColor(red);
+    else if (isColor(red))
+        addRemoveColor(red, yellow);
+    else if (isColor(yellow))
+        addRemoveColor(yellow, green);
+    else
+        addRemoveColor(green, red);
 
 }
