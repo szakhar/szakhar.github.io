@@ -224,16 +224,24 @@ button:active {
 }
 
 .light--red {
-    background-color: Brown;
+    background-color: red;
+    opacity: .5;
 }
 
 .light--yellow {
-    background-color: GoldenRod;
+    background-color: gold;
+    opacity: .5;
 }
 
 .light--green {
-    background-color: DarkOliveGreen;
+    background-color: ForestGreen;
+    opacity: .5;
 }
+
+.active {
+    opacity: 1;
+}
+
 
 img {
     width: 100%;
@@ -320,16 +328,4 @@ img {
 .visible {
     opacity: 1;
     visibility: visible;
-}
-
-.red {
-    background-color: Red;
-}
-
-.yellow {
-    background-color: Gold;
-}
-
-.green {
-    background-color: ForestGreen;
 }
