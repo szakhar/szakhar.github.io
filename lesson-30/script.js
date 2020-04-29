@@ -85,13 +85,7 @@ function sortingNumber(list, field) {
 }
 
 function showTable(list) {
-    let table = '<table>';
-
-    table += `<tr>
-                  <th class="sort-name">Ім'я</th>
-                  <th class="sort-age">Вік</th>
-                  <th class="sort-department">Відділ</th>
-              </tr>`;
+    let table = '';
 
     for(item of list) {
         table += `<tr>
@@ -101,7 +95,7 @@ function showTable(list) {
                   </tr>`;
     }
 
-    return table += '</table>';
+    return table;
 }
 
 
@@ -111,34 +105,58 @@ table.innerHTML = showTable(tableList);
 
 
 
-const sortName = document.querySelector('.sort-name');
+const sortTable = document.querySelector('.sort-table');
 
-sortName.addEventListener('click', () => {
-    sortingText(tableList, 'fullName');
+sortTable.addEventListener('click', event => {
+    const className = event.target.classList[0];
+
+    if (className === 'sort-department') {
+        sortingText(tableList, 'department');
+    } else if (className === 'sort-age') {
+        sortingNumber(tableList, 'age');
+    } else {
+        sortingText(tableList, 'fullName');
+    }
+
     table.innerHTML = showTable(tableList);
-    // console.log(1);
 });
 
 
 
-const sortAge = document.querySelector('.sort-age');
-
-sortAge.addEventListener('click', () => {
-    sortingNumber(tableList, 'age');
-    table.innerHTML = showTable(tableList);
-    // console.log(2);
-});
-
-
-
-const sortDepartment = document.querySelector('.sort-department');
-
-sortDepartment.addEventListener('click', () => {
-    sortingText(tableList, 'department');
-    table.innerHTML = showTable(tableList);
-    // console.log(3);
-});
 
 // Task 3. Создать HTML-страницу с блоком текста в рамочке.
 // Реализовать возможность изменять размер блока,
 // если зажать мышку в правом нижнем углу и тянуть ее дальше.
+
+const resizeTable = document.querySelector('.resize-table');
+const textBlock = document.querySelector('.text-block');
+const resizeBtn = document.querySelector('.resize-btn');
+
+let active = false;
+
+resizeBtn.addEventListener('mousedown', e => {
+    const width = resizeTable.offsetWidth;
+    const height = textBlock.offsetHeight;
+    const positionX = e.x;
+    const positionY = e.y;
+    active = true;
+
+    resizeTable.addEventListener('mousemove', e => {
+        if (active) {
+            e.preventDefault();
+
+            let resultWidth = width + (e.x - positionX);
+            resizeTable.style.width = `${resultWidth}px`;
+
+            let resultHeight = height + (e.y - positionY);
+            textBlock.style.height = `${resultHeight}px`;
+            
+            resizeTable.style.cursor = 'nwse-resize';
+        }
+    });
+});
+
+resizeTable.addEventListener('mouseup', () => {
+    active = false;
+    resizeTable.style.cursor = 'auto';
+});
