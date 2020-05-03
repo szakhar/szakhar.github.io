@@ -129,34 +129,19 @@ sortTable.addEventListener('click', event => {
 // если зажать мышку в правом нижнем углу и тянуть ее дальше.
 
 const resizeTable = document.querySelector('.resize-table');
-const textBlock = document.querySelector('.text-block');
 const resizeBtn = document.querySelector('.resize-btn');
 
-let active = false;
+function resize(event) {
+    resizeTable.style.width = event.clientX - resizeTable.getBoundingClientRect().left + 'px'
+    resizeTable.style.height = event.clientY - resizeTable.getBoundingClientRect().top + 'px'
+}
 
-resizeBtn.addEventListener('mousedown', e => {
-    const width = resizeTable.offsetWidth;
-    const height = textBlock.offsetHeight;
-    const positionX = e.x;
-    const positionY = e.y;
-    active = true;
+function stopResize() {
+    document.removeEventListener('mousemove', resize)
+}
 
-    resizeTable.addEventListener('mousemove', e => {
-        if (active) {
-            e.preventDefault();
-
-            let resultWidth = width + (e.x - positionX);
-            resizeTable.style.width = `${resultWidth}px`;
-
-            let resultHeight = height + (e.y - positionY);
-            textBlock.style.height = `${resultHeight}px`;
-            
-            resizeTable.style.cursor = 'nwse-resize';
-        }
-    });
+resizeBtn.addEventListener('mousedown', () => {
+    document.addEventListener('mousemove', resize);
+    
 });
-
-resizeTable.addEventListener('mouseup', () => {
-    active = false;
-    resizeTable.style.cursor = 'auto';
-});
+document.addEventListener('mouseup', stopResize);
