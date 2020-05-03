@@ -225,3 +225,7 @@ td {
     background-color: transparent;
     cursor: nwse-resize;
 }
+
+.task3 {
+    height: 250px;
+}
