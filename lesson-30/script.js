@@ -66,8 +66,8 @@ const tableList = [
     },
 ];
 
-function sortingText(list, field) {
-    list.sort((a, b) => {
+function sortingText(list, field, reverse = false) {
+    const arr = list.sort((a, b) => {
         let nameA = a[field].toLowerCase();
         let nameB = b[field].toLowerCase();
         if (nameA < nameB)
@@ -76,12 +76,16 @@ function sortingText(list, field) {
             return 1
         return 0
     });
+    
+    (reverse) ? arr.reverse() : arr;
 }
 
-function sortingNumber(list, field) {
-    list.sort((a, b) => {
+function sortingNumber(list, field, reverse = false) {
+    const arr = list.sort((a, b) => {
         return a[field] - b[field];
     });
+
+    (reverse) ? arr.reverse() : arr;
 }
 
 function showTable(list) {
@@ -98,6 +102,27 @@ function showTable(list) {
     return table;
 }
 
+function checkSort (classSort, listSort, rowSort, type = 'Text') {
+    const sort = document.querySelector(`.${classSort}`);
+
+    if (type == 'Text') {
+        if (sort.classList.contains('sort')) {
+            sortingText(listSort, rowSort, true);
+            sort.classList.toggle('sort');
+        } else {
+            sortingText(listSort, rowSort, false);
+            sort.classList.toggle('sort');
+        }
+    } else {
+        if (sort.classList.contains('sort')) {
+            sortingNumber(listSort, rowSort, true);
+            sort.classList.toggle('sort');
+        } else {
+            sortingNumber(listSort, rowSort, false);
+            sort.classList.toggle('sort');
+        }
+    }
+}
 
 
 const table = document.querySelector('.table');
@@ -111,11 +136,11 @@ sortTable.addEventListener('click', event => {
     const className = event.target.classList[0];
 
     if (className === 'sort-department') {
-        sortingText(tableList, 'department');
+        checkSort('sort-department', tableList, 'department');
     } else if (className === 'sort-age') {
-        sortingNumber(tableList, 'age');
+        checkSort('sort-age', tableList, 'age', 'number');
     } else {
-        sortingText(tableList, 'fullName');
+        checkSort('sort-name', tableList, 'fullName');
     }
 
     table.innerHTML = showTable(tableList);
