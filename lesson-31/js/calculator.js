@@ -1,0 +1,44 @@
+// JQuery Calculator
+
+$(document).ready(function(){
+    
+    $('.btn').click(function() {
+        let num = $(this).html();
+        // Замінює хрестик на знак множення
+        if (num === 'x') num = '*';
+
+        let display = $('.calc__display').html();
+        
+        // Перевіряє, щоб не було нажато більше 12 цифр
+        if (display.length < 12) {
+            // Перевіряє, щоб не дублювались оператори при натисканні
+            // і щоб оператор замінювався на новий при дублюванні
+            let count = 0;
+            if (num === '+' || num === '-' || num === '*' || num === '/' || num === '.') {
+                let last = display.toString().slice(-1);
+
+                if (last === '+' || last === '-' || last === '*' || last === '/' || last === '.') {
+                    $('.calc__display').html(display.slice(0, -1) + num);
+                } else {
+                    $('.calc__display').html(display + num);
+                }
+            } else {
+                $('.calc__display').html(display + num);
+            }
+        }
+
+        // Очищає результат (AC)
+        $('.clear').click(function(){
+            $('.calc__display').html('');
+        });
+        
+        // Рахує
+        $('.equal').click(function(){
+            const result = eval($('.calc__display').html());
+            // Виводить і округляє до 5 знаків,
+            // parseFloat залишає результат цифрою, а не string
+            $('.calc__display').html(parseFloat(result.toFixed(5)));
+        });
+    });
+
+});

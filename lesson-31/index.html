@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="icons/style.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <title>Lesson 31 - JQuery</title>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<main>
+    <section class="card">
+        <div class="card__tab tab">
+            <div class="tab__item">
+                <a href="#information" class="tab__link">
+                    <svg class="tab__icon tab__icon_information" xmlns="http://www.w3.org/2000/svg" width="22.376" height="22.376"><path d="M19.588 18.188h-3.62l-3.79 3.79a1.4 1.4 0 01-1.98 0l-3.79-3.79h-3.62a2.8 2.8 0 01-2.8-2.8v-12.6a2.8 2.8 0 012.8-2.8h16.8a2.8 2.8 0 012.8 2.8v12.6a2.8 2.8 0 01-2.8 2.8zm0-14a1.4 1.4 0 00-1.4-1.4h-14a1.4 1.4 0 00-1.4 1.4v9.8a1.4 1.4 0 001.4 1.4h2.8a1.4 1.4 0 01.99.41l3.21 3.209 3.21-3.209a1.392 1.392 0 01.99-.41h2.8a1.4 1.4 0 001.4-1.4v-9.8zm-4.2 8.4h-8.4a1.4 1.4 0 010-2.8h8.4a1.4 1.4 0 110 2.8zm0-4.2h-8.4a1.4 1.4 0 010-2.8h8.4a1.4 1.4 0 110 2.8z" fill-rule="evenodd"/></svg>
+                    INFORMATION
+                </a>
+            </div>
+            <div class="tab__item">
+                <a href="#rating-info" class="tab__link">
+                    <svg class="tab__icon tab__icon_rating" xmlns="http://www.w3.org/2000/svg" width="19" height="21"><defs><filter id="a" x="525" y="179" width="19" height="21" filterUnits="userSpaceOnUse"><feFlood result="flood" flood-color="#b7bacd"/><feComposite result="composite" operator="in" in2="SourceGraphic"/><feBlend result="blend" in2="SourceGraphic"/></filter></defs><path d="M543.993 190.308a4.8 4.8 0 01-4.747 4.849 4.657 4.657 0 01-3.774-1.957l-.023.017-.949-1.293-.95 1.293-.013-.01a4.693 4.693 0 01-3.784 1.95 4.8 4.8 0 01-4.746-4.849 4.876 4.876 0 01.962-2.9l-.013-.01s6.962-8.406 8.544-8.406 8.543 8.406 8.543 8.406l-.013.01a4.876 4.876 0 01.963 2.9zm-11.075 6.465v-1.616a1.582 1.582 0 113.164 0v1.616a1.617 1.617 0 010 3.234h-3.164a1.617 1.617 0 010-3.234z" transform="translate(-525 -179)" fill-rule="evenodd"/></svg>
+                    RATINGS INFO
+                </a>
+            </div>
+            <div class="tab__item">
+                <a href="#where-to-buy" class="tab__link">
+                    <svg class="tab__icon tab__icon_where-buy" xmlns="http://www.w3.org/2000/svg" width="20" height="20"><defs><filter id="a" x="703" y="179" width="20" height="20" filterUnits="userSpaceOnUse"><feFlood result="flood" flood-color="#b7bacd"/><feComposite result="composite" operator="in" in2="SourceGraphic"/><feBlend result="blend" in2="SourceGraphic"/></filter></defs><path d="M722.946 186.765l.024.006-2.5 11.25-.024-.006a1.231 1.231 0 01-1.2.984h-12.5a1.231 1.231 0 01-1.2-.984l-.024.006-2.5-11.25.024-.006a1.176 1.176 0 01-.046-.265 1.25 1.25 0 011.25-1.25h2.5a6.25 6.25 0 1112.5 0h2.5a1.25 1.25 0 011.25 1.25 1.176 1.176 0 01-.054.265zM713 181.5a3.75 3.75 0 00-3.75 3.751h7.5A3.75 3.75 0 00713 181.5zm5 8.751a1.251 1.251 0 01-1.25-1.251v-1.25h-7.5V189a1.25 1.25 0 11-2.5 0v-1.25h-.942l1.945 8.749h10.494l1.945-8.749h-.942V189a1.251 1.251 0 01-1.25 1.25z" transform="translate(-703 -179)" fill-rule="evenodd"/></svg>
+                    WHERE TO BUY
+                </a>
+            </div>
+        </div>
+
+        
+        <div id="information" class="card__body card__body_information tab-body">
+            <div class="card__cover">
+                <div class="card__cover-img">
+                    <img  src="img/cover.jpg" alt="FarCry 4">
+                </div>
+
+                <div class="card__rating-star-box">
+                    <div class="card__rating-star">
+                        <input type="radio" class="card__radio" id="star-1" name="star">
+                        <label for="star-1" class="card__star"></label>
+                        <input type="radio" class="card__radio" id="star-2" name="star" checked>
+                        <label for="star-2" class="card__star"></label>
+                        <input type="radio" class="card__radio" id="star-3" name="star">
+                        <label for="star-3" class="card__star"></label>
+                        <input type="radio" class="card__radio" id="star-4" name="star">
+                        <label for="star-4" class="card__star"></label>
+                        <input type="radio" class="card__radio" id="star-5" name="star">
+                        <label for="star-5" class="card__star"></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__description">
+                <div class="card__header-box">
+                    <div class="card__header">
+                        <h1 class="card__heading-1 heading-1">FarCry 4</h1>
+                        <div class="card__release">First Released Nov 17, 2014</div>
+                    </div>
+                    <div class="card__rating">7.8</div>
+                </div>
+
+                <div class="card__text">In Far Cry 4, players find themselves in Kyrat, a breathtaking, perilous and wild region of the Hima layas struggling under the regime of a despotic self-appointed king.</div>
+
+                <div class="card__footer">
+                    <div class="card__price-box">
+                        <div class="card__offer">20% OFF!</div>
+                        <div class="card__price">$59.96</div>
+                    </div>
+                    <button class="card__btn-buy">BUY IT NOW</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="rating-info" class="card__body card__body_calc tab-body">
+            <div class="card__calc calc">
+                <div class="calc__display"></div>
+                <div class="calc__button-box">
+                    <button class="calc__button clear">AC</button>
+                    <button class="calc__button calc__button_plus-minus">+/-</button>
+                    <button class="calc__button calc__button_percente">%</button>
+                    <button class="calc__button btn">/</button>
+                    <button class="calc__button btn">7</button>
+                    <button class="calc__button btn">8</button>
+                    <button class="calc__button btn">9</button>
+                    <button class="calc__button btn">x</button>
+                    <button class="calc__button btn">4</button>
+                    <button class="calc__button btn">5</button>
+                    <button class="calc__button btn">6</button>
+                    <button class="calc__button btn">-</button>
+                    <button class="calc__button btn">1</button>
+                    <button class="calc__button btn">2</button>
+                    <button class="calc__button btn">3</button>
+                    <button class="calc__button btn">+</button>
+                    <button class="calc__button btn calc__button_zero">0</button>
+                    <button class="calc__button btn">.</button>
+                    <button class="calc__button equal">=</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="where-to-buy" class="card__body card__body_where-buy tab-body">
+            <div class="card__where-buy where-buy">
+                <div class="where-buy__emoji">🤷‍♂️</div>
+                <img src="img/photo.jpg" alt="Where to buy">
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<script src="js/jquery-3.5.0.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/calculator.js"></script>
+</body>
+</html>
