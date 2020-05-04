@@ -3,11 +3,11 @@
 $(document).ready(function(){
     
     $('.btn').click(function() {
-        let num = $(this).html();
+        let num = $(this).text();
         // Замінює хрестик на знак множення
         if (num === 'x') num = '*';
 
-        let display = $('.calc__display').html();
+        let display = $('.calc__display').text();
         
         // Перевіряє, щоб не було нажато більше 12 цифр
         if (display.length < 12) {
@@ -18,26 +18,26 @@ $(document).ready(function(){
                 let last = display.toString().slice(-1);
 
                 if (last === '+' || last === '-' || last === '*' || last === '/' || last === '.') {
-                    $('.calc__display').html(display.slice(0, -1) + num);
+                    $('.calc__display').text(display.slice(0, -1) + num);
                 } else {
-                    $('.calc__display').html(display + num);
+                    $('.calc__display').text(display + num);
                 }
             } else {
-                $('.calc__display').html(display + num);
+                $('.calc__display').text(display + num);
             }
         }
 
         // Очищає результат (AC)
         $('.clear').click(function(){
-            $('.calc__display').html('');
+            $('.calc__display').text('');
         });
         
         // Рахує
         $('.equal').click(function(){
-            const result = eval($('.calc__display').html());
+            const result = eval($('.calc__display').text());
             // Виводить і округляє до 5 знаків,
             // parseFloat залишає результат цифрою, а не string
-            $('.calc__display').html(parseFloat(result.toFixed(5)));
+            $('.calc__display').text(parseFloat(result.toFixed(5)));
         });
     });
 
