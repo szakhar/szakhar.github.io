@@ -227,3 +227,18 @@ td {
 .task3 {
     height: 250px;
 }
+
+.arrow {
+    display: inline-block;
+    margin-left: 6px;
+    width: 10px;
+    height: 10px;
+    background: center/cover no-repeat url(img/arrow.svg);
+}
+
+.sort-age {
+    width: 110px;
+}
+.col-age {
+    text-align: center;
+}
