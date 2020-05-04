@@ -94,7 +94,7 @@ function showTable(list) {
     for(item of list) {
         table += `<tr>
                       <td>${item.fullName}</td>
-                      <td>${item.age}</td>
+                      <td class="col-age">${item.age}</td>
                       <td>${item.department}</td>
                   </tr>`;
     }
@@ -102,26 +102,44 @@ function showTable(list) {
     return table;
 }
 
-function checkSort (classSort, listSort, rowSort, type = 'Text') {
+function checkSort (classSort, listSort, rowSort, type = 'text') {
     const sort = document.querySelector(`.${classSort}`);
+    
+    // Видаляє всі стрілки перед тим як додати нову
+    const spanArrowAll = document.querySelectorAll(`.sort-h span`);
+    for (let i=0; i < spanArrowAll.length; i++) {
+        spanArrowAll[i].classList.remove('arrow');
+    }
 
-    if (type == 'Text') {
+    if (type == 'text') {
         if (sort.classList.contains('sort')) {
-            sortingText(listSort, rowSort, true);
-            sort.classList.toggle('sort');
+            addArrow(type, listSort, rowSort, classSort, true, 180);
         } else {
-            sortingText(listSort, rowSort, false);
-            sort.classList.toggle('sort');
+            addArrow(type, listSort, rowSort, classSort);
         }
     } else {
         if (sort.classList.contains('sort')) {
-            sortingNumber(listSort, rowSort, true);
-            sort.classList.toggle('sort');
+            addArrow(type, listSort, rowSort, classSort, true, 180);
         } else {
-            sortingNumber(listSort, rowSort, false);
-            sort.classList.toggle('sort');
+            addArrow(type, listSort, rowSort, classSort);
         }
     }
+}
+
+function addArrow(type, list, row, classSort, reverse = false, deg = 0) {
+    const sort = document.querySelector(`.${classSort}`);
+    const spanArrow = document.querySelector(`.${classSort} span`);
+
+    if (type === 'text') {
+        sortingText(list, row, reverse);
+    } else {
+        sortingNumber(list, row, reverse);
+    }
+    
+    sort.classList.toggle('sort');
+    spanArrow.classList.add('arrow');
+    const arrow = document.querySelector(`.arrow`);
+    arrow.style.transform = `rotate(${deg}deg)`;
 }
 
 
