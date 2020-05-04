@@ -1,0 +1,61 @@
+//   IMPORT FONTS
+// ==================================================
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+
+//   FONTS
+// ==================================================
+
+$font-primary: 'Lato', sans-serif;
+$font-size: 14px;
+
+
+//   COLORS
+// ==================================================
+
+$color-primary: #13e28d;
+$color-grey: #b7bacd;
+$font-weight: 400;
+
+
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: #f8f8f8;
+    color: #212121;
+}
+
+body {
+    font-family: $font-primary;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color-grey;
+}
+
+.bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+                    rgba(#292d3e, .87),
+                    rgba(#292d3e, .87)
+                ),
+                center/cover no-repeat url(../img/bg.jpg);
+}
