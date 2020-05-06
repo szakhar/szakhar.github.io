@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/> -->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <title>Lesson 32 - Slick Slider</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="heading-box">
+        <div class="subtitle">our featured work</div>
+        <h1 class="heading-1">We create engaging experiences through creativity & craft</h1>
+    </div>
+
+    <div class="slider">
+        <div class="slider__slide">
+            <div class="slider__bg"></div>
+            <img src="img/img-01.jpg" class="slider__img" alt="">
+            <div class="slider__text">
+                <h2 class="heading-2">Apex Magazine June Issue</h2>
+                <div class="slider__author">by Fabrizio Morra</div>
+            </div>
+        </div>
+
+        <div class="slider__slide">
+            <div class="slider__bg"></div>
+            <img src="img/img-02.jpg" class="slider__img" alt="">
+            <div class="slider__text">
+                <h2 class="heading-2">Apex Magazine June Issue</h2>
+                <div class="slider__author">by Fabrizio Morra</div>
+            </div>
+        </div>
+
+        <div class="slider__slide">
+            <div class="slider__bg"></div>
+            <img src="img/img-03.jpg" class="slider__img" alt="">
+            <div class="slider__text">
+                <h2 class="heading-2">Apex Magazine June Issue</h2>
+                <div class="slider__author">by Fabrizio Morra</div>
+            </div>
+        </div>
+
+        <div class="slider__slide">
+            <div class="slider__bg"></div>
+            <img src="img/img-04.jpg" class="slider__img" alt="">
+            <div class="slider__text">
+                <h2 class="heading-2">Apex Magazine June Issue</h2>
+                <div class="slider__author">by Fabrizio Morra</div>
+            </div>
+        </div>
+
+        <div class="slider__slide">
+            <div class="slider__bg"></div>
+            <img src="img/img-03.jpg" class="slider__img" alt="">
+            <div class="slider__text">
+                <h2 class="heading-2">Apex Magazine June Issue</h2>
+                <div class="slider__author">by Fabrizio Morra</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/slick/slick.min.js"></script>
+<script type="text/javascript">
+    $('.slider').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        variableWidth: true,
+    });
+  </script>
+</body>
+</html>

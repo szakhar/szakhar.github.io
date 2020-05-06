@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap");
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #e98457;
+  color: #000;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #303030;
+  background: url(../img/bgLine.png);
+}
+
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+.heading-1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.heading-1 {
+  font-size: 86px;
+  line-height: 1.05;
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+
+.heading-2 {
+  font-size: 28px;
+  line-height: 0.86;
+  letter-spacing: 6.3px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.container {
+  margin: 65px 0 130px;
+}
+
+.subtitle {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #303030;
+}
+
+.heading-box {
+  position: relative;
+  width: 1050px;
+  margin: 0 auto 90px;
+}
+.heading-box::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 58%;
+  left: -83px;
+  width: 44px;
+  height: 44px;
+  background: center no-repeat url(../img/iconTriangle.png);
+}
+.heading-box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -27px;
+  right: 125px;
+  width: 30px;
+  height: 30px;
+  background: center no-repeat url(../img/iconPlus.png);
+}
+
+.slider {
+  position: relative;
+  margin-left: 136px;
+}
+.slider__slide {
+  margin-right: 44px;
+  position: relative;
+}
+.slider__slide:hover .slider__text {
+  opacity: 1;
+  visibility: visible;
+}
+.slider__slide:hover .slider__img {
+  opacity: 0.1;
+}
+.slider__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1bf1ad;
+  z-index: -5;
+}
+.slider__img {
+  transition: all 0.3s;
+}
+.slider__text {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  bottom: 37px;
+  left: 30px;
+  transition: all 0.3s;
+}
+.slider__author {
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media only screen and (max-width: 2090px) {
+  .slick-active + .slick-active + .slick-active + .slick-active {
+    opacity: 0.2;
+  }
+  .slick-active + .slick-active + .slick-active + .slick-active:hover .slider__text {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .slick-active + .slick-active + .slick-active + .slick-active:hover .slider__img {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .slick-active + .slick-active + .slick-active {
+    opacity: 0.2;
+  }
+  .slick-active + .slick-active + .slick-active:hover .slider__text {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .slick-active + .slick-active + .slick-active:hover .slider__img {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 1120px) {
+  .slick-active + .slick-active {
+    opacity: 0.2;
+  }
+  .slick-active + .slick-active:hover .slider__text {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .slick-active + .slick-active:hover .slider__img {
+    opacity: 1;
+  }
+}
+.slick-loading .slick-list {
+  background: #fff url(../js/slick/ajax-loader.gif) center center no-repeat;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  border: none;
+  outline: none;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 96px;
+  height: 96px;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0px;
+  color: transparent;
+  transition: all 0.3s;
+}
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  opacity: 0.5;
+}
+
+.slick-prev {
+  left: -116px;
+  background: center no-repeat url(../img/prevArrow.png);
+  z-index: 10;
+}
+
+.slick-next {
+  right: 20px;
+  background: center no-repeat url(../img/nextArrow.png);
+  z-index: 10;
+}
