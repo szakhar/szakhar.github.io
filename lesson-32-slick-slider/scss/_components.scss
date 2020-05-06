@@ -1,0 +1,26 @@
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+
+%heading {
+    font-family: $font-primary;
+    font-weight: 700;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: $font-size + 70px;
+    line-height: 1.05;
+    letter-spacing: 2.6px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-primary;
+}
+
+.heading-2 {
+    font-size: $font-size + 12px;
+    line-height: 0.86;
+    letter-spacing: 6.3px;
+    text-transform: uppercase;
+    color: #fff;
+}
