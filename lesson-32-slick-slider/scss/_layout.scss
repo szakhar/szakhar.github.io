@@ -1,5 +1,6 @@
 .container {
-    margin: 65px 0 130px;
+    max-width: 2550px;
+    margin: 65px auto 130px;
 }
 
 .subtitle {
@@ -91,8 +92,12 @@
 }
 
 
+// .slick-active {
+//     border: 1px solid red;
+// }
+
 // .slick-current {
-//     opacity: .1;
+//     border: 1px solid red;
 // }
 
 
@@ -108,6 +113,12 @@
         .slider__img {
             opacity: 1;
         }
+    }
+}
+
+@media only screen and (min-width: 2091px) {
+    .slick-active + .slick-active + .slick-active + .slick-active + .slick-active {
+        @include last-slide;
     }
 }
 

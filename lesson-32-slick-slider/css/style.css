@@ -54,7 +54,8 @@ body {
 }
 
 .container {
-  margin: 65px 0 130px;
+  max-width: 2550px;
+  margin: 65px auto 130px;
 }
 
 .subtitle {
@@ -137,6 +138,18 @@ body {
   color: #fff;
 }
 
+@media only screen and (min-width: 2091px) {
+  .slick-active + .slick-active + .slick-active + .slick-active + .slick-active {
+    opacity: 0.3;
+  }
+  .slick-active + .slick-active + .slick-active + .slick-active + .slick-active:hover .slider__text {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .slick-active + .slick-active + .slick-active + .slick-active + .slick-active:hover .slider__img {
+    opacity: 1;
+  }
+}
 @media only screen and (max-width: 2090px) {
   .slick-active + .slick-active + .slick-active + .slick-active {
     opacity: 0.3;
