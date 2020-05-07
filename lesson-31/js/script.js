@@ -9,7 +9,7 @@ $(document).ready(function(){
     // Виключає роботу якорів #, видаляє всі активні tab,
     // додає до натиснутого class active-tab
     $('.tab__item').click(function(event) {
-        event.preventDefault();
+        // event.preventDefault();
         $('.tab__item').removeClass('active-tab');
         $(this).addClass('active-tab');
 
@@ -18,5 +18,7 @@ $(document).ready(function(){
         const activeTab = $(this).find('a').attr('href');
         $('.tab-body').hide();
         $(activeTab).fadeIn();
+        // Зупиняє дію якорів
+        return false;
     });
 });
