@@ -2,7 +2,7 @@ const output = document.querySelector('.output');
 const details = document.querySelector('.details');
 const pagination = document.querySelector('.pagination');
 
-const url = `http://www.omdbapi.com/?apikey=ff377d04`;
+const url = `https://www.omdbapi.com/?apikey=ff377d04`;
 
 searchForm.addEventListener('submit', function(event) {
     event.preventDefault();
