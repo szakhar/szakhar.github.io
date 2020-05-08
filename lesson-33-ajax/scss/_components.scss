@@ -1,0 +1,26 @@
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+
+%heading {
+    font-family: $font-primary;
+    font-weight: $font-weight;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: $font-size + 16px;
+    font-weight: $font-weight;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: goldenrod;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: $font-size + 8px;
+    font-weight: $font-weight + 300;
+    // text-transform: uppercase;
+    letter-spacing: .3px;
+    color: rgba(#fff, .95);
+}
