@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <title>Lesson 33 Ajax</title>
+</head>
+<body>
+
+<main class="container">
+    <div class="search-form">
+        <h1 class="search-form__heading-1 heading-1">
+            <img class="search-form__logo" src="img/play.svg" alt="Search Movie">
+            Search
+        </h1>
+
+        <form class="search-form__form" name="searchForm">
+            <input type="search" name="s" placeholder="Godfather" value="Godfather">
+            <select name="type">
+                <option value="movie" selected>Movie</option>
+                <option value="series">Series</option>
+                <option value="episode">Episode</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <div class="details"></div>
+
+    <div class="output"></div>
+
+    <div class="pagination"></div>
+</main>
+
+<script src="js/ajax.js"></script>
+</body>
+</html>
