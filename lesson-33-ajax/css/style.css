@@ -90,6 +90,11 @@ button:active {
   letter-spacing: 1px;
   color: goldenrod;
 }
+.heading-1 a:link,
+.heading-1 a:visited {
+  color: goldenrod;
+  text-decoration: none;
+}
 
 .heading-2 {
   font-size: 24px;
