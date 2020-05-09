@@ -100,7 +100,7 @@ function showIndex(json) {
 
         for(let i=0; i<8; i++) {
             if(item[i].Poster === 'N/A')
-                item[i].Poster = '../img/cover.jpg';
+                item[i].Poster = 'img/cover.jpg';
             
             result += `<div class="output__item item">
                             <img class="item__img" src="${item[i].Poster}" alt="${item[i].Title}">
@@ -125,7 +125,7 @@ function showAll(json) {
 
         json.Search.map(item => {
             if(item.Poster === 'N/A')
-                item.Poster = '../img/cover.jpg';
+                item.Poster = 'img/cover.jpg';
             
             result += `<div class="output__item item">
                             <img class="item__img" src="${item.Poster}" alt="${item.Title}">
@@ -176,7 +176,7 @@ function showDetails(json) {
     let result = '';
 
     if(json.Poster === 'N/A')
-        json.Poster = '../img/cover.jpg';
+        json.Poster = 'img/cover.jpg';
     
     result += `<div class="details__item item-details">
                     <img class="item-details__img" src="${json.Poster}" alt="${json.Title}">
@@ -201,7 +201,7 @@ function nextPage(json) {
         json.Search.map(item => {
 
             if(item.Poster === 'N/A')
-                item.Poster = '../img/cover.jpg';
+                item.Poster = 'img/cover.jpg';
             
             result += `<div class="output__item item">
                            <img class="item__img" src="${item.Poster}" alt="${item.Title}">
