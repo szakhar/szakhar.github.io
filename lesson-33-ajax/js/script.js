@@ -63,8 +63,13 @@ searchForm.addEventListener('submit', function(event) {
 
 // Подія яка підгружає деталі фільму
 output.addEventListener('click', event => {
-    const searchTitle = '&t=' + event.target.getAttribute('alt');
-    fetchCall(showDetails, searchTitle);
+    // Провірка потрібна, щоб не підгружало альбом який називаться Null
+    const title = event.target.getAttribute('alt');
+    
+    if(title !== null) {
+        const searchTitle = '&t=' + title;
+        fetchCall(showDetails, searchTitle);
+    }
 });
 
 
