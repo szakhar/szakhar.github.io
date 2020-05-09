@@ -16,6 +16,11 @@ html {
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: goldenrod;
+  color: #121212;
+}
+
 body {
   background-color: #121212;
   font-family: "Lato", sans-serif;
@@ -27,6 +32,47 @@ body {
 .container {
   max-width: 1170px;
   margin: 100px auto 80px;
+}
+
+input,
+select,
+button {
+  border: none;
+  outline: none;
+  height: 45px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input {
+  padding: 0 15px;
+  margin-right: 10px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+select {
+  padding: 0 10px;
+  margin-right: 10px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+button {
+  background-color: goldenrod;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  transition: all 0.3s;
+}
+button:hover {
+  background-color: #c8981d;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.6);
+}
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
 }
 
 /* ================================================
@@ -52,6 +98,30 @@ body {
   color: rgba(255, 255, 255, 0.95);
 }
 
+.disabled {
+  opacity: 0.5;
+}
+.disabled:hover {
+  background-color: goldenrod;
+  transform: translateY(0);
+  box-shadow: none;
+}
+.disabled:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.error,
+.warning {
+  grid-column: 1/-1;
+  margin-top: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  text-align: center;
+  color: goldenrod;
+}
+
 .search-form {
   margin: 0 auto 30px;
   text-align: center;
@@ -71,44 +141,14 @@ body {
   justify-content: center;
   align-items: center;
 }
-.search-form input,
-.search-form select,
-.search-form button {
-  border: none;
-  outline: none;
-  height: 45px;
-  border-radius: 4px;
-  font-size: 16px;
-}
 .search-form input {
-  padding: 0 15px;
-  margin-right: 10px;
-  max-width: 250px;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
+  max-width: 260px;
 }
 .search-form select {
-  padding: 0 10px;
-  margin-right: 10px;
-  max-width: 150px;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
+  max-width: 140px;
 }
 .search-form button {
   width: 100px;
-  background-color: goldenrod;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 13px;
-  transition: all 0.3s;
-}
-.search-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.6);
-}
-.search-form button:active {
-  transform: translateY(1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
 }
 
 .details {
@@ -193,4 +233,13 @@ body {
 .item-details__starring span {
   margin-left: 5px;
   color: rgba(255, 255, 255, 0.95);
+}
+
+.pagination {
+  display: none;
+  margin-top: 90px;
+  text-align: center;
+}
+.pagination__more {
+  width: 150px;
 }

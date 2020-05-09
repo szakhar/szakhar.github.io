@@ -37,10 +37,10 @@ html {
     box-sizing: border-box;
 }
 
-// ::selection {
-//     background-color: $color-grey;
-//     color: #fff;
-// }
+::selection {
+    background-color: goldenrod;
+    color: $color-primary;
+}
 
 body {
     background-color: $color-primary;
@@ -54,3 +54,46 @@ body {
     max-width: 1170px;
     margin: 100px auto 80px;
 }
+
+input,
+    select,
+    button {
+        border: none;
+        outline: none;
+        height: 45px;
+        border-radius: 4px;
+        font-size: $font-size;
+    }
+
+    input {
+        padding: 0 15px;
+        margin-right: 10px;
+        width: 100%;
+        background-color: rgba(#fff, .6);
+    }
+
+    select {
+        padding: 0 10px;
+        margin-right: 10px;
+        width: 100%;
+        background-color: rgba(#fff, .6);
+    }
+
+    button {
+        background-color: goldenrod;
+        font-weight: $font-weight + 300;
+        text-transform: uppercase;
+        font-size: $font-size - 3px;
+        transition: all .3s;
+
+        &:hover {
+            background-color: darken(goldenrod, 4%);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 10px rgba(0,0,0, .6);
+        }
+
+        &:active {
+            transform: translateY(1px);
+            box-shadow: 0 5px 10px rgba(0,0,0, .6);
+        }
+    }
