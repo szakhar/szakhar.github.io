@@ -20,7 +20,32 @@
     @extend %heading;
     font-size: $font-size + 8px;
     font-weight: $font-weight + 300;
-    // text-transform: uppercase;
     letter-spacing: .3px;
     color: rgba(#fff, .95);
+}
+
+.disabled {
+    opacity: .5;
+
+    &:hover {
+        background-color: goldenrod;
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+}
+
+.error,
+.warning {
+    grid-column: 1 / -1;
+    margin-top: 10px;
+    font-size: $font-size + 2px;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    text-align: center;
+    color: goldenrod;
 }
