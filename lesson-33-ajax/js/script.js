@@ -189,6 +189,12 @@ function showDetails(json) {
                 </button>`;
 
     details.innerHTML = result;
+
+    // Прокрутка до деталей фільму
+    window.scrollTo({
+        top: 230,
+        behavior: "smooth"
+    });
 }
 
 
