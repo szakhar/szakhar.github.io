@@ -50,10 +50,6 @@
         letter-spacing: 1px;
         text-align: center;
     }
-
-    &__item {
-
-    }
 }
 
 
@@ -61,8 +57,7 @@
     position: relative;
     cursor: pointer;
 
-    &:hover {
-        
+    &:hover { 
         .item__img {
             opacity: .15;
         }
@@ -99,9 +94,6 @@
 .details {
     width: 70%;
     margin: 65px auto;
-
-    &__item {
-    }
 }
 .item-details {
     display: flex;
@@ -114,9 +106,6 @@
         margin-right: 30px;
         max-width: 282px;
         width: 100%;
-    }
-
-    &__heading-2 {
     }
 
     &__metadata,
