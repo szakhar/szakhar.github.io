@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Suez+One&display=swap");
 /* ================================================
      BASE AND CSS RESET
    ================================================ */
@@ -173,6 +172,7 @@ button:active {
   letter-spacing: 1px;
   text-align: center;
 }
+
 .item {
   position: relative;
   cursor: pointer;
@@ -209,6 +209,7 @@ button:active {
   width: 70%;
   margin: 65px auto;
 }
+
 .item-details {
   display: flex;
 }
