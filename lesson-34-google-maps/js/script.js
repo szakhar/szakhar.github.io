@@ -2,6 +2,24 @@
 // Адреса вводятся в два поля и при нажатии на кнопку “Проложить маршрут” на карте показывается маршру
 
 function initMap() {
+
+    // Autocomplete (Автозаповнення). Для цього використовується Place API
+    // const origin = document.querySelector('.origin');
+    // const destination = document.querySelector('.destination');
+    function autoComplete(input) {
+        const autocomplete = new google.maps.places.Autocomplete((document.querySelector(input)), {
+            types: ['geocode']
+        });
+    
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+            const near_place = autocomplete.getPlace();
+        });
+    }
+    autoComplete('.origin');
+    autoComplete('.destination');
+
+    
+
     // Для прокладки маршруту
     const directionsService = new google.maps.DirectionsService();
     const directionsRenderer = new google.maps.DirectionsRenderer();
@@ -247,7 +265,6 @@ function initMap() {
         // Видаляє маркер коли прокладається маршрут
         marker.setMap(null);
     });
-
 }
 
 // google.maps.event.addDomListener(window, 'load', initMap);
