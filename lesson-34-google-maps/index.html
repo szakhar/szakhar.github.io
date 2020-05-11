@@ -11,15 +11,15 @@
 <div class="search-form">
     <!-- <img src="img/map.svg" alt="Map"> -->
     <form name="form">
-        <input type="text" name="origin" value="Ivano-Frankivsk">
-        <input type="text" name="destination" value="Berlin">
+        <input class="origin" type="text" name="origin" value="Ivano-Frankivsk">
+        <input class="destination" type="text" name="destination" value="Berlin">
         <button>Прокласти маршрут</button>
     </form>
 </div>
 
 <div id="map"></div>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACNyYkuj4eRHe0dQdASwwEXWLY68b_ZpM&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACNyYkuj4eRHe0dQdASwwEXWLY68b_ZpM&libraries=places&callback=initMap"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
