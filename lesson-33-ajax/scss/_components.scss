@@ -32,6 +32,7 @@
 
 .disabled {
     opacity: .5;
+    cursor: inherit;
 
     &:hover {
         background-color: goldenrod;

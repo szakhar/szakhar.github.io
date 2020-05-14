@@ -90,6 +90,7 @@ button {
     text-transform: uppercase;
     font-size: $font-size - 3px;
     transition: all .3s;
+    cursor: pointer;
 
     &:hover {
         background-color: darken(goldenrod, 4%);
