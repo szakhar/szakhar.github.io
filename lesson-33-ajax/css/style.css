@@ -297,7 +297,7 @@ button:active {
 
 .favorite {
   position: absolute;
-  top: 22px;
+  top: -9px;
   right: 75px;
 }
 .favorite__btn {
