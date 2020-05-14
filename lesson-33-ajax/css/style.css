@@ -139,6 +139,7 @@ button:active {
   text-align: center;
 }
 .search-form__logo {
+  width: auto;
   height: 26px;
   margin-right: 10px;
 }
@@ -147,6 +148,11 @@ button:active {
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+}
+.search-form__heading-1 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .search-form__form {
   display: flex;
