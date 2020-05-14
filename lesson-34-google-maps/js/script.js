@@ -2,7 +2,6 @@
 // Адреса вводятся в два поля и при нажатии на кнопку “Проложить маршрут” на карте показывается маршру
 
 function initMap() {
-
     // Autocomplete (Автозаповнення). Для цього використовується Place API
     // const origin = document.querySelector('.origin');
     // const destination = document.querySelector('.destination');
@@ -266,4 +265,4 @@ function initMap() {
     });
 }
 
-// google.maps.event.addDomListener(window, 'load', initMap);
+google.maps.event.addDomListener(window, 'load', initMap);
