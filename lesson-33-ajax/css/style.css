@@ -68,6 +68,7 @@ button {
   text-transform: uppercase;
   font-size: 13px;
   transition: all 0.3s;
+  cursor: pointer;
 }
 button:hover {
   background-color: #c8981d;
@@ -109,6 +110,7 @@ button:active {
 
 .disabled {
   opacity: 0.5;
+  cursor: inherit;
 }
 .disabled:hover {
   background-color: goldenrod;
@@ -132,6 +134,7 @@ button:active {
 }
 
 .search-form {
+  position: relative;
   margin: 0 auto 30px;
   text-align: center;
 }
@@ -189,6 +192,22 @@ button:active {
   opacity: 1;
   visibility: visible;
 }
+.item:hover .item__favorite {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  background: center/cover no-repeat url(../img/heart-empty.svg);
+  z-index: 30;
+}
+.item:hover .item__favorite--full {
+  background: center/cover no-repeat url(../img/heart.svg);
+}
+.item__favorite {
+  display: none;
+}
 .item__img {
   width: 100%;
   height: auto;
@@ -221,10 +240,25 @@ button:active {
 .item-details__desc {
   margin-top: 30px;
 }
+.item-details__favorite {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  left: 0;
+  margin-left: 8px;
+  width: 28px;
+  height: 28px;
+  background: center/cover no-repeat url(../img/heart-empty.svg);
+  cursor: pointer;
+}
+.item-details__favorite--full {
+  background: center/cover no-repeat url(../img/heart.svg);
+}
 .item-details__img {
   margin-right: 30px;
   max-width: 282px;
   width: 100%;
+  transition: all 0.2s;
 }
 .item-details__metadata, .item-details__synopsis, .item-details__starring {
   margin-top: 16px;
@@ -247,10 +281,35 @@ button:active {
 }
 
 .pagination {
-  display: none;
   margin-top: 90px;
-  text-align: center;
 }
-.pagination__more {
+.pagination__more, .pagination__clear-btn {
+  display: none;
   width: 150px;
+  margin: 0 auto;
+}
+
+.favorite {
+  position: absolute;
+  top: 22px;
+  right: 75px;
+}
+.favorite__btn {
+  height: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border-radius: 0;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+.favorite__btn:hover {
+  background-color: inherit;
+  transform: translateY(0);
+  box-shadow: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+.favorite__btn:active {
+  transform: translateY(0);
+  box-shadow: none;
 }

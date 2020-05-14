@@ -1,4 +1,5 @@
 .search-form {
+    position: relative;
     margin: 0 auto 30px;
     text-align: center;
 
@@ -66,6 +67,24 @@
             opacity: 1;
             visibility: visible;
         }
+
+        .item__favorite {
+            display: block;
+            position: absolute;
+            top: 20px; right: 20px;
+            width: 28px;
+            height: 28px;
+            background: center/cover no-repeat url(../img/heart-empty.svg);
+            z-index: 30;
+
+            &--full {
+                background: center/cover no-repeat url(../img/heart.svg);
+            }
+        }
+    }
+
+    &__favorite {
+        display: none;
     }
 
     &__img {
@@ -95,17 +114,34 @@
     width: 70%;
     margin: 65px auto;
 }
+
 .item-details {
     display: flex;
 
     &__desc {
         margin-top: 30px;
     }
+    
+    &__favorite {
+        display: inline-block;
+        position: relative;
+        top: 5px; left: 0;
+        margin-left: 8px;
+        width: 28px;
+        height: 28px;
+        background: center/cover no-repeat url(../img/heart-empty.svg);
+        cursor: pointer;
 
+        &--full {
+            background: center/cover no-repeat url(../img/heart.svg);
+        }
+    }   
+    
     &__img {
         margin-right: 30px;
         max-width: 282px;
         width: 100%;
+        transition: all .2s;
     }
 
     &__metadata,
@@ -137,11 +173,40 @@
 
 
 .pagination {
-    display: none;
     margin-top: 90px;
-    text-align: center;
 
-    &__more {
+    &__more,
+    &__clear-btn {
+        display: none;
         width: 150px;
+        margin: 0 auto;
+    }
+}
+
+
+.favorite {
+    position: absolute;
+    top: 22px; right: 75px;
+
+    &__btn {
+        height: 0;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border-radius: 0;
+        color: rgba(#fff, .9);
+        cursor: pointer;
+        
+        &:hover {
+            background-color: inherit;
+            transform: translateY(0);
+            box-shadow: none;
+            color: rgba(#fff, .6);
+        }
+    
+        &:active {
+            transform: translateY(0);
+            box-shadow: none;
+        }
     }
 }

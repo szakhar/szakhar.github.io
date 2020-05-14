@@ -40,6 +40,7 @@ const details = document.querySelector('.details');
 const pagination = document.querySelector('.pagination');
 const more = pagination.querySelector('.pagination__more');
 const count = more.querySelector('.pagination__count');
+const clearBtn = pagination.querySelector('.clear-btn');
 
 
 // Вивід фільмів на Index Page
@@ -74,6 +75,92 @@ output.addEventListener('click', event => {
 
 
 
+// Подія Show Favorite Movies
+const showFavorite = document.querySelector('.favorite__btn');
+showFavorite.addEventListener('click', event => {    
+    output.innerHTML = '';
+    details.innerHTML = '';
+
+    more.style.display = 'none';
+    clearBtn.style.display = 'block';
+    
+    pagination.addEventListener('click', event => {
+        event.preventDefault();
+        if (event.target === clearBtn) {
+            localStorage.clear();
+            output.innerHTML = '<div class="warning">Пусто. Додайте щось.</div>';
+            more.style.display = 'none';
+            clearBtn.style.display = 'none';
+        }
+    });
+
+    arrFavorites = JSON.parse(localStorage.getItem('favorites'));
+    // arrFavorites.sort();
+    if (arrFavorites && arrFavorites.length > 0) {
+        output.innerHTML += `<div class="output__found">Favorite Movies</div>`;
+
+        for(item of arrFavorites) {
+            const searchTitle = '&t=' + item;
+            fetchCall(showFavorites, searchTitle);
+        }
+    } else {
+        output.innerHTML = '<div class="warning">Пусто. Додайте щось.</div>';
+        more.style.display = 'none';
+        clearBtn.style.display = 'none';
+    }
+});
+
+
+// Подія Add Favorite Movie для пошуку
+output.addEventListener('click', event => {
+    addFavorite(event, 'item');
+});
+
+// Подія Add Favorite Movie для сторінки фільму
+details.addEventListener('click', event => {
+    addFavorite(event);
+});
+
+// Function Add Movie to Favorite page
+function addFavorite(event, type='details') {
+    // Витягаю .item-favorite для того, щоб nextElementSibling спрацював
+    const favoriteItem = event.target;
+    // Витягаю alt в img по якому буду додавати фільми в LocalStorage
+    let title = '';
+    if (type === 'item')
+        title = favoriteItem.nextElementSibling.getAttribute('alt');
+    else
+        title = favoriteItem.parentNode.parentNode.previousElementSibling.getAttribute('alt');
+    
+    if (title !== null && title !== undefined) {
+    // Перевірка чи існує такий фільм у LocalStorage
+        if (localStorage.getItem('favorites')) {
+            const favorites = JSON.parse(localStorage.getItem('favorites'));
+
+            // Шукає фільм в LocalStorage і вертає індекс масиву або -1
+            const findElement = favorites.findIndex(item => {
+                if (item === title) return item;
+            });
+
+            // Перевіряє наявність фільму в LocalStorage і якщо такий відстуній то додає
+            if (findElement === -1) {
+                favorites.push(title);
+            } else {
+                favorites.splice(findElement, 1);
+            }
+
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+            favoriteItem.classList.toggle('item__favorite--full');
+            favoriteItem.classList.toggle('item-details__favorite--full');
+        } else {
+            const arrFavorite = [title];
+            localStorage.setItem('favorites', JSON.stringify(arrFavorite));
+            favoriteItem.classList.toggle('item__favorite--full');
+            favoriteItem.classList.toggle('item-details__favorite--full');
+        }
+    }
+}
+
 
 // Функція запиту даних по API
 async function fetchCall(callback, title='', query='', type='', page=1) {
@@ -95,6 +182,20 @@ async function fetchCall(callback, title='', query='', type='', page=1) {
 }
 
 
+// Відображає html фільмів які знайдено
+function renderHtml(item) {
+    if(item.Poster === 'N/A')
+        item.Poster = 'img/cover.jpg';
+
+    let result = ''
+    result += `<div class="output__item item">
+                    <div class="item__favorite ${checkLocal(item.Title)}"></div>
+                    <img class="item__img" src="${item.Poster}" alt="${item.Title}">
+                    <div class="item__heading">${item.Title} (${item.Year})</div>
+                </div>`;
+    return result;
+}
+
 
 // Відображає на головній сторінці фільми
 function showIndex(json) {
@@ -104,13 +205,7 @@ function showIndex(json) {
         const item = json.Search;
 
         for(let i=0; i<8; i++) {
-            if(item[i].Poster === 'N/A')
-                item[i].Poster = 'img/cover.jpg';
-            
-            result += `<div class="output__item item">
-                            <img class="item__img" src="${item[i].Poster}" alt="${item[i].Title}">
-                            <div class="item__heading">${item[i].Title} (${item[i].Year})</div>
-                        </div>`;
+            result += renderHtml(item[i]);
         }
     } else {
         result += '<div class="warning">Виникла помилка. Спробуйте пізніше.</div>';
@@ -124,25 +219,20 @@ function showIndex(json) {
 // Показує всі фільми, що знайшов пошук.
 function showAll(json) {
     let result = '';
+    clearBtn.style.display = 'none';
 
     if (json.Search !== undefined) {
         result += `<div class="output__found">Знайдено ${json.totalResults}шт.</div>`;
 
         json.Search.map(item => {
-            if(item.Poster === 'N/A')
-                item.Poster = 'img/cover.jpg';
-            
-            result += `<div class="output__item item">
-                            <img class="item__img" src="${item.Poster}" alt="${item.Title}">
-                            <div class="item__heading">${item.Title} (${item.Year})</div>
-                        </div>`;
+            result += renderHtml(item);
         });
 
         // Робить активною чи не активною кнопку More і рахує кількість
         let searchCount = json.totalResults - 10;
 
         if(searchCount >= 1) {
-            pagination.style.display = 'block';
+            more.style.display = 'block';
             count.innerHTML = `(${searchCount})`;
             more.classList.remove('disabled');
         } else {
@@ -168,7 +258,7 @@ function showAll(json) {
         });
     } else {
         result += '<div class="warning">Нічого не знайдено.</div>';
-        pagination.style.display = 'none';
+        more.style.display = 'none';
     }
 
     output.innerHTML = result;
@@ -178,15 +268,16 @@ function showAll(json) {
 
 // Показує детальну інформацію про фільм
 function showDetails(json) {
-    let result = '';
-
     if(json.Poster === 'N/A')
         json.Poster = 'img/cover.jpg';
     
-    result += `<div class="details__item item-details">
+    const result = `<div class="details__item item-details">
                     <img class="item-details__img" src="${json.Poster}" alt="${json.Title}">
                     <div class="item-details__desc">
-                        <h2 class="item-details__heading-2 heading-2">${json.Title}</h2>
+                        <h2 class="item-details__heading-2 heading-2">
+                            ${json.Title}
+                            <div class="item__favorite item-details__favorite ${checkLocal(json.Title)}"></div>
+                        </h2>
                         <div class="item-details__metadata">${json.Year}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;${json.Runtime}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;${json.Genre}</div>
                         <div class="item-details__synopsis">${json.Plot}</div>
                         <div class="item-details__starring">Starring: <span>${json.Actors}</span></div>
@@ -210,16 +301,30 @@ function nextPage(json) {
 
     if (json.Search !== undefined) {
         json.Search.map(item => {
-
-            if(item.Poster === 'N/A')
-                item.Poster = 'img/cover.jpg';
-            
-            result += `<div class="output__item item">
-                           <img class="item__img" src="${item.Poster}" alt="${item.Title}">
-                           <div class="item__heading">${item.Title} (${item.Year})</div>
-                       </div>`;
+            result += renderHtml(item);
         });
     }
 
     output.innerHTML += result;
+}
+
+
+
+// Показує сторінку Favorites
+function showFavorites(json) {
+    let result = '';
+    result += renderHtml(json);
+    output.innerHTML += result;
+}
+
+
+
+// Провіряє чи є у Favorite (LocalStorage)
+function checkLocal(title) {
+    const favorites = JSON.parse(localStorage.getItem('favorites'));
+
+    if (favorites && favorites.includes(title)) {
+        return 'item__favorite--full item-details__favorite--full'; }
+
+    return '';
 }
