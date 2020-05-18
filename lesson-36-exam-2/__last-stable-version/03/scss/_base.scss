@@ -1,0 +1,189 @@
+//   IMPORT FONTS
+// ==================================================
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/gotham-book/gotham-book.eot");
+    src: url("../fonts/gotham-book/gotham-book.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/gotham-book/gotham-book.woff") format("woff"),
+      url("../fonts/gotham-book/gotham-book.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/gotham-regular/gotham-regular.woff2") format("woff2"),
+      url("../fonts/gotham-regular/gotham-regular.woff") format("woff"),
+      url("../fonts/gotham-regular/gotham-regular.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/gotham-bold/gotham-bold.eot");
+    src: url("../fonts/gotham-bold/gotham-bold.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/gotham-bold/gotham-bold.woff") format("woff"),
+      url("../fonts/gotham-bold/gotham-bold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+
+//   FONTS
+// ==================================================
+
+$font-primary: 'Gotham', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+$font-size: 16px;
+$font-weight: 400;
+
+
+//   COLORS
+// ==================================================
+
+$color-primary: #333;
+$color-grey-dark-1: #2c4058;
+$color-white: #fff;
+
+
+/* VARIABLES
+   ================================================ */
+
+$container: 1170px + 60px;
+$container-footer: 770px + 60px;
+$gradient: linear-gradient( 45deg, rgb(85,183,255) 0%, rgb(126,90,255) 100%);
+
+/* ================================================
+     RESPONSIVE
+   ================================================ */
+
+// @mixin small-phone {
+//     @media only screen and (max-width: 375px) { @content; }
+// }
+// @mixin phone {
+//     @media only screen and (max-width: 640px) { @content; }
+// }
+// @mixin tablet-port {
+//     @media only screen and (max-width: 768px) { @content; }
+// }
+// @mixin tablet-land {
+//     @media only screen and (max-width: 960px) { @content; }
+// }
+
+@mixin phone {
+    @media only screen and (max-width: 479px) { @content; }
+}
+@mixin phone-land {
+    @media only screen and (max-width: 767px) { @content; }
+}
+@mixin tablet {
+    @media only screen and (max-width: 991px) { @content; }
+}
+@mixin desktop {
+    @media only screen and (max-width: 1164px) { @content; }
+}
+// @include phone {}
+
+
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+// ::selection {
+//     background-color: $color-grey;
+//     color: #fff;
+// }
+
+body {
+    font-family: $font-primary;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color-grey-dark-1;
+}
+
+a:link,
+a:visited {
+    position: relative;
+    color: $color-white;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+a:hover,
+a:active {
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -3px; left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+    }
+}
+
+.container {
+    max-width: $container;
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+input,
+button {
+    display: block;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 1px 0 15px;
+    width: 100%;
+    border-bottom: 1px solid rgba($color-grey-dark-1, .2);
+    font-size: $font-size + 2px;
+    color: $color-grey-dark-1;
+    transition: all .3s;
+
+    &::placeholder {
+        color: rgba(75, 85, 98, 0.5);
+    }
+
+    &:focus {
+        border-bottom: 1px solid $color-grey-dark-1;
+    }
+}
+
+button {
+    padding: 17px 41px;
+    border: solid 1px $color-grey-dark-1;
+    font-size: $font-size - 2px;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    color: $color-grey-dark-1;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+        background-color: $color-grey-dark-1;
+        color: $color-white;
+    }
+}

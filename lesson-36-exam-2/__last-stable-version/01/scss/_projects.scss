@@ -1,0 +1,148 @@
+.projects {
+    padding: 99px 0 110px;
+    // Ховає лишні куски квадратів-тіней від фото
+    overflow: hidden;
+
+    &__heading-3 {
+        margin-bottom: 162px;
+    }
+
+    &__project {
+        &:not(:last-child) {
+            margin-bottom: 210px;
+        }
+    }
+}
+
+.project {
+    display: flex;
+
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+        max-width: 650px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &--left {
+        .project__photo-box {
+            margin-right: 70px;
+
+            @include tablet {
+                margin-right: 0;
+            }
+
+            &::after {
+                left: -260px;
+                background-color: #55b7ff;
+
+                @include desktop {
+                    left: -160px;
+                }
+            }
+        }
+    }
+
+    &--right {
+        .project__photo-box {
+            margin-left: 70px;
+            
+            @include tablet {
+                order: -1;
+                margin-left: 0;
+            }
+
+            &::after {
+                right: -260px;
+                background-color: #7e5aff;
+
+                @include desktop {
+                    right: -160px;
+                }
+            }
+        }
+    }
+
+    &__photo-box {
+        position: relative;
+        max-width: 630px;
+        width: 100%;
+        max-height: 470px;
+        height: 100%;
+        flex: 1 0 auto;
+
+        @include desktop {
+            flex-basis: 45%;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -70px;
+            width: 100%;
+            height: 100%;
+            z-index: -5;
+        }
+    }
+
+    &__photo {
+        width: 100%;
+        height: auto;
+    }
+
+    &__details {
+        margin-top: 59px;
+
+        @include desktop {
+            margin-top: 35px;
+            flex-basis: 55%;
+        }
+    }
+
+    &__overtitle {
+        font-size: $font-size + 6px;
+        line-height: 1.5;
+        text-transform: uppercase;
+        color: $color-grey-dark-1;
+    }
+
+    &__heading-4 {
+        margin-top: -4px;
+    }
+
+    &__description {
+        margin-top: 23px;
+        font-family: $font-secondary;
+        font-size: $font-size + 2px;
+        letter-spacing: .1px;
+        line-height: 1.67;
+        color: #4b5562;
+    }
+
+    &__btn {
+        margin-top: 32px;
+    }
+
+    &__location {
+        margin-top: 55px;
+        display: flex;
+        // align-items: center;
+        font-family: $font-secondary;
+        font-size: $font-size + 2px;
+        font-style: italic;
+        letter-spacing: -.5px;
+        line-height: 1.4;
+        color: $color-grey-dark-1;
+
+        @include tablet {
+            margin-top: 30px;
+        }
+    }
+
+    &__icon-marker {
+        margin-top: 3px;
+        margin-right: 7px;
+    }
+}
