@@ -1226,7 +1226,9 @@ button:hover {
 
 .footer {
   padding: 203px 0 206px;
-  background-image: linear-gradient(45deg, #55b7ff 0%, #7e5aff 100%);
+  background-image: url(../img/footer-bg.png), linear-gradient(45deg, #55b7ff 0%, #7e5aff 100%);
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 @media only screen and (max-width: 479px) {
   .footer {
