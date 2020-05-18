@@ -110,8 +110,8 @@ function scrollToAnchor(current, event) {
     const target = $( $(current).attr('href') );
 
     if (target.length) {
-        // 80 - це мінус висота полоски хедера
-        const scrollTo = target.offset().top - 80;
+        // 70 - це мінус висота полоски хедера
+        const scrollTo = target.offset().top - 70;
         $('html, body').animate({scrollTop: scrollTo + 'px'}, 800);
     }
 }
