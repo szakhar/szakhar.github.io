@@ -1,6 +1,8 @@
 .footer {
     padding: 203px 0 206px;
-    background-image: $gradient;
+    background-image: url(../img/footer-bg.png), $gradient;
+    background-repeat: no-repeat;
+    background-position: bottom;
 
     @include phone {
         padding: 203px 0 130px;
