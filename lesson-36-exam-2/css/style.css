@@ -57,8 +57,14 @@ a:link,
 a:visited {
   position: relative;
   color: #fff;
-  text-decoration: none;
   transition: all 0.3s;
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+}
+
+a[href^=tel] {
+  color: inherit;
+  text-decoration: none;
 }
 
 a:hover::after,
@@ -94,6 +100,9 @@ input {
   font-size: 18px;
   color: #2c4058;
   transition: all 0.3s;
+}
+input::-ms-input-placeholder {
+  color: rgba(75, 85, 98, 0.5);
 }
 input::placeholder {
   color: rgba(75, 85, 98, 0.5);
