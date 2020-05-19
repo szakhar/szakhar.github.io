@@ -95,9 +95,10 @@
 
                     &__item {
                         font-size: $font-size + 12px;
+                        line-height: 1.6;
                         &:not(:last-child) {
                             margin-right: 0;
-                            margin-bottom: 30px;
+                            margin-bottom: 25px;
                         }
                     }
                 }
