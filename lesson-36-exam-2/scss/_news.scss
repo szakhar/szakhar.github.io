@@ -199,7 +199,8 @@
     }
 
     // Arrows Slider
-    .slick-arrow {
+    .slick-prev,
+    .slick-next {
         display: block !important;
         position: absolute;
         top: 44%;
@@ -226,10 +227,12 @@
             color: $color-white;
         }
 
-        &:hover,
-        &:focus {
-            opacity: .6;
-            background-color: transparent;
+        &:hover {
+            background-color: $color-white;
+
+            &::before {
+                color: $color-grey-dark-1;
+            }
         }
     }
 
