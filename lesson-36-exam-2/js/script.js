@@ -11,7 +11,7 @@ $(".slider").slick({
     autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 4000,
     pauseOnFocus: false,
     pauseOnHover: false,
     easing: 'ease',
