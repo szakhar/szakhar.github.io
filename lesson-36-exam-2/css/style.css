@@ -386,10 +386,11 @@ button:hover {
   }
   .top__menu.active .menu__item {
     font-size: 28px;
+    line-height: 1.6;
   }
   .top__menu.active .menu__item:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
   .top__menu.active .menu__item::before {
     display: none;
