@@ -1,0 +1,33 @@
+// FONTS
+$font-primary: 'Raleway', sans-serif;
+
+// COLORS
+$color-primary: #e2e7ec;
+$color-grey-light: #818181;
+$color-grey-dark: #1d1d1d;
+
+// BASE
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+::selection {
+  background-color: $color-grey-dark;
+  color: #fff;
+}
+
+body {
+    background-color: $color-primary;
+    font-family: $font-primary;
+    color: $color-grey-dark;
+    font-weight: 500;
+}

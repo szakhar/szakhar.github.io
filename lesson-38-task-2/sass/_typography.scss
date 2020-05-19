@@ -1,0 +1,22 @@
+%heading {
+    font-family: $font-primary;
+    font-weight: 400;
+  }
+
+.heading-2 {
+    @extend %heading;
+    font-size: 2.2rem;
+    color: $color-grey-dark;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.55px;
+    text-transform: uppercase;
+    margin-bottom: 1.7rem;
+
+    &--light {
+      color: #fff;
+      font-size: 3rem;
+      line-height: 3.6rem;
+      letter-spacing: 0.75px;
+    }
+}
