@@ -1,0 +1,64 @@
+//   IMPORT FONTS
+// ==================================================
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+
+//   FONTS
+// ==================================================
+
+$font-primary: 'Roboto', sans-serif;
+$font-size: 16px;
+$font-weight: 400;
+
+
+//   COLORS
+// ==================================================
+
+$color-primary: #333;
+$color-grey: #999;
+
+
+/* VARIABLES
+   ================================================ */
+
+$container: 1170px;
+
+
+/* ================================================
+     RESPONSIVE
+   ================================================ */
+
+@mixin viewport-4 {
+    @media only screen and (max-width: 479px) { @content; }
+}
+@mixin viewport-7 {
+    @media only screen and (max-width: 767px) { @content; }
+}
+@mixin viewport-9 {
+    @media only screen and (max-width: 991px) { @content; }
+}
+
+
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+
+::selection {
+    background-color: royalblue;
+    color: #fff;
+}
+
+body {
+    font-family: $font-primary;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color-grey;
+}
+
+.container {
+    max-width: $container + 60px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}

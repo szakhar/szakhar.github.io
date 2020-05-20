@@ -1,0 +1,48 @@
+.gallery-1 {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 56px;
+
+    @include viewport-7 {
+        margin-top: 60px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    @include viewport-4 {
+        margin-top: 40px;
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 30px;
+    }
+
+    &__item {
+        width: 100%;
+
+        &--1 {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+        }
+    }
+}
+.gallery-2 {
+    margin-top: 82px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    background-color: #1a1a1a;
+
+    @include viewport-9 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    &__item {
+        width: 100%;
+        opacity: .3;
+        transition: opacity .3s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

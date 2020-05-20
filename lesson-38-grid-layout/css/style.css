@@ -1,0 +1,167 @@
+/* ================================================
+     RESET CSS
+   ================================================ */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* ================================================
+   ================================================ */
+/* VARIABLES
+   ================================================ */
+/* ================================================
+     RESPONSIVE
+   ================================================ */
+/* ================================================
+     BASE AND CSS RESET
+   ================================================ */
+::selection {
+  background-color: royalblue;
+  color: #fff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #999;
+}
+
+.container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+.heading-1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.heading-1 {
+  font-size: 20px;
+}
+
+.gallery-1 {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 56px;
+}
+@media only screen and (max-width: 767px) {
+  .gallery-1 {
+    margin-top: 60px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .gallery-1 {
+    margin-top: 40px;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 30px;
+  }
+}
+.gallery-1__item {
+  width: 100%;
+}
+.gallery-1__item--1 {
+  grid-column: 1/span 2;
+  grid-row: 1/span 2;
+}
+
+.gallery-2 {
+  margin-top: 82px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  background-color: #1a1a1a;
+}
+@media only screen and (max-width: 991px) {
+  .gallery-2 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+.gallery-2__item {
+  width: 100%;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+.gallery-2__item:hover {
+  opacity: 1;
+}
