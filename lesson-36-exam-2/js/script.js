@@ -40,10 +40,12 @@ $(".slider-news").slick({
 
 const iconMenu = document.querySelector('.icon-menu');
 const menuBody = document.querySelector('.menu');
+const body = document.querySelector('body');
 
 iconMenu.addEventListener('click', () => {
     iconMenu.classList.toggle('active');
     menuBody.classList.toggle('active');
+    body.classList.toggle('scroll-menu-off');
 });
 
 
@@ -52,6 +54,7 @@ const menuList = document.querySelector('.menu__list');
 menuList.addEventListener('click', () => {
     iconMenu.classList.toggle('active');
     menuBody.classList.toggle('active');
+    body.classList.toggle('scroll-menu-off');
 });
 
 

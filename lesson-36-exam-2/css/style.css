@@ -430,6 +430,10 @@ button:hover {
   }
 }
 
+.scroll-menu-off {
+  overflow: hidden;
+}
+
 .menu {
   font-size: 14px;
   text-transform: uppercase;
