@@ -147,7 +147,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: center/cover no-repeat url(../../img/front.jpg);
+  background: center/cover no-repeat url(../img/front.jpg);
   background-size: 88%;
   background-color: whitesmoke;
   border-radius: 8px;
@@ -183,7 +183,7 @@ body {
   transform: translate(-50%, -50%);
   width: 35px;
   height: 35px;
-  background: center/cover no-repeat url(../../img/hearts.svg);
+  background: center/cover no-repeat url(../img/hearts.svg);
 }
 .card__icon--hearts::before {
   content: "";
@@ -193,7 +193,7 @@ body {
   left: -66px;
   width: 35px;
   height: 35px;
-  background: center/cover no-repeat url(../../img/hearts.svg);
+  background: center/cover no-repeat url(../img/hearts.svg);
   background-size: 16px 16px;
   background-color: whitesmoke;
 }
@@ -206,7 +206,7 @@ body {
   transform: rotate(180deg);
   width: 35px;
   height: 35px;
-  background: center/cover no-repeat url(../../img/hearts.svg);
+  background: center/cover no-repeat url(../img/hearts.svg);
   background-size: 16px 16px;
   background-color: whitesmoke;
 }
@@ -217,7 +217,7 @@ body {
   transform: translate(-50%, -50%);
   width: 35px;
   height: 35px;
-  background: center/cover no-repeat url(../../img/rhombus.svg);
+  background: center/cover no-repeat url(../img/rhombus.svg);
 }
 .card__icon--rhombus::before {
   content: "";
@@ -227,7 +227,7 @@ body {
   left: -66px;
   width: 35px;
   height: 35px;
-  background: center/cover no-repeat url(../../img/rhombus.svg);
+  background: center/cover no-repeat url(../img/rhombus.svg);
   background-size: 16px 16px;
   background-color: whitesmoke;
 }
@@ -240,7 +240,7 @@ body {
   transform: rotate(180deg);
   width: 35px;
   height: 35px;
-  background: center/cover no-repeat url(../../img/rhombus.svg);
+  background: center/cover no-repeat url(../img/rhombus.svg);
   background-size: 16px 16px;
   background-color: whitesmoke;
 }
@@ -251,7 +251,7 @@ body {
   transform: translate(-50%, -50%);
   width: 35px;
   height: 35px;
-  background: center/cover no-repeat url(../../img/spades.svg);
+  background: center/cover no-repeat url(../img/spades.svg);
 }
 .card__icon--spades::before {
   content: "";
@@ -261,7 +261,7 @@ body {
   left: -66px;
   width: 35px;
   height: 35px;
-  background: center/cover no-repeat url(../../img/spades.svg);
+  background: center/cover no-repeat url(../img/spades.svg);
   background-size: 16px 16px;
   background-color: whitesmoke;
 }
@@ -274,7 +274,7 @@ body {
   transform: rotate(180deg);
   width: 35px;
   height: 35px;
-  background: center/cover no-repeat url(../../img/spades.svg);
+  background: center/cover no-repeat url(../img/spades.svg);
   background-size: 16px 16px;
   background-color: whitesmoke;
 }
@@ -285,7 +285,7 @@ body {
   transform: translate(-50%, -50%);
   width: 35px;
   height: 35px;
-  background: center/cover no-repeat url(../../img/clubs.svg);
+  background: center/cover no-repeat url(../img/clubs.svg);
 }
 .card__icon--clubs::before {
   content: "";
@@ -295,7 +295,7 @@ body {
   left: -66px;
   width: 35px;
   height: 35px;
-  background: center/cover no-repeat url(../../img/clubs.svg);
+  background: center/cover no-repeat url(../img/clubs.svg);
   background-size: 16px 16px;
   background-color: whitesmoke;
 }
@@ -308,7 +308,7 @@ body {
   transform: rotate(180deg);
   width: 35px;
   height: 35px;
-  background: center/cover no-repeat url(../../img/clubs.svg);
+  background: center/cover no-repeat url(../img/clubs.svg);
   background-size: 16px 16px;
   background-color: whitesmoke;
 }
