@@ -531,7 +531,7 @@ button:hover {
 }
 @media only screen and (max-height: 360px) {
   .slider__title {
-    font-size: 38px;
+    font-size: 35px;
   }
 }
 .slider__subtitle {
