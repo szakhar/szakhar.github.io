@@ -151,6 +151,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   background-color: #1a1a1a;
+  cursor: pointer;
 }
 @media only screen and (max-width: 991px) {
   .gallery-2 {
