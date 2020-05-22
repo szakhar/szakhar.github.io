@@ -31,6 +31,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     background-color: #1a1a1a;
+    cursor: pointer;
 
     @include viewport-9 {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
