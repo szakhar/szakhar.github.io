@@ -1,0 +1,81 @@
+.gallery {
+    padding: 140px 0;
+
+    @include phone-land {
+        padding: 100px 0;
+    }
+
+    @include phone {
+        padding: 80px 0;
+    }
+
+    &__heading-3 {
+    }
+
+    &__container {
+        padding: 0 30px;
+
+        @include phone-land {
+            padding: 0 20px;
+        }
+
+        @include phone {
+            padding: 0 10px;
+        }
+    }
+
+    &__box {
+        margin-top: 90px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 5;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include phone {
+            margin-top: 70px;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        position: relative;
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        &:first-child {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+
+            @include phone {
+                grid-column: 1 / span 1;
+                grid-row: 1 / span 1;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+                // z-index: 20;
+
+                width: 80px;
+                height: 80px;
+                background: center/cover no-repeat url(../img/gallery-360.png);
+            }
+        }
+    }
+
+    &__btn {
+        display: block;
+        margin: 52px auto 0;
+        padding: 17px 57px;
+    }
+}
