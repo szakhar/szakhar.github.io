@@ -1,0 +1,57 @@
+.footer {
+    padding: 203px 0 206px;
+    background-image: url(../img/footer-bg.png), $gradient;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    @include phone {
+        padding: 203px 0 130px;
+    }
+
+    &__container {
+        margin: 0 auto;
+        max-width: $container-footer;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include phone {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__social {
+
+        @include phone {
+            margin-top: 25px;
+        }
+    }
+
+    &__icon {
+    }
+
+    &__text {
+        margin-top: 40px;
+        font-size: $font-size - 2px;
+        color: $color-white;
+
+        @include phone {
+            text-align: center;
+        }
+
+        span {
+            
+            @include phone {
+                display: none;
+            }
+
+            &:first-child {
+                padding: 0 18px;
+            }
+        }
+    }
+}
