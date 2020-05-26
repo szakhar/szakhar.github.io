@@ -89,6 +89,8 @@ gulp.task('prebuild', async () => {
         .pipe(gulp.dest('dist/js'));
     gulp.src('app/js/slick/**/*')
         .pipe(gulp.dest('dist/js/slick'));
+    gulp.src('app/js/wow.min.js')
+        .pipe(gulp.dest('dist/js/wow.min.js'));
     gulp.src('app/fonts/**/*')
         .pipe(gulp.dest('dist/fonts'));
 });
