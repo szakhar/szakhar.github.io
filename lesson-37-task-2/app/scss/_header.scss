@@ -22,6 +22,40 @@
             display: none;
         }
     }
+
+    &__prod-box {
+        position: absolute;
+        bottom: 40px; right: 80px;
+        z-index: 5;
+    }
+
+    &__prod-desc {
+        margin-right: 15px;
+        display: inline-block;
+        font-size: $font-size;
+        color: $color-white;
+    }
+
+    &__prod-link:link,
+    &__prod-link:visited {
+        display: inline-block;
+        padding: 16px 25px 5px;
+        border: 1px solid $color-white;
+        font-size: $font-size - 3px;
+        text-transform: uppercase;
+        text-decoration-color: transparent;
+        transition: all .3s;
+
+        &:hover,
+        &:active {
+            background-color: $color-white;
+            color: inherit;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
 }
 
 
@@ -234,8 +268,8 @@
     }
 
     &__title {
-        transform: translateX(-100%);
         line-height: 1.1;
+        // animation: slider 1.2s;
 
         @include desktop {
             // font-size: 6vw;
@@ -260,13 +294,13 @@
     }
 
     &__subtitle {
-        transform: translateX(-100%);
         margin-top: 18px;
         font-size: $font-size + 2px;
         line-height: 1.8;
         text-transform: uppercase;
         letter-spacing: 5.4px;
         color: $color-white;
+        // animation: slider 1.2s;
         
         @include desktop {
             font-size: $font-size - 2px;
