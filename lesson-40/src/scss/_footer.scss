@@ -1,0 +1,43 @@
+.footer {
+    background-color: #232323;
+    padding: 120px 10px 48px;
+
+    &__box {
+        @extend %container;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 2.1px;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 12px;
+    }
+
+    &__subtitle {
+        letter-spacing: .9px;
+        color: #fff;
+        margin-bottom: 29px;
+    }
+
+    &__socials {
+    }
+
+    &__link {
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        &:not(:last-child) {
+            margin-right: 19px;
+        }
+    }
+
+}
+

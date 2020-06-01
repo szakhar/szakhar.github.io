@@ -1,0 +1,73 @@
+/* ================================================
+     COMPONENTS
+   ================================================ */
+
+%container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @media only screen and (max-width: 480px) {
+        padding: 0 15px;
+    }
+}
+
+%container-hotel {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+%border-none {
+    border: none;
+    outline: none;
+    height: 100%;
+}
+
+.btn {
+    @extend %border-none;
+    width: 225px;
+    height: 60px;
+    background-image: linear-gradient(45deg,
+                                        #496bfe 38%,
+                                        #5474fd 38%);
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    color: #fff;
+    text-transform: uppercase;
+
+    &:hover {
+        background-image: linear-gradient(45deg,
+                                        darken(#496bfe, 2%) 38%,
+                                        darken(#5474fd, 1%) 38%);
+    }
+
+    &:active {
+        background-image: linear-gradient(45deg,
+                                        darken(#496bfe, 4%) 38%,
+                                        darken(#5474fd, 3%) 38%);
+    }
+}
+
+
+
+/* ================================================
+     ANIMATION
+   ================================================ */
+
+@keyframes scroll { /* ANIMATION SCROLL */
+    0% {
+        transform: translate(0, 0) rotate(90deg);
+    }
+
+    50% {
+        transform: translate(0, 9%) rotate(90deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(90deg);
+    }
+}
