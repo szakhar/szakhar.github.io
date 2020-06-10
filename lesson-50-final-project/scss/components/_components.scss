@@ -1,0 +1,62 @@
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+
+%heading {
+    font-family: $font-primary;
+    font-weight: 800;
+    letter-spacing: .9px;
+    text-transform: uppercase;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: $font-size + 39px;
+    line-height: .9;
+    color: $color-black;
+
+    &--light {
+        color: $color-white;
+    }
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: $font-size + 24px;
+    // line-height: .9;
+    letter-spacing: .32px;
+    color: $color-black;
+
+    &--light {
+        color: $color-white;
+    }
+}
+
+.heading-4 {
+    @extend %heading;
+    font-size: $font-size + 6px;
+    letter-spacing: .5px;
+    color: $color-black;
+
+    &--light {
+        color: $color-white;
+    }
+}
+
+.heading-box {
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subtitle {
+    margin-top: 28px;
+    font-size: $font-size + 2px;
+    line-height: 27px;
+    color: $color-grey-dark-1;
+
+    &--light {
+        color: #a6a6a6;
+    }
+}

@@ -1,0 +1,28 @@
+.classes {
+    padding: 135px 0;
+    background-color: $color-grey-dark-3;
+
+    &__heading-2 {
+        
+    }
+
+    &__tabs {
+    }
+
+    &__item {
+    }
+
+    &__bottom-line {
+    }
+
+    &__left-line {
+    }
+
+    &__table {
+        background-color: $color-black;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        // grid-template-rows: ;
+        gap: 1px;
+    }
+}

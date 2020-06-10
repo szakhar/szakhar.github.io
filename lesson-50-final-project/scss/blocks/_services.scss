@@ -1,0 +1,110 @@
+@mixin item-bg($number, $color) {
+    background-image:
+                linear-gradient(to right, $color, $color),
+                url(../img/service-bg-#{$number}.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.services {
+    background-color: #141414;
+
+    &__box {
+        display: flex;
+    }
+
+    &__item {
+        text-align: center;
+
+        &--1,
+        &--2,
+        &--3 {
+            padding: 71px 4.4% 80px;
+        }
+
+        &--1 {
+            @include item-bg(1, rgba(0,0,0, .57));
+        }
+
+        &--2 {
+            @include item-bg(2, rgba(219,210,201, .9));
+        }
+
+        &--3 {
+            @include item-bg(3, rgba(0,0,0, .57));
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+    }
+
+    &__heading-3 {
+        margin-top: 22px;
+    }
+
+    &__description {
+        margin: 27px 0 4px;
+        font-size: $font-size + 2px;
+        line-height: 1.3;
+        color: #6d6d6d;
+
+        &--light {
+            color: #a6a6a6;
+        }
+    }
+
+    &__btn {
+        margin-top: 33px;
+        
+    }
+}
+
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 0 18px 11px;
+
+    &__link {
+        font-size: $font-size - 4px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 400;
+        background-color: transparent;
+        // border-left: 1px solid $color-black;
+        // border-bottom: 1px solid $color-black;
+
+        &:link,
+        &:visited {
+            color: $color-black;
+        }
+    }
+
+    &__top-line {
+        display: none;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $color-black;
+    }
+
+    &__bottom-line {
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $color-black;
+    }
+
+    &__left-line {
+        position: absolute;
+        top: 0; left: 0;
+        width: 1px;
+        height: 100%;
+        background-color: $color-black;
+    }
+}

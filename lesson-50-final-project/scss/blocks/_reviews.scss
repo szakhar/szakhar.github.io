@@ -1,0 +1,79 @@
+.reviews {
+    padding-top: 135px;
+
+    &__container {
+        
+    }
+
+    &__heading-2 {
+    }
+
+    &__box {
+        display: flex;
+        padding: 48px 0 136px;
+        width: 70%;
+        position: relative;
+
+        &::after {
+            content: '“”';
+            display: block;
+            position: absolute;
+            top: 0; right: -30%;
+            line-height: .55;
+            // transform: translateY(-50%);
+            font-family: 'Montserrat', sans-serif;;
+            font-size: 700px;
+            font-weight: 700;
+            color: transparent;
+            -webkit-text-stroke-color: rgba(104,104,104, .2);
+            -webkit-text-stroke-width: 1px;
+        }
+    }
+
+    &__pagination {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        align-content: start;
+        gap: 7px;
+        margin-right: 42px;
+    }
+
+    &__item {
+        width: 55px;
+        height: auto;
+    }
+
+    &__body {
+    }
+
+    &__text {
+        font-family: 'Poppins', sans-serif;
+        font-style: italic;
+        font-size: $font-size + 2px;
+        font-weight: 200;
+        line-height: 24px;
+        color: $color-grey-dark-1;
+    }
+
+    &__author {
+        margin-top: 22px;
+    }
+
+    &__author-job {
+        font-size: $font-size - 4px;
+        font-weight: 400;
+        letter-spacing: 3.2px;
+        text-transform: uppercase;
+        color: $color-black;
+    }
+
+    &__author-name {
+        margin-top: 4px;
+        font-size: $font-size + 4px;
+        font-weight: 800;
+        letter-spacing: .32px;
+        text-transform: uppercase;
+        color: $color-black;
+    }
+}
