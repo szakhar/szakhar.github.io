@@ -1,0 +1,85 @@
+@mixin program-bg($number) {
+    background: center/cover no-repeat url(../img/program-#{$number}.jpg);
+}
+
+.program {
+    display: flex;
+    flex-wrap: wrap;
+    
+    &__item {
+        padding: 99px 0 122px;
+        flex-basis: 50%;
+
+        &--1 {
+            @include program-bg(1);
+        }
+
+        &--2 {
+            @include program-bg(2);
+        }
+
+        &--3 {
+            @include program-bg(3);
+        }
+
+        &--4 {
+            @include program-bg(4);
+        }
+    }
+
+    &__heading-3 {
+        text-align: center;
+    }
+
+    &__description {
+        width: 70%;
+        margin: 26px auto;
+
+        font-family: 'Poppins', sans-serif;
+        font-size: $font-size + 2px;
+        font-weight: 300;
+        line-height: 24px;
+        text-align: center;
+        color: $color-white;
+    }
+
+    &__btn {
+        margin-top: 58px;
+        text-align: center;
+    }
+
+    &__link {
+        padding: 20px 61px;
+        border: 2px solid $color-white;
+        font-size: $font-size - 4px;
+        // font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        &:link,
+        &:visited {
+            color: $color-white;
+        }
+
+        &::after {
+            content: '';
+            margin-left: 10px;
+            display: inline-block;
+            width: 14px;
+            height: 12px;
+            background: center/cover no-repeat url(../img/icons/arrow-redo-outline-light.svg);
+        }
+    }
+
+    &__btn-top-line {
+    }
+
+    &__btn-right-line {
+    }
+
+    &__btn-bottom-line {
+    }
+
+    &__btn-left-line {
+    }
+}

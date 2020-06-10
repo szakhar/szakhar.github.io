@@ -1,0 +1,91 @@
+.team {
+    background-color: #141414;
+    padding: 134px 0 142px;
+
+    &__heading-box {
+    }
+
+    &__heading-2 {
+    }
+
+    &__subtitle {
+        margin-top: 22px;
+    }
+
+    &__coaches {
+        margin-top: 60px;
+    }
+}
+
+.coaches {
+    &__container {
+        // max-width: 1300px;
+        // margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        // display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__box {
+        padding: 0 15px;
+
+        &:first-child {
+            padding: 0 15px 0 0;
+        }
+
+        &:last-child {
+            padding: 0 0 0 15px;
+        }
+    }
+
+    &__profile {
+        display: flex;
+        position: relative;
+        
+        // display: grid;
+        // grid-template-columns: auto auto;
+
+        img {
+        }
+    }
+
+    &__header {
+        position: absolute;
+        top: 0; left: 100%;
+        width: 100%;
+        display: block;
+        transform: rotate(90deg);
+        transform-origin: 0 top;
+        // writing-mode: vertical-rl;
+    
+        // display: none;
+  
+    }
+
+    &__subtitle {
+        font-size: $font-size - 5px;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        color: $color-white;
+        padding-top: 20px;
+        // margin-right: 10px;
+    }
+
+    &__heading-4 {
+        margin-top: 6px;
+        // margin-right: 6px;
+        // margin-left: 30px;
+    }
+
+    &__photo {
+        width: calc(100% - 86px);
+        // margin-right: 20px;
+    }
+
+    &__social {
+        // display: none;
+        position: absolute;
+        bottom: 0; left: 50%;
+    }
+}

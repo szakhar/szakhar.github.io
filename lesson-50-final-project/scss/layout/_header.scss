@@ -1,0 +1,134 @@
+.header {
+    height: 100vh;
+    background-image: url(../img/slider-slide-1.png),
+    url(../img/slider-slide-2.png);
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 5px 0 67px;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: center no-repeat url(../img/slider-m-letter.png);
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 6.3%; left: 0;
+            width: 100%;
+            height: 100%;
+            background: center no-repeat url(../img/slider-text.png);
+            background-size: 34.7%;
+        }
+    }
+
+    &__logo,
+    &__menu {
+        position: relative;
+        z-index: 10;
+    }
+
+    &__logo {
+        display: block;
+        width: auto;
+        height: 72px;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.menu {
+    background-color: #000;
+    padding: 44px 124px 42px 62px;
+    font-size: $font-size - 4px;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+    color: $color-white;
+
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 84px;
+        }
+
+        /* Underlink link */
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: -3px; left: 0;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            width: 0;
+            // transform: scaleX(0);
+            // 50%
+            // transform: scaleX(.4);
+            // transform-origin: 100% 100%;
+            transition: all .2s;
+        }
+
+        // &:last-child {
+        //     position: relative;
+            
+        //     &::after {
+        //         content: '';
+        //         display: inline-block;
+        //         width: 30px;
+        //         height: 2px;
+        //         background-color: $color-white;
+        //         position: relative;
+        //         top: 0; left: 0;
+        //         visibility: visible;
+        //         opacity: 1;
+        //     }
+        // }
+    }
+
+    &__active {
+        &::after {
+            opacity: 1;
+            visibility: visible;
+            width: 100%;
+        }
+    }
+
+    a:link,
+    a:visited {
+        color: $color-white;
+    }
+
+    a:hover,
+    a:active {
+        &::after {
+            opacity: 1;
+            visibility: visible;
+            width: 100%;
+            // transform: scaleX(1);
+        }
+    }
+
+    &__icon {
+        
+    }
+}
