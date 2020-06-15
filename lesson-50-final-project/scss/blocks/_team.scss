@@ -19,34 +19,67 @@
 
 .coaches {
     &__container {
-        // max-width: 1300px;
-        // margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        // display: grid;
-        // grid-template-columns: repeat(3, 1fr);
+        // display: flex;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        column-gap: 30px;
+        row-gap: 60px;
+
+        @include breakpoint-custom(1200px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint-down-9 {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        @include breakpoint-down-7 {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 15px;
+        }
+
+        @include breakpoint-down-4 {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 30px;
+        }
     }
 
     &__box {
-        padding: 0 15px;
+        max-width: 768px;
 
-        &:first-child {
-            padding: 0 15px 0 0;
+        @include breakpoint-down-9 {
+            padding: 40px 10px 40px 40px;
         }
 
-        &:last-child {
-            padding: 0 0 0 15px;
+        @include breakpoint-down-4 {
+            padding: 25px 0px 25px 10px;
+            transform: translateX(7px);
         }
+        // padding: 0 15px;
+
+        // &:first-child {
+        //     padding: 0 15px 0 0;
+        // }
+
+        // &:last-child {
+        //     padding: 0 0 0 15px;
+        // }
     }
 
     &__profile {
         display: flex;
         position: relative;
-        
-        // display: grid;
-        // grid-template-columns: auto auto;
 
-        img {
+        &:hover {
+            overflow: visible;
+
+            .coaches__social-list {
+                height: 142px;
+                visibility: visible;
+                transform: translateY(0);
+            }
         }
     }
 
@@ -57,10 +90,6 @@
         display: block;
         transform: rotate(90deg);
         transform-origin: 0 top;
-        // writing-mode: vertical-rl;
-    
-        // display: none;
-  
     }
 
     &__subtitle {
@@ -69,23 +98,84 @@
         text-transform: uppercase;
         color: $color-white;
         padding-top: 20px;
-        // margin-right: 10px;
     }
 
     &__heading-4 {
         margin-top: 6px;
-        // margin-right: 6px;
-        // margin-left: 30px;
     }
 
     &__photo {
         width: calc(100% - 86px);
-        // margin-right: 20px;
     }
 
     &__social {
-        // display: none;
         position: absolute;
-        bottom: 0; left: 50%;
+        bottom: 4.5%; left: calc(100% - 147px);
+        width: 40px;
+        height: 43px;
+        background-color: $color-black;
+    }
+
+    &__social-share-icon {
+        position: relative;
+        z-index: 5;
+        display: block;
+        
+        width: 100%;
+        height: 100%;
+        background: center no-repeat url(../../img/icons/social-share.svg);
+        background-size: 20px 20px;
+        // cursor: pointer;
+    }
+
+    &__social-list {
+        height: 0;
+        visibility: hidden;
+        transform: translateY(142px);
+        z-index: 0;
+        overflow: hidden;
+
+        position: absolute;
+        top: -142px; left: 0;
+        width: 40px;
+        background-color: $color-black;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        transition: all .3s ease;
+    }
+
+    &__social-link {
+        padding: 13px 0;
+
+        &:hover,
+        &:active {
+            .coaches__icon {
+                stroke-width: 1px;
+                fill: $color-white;
+
+                &--instagram-1 {
+                    fill: $color-black;
+                }
+
+                &--instagram-2 {
+                    stroke: $color-black;
+                }
+            }
+        }
+
+        &:first-child {
+            padding-top: 21px;
+        }
+
+        &:last-child {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+    }
+
+    &__icon {
+        transition: all .3s ease-out;
     }
 }

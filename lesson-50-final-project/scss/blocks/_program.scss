@@ -44,42 +44,6 @@
     }
 
     &__btn {
-        margin-top: 58px;
-        text-align: center;
-    }
-
-    &__link {
-        padding: 20px 61px;
-        border: 2px solid $color-white;
-        font-size: $font-size - 4px;
-        // font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-
-        &:link,
-        &:visited {
-            color: $color-white;
-        }
-
-        &::after {
-            content: '';
-            margin-left: 10px;
-            display: inline-block;
-            width: 14px;
-            height: 12px;
-            background: center/cover no-repeat url(../img/icons/arrow-redo-outline-light.svg);
-        }
-    }
-
-    &__btn-top-line {
-    }
-
-    &__btn-right-line {
-    }
-
-    &__btn-bottom-line {
-    }
-
-    &__btn-left-line {
+        margin-top: 39px;
     }
 }

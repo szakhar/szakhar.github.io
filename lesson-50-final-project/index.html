@@ -9,6 +9,8 @@
 <body>
 
 <header class="header">
+    <div class="header__text-m"></div>
+    <img class="header__text" src="img/slider-text.png" alt="Not your typical fitness">
     <div class="header__box">
         <a href=""><img class="header__logo" src="img/logo-light.png" alt="Gym"></a>
         <nav class="header__menu menu">
@@ -18,11 +20,13 @@
             <a class="menu__item" href="#">Blog</a>
             <a class="menu__item" href="#">Shop</a>
             <a class="menu__item" href="#">Events</a>
-            <a class="menu__item" href="#">
-                Info
-                <div class="menu__icon">
-                    <span></span>
-                    <span></span>
+            <a class="" href="#">
+                <div class="menu__info">
+                        Info
+                        <div class="menu__icon">
+                            <span></span>
+                            <span></span>
+                        </div>
                 </div>
             </a>
         </nav>
@@ -41,22 +45,79 @@
 
         <div class="about-fitness__gallery gallery">
             <a href="#" class="gallery__item gallery__item--1">
-                <img src="img/gallery-photo-1.jpg" alt="Cardio Now">
+                <img class="gallery__photo" src="img/gallery-photo-1.jpg" alt="Cardio Now">
+                <div class="gallery__link">
+                    <div class="gallery__category">Cardio</div>
+                    <div class="gallery__inner-box">
+                        <div class="gallery__title">Now</div>
+                        <div class="gallery__arrow">
+                            <img src="img/icons/gallery-link-arrow.svg" alt="Link arrow">
+                            <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <polygon points="1.5,24.2 22.9,2.9 22.8,22.6 23.8,22.6 23.8,1.2 2.5,1.2 2.5,2.2 22.2,2.2 0.8,23.5"></polygon>
+                            </svg> -->
+                        </div>
+                    </div>
+                </div>
             </a>
             <a href="#" class="gallery__item gallery__item--2">
-                <img src="img/gallery-photo-2.jpg" alt="Cardio Start">
+                <img class="gallery__photo" src="img/gallery-photo-2.jpg" alt="Cardio Start">
+                <div class="gallery__link">
+                    <div class="gallery__category">Cardio</div>
+                    <div class="gallery__inner-box">
+                        <div class="gallery__title">Start</div>
+                        <div class="gallery__arrow">
+                            <img src="img/icons/gallery-link-arrow.svg" alt="Link arrow">
+                        </div>
+                    </div>
+                </div>
             </a>
             <a href="#" class="gallery__item gallery__item--3">
-                <img src="img/gallery-photo-3.jpg" alt="Cardio Running">
+                <img class="gallery__photo" src="img/gallery-photo-3.jpg" alt="Cardio Running">
+                <div class="gallery__link">
+                    <div class="gallery__category">Cardio</div>
+                    <div class="gallery__inner-box">
+                        <div class="gallery__title">Running</div>
+                        <div class="gallery__arrow">
+                            <img src="img/icons/gallery-link-arrow.svg" alt="Link arrow">
+                        </div>
+                    </div>
+                </div>
             </a>
             <a href="#" class="gallery__item gallery__item--4">
-                <img src="img/gallery-photo-4.jpg" alt="Cardio Low Treats">
+                <img class="gallery__photo" src="img/gallery-photo-4.jpg" alt="Cardio Low Treats">
+                <div class="gallery__link">
+                    <div class="gallery__category">Cardio</div>
+                    <div class="gallery__inner-box">
+                        <div class="gallery__title">Low Treats</div>
+                        <div class="gallery__arrow">
+                            <img src="img/icons/gallery-link-arrow.svg" alt="Link arrow">
+                        </div>
+                    </div>
+                </div>
             </a>
             <a href="#" class="gallery__item gallery__item--5">
-                <img src="img/gallery-photo-5.jpg" alt="Cardio Workout">
+                <img class="gallery__photo" src="img/gallery-photo-5.jpg" alt="Cardio Workout">
+                <div class="gallery__link">
+                    <div class="gallery__category">Cardio</div>
+                    <div class="gallery__inner-box">
+                        <div class="gallery__title">Workout</div>
+                        <div class="gallery__arrow">
+                            <img src="img/icons/gallery-link-arrow.svg" alt="Link arrow">
+                        </div>
+                    </div>
+                </div>
             </a>
             <a href="#" class="gallery__item gallery__item--6">
-                <img src="img/gallery-photo-6.jpg" alt="Cardio Jump!">
+                <img class="gallery__photo" src="img/gallery-photo-6.jpg" alt="Cardio Jump!">
+                <div class="gallery__link">
+                    <div class="gallery__category">Cardio</div>
+                    <div class="gallery__inner-box">
+                        <div class="gallery__title">Jump!</div>
+                        <div class="gallery__arrow">
+                            <img src="img/icons/gallery-link-arrow.svg" alt="Link arrow">
+                        </div>
+                    </div>
+                </div>
             </a>
         </div>
     </section>
@@ -76,7 +137,29 @@
                     <article class="coaches__profile">
                         <div class="coaches__photo">
                             <img src="img/coach-1.jpg" alt="MATIE SIMMS JUNIOR" class="coaches__img">
-                            <div class="coaches__social">Social</div>
+                            <div class="coaches__social">
+                                <div class="coaches__social-share-icon"></div>
+                                <div class="coaches__social-list">
+                                    <a href="#" class="coaches__social-link">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32">
+                                            <path class="coaches__icon" stroke="#fff" stroke-width="1px" fill="transparent" d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="coaches__social-link">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32">
+                                            <path class="coaches__icon" stroke="#fff" stroke-width="1px" fill="transparent" d="M22.5,31h-13C4.8,31,1,27.2,1,22.5v-13C1,4.8,4.8,1,9.5,1h13C27.2,1,31,4.8,31,9.5v13C31,27.2,27.2,31,22.5,31z M22.5,31
+                                                h-13C4.8,31,1,27.2,1,22.5v-13C1,4.8,4.8,1,9.5,1h13C27.2,1,31,4.8,31,9.5v13C31,27.2,27.2,31,22.5,31z"/>
+                                            <path class="coaches__icon--instagram-1" fill="#fff" d="M25.8,7.5c0,0.7-0.6,1.2-1.2,1.2s-1.2-0.6-1.2-1.2s0.6-1.2,1.2-1.2S25.8,6.8,25.8,7.5z"/>
+                                            <circle class="coaches__icon--instagram-2" stroke="#fff" stroke-width="1px" fill="transparent" cx="16" cy="16" r="7.2"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="coaches__social-link">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32">
+                                            <path class="coaches__icon" stroke="#fff" stroke-width="1px" fill="transparent" d="M19.3,6.6H24V1h-4.7c-3.6,0-6.6,2.9-6.6,6.6v2.8H9V16h3.7v15h5.6V16h4.7l0.9-5.6h-5.6V7.6 C18.4,7,18.8,6.6,19.3,6.6z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <header class="coaches__header">
                             <div class="coaches__subtitle">Crossfit COACH</div>
@@ -89,7 +172,29 @@
                     <article class="coaches__profile">
                         <div class="coaches__photo">
                             <img src="img/coach-2.jpg" alt="MADISON FRONING" class="coaches__img">
-                            <div class="coaches__social">Social</div>
+                            <div class="coaches__social">
+                                <div class="coaches__social-share-icon"></div>
+                                <div class="coaches__social-list">
+                                    <a href="#" class="coaches__social-link">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32">
+                                            <path class="coaches__icon" stroke="#fff" stroke-width="1px" fill="transparent" d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="coaches__social-link">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32">
+                                            <path class="coaches__icon" stroke="#fff" stroke-width="1px" fill="transparent" d="M22.5,31h-13C4.8,31,1,27.2,1,22.5v-13C1,4.8,4.8,1,9.5,1h13C27.2,1,31,4.8,31,9.5v13C31,27.2,27.2,31,22.5,31z M22.5,31
+                                                h-13C4.8,31,1,27.2,1,22.5v-13C1,4.8,4.8,1,9.5,1h13C27.2,1,31,4.8,31,9.5v13C31,27.2,27.2,31,22.5,31z"/>
+                                            <path class="coaches__icon--instagram-1" fill="#fff" d="M25.8,7.5c0,0.7-0.6,1.2-1.2,1.2s-1.2-0.6-1.2-1.2s0.6-1.2,1.2-1.2S25.8,6.8,25.8,7.5z"/>
+                                            <circle class="coaches__icon--instagram-2" stroke="#fff" stroke-width="1px" fill="transparent" cx="16" cy="16" r="7.2"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="coaches__social-link">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32">
+                                            <path class="coaches__icon" stroke="#fff" stroke-width="1px" fill="transparent" d="M19.3,6.6H24V1h-4.7c-3.6,0-6.6,2.9-6.6,6.6v2.8H9V16h3.7v15h5.6V16h4.7l0.9-5.6h-5.6V7.6 C18.4,7,18.8,6.6,19.3,6.6z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <header class="coaches__header">
                             <div class="coaches__subtitle">Cardio & CONDITIONING</div>
@@ -102,7 +207,29 @@
                     <article class="coaches__profile">
                         <div class="coaches__photo">
                             <img src="img/coach-3.jpg" alt="JOSHUA FRANKLIN" class="coaches__img">
-                            <div class="coaches__social">Social</div>
+                            <div class="coaches__social">
+                                <div class="coaches__social-share-icon"></div>
+                                <div class="coaches__social-list">
+                                    <a href="#" class="coaches__social-link">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32">
+                                            <path class="coaches__icon" stroke="#fff" stroke-width="1px" fill="transparent" d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="coaches__social-link">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32">
+                                            <path class="coaches__icon" stroke="#fff" stroke-width="1px" fill="transparent" d="M22.5,31h-13C4.8,31,1,27.2,1,22.5v-13C1,4.8,4.8,1,9.5,1h13C27.2,1,31,4.8,31,9.5v13C31,27.2,27.2,31,22.5,31z M22.5,31
+                                                h-13C4.8,31,1,27.2,1,22.5v-13C1,4.8,4.8,1,9.5,1h13C27.2,1,31,4.8,31,9.5v13C31,27.2,27.2,31,22.5,31z"/>
+                                            <path class="coaches__icon--instagram-1" fill="#fff" d="M25.8,7.5c0,0.7-0.6,1.2-1.2,1.2s-1.2-0.6-1.2-1.2s0.6-1.2,1.2-1.2S25.8,6.8,25.8,7.5z"/>
+                                            <circle class="coaches__icon--instagram-2" stroke="#fff" stroke-width="1px" fill="transparent" cx="16" cy="16" r="7.2"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="coaches__social-link">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32">
+                                            <path class="coaches__icon" stroke="#fff" stroke-width="1px" fill="transparent" d="M19.3,6.6H24V1h-4.7c-3.6,0-6.6,2.9-6.6,6.6v2.8H9V16h3.7v15h5.6V16h4.7l0.9-5.6h-5.6V7.6 C18.4,7,18.8,6.6,19.3,6.6z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <header class="coaches__header">
                             <div class="coaches__subtitle">BODYBUILDING Coach</div>
@@ -148,7 +275,12 @@
     </section>
 
 
-    <section class="parallax-video">
+    <section class="parallax-video parallaxie">
+        <a href="#" class="parallax-video__btn-play">
+            <svg version="1.1" x="0px" y="0px" width="75px" height="75px" viewBox="0 0 75 75" style="enable-background:new 0 0 75 75;" xml:space="preserve">
+				<path d="M37.5,1C17.3,1,1,17.3,1,37.5S17.3,74,37.5,74S74,57.7,74,37.5S57.6,1,37.5,1z M30.5,50.5v-26l20,13L30.5,50.5z"></path>
+			</svg>
+        </a>
     </section>
 
 
@@ -156,21 +288,21 @@
         <div class="bmi__container container">
             <div class="bmi__body">
                 <h2 class="bmi__heading-2 heading-2">WHAT IS BMI</h2>
-                <p class="bmi__descriptio">
+                <p class="bmi__subtitle subtitle">
                     Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.
                 </p>
 
-                <div class="bmi__form">
-                    <form action="">
-                        <input type="text" name="height" placeholder="Height / cm">
-                        <input type="text" name="weight" placeholder="Weight / kg">
-                        <input type="text" name="age" placeholder="Age">
-                        <select name="gender" id="bmi-gender">
+                <form action="">
+                    <div class="bmi__form">
+                        <input class="bmi__input" type="text" name="height" placeholder="Height / cm">
+                        <input class="bmi__input" type="text" name="weight" placeholder="Weight / kg">
+                        <input class="bmi__input" type="text" name="age" placeholder="Age">
+                        <select class="bmi__select" name="gender" id="bmi-gender">
                             <option>Gender</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </select>
-                        <select name="activity" id="bmi-activity">
+                        <select class="bmi__select bmi__select--activity" name="activity" id="bmi-activity">
                             <option>Select an activity factor:</option>
                             <option value="little">Little or no Exercise / desk job</option>
                             <option value="light">Light exercise / sports 1 – 3 days/ week</option>
@@ -178,10 +310,11 @@
                             <option value="heavy">Heavy Exercise / sports 6 – 7 days / week</option>
                             <option value="very_heavy">Very heavy exercise/ physical job / training 2 x / day</option>
                         </select>
-                        <button>Calculate</button>
-                    </form>
-                </div>
+                        <button class="bmi__btn" name="calculate" type="submit">Calculate</button>
+                    </div>
+                </form>
             </div>
+
             <div class="bmi__info">
                 <table>
                     <thead>
@@ -211,7 +344,7 @@
                     </tbody>
                 </table>
 
-                <div><strong>BMR</strong> Metabolic Rate / <strong>BMI</strong> Body Mass Index</div>
+                <div class="bmi__table-info"><strong>BMR</strong> Metabolic Rate / <strong>BMI</strong> Body Mass Index</div>
             </div>
         </div>
     </section>
@@ -219,12 +352,34 @@
 
     <section class="services">
         <div class="services__box">
-            <div class="services__item services__item--1">
-                <img src="img/service-1.png" alt="Progression" class="services__icon">
-                <h3 class="services__heading-3 heading-3 heading-3--light">Progression</h3>
-                <p class="services__description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet quidem rerum facilis est.
-                </p>
+            <div class="services__item">
+                <a class="services__link" href="#"></a>
+                <div class="services__photo services__photo--1"></div>
+                <div class="services__text-holder">
+                    <img src="img/service-1.png" alt="Progression" class="services__icon">
+                    <h3 class="services__heading-3 heading-3 heading-3--light">Progression</h3>
+                    <p class="services__description services__description--light">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet quidem rerum facilis est.
+                    </p>
+                </div>
+                <div class="services__btn btn">
+                    <a href="#" class="btn__link btn__link--light">Send message</a>
+                    <div class="btn__top-line btn__top-line--light"></div>
+                    <div class="btn__bottom-line btn__bottom-line--light"></div>
+                    <div class="btn__left-line btn__left-line--light"></div>
+                </div>
+            </div>
+
+            <div class="services__item">
+                <a class="services__link" href="#"></a>
+                <div class="services__photo services__photo--2"></div>
+                <div class="services__text-holder">
+                    <img src="img/service-2.png" alt="Workout" class="services__icon">
+                    <h3 class="services__heading-3 heading-3">Workout</h3>
+                    <p class="services__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet quidem rerum facilis est.
+                    </p>
+                </div>
                 <div class="services__btn btn">
                     <a href="#" class="btn__link">Send message</a>
                     <div class="btn__top-line"></div>
@@ -233,29 +388,19 @@
                 </div>
             </div>
 
-            <div class="services__item services__item--2">
-                <img src="img/service-2.png" alt="Workout" class="services__icon">
-                <h3 class="services__heading-3 heading-3">Workout</h3>
-                <p class="services__description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet quidem rerum facilis est.
-                </p>
-                <div class="services__btn btn">
-                    <a href="#" class="btn__link">Send message</a>
-                    <div class="btn__top-line"></div>
-                    <div class="btn__bottom-line"></div>
-                    <div class="btn__left-line"></div>
+            <div class="services__item">
+                <a class="services__link" href="#"></a>
+                <div class="services__photo services__photo--3"></div>
+                <div class="services__text-holder">
+                    <img src="img/service-3.png" alt="Nutrition" class="services__icon">
+                    <h3 class="services__heading-3 heading-3 heading-3--light">Nutrition</h3>
+                    <p class="services__description services__description--light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet quidem rerum facilis est.</p>
                 </div>
-            </div>
-
-            <div class="services__item services__item--3">
-                <img src="img/service-3.png" alt="Nutrition" class="services__icon">
-                <h3 class="services__heading-3 heading-3 heading-3--light">Nutrition</h3>
-                <p class="services__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet quidem rerum facilis est.</p>
                 <div class="services__btn btn">
-                    <a href="#" class="btn__link">Send message</a>
-                    <div class="btn__top-line"></div>
-                    <div class="btn__bottom-line"></div>
-                    <div class="btn__left-line"></div>
+                    <a href="#" class="btn__link btn__link--light">Send message</a>
+                    <div class="btn__top-line btn__top-line--light"></div>
+                    <div class="btn__bottom-line btn__bottom-line--light"></div>
+                    <div class="btn__left-line btn__left-line--light"></div>
                 </div>
             </div>
         </div>
@@ -270,34 +415,212 @@
         <div class="classes__container container">
             <ul class="classes__tabs">
                 <li class="classes__item">
-                    <span>All Events</span>
+                    <button class="classes__btn">All Events</button>
                     <div class="classes__bottom-line"></div>
                     <div class="classes__left-line"></div>
                 </li>
                 <li class="classes__item">
-                    <span>Cardio</span>
+                    <button class="classes__btn">Cardio</button>
                     <div class="classes__bottom-line"></div>
                     <div class="classes__left-line"></div>
                 </li>
                 <li class="classes__item">
-                    <span>Crossfit</span>
+                    <button class="classes__btn">Crossfit</button>
                     <div class="classes__bottom-line"></div>
                     <div class="classes__left-line"></div>
                 </li>
                 <li class="classes__item">
-                    <span>Gym</span>
+                    <button class="classes__btn">Gym</button>
                     <div class="classes__bottom-line"></div>
                     <div class="classes__left-line"></div>
                 </li>
                 <li class="classes__item">
-                    <span>Powerlifting</span>
+                    <button class="classes__btn">Powerlifting</button>
                     <div class="classes__bottom-line"></div>
                     <div class="classes__left-line"></div>
                 </li>
             </ul>
 
             <div class="classes__table">
-                dadsa
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                            <th>Sunday</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>06:00 - 07:00</td>
+                            <td rowspan="2">
+                                <a class="classes__header" href="#">Open Gym</a>
+                            </td>
+                            <td rowspan="2">
+                                <a class="classes__header" href="#">Crossfit<br>Class</a>
+                                <div class="classes__author">Madison Fren</div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="4">
+                                <a class="classes__header" href="#">Open Gym</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>07:00 - 08:00</td>
+                            <td rowspan="3">
+                                <a class="classes__header" href="#">Power<br>Lifting</a>
+                                <div class="classes__author">Joe Bell</div>
+                            </td>
+                            <td></td>
+                            <td rowspan="3">
+                                <a class="classes__header" href="#">Power<br>Lifting</a>
+                                <div class="classes__author">Joe Bell</div>
+                            </td>
+                            <td>
+                                <a class="classes__header" href="#">Cardio Burn</a>
+                                <div class="classes__author">Anna Simms Jr.</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>08:00 - 09:00</td>
+                            <td></td>
+                            <td rowspan="4">
+                                <a class="classes__header" href="#">Open Gym</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>09:00 - 10:00</td>
+                            <td></td>
+                            <td rowspan="6">
+                                <a class="classes__header" href="#">Crossfit<br>Class</a>
+                                <div class="classes__author">Madison Fren</div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:00 - 11:00</td>
+                            <td rowspan="2">
+                                <a class="classes__header" href="#">Open Gym</a>
+                            </td>
+                            <td></td>
+                            <td>
+                                <a class="classes__header" href="#">Open Gym</a>
+                            </td>
+                            <td rowspan="2">
+                                <a class="classes__header" href="#">Open Gym</a>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:00 - 12:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:00 - 13:00</td>
+                            <td>
+                                <a class="classes__header" href="#">Power<br>Lifting</a>
+                                <div class="classes__author">Joe Bell</div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <a class="classes__header" href="#">Cardio Burn</a>
+                                <div class="classes__author">Anna Simms Jr.</div>
+                            </td>
+                            <td>
+                                <a class="classes__header" href="#">Crossfit<br>Class</a>
+                                <div class="classes__author">Madison Fren</div>
+                            </td>
+                            <td>
+                                <a class="classes__header" href="#">Crossfit<br>Class</a>
+                                <div class="classes__author">Madison Fren</div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>13:00 - 14:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>14:00 - 15:00</td>
+                            <td></td>
+                            <td rowspan="2">
+                                <a class="classes__header" href="#">Open Gym</a>
+                            </td>
+                            <td rowspan="2">
+                                <a class="classes__header" href="#">Open Gym</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>15:00 - 16:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>18:00 - 19:00</td>
+                            <td rowspan="2">
+                                <a class="classes__header" href="#">Crossfit<br>Class</a>
+                                <div class="classes__author">Madison Fren</div>
+                            </td>
+                            <td rowspan="2">
+                                <a class="classes__header" href="#">Power<br>Lifting</a>
+                                <div class="classes__author">Joe Bell</div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>19:00 - 20:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>20:00 - 21:00</td>
+                            <td>
+                                <a class="classes__header" href="#">Cardio Burn</a>
+                                <div class="classes__author">Anna Simms Jr.</div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <a class="classes__header" href="#">Cardio Burn</a>
+                                <div class="classes__author">Anna Simms Jr.</div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -327,11 +650,11 @@
                     <div class="post__body">
                         <h4 class="post__heading-4 heading-4">10 Tips How to Prepare Meals Fast and Easy.</h4>
                         <p class="post__description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                        <div class="post__btn">
-                            <a href="#" class="post__link">View Here</a>
-                            <div class="post__btn-top-line"></div>
-                            <div class="post__btn-bottom-line"></div>
-                            <div class="post__btn-left-line"></div>
+                        <div class="post__btn btn">
+                            <a href="#" class="btn__link">View Here </a>
+                            <div class="btn__top-line"></div>
+                            <div class="btn__bottom-line"></div>
+                            <div class="btn__left-line"></div>
                         </div>
                     </div>
                 </article>
@@ -350,11 +673,11 @@
                     <div class="post__body">
                         <h4 class="post__heading-4 heading-4">How to Maximise Time Spent at the Gym.</h4>
                         <p class="post__description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                        <div class="post__btn">
-                            <a href="#" class="post__link">View Here</a>
-                            <div class="post__btn-top-line"></div>
-                            <div class="post__btn-bottom-line"></div>
-                            <div class="post__btn-left-line"></div>
+                        <div class="post__btn btn">
+                            <a href="#" class="btn__link">View Here </a>
+                            <div class="btn__top-line"></div>
+                            <div class="btn__bottom-line"></div>
+                            <div class="btn__left-line"></div>
                         </div>
                     </div>
                 </article>
@@ -373,11 +696,11 @@
                     <div class="post__body">
                         <h4 class="post__heading-4 heading-4">Simple Condition for all Around Fitness.</h4>
                         <p class="post__description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                        <div class="post__btn">
-                            <a href="#" class="post__link">View Here</a>
-                            <div class="post__btn-top-line"></div>
-                            <div class="post__btn-bottom-line"></div>
-                            <div class="post__btn-left-line"></div>
+                        <div class="post__btn btn">
+                            <a href="#" class="btn__link">View Here </a>
+                            <div class="btn__top-line"></div>
+                            <div class="btn__bottom-line"></div>
+                            <div class="btn__left-line"></div>
                         </div>
                     </div>
                 </article>
@@ -390,48 +713,48 @@
         <div class="program__item program__item--1">
             <h3 class="program__heading-3 heading-3 heading-3--light">Cardio program</h3>
             <p class="program__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet bibendum egestas.</p>
-            <div class="program__btn">
-                <a href="#" class="program__link">Read more</a>
-                <div class="program__btn-top-line"></div>
-                <div class="program__btn-right-line"></div>
-                <div class="program__btn-bottom-line"></div>
-                <div class="program__btn-left-line"></div>
+            <div class="program__btn btn-big">
+                <a href="#" class="btn-big__link">Read more</a>
+                <div class="btn-big__top-line"></div>
+                <div class="btn-big__right-line"></div>
+                <div class="btn-big__bottom-line"></div>
+                <div class="btn-big__left-line"></div>
             </div>
         </div>
 
         <div class="program__item program__item--2">
             <h3 class="program__heading-3 heading-3 heading-3--light">Pure Strenght</h3>
             <p class="program__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet bibendum egestas.</p>
-            <div class="program__btn">
-                <a href="#" class="program__link">Read more</a>
-                <div class="program__btn-top-line"></div>
-                <div class="program__btn-right-line"></div>
-                <div class="program__btn-bottom-line"></div>
-                <div class="program__btn-left-line"></div>
+            <div class="program__btn btn-big">
+                <a href="#" class="btn-big__link">Read more</a>
+                <div class="btn-big__top-line"></div>
+                <div class="btn-big__right-line"></div>
+                <div class="btn-big__bottom-line"></div>
+                <div class="btn-big__left-line"></div>
             </div>
         </div>
 
         <div class="program__item program__item--3">
             <h3 class="program__heading-3 heading-3 heading-3--light">True Challenge</h3>
             <p class="program__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet bibendum egestas.</p>
-            <div class="program__btn">
-                <a href="#" class="program__link">Read more</a>
-                <div class="program__btn-top-line"></div>
-                <div class="program__btn-right-line"></div>
-                <div class="program__btn-bottom-line"></div>
-                <div class="program__btn-left-line"></div>
+            <div class="program__btn btn-big">
+                <a href="#" class="btn-big__link">Read more</a>
+                <div class="btn-big__top-line"></div>
+                <div class="btn-big__right-line"></div>
+                <div class="btn-big__bottom-line"></div>
+                <div class="btn-big__left-line"></div>
             </div>
         </div>
 
         <div class="program__item program__item--4">
             <h3 class="program__heading-3 heading-3 heading-3--light">Power yoga</h3>
             <p class="program__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet bibendum egestas.</p>
-            <div class="program__btn">
-                <a href="#" class="program__link">Read more</a>
-                <div class="program__btn-top-line"></div>
-                <div class="program__btn-right-line"></div>
-                <div class="program__btn-bottom-line"></div>
-                <div class="program__btn-left-line"></div>
+            <div class="program__btn btn-big">
+                <a href="#" class="btn-big__link">Read more</a>
+                <div class="btn-big__top-line"></div>
+                <div class="btn-big__right-line"></div>
+                <div class="btn-big__bottom-line"></div>
+                <div class="btn-big__left-line"></div>
             </div>
         </div>
     </section>
@@ -440,47 +763,166 @@
     <section class="contact">
         <div class="contact__map"></div>
 
-        <div class="contact__box">
-            <div class="contact__info">
-                <div class="about-fitness__heading-box heading-box">
-                    <h2 class="about-fitness__heading-2 heading-2">FEEL FREE TO ASK ANYTHING</h2>
-                    <p class="about-fitness__subtitle subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla eu posuere scelerisque.
-                    </p>
-                </div>
+        <div class="contact__container container">
+            <div class="contact__box">
+                <div class="contact__info">
+                    <div class="contact__inner">
+                        <div class="contact__heading-box heading-box">
+                            <h2 class="contact__heading-2 heading-2">FEEL FREE TO ASK ANYTHING</h2>
+                            <p class="contact__subtitle subtitle">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla eu posuere scelerisque.
+                            </p>
+                        </div>
 
-                <div class="contact__address">
-                    <div class="contact__item">
-                        <a href="#">251 Purple Sunset Avenue<br>Brooklyn, BXY 92101</a>
-                        <a href="mailto:powerlift@email.com">powerlift@email.com</a>
-                    </div>
+                        <div class="contact__address">
+                            <div class="contact__item">
+                                <a href="#">251 Purple Sunset Avenue<br>Brooklyn, BXY 92101</a>
+                                <a href="mailto:powerlift@email.com">powerlift@email.com</a>
+                            </div>
 
-                    <div class="contact__item">
-                        <a href="#">251 Purple Sunset Avenue<br>Brooklyn, BXY 92101</a>
-                        <a href="mailto:powerlift@email.com">powerlift@email.com</a>
+                            <div class="contact__item">
+                                <a href="#">251 Purple Sunset Avenue<br>Brooklyn, BXY 92101</a>
+                                <a href="mailto:powerlift@email.com">powerlift@email.com</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="contact__form">
+                
                 <form action="">
-                    <input class="contact__input" name="full-name" type="text" placeholder="Your full name">
-                    <input class="contact__input" name="email" type="text" placeholder="E-mail address">
-                    <input class="contact__input contact__input--long" name="subject" type="text" placeholder="Subject">
-                    <textarea name="" placeholder="Drop us a few lines here..."></textarea>
-                    <button type="submit">Send us a message</button>
+                    <div class="contact__form">
+                        <input class="contact__input" name="full-name" type="text" placeholder="Your full name">
+                        <input class="contact__input" name="email" type="text" placeholder="E-mail address">
+                        <input class="contact__input contact__input--long" name="subject" type="text" placeholder="Subject">
+                        <textarea class="contact__textarea" name="" placeholder="Drop us a few lines here..."></textarea>
+                        <div class="contact__btn btn">
+                            <button type="submit" class="btn__link">Send us a message </button>
+                            <div class="btn__top-line"></div>
+                            <div class="btn__bottom-line"></div>
+                            <div class="btn__left-line"></div>
+                        </div>
+                    </div>
                 </form>
             </div>
-
         </div>
     </section>
-
-    <!-- <article></article> -->
 </main>
 
-<!-- <aside></aside> -->
+<footer class="footer">
+    <p class="footer__instagram">Follow US ON <a href="#">@GYMFITNESSBOX</a></p>
 
-<footer></footer>
+    <!-- <ul class="footer__instagram-list">
+        <li class="footer__instagram-item"></li>
+        <li class="footer__instagram-item"></li>
+        <li class="footer__instagram-item"></li>
+        <li class="footer__instagram-item"></li>
+    </ul> -->
+    <hr class="footer__instagram-list">
 
+    <div class="footer__container container">
+        <div class="footer__body">
+            <div class="footer__info footer__item">
+                <img class="footer__logo" src="img/logo-light.png" alt="Gym">
+                <p class="footer__description">
+                    Powerlift is a champ in providing its users with absolutely everything a fitness or gym site needs.
+                </p>
+
+                <div class="footer__social social">
+                    <div class="social__heading">Our Socials</div>
+
+                    <div class="social__list">
+                        <a href="#" class="social__link">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32">
+                                <path class="social__icon" stroke="#fff" stroke-width="1px" fill="transparent" d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social__link">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32">
+                                <path class="social__icon" stroke="#fff" stroke-width="1px" fill="transparent" d="M22.5,31h-13C4.8,31,1,27.2,1,22.5v-13C1,4.8,4.8,1,9.5,1h13C27.2,1,31,4.8,31,9.5v13C31,27.2,27.2,31,22.5,31z M22.5,31
+                                    h-13C4.8,31,1,27.2,1,22.5v-13C1,4.8,4.8,1,9.5,1h13C27.2,1,31,4.8,31,9.5v13C31,27.2,27.2,31,22.5,31z"/>
+                                <path class="social__icon--instagram-1" fill="#fff" d="M25.8,7.5c0,0.7-0.6,1.2-1.2,1.2s-1.2-0.6-1.2-1.2s0.6-1.2,1.2-1.2S25.8,6.8,25.8,7.5z"/>
+                                <circle class="social__icon--instagram-2" stroke="#fff" stroke-width="1px" fill="transparent" cx="16" cy="16" r="7.2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social__link">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32">
+                                <path class="social__icon" stroke="#fff" stroke-width="1px" fill="transparent" d="M19.3,6.6H24V1h-4.7c-3.6,0-6.6,2.9-6.6,6.6v2.8H9V16h3.7v15h5.6V16h4.7l0.9-5.6h-5.6V7.6 C18.4,7,18.8,6.6,19.3,6.6z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__blog footer__item">
+                <h5 class="footer__heading-4 heading-4 heading-4--light">Blog posts</h5>
+
+                <div class="footer__blog-list">
+                    <div class="footer__blog-item">
+                        <div class="footer__blog-title">
+                            <a href="#">Your future is created by what you do today, not tomorrow.</a>
+                        </div>
+                        <div class="footer__blog-date">
+                            <a href="#">June 18, 2019</a>
+                        </div>
+                    </div>
+
+                    <div class="footer__blog-item">
+                        <div class="footer__blog-title">
+                            <a href="#">10 Tips How to Prepare Meals Fast and Easy.</a>
+                        </div>
+                        <div class="footer__blog-date">
+                            <a href="#">June 21, 2019</a>
+                        </div>
+                    </div>
+
+                    <div class="footer__blog-item">
+                        <div class="footer__blog-title">
+                            <a href="#">How to Maximise Time Spent at the Gym.</a>
+                        </div>
+                        <div class="footer__blog-date">
+                            <a href="#">June 21, 2019</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__location footer__item">
+                <h5 class="footer__heading-4 heading-4 heading-4--light">Locations</h5>
+
+                <img class="footer__location-map" src="img/footer-map.png" alt="">
+
+                <p class="footer__location-address">
+                    <a href="#">251 Purple Sunset Avenue<br>Brooklyn, BXY 92101</a>
+                </p>
+            </div>
+
+            <div class="footer__hours footer__item">
+                <h5 class="footer__heading-4 heading-4 heading-4--light">Working hours</h5>
+
+                <ul class="footer__hours-list">
+                    <li class="footer__hours-item">Monday – Friday:<br>07:00 – 21:00</li>
+                    <li class="footer__hours-item">Saturday:<br>07:00 – 16:00</li>
+                    <li class="footer__hours-item">Sunday Closed</li>
+                </ul>
+
+                <div class="footer__btn btn">
+                    <a href="#" class="btn__link btn__link--light">More here </a>
+                    <div class="btn__top-line btn__top-line--light"></div>
+                    <div class="btn__bottom-line btn__bottom-line--light"></div>
+                    <div class="btn__left-line btn__left-line--light"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__copyright-box">
+        <p class="footer__copyright">
+            Created with <img width="17px" src="img/icons/skull-outline.svg" alt=""> <a href="#">Qode Interactive</a>
+        </p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="js/parallaxie.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

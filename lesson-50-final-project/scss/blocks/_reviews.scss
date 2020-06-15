@@ -10,7 +10,7 @@
 
     &__box {
         display: flex;
-        padding: 48px 0 136px;
+        padding: 42px 0 136px;
         width: 70%;
         position: relative;
 
@@ -18,7 +18,7 @@
             content: '“”';
             display: block;
             position: absolute;
-            top: 0; right: -30%;
+            top: 15.2%; right: -43%;
             line-height: .55;
             // transform: translateY(-50%);
             font-family: 'Montserrat', sans-serif;;
@@ -45,6 +45,7 @@
     }
 
     &__body {
+        margin-top: -4px;
     }
 
     &__text {
@@ -52,12 +53,12 @@
         font-style: italic;
         font-size: $font-size + 2px;
         font-weight: 200;
-        line-height: 24px;
+        line-height: 27px;
         color: $color-grey-dark-1;
     }
 
     &__author {
-        margin-top: 22px;
+        margin-top: 24px;
     }
 
     &__author-job {
@@ -69,7 +70,7 @@
     }
 
     &__author-name {
-        margin-top: 4px;
+        margin-top: 6px;
         font-size: $font-size + 4px;
         font-weight: 800;
         letter-spacing: .32px;
