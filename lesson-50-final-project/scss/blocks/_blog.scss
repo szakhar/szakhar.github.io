@@ -10,7 +10,6 @@
     &__subtitle {
         margin-top: 23px;
         line-height: 25px;
-        letter-spacing: .1px;
     }
 
     &__container {
@@ -37,13 +36,28 @@
 
     &__data {
         position: absolute;
-        top: 0; right: 0;
+        top: 5px; right: 5px;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        background-color: $color-black;
     }
 
     &__data-number {
+        padding-top: 14px;
+        font-family: $font-secondary;
+        font-size: $font-size + 14px;
+        font-weight: 800;
+        letter-spacing: .6px;
+        text-transform: uppercase;
+        color: $color-white;
     }
 
     &__data-month {
+        font-size: $font-size - 4px;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        color: $color-white;
     }
 
     &__img {
@@ -67,26 +81,6 @@
     }
 
     &__btn {
-    }
-
-    &__link {
-
-        &::after {
-            content: '';
-            margin-left: 10px;
-            display: inline-block;
-            width: 14px;
-            height: 12px;
-            background: center/cover no-repeat url(../img/icons/arrow-redo-outline.svg);
-        }
-    }
-
-    &__btn-top-line {
-    }
-
-    &__btn-bottom-line {
-    }
-
-    &__btn-left-line {
+        margin-top: 8px;
     }
 }
