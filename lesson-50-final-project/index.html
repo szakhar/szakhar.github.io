@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="js/slick/slick.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <title>Gym - Final Project</title>
 </head>
@@ -31,6 +32,11 @@
             </a>
         </nav>
     </div>
+    <div class="header__slider">
+        <div class="header__slider-item" style="background-image: url(../img/slider-slide-1.png), url(../img/slider-slide-2.png)"></div>
+        <div class="header__slider-item" style="background-image: url(../img/slider-slide-3.png), url(../img/slider-slide-4.png)"></div>
+    </div>
+    <!-- <div class="header__loader"></div> -->
 </header>
 
 
@@ -247,27 +253,46 @@
             <h2 class="reviews__heading-2 heading-2">REVIEWS FROM you</h2>
 
             <div class="reviews__box">
-                <ul class="reviews__pagination">
-                    <li class="reviews__item">
-                        <img src="img/reviews-author-1.jpg" alt="Matie Simms Junior">
-                    </li>
-                    <li class="reviews__item">
-                        <img src="img/reviews-author-2.jpg" alt="Mellisa Martinez">
-                    </li>
-                    <li class="reviews__item">
-                        <img src="img/reviews-author-3.jpg" alt="Alexis Morton">
-                    </li>
-                    <li class="reviews__item">
-                        <img src="img/reviews-author-4.jpg" alt="Elijah Shelton">
-                    </li>
-                </ul>
+                <!-- Pagination in css styles and js script -->
                 <div class="reviews__body">
-                    <p class="reviews__text">
-                        Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
-                    </p>
-                    <div class="reviews__author">
-                        <div class="reviews__author-job">Yoga instructor</div>
-                        <div class="reviews__author-name">Mellisa Martinez</div>
+                    <div class="reviews__review">
+                        <p class="reviews__text">
+                            Et harum  debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta.
+                        </p>
+                        <div class="reviews__author">
+                            <div class="reviews__author-job">Fitness instructor</div>
+                            <div class="reviews__author-name">Matie Simms Junior</div>
+                        </div>
+                    </div>
+
+                    <div class="reviews__review">
+                        <p class="reviews__text">
+                            Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+                        </p>
+                        <div class="reviews__author">
+                            <div class="reviews__author-job">Yoga instructor</div>
+                            <div class="reviews__author-name">Mellisa Martinez</div>
+                        </div>
+                    </div>
+
+                    <div class="reviews__review">
+                        <p class="reviews__text">
+                            Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.
+                        </p>
+                        <div class="reviews__author">
+                            <div class="reviews__author-job">Nutritionist</div>
+                            <div class="reviews__author-name">Alexis Morton</div>
+                        </div>
+                    </div>
+
+                    <div class="reviews__review">
+                        <p class="reviews__text">
+                            Et harum  debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta.
+                        </p>
+                        <div class="reviews__author">
+                            <div class="reviews__author-job">Gym coach</div>
+                            <div class="reviews__author-name">Elijah Shelton</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -310,7 +335,13 @@
                             <option value="heavy">Heavy Exercise / sports 6 – 7 days / week</option>
                             <option value="very_heavy">Very heavy exercise/ physical job / training 2 x / day</option>
                         </select>
-                        <button class="bmi__btn" name="calculate" type="submit">Calculate</button>
+                        <div class="bmi__btn btn-big">
+                            <button class="btn-big__link" name="calculate" type="submit">Calculate</button>
+                            <div class="btn-big__top-line"></div>
+                            <div class="btn-big__right-line"></div>
+                            <div class="btn-big__bottom-line"></div>
+                            <div class="btn-big__left-line"></div>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -710,51 +741,79 @@
 
 
     <section class="program">
-        <div class="program__item program__item--1">
-            <h3 class="program__heading-3 heading-3 heading-3--light">Cardio program</h3>
-            <p class="program__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet bibendum egestas.</p>
-            <div class="program__btn btn-big">
-                <a href="#" class="btn-big__link">Read more</a>
-                <div class="btn-big__top-line"></div>
-                <div class="btn-big__right-line"></div>
-                <div class="btn-big__bottom-line"></div>
-                <div class="btn-big__left-line"></div>
+        <div class="program__item">
+            <a class="program__link" href="#"></a>
+            <div class="program__photo program__photo--1"></div>
+            <div class="program__text-holder">
+                <h3 class="program__heading-3 heading-3 heading-3--light">
+                    <span class="program__heading-inner">Cardio program</span>
+                    <span class="program__heading-highlighted"></span>
+                </h3>
+                <p class="program__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet bibendum egestas.</p>
+            </div>
+            <div class="program__btn btn-big btn-big--white">
+                <a href="#" class="btn-big__link btn-big__link--white">Read more</a>
+                <div class="btn-big__top-line btn-big__top-line--white"></div>
+                <div class="btn-big__right-line btn-big__right-line--white"></div>
+                <div class="btn-big__bottom-line btn-big__bottom-line--white"></div>
+                <div class="btn-big__left-line btn-big__left-line--white"></div>
             </div>
         </div>
 
-        <div class="program__item program__item--2">
-            <h3 class="program__heading-3 heading-3 heading-3--light">Pure Strenght</h3>
-            <p class="program__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet bibendum egestas.</p>
-            <div class="program__btn btn-big">
-                <a href="#" class="btn-big__link">Read more</a>
-                <div class="btn-big__top-line"></div>
-                <div class="btn-big__right-line"></div>
-                <div class="btn-big__bottom-line"></div>
-                <div class="btn-big__left-line"></div>
+        <div class="program__item">
+            <a class="program__link" href="#"></a>
+            <div class="program__photo program__photo--2"></div>
+            <div class="program__text-holder">
+                <h3 class="program__heading-3 heading-3 heading-3--light">
+                    <span class="program__heading-inner">Pure Strenght</span>
+                    <span class="program__heading-highlighted"></span>
+                </h3>
+                <p class="program__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet bibendum egestas.</p>
+            </div>
+            <div class="program__btn btn-big btn-big--white">
+                <a href="#" class="btn-big__link btn-big__link--white">Read more</a>
+                <div class="btn-big__top-line btn-big__top-line--white"></div>
+                <div class="btn-big__right-line btn-big__right-line--white"></div>
+                <div class="btn-big__bottom-line btn-big__bottom-line--white"></div>
+                <div class="btn-big__left-line btn-big__left-line--white"></div>
             </div>
         </div>
 
-        <div class="program__item program__item--3">
-            <h3 class="program__heading-3 heading-3 heading-3--light">True Challenge</h3>
-            <p class="program__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet bibendum egestas.</p>
-            <div class="program__btn btn-big">
-                <a href="#" class="btn-big__link">Read more</a>
-                <div class="btn-big__top-line"></div>
-                <div class="btn-big__right-line"></div>
-                <div class="btn-big__bottom-line"></div>
-                <div class="btn-big__left-line"></div>
+        <div class="program__item">
+            <a class="program__link" href="#"></a>
+            <div class="program__photo program__photo--3"></div>
+            <div class="program__text-holder">
+                <h3 class="program__heading-3 heading-3 heading-3--light">
+                    <span class="program__heading-inner">True Challenge</span>
+                    <span class="program__heading-highlighted"></span>
+                </h3>
+                <p class="program__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet bibendum egestas.</p>
+            </div>
+            <div class="program__btn btn-big btn-big--white">
+                <a href="#" class="btn-big__link btn-big__link--white">Read more</a>
+                <div class="btn-big__top-line btn-big__top-line--white"></div>
+                <div class="btn-big__right-line btn-big__right-line--white"></div>
+                <div class="btn-big__bottom-line btn-big__bottom-line--white"></div>
+                <div class="btn-big__left-line btn-big__left-line--white"></div>
             </div>
         </div>
 
-        <div class="program__item program__item--4">
-            <h3 class="program__heading-3 heading-3 heading-3--light">Power yoga</h3>
-            <p class="program__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet bibendum egestas.</p>
-            <div class="program__btn btn-big">
-                <a href="#" class="btn-big__link">Read more</a>
-                <div class="btn-big__top-line"></div>
-                <div class="btn-big__right-line"></div>
-                <div class="btn-big__bottom-line"></div>
-                <div class="btn-big__left-line"></div>
+        <div class="program__item">
+            <a class="program__link" href="#"></a>
+            <div class="program__photo program__photo--4"></div>
+            <div class="program__text-holder">
+                <h3 class="program__heading-3 heading-3 heading-3--light">
+                    <span class="program__heading-inner">Power yoga</span>
+                    <span class="program__heading-highlighted"></span>
+                </h3>
+                <p class="program__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi mi, imperdiet bibendum egestas.</p>
+            </div>
+            <div class="program__btn btn-big btn-big--white">
+                <a href="#" class="btn-big__link btn-big__link--white">Read more</a>
+                <div class="btn-big__top-line btn-big__top-line--white"></div>
+                <div class="btn-big__right-line btn-big__right-line--white"></div>
+                <div class="btn-big__bottom-line btn-big__bottom-line--white"></div>
+                <div class="btn-big__left-line btn-big__left-line--white"></div>
             </div>
         </div>
     </section>
@@ -923,6 +982,7 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="js/parallaxie.js"></script>
+<script src="js/slick/slick.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

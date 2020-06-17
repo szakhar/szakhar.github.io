@@ -1,9 +1,6 @@
 .header {
+    width: 100%;
     height: 100vh;
-    background-image: url(../img/slider-slide-1.png),
-    url(../img/slider-slide-2.png);
-    background-position: center top;
-    background-size: cover;
     position: relative;
 
     &__box {
@@ -31,6 +28,7 @@
         width: 100%;
         height: 100%;
         background: center/cover no-repeat url(../img/slider-m-letter.png);
+        z-index: 5;
     }
 
     &__text {
@@ -42,6 +40,7 @@
         max-width: 580px;
         width: 100%;
         height: auto;
+        z-index: 5;
     }
 
     &__logo,
@@ -60,6 +59,61 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    &__slider {
+        position: absolute;
+        top: 0; left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+
+
+        /* Slider Image Transition */
+        .slick-active {
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0; left: 0;
+                display: block;
+                width: 100%;
+                height: 8px;
+                background-color: rgb(218, 210, 200);
+        
+                animation: ProgressSlide 5s both;
+            }
+        }
+    }
+
+    &__slider-item {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background-position: center top;
+        background-position: left -40px top,
+                             left 40px top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__prev,
+    &__next {
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 50%;
+        height: 100%;
+        z-index: 5;
+    }
+
+    &__prev {
+        left: 0;
+        cursor: url(../../img/icons/arrow-left.svg), auto;
+    }
+
+    &__next {
+        right: 0;
+        cursor: url(../../img/icons/arrow-right.svg), auto;
     }
 }
 
