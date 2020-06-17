@@ -36,7 +36,6 @@
         <div class="header__slider-item" style="background-image: url(../img/slider-slide-1.png), url(../img/slider-slide-2.png)"></div>
         <div class="header__slider-item" style="background-image: url(../img/slider-slide-3.png), url(../img/slider-slide-4.png)"></div>
     </div>
-    <!-- <div class="header__loader"></div> -->
 </header>
 
 
@@ -317,18 +316,18 @@
                     Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.
                 </p>
 
-                <form action="">
+                <form id="bmi-form" name="bmiForm" action="">
                     <div class="bmi__form">
                         <input class="bmi__input" type="text" name="height" placeholder="Height / cm">
                         <input class="bmi__input" type="text" name="weight" placeholder="Weight / kg">
                         <input class="bmi__input" type="text" name="age" placeholder="Age">
                         <select class="bmi__select" name="gender" id="bmi-gender">
-                            <option>Gender</option>
+                            <option value="gender-empty">Gender</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </select>
                         <select class="bmi__select bmi__select--activity" name="activity" id="bmi-activity">
-                            <option>Select an activity factor:</option>
+                            <option value="activity-empty">Select an activity factor:</option>
                             <option value="little">Little or no Exercise / desk job</option>
                             <option value="light">Light exercise / sports 1 – 3 days/ week</option>
                             <option value="moderate">Moderate Exercise, sports 3 – 5 days / week</option>
@@ -377,6 +376,9 @@
 
                 <div class="bmi__table-info"><strong>BMR</strong> Metabolic Rate / <strong>BMI</strong> Body Mass Index</div>
             </div>
+        </div>
+        <div class="bmi__result-box">
+            <div class="bmi__result"></div>
         </div>
     </section>
 
