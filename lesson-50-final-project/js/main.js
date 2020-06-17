@@ -42,4 +42,55 @@ $('.reviews__body').slick({
 // Parallax video
 $('.parallaxie').parallaxie();
 
+
+// $('#bmi-form').submit(function(event) {
+//     event.preventDefault();
+
+//     console.log('йо');
+// });
+
+
+function calculateBMI(height, weight, age, gender, activity) {
+    let bmi = (weight / (height ** 2)) * 100;
+    // bmi = Math.round(bmi);
+
+    console.log(height);
+    console.log(weight);
+    console.log(bmi);
+
+    if (bmi !== '' && !isNaN(bmi)) {
+        if (bmi < 18.5) {
+            return 'Underweight';
+        } else if (bmi >= 18.5 && bmi <= 24.9) {
+            return 'Healthy';
+        } else if (bmi >= 25 && bmi <= 29.9) {
+            return 'Overweight';
+        } else {
+            return 'Obese';
+        }
+    } else {
+        return 'Please provide a valid height. Please provide a valid weight';
+    }
+}
+
+const resultBMIBox = document.querySelector('.bmi__result-box');
+const resultBMI = document.querySelector('.bmi__result');
+
+bmiForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const height = +bmiForm.elements.height.value;
+    const weight = +bmiForm.elements.weight.value;
+    const age = +bmiForm.elements.age.value;
+    const gender = bmiForm.elements.gender.value;
+    const activity = bmiForm.elements.activity.value;
+
+    // console.log(resultBMI);
+    resultBMIBox.style.display = 'block';
+    resultBMI.innerHTML = calculateBMI(height, weight, age, gender, activity);
+    // console.log(calculateBMI(height, weight, age, gender, activity));
+    // console.log(`Height: ${height}  Weight: ${weight}  Age: ${age}  Gender: ${gender}  Activity: ${activity}`);
+});
+
+
 });

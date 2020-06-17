@@ -691,10 +691,22 @@ select::placeholder {
     width: 100%;
   }
 }
+@keyframes HeaderSliderMove {
+  from {
+    background-position: left -40px top, left 40px top;
+  }
+  to {
+    background-position: left 0px top, left 0px top;
+  }
+}
 .header {
   width: 100%;
   height: 100vh;
   position: relative;
+  background-image: url(../../img/slider-slide-1.png), url(../../img/slider-slide-2.png);
+  background-position: center top, center top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .header__box {
   display: flex;
@@ -764,10 +776,12 @@ select::placeholder {
   display: block;
   width: 100%;
   height: 100vh;
-  background-position: center top;
   background-position: left -40px top, left 40px top;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.header .slick-active.header__slider-item {
+  animation: HeaderSliderMove 1s both;
 }
 .header__prev, .header__next {
   position: absolute;
@@ -1320,6 +1334,18 @@ select::placeholder {
 }
 .bmi__table-info strong {
   color: #000;
+}
+.bmi__result-box {
+  display: none;
+  margin: 80px auto;
+  padding: 0 25px;
+  max-width: 1140px;
+  width: 100%;
+}
+.bmi__result {
+  padding: 30px;
+  background-color: #000;
+  color: #fff;
 }
 
 .services {
