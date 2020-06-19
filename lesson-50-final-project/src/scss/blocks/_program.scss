@@ -1,0 +1,120 @@
+@mixin program-bg($number) {
+    background: center/cover no-repeat url(../img/program-#{$number}.jpg);
+}
+
+.program {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // display: flex;
+    // flex-wrap: wrap;
+    @include breakpoint-down-9 {
+        grid-template-columns: 1fr;
+    }
+    
+    &__item {
+        position: relative;
+        padding: 99px 0 122px;
+        // flex-basis: 50%;
+        overflow: hidden;
+
+        &:hover {
+            .program__photo {
+                transform: scale(1.04);
+            }
+
+            .program__heading-highlighted {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+
+    &__link {
+        position: absolute;
+        top: 0; left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 15;
+    }
+
+    &__photo {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        transition: transform .7s cubic-bezier(.39,.18,0,.85);
+        z-index: 5;
+
+        &--1 {
+            @include program-bg(1);
+        }
+
+        &--2 {
+            @include program-bg(2);
+        }
+
+        &--3 {
+            @include program-bg(3);
+        }
+
+        &--4 {
+            @include program-bg(4);
+        }
+    }
+
+    &__text-holder {
+        position: relative;
+        text-align: center;
+        z-index: 10;
+    }
+
+    &__heading-3 {
+        position: relative;
+        display: inline-block;
+        padding: 0 29px;
+        overflow: hidden;
+
+        @include breakpoint-down-4 {
+            font-size: $font-size + 16px;
+            padding: 0 10px;
+        }
+    }
+
+    &__heading-inner {
+        position: relative;
+        z-index: 10;
+    }
+
+    &__heading-highlighted {
+        position: absolute;
+        top: 0; left: auto;
+        right: 0px;
+        display: block;
+        width: 0;
+        height: 100%;
+        background-color: $color-black;
+        z-index: 5;
+        transition: .5s cubic-bezier(.7,.13,.26,.88);
+    }
+
+    &__description {
+        width: 70%;
+        margin: 26px auto;
+
+        font-family: 'Poppins', sans-serif;
+        font-size: $font-size + 2px;
+        font-weight: 300;
+        line-height: 24px;
+        text-align: center;
+        color: $color-white;
+
+        @include breakpoint-down-4 {
+            font-size: $font-size;
+        }
+    }
+
+    &__btn {
+        margin-top: 39px;
+    }
+}

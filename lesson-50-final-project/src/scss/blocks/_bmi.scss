@@ -1,0 +1,281 @@
+.bmi {
+    padding: 135px 0 208px;
+
+    &__container {
+        max-width: 1140px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: end;
+        padding: 0 25px;
+        
+        @include breakpoint-custom(900px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__body {
+        padding: 0 25px;
+
+        @include breakpoint-custom(1100px) {
+            padding: 0 0 0 25px;
+        }
+
+        @include breakpoint-custom(1100px) {
+            padding: 0 25px 0 25px;
+        }
+
+        @include breakpoint-down-4 {
+            padding: 0;
+        }
+    }
+
+    &__heading-2 {
+    }
+
+    &__subtitle {
+        margin-top: 27px;
+        line-height: 24px;
+    }
+
+    &__form {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px
+    }
+
+    &__input {
+        width: 100%;
+
+        @include breakpoint-custom(530px) {
+            grid-column: 1 / span 2;
+        }
+    }
+
+    &__select {
+
+        @include breakpoint-custom(530px) {
+            grid-column: 1 / span 2;
+        }
+
+        &--activity {
+            grid-column: 1 / span 2;
+        }
+    }
+
+    &__btn {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &__info {
+        padding: 0px 25px 0;
+
+        @include breakpoint-custom(900px) {
+            margin-top: 70px;
+        }
+
+        @include breakpoint-custom(400px) {
+            padding: 0;
+        }
+
+        table {
+            margin-left: auto;
+            width: 93%;
+            table-layout: fixed;
+            border-collapse: collapse;
+
+            @include breakpoint-custom(900px) {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+        th, td {
+            padding: 17px 32px;
+            border: none;
+            text-align: left;
+            vertical-align: top;
+
+            @include breakpoint-custom(360px) {
+                padding: 17px 20px;
+            }
+        }
+
+        th {
+            padding: 18px 32px;
+            border-bottom: 1px solid #e1e1e1;
+            font-size: $font-size - 1px;
+            font-weight: 700;
+            letter-spacing: .4px;
+            text-transform: uppercase;
+            color: $color-black;
+
+            &:first-child {
+                width: 140px;
+            }
+        }
+
+        tr {
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #e1e1e1;
+            }
+
+            th {
+                &:first-child {
+                    border-right: 1px solid #e1e1e1;
+                }
+            }
+
+            td {
+                &:first-child {
+                    border-right: 1px solid #e1e1e1;
+                }
+            }
+        }
+
+        td {
+            font-family: $font-secondary;
+            font-size: $font-size - 1px;
+            font-weight: 300;
+            line-height: 24px;
+            color: $color-black;
+        }
+    }
+
+    &__table-info {
+        margin-top: 25px;
+        margin-left: auto;
+        padding-left: 20px;
+        width: 93%;
+        font-size: $font-size - 2px;
+        letter-spacing: .24px;
+        color: #999;
+
+        @include breakpoint-custom(900px) {
+            margin-left: 0;
+        }
+
+        strong {
+            color: $color-black;
+        }
+    }
+
+    &__result-box {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        margin: 80px auto -30px;
+        padding: 0 50px;
+        max-width: 1140px;
+        width: 100%;
+        transition: all .5s ease-in-out;
+
+        @include breakpoint-custom(660px) {
+            padding: 0 30px;
+        }
+
+        @include breakpoint-custom(580px) {
+            padding: 0 15px;
+        }
+    }
+
+    &__active {
+        visibility: visible;
+        opacity: 1;
+        height: 100%;
+    }
+
+    &__result-inner {
+        position: relative;
+        padding: 27px 10px 27px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color-black;
+    }
+
+    &__result {
+        display: flex;
+        align-items: center;
+        color: $color-white;
+    }
+
+    &__result-empty {
+        font-family: $font-secondary;
+        font-size: $font-size - 1px;
+        font-weight: 200;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%; left: 14px;
+        transform: translateY(-50%);
+        width: auto;
+        height: 60px;
+
+        @include breakpoint-custom(400px) {
+            left: 3px;
+        }
+    }
+
+    &__result-text {
+        margin-left: 71px;
+        font-size: $font-size - 1px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        @include breakpoint-custom(400px) {
+            margin-left: 45px;
+        }
+    }
+
+    &__your-bmi {
+        margin-left: 79px;
+        font-family: $font-secondary;
+        font-size: $font-size - 1px;
+        font-weight: 200;
+        letter-spacing: normal;
+        text-transform: none;
+
+        @include breakpoint-custom(640px) {
+            margin-left: 30px;
+        }
+
+        @include breakpoint-custom(540px) {
+            margin-left: 0;
+            display: block;
+            margin-top: 3px;
+        }
+    }
+
+    &__result-close {
+        position: relative;
+        margin-right: 5px;
+        display: block;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            display: block;
+            width: 57%;
+            height: 1.5px;
+            background-color: $color-white;
+        }
+        
+        &::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+}

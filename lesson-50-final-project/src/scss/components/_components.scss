@@ -1,0 +1,374 @@
+/* ================================================
+     TYPOGRAPHY
+   ================================================ */
+
+%heading {
+    font-family: $font-primary;
+    font-weight: 800;
+    letter-spacing: .9px;
+    text-transform: uppercase;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: $font-size + 39px;
+    line-height: .9;
+    color: $color-black;
+
+    &--light {
+        color: $color-white;
+    }
+
+    @include breakpoint-down-7 {
+        font-size: $font-size + 24px;
+    }
+
+    @include breakpoint-down-4 {
+        font-size: $font-size + 18px;
+    }
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: $font-size + 24px;
+    // line-height: .9;
+    letter-spacing: .32px;
+    color: $color-black;
+
+    &--light {
+        color: $color-white;
+    }
+}
+
+.heading-4 {
+    @extend %heading;
+    font-size: $font-size + 6px;
+    letter-spacing: .5px;
+    color: $color-black;
+
+    &--light {
+        color: $color-white;
+    }
+}
+
+.heading-5 {
+    @extend %heading;
+    font-size: $font-size - 3px;
+    color: $color-white;
+}
+
+.heading-box {
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    @include breakpoint-down-7 {
+        max-width: 600px;
+    }
+
+    @include breakpoint-custom(680px) {
+        max-width: 420px;
+    }
+
+    @include breakpoint-custom(480px) {
+        max-width: 300px;
+    }
+}
+
+.subtitle {
+    margin-top: 28px;
+    font-family: $font-secondary;
+    font-size: $font-size + 2px;
+    font-weight: 200;
+    line-height: 27px;
+    letter-spacing: .1px;
+    color: $color-grey-dark-1;
+
+    &--light {
+        color: #a6a6a6;
+    }
+}
+
+input,
+textarea,
+select {
+    outline: 0;
+    border-radius: 0;
+    padding: 14px 20px;
+    border: 1px solid #e1e1e1;
+    font-family: inherit;
+    font-size: $font-size - 2px;
+    font-weight: inherit;
+    line-height: 21px;
+    color: $color-black;
+    background-color: transparent;
+    // cursor: pointer;
+    transition: border-color .2s ease-in-out;
+
+    &:focus {
+        color: $color-black;
+        border-color: $color-grey-dark-1;
+    }
+
+    &::placeholder {
+        color: $color-black;
+    }
+}
+
+select {
+    webkit-appearance: none; // Hide arrow
+    appearance: none;
+    
+    background-image:
+            url(../img/icons/select-arrow.svg);
+        background-position:
+            calc(100% - 14px) 13px;
+        background-size:
+            24px 24px;
+        background-repeat: no-repeat;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    z-index: 25;
+
+    &__link {
+        border: none;
+        outline: none;
+
+        display: inline-block;
+        padding: 0 0 12px 13px;
+        font-size: $font-size - 4px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 400;
+        background-color: transparent;
+        // For button
+        transition: all .3s ease-in-out;
+
+        &::after {
+            content: '';
+            margin-left: 4px;
+            display: inline-block;
+            width: 14px;
+            height: 12px;
+            background: center/cover no-repeat url(../img/icons/arrow-redo-outline.svg);
+        }
+
+        &:link,
+        &:visited {
+            color: $color-black;
+            transition: all .3s ease-in-out;
+        }
+
+        &--light {
+
+            &::after {
+                content: '';
+                margin-left: 4px;
+                display: inline-block;
+                width: 14px;
+                height: 12px;
+                background: center/cover no-repeat url(../img/icons/arrow-redo-outline-light.svg);
+            }
+            
+            &:link,
+            &:visited {
+                color: $color-white;
+            }
+        }
+    }
+
+    &__top-line {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        transform: scaleX(0);
+        transform-origin: left center;
+        height: 1px;
+        background-color: $color-black;
+    }
+
+    &__bottom-line {
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%;
+        transform: scaleX(1);
+        transform-origin: left center;
+        height: 1px;
+        background-color: $color-black;
+    }
+
+    &__left-line {
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 1px;
+        height: 100%;
+        background-color: $color-black;
+    }
+
+    &__top-line,
+    &__bottom-line,
+    &__left-line {
+        transition: all .3s cubic-bezier(.78,.2,.21,.88);
+
+        &--light {
+            background-color: $color-white;
+        }
+    }
+
+    &:hover {
+
+        .btn__link {
+            transform: translateY(10px);
+            transition-delay: .3s;
+        }
+
+        .btn__bottom-line {
+            // width: 0;
+            transform: scaleX(0);
+        }
+
+        .btn__top-line {
+            // width: 100%;
+            transform: scaleX(1);
+            transition-delay: .3s;
+        }
+    }
+}
+
+
+.btn-big {
+    position: relative;
+    // padding: 19px 0;
+    margin: 0 auto;
+    max-width: 243px;
+    width: 100%;
+    border: 2px solid $color-black;
+    background-color: $color-black;
+    text-align: center;
+    transition: all .3s cubic-bezier(.78,.2,.21,.88);
+    z-index: 30;
+
+    &--white {
+        border: 2px solid $color-white;
+        background-color: transparent;
+    }
+
+    &:hover {
+        transform: translate(5px, 5px);
+        
+        .btn-big__top-line {
+            top: -7px; left: -6px;
+            width: 101%;
+        }
+
+        .btn-big__right-line {
+            bottom: -2px; right: -2px;
+        }
+
+        .btn-big__bottom-line {
+            bottom: -2px; right: -1px;
+        }
+
+        .btn-big__left-line {
+            top: -7px; left: -7px;
+            height: 106%;
+        } 
+    }
+
+    &__link {
+        border: none;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 56px;
+
+        font-size: $font-size - 4px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: $color-white;
+        background-color: $color-black;
+        cursor: pointer;
+
+        &--white {
+            background-color: transparent;
+        }
+
+        &:link,
+        &:visited {
+            color: $color-white;
+        }
+
+        &::after {
+            content: '';
+            margin-left: 10px;
+            display: inline-block;
+            width: 14px;
+            height: 12px;
+            background: center/cover no-repeat url(../img/icons/arrow-redo-outline-light.svg);
+        }
+    }
+
+    &__top-line,
+    &__right-line,
+    &__bottom-line,
+    &__left-line {
+        position: absolute;
+        background-color: $color-black;
+        transition: all .3s cubic-bezier(.78,.2,.21,.88);
+
+        &--white {
+            background-color: $color-white;
+        }
+    }
+
+    &__top-line {
+        top: -2px; left: -2px;
+        width: 0;
+        height: 2px;
+        transition: width .4s .3s;
+    }
+
+    &__right-line {
+        bottom: -7px; right: -7px;
+        width: 2px;
+        height: 107%;
+    }
+
+    &__bottom-line {
+        bottom: -7px; right: -5px;
+        width: 101%;
+        height: 2px;
+    }
+
+    &__left-line {
+        top: -2px; left: -2px;
+        width: 2px;
+        height: 0;
+        transition: height .2s .1s;
+    }
+}
+
+
+
+.icon-menu {
+    display: none;
+
+    @include breakpoint-custom(1024px) {
+        display: block;
+        width: 50px;
+        height: 50px;
+        z-index: 60;
+        cursor: pointer;
+    }
+}
+
+.visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
