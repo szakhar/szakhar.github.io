@@ -1,0 +1,257 @@
+.footer {
+    padding: 44px 0 0;
+    background-color: $color-black;
+
+    &__instagram {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-size - 5px;
+        // font-weight: 400;
+        letter-spacing: 2.35px;
+        text-transform: uppercase;
+        color: $color-white;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background: center/cover no-repeat url(../img/icons/instagram.svg);
+            margin-right: 12px;
+        }
+    }
+
+    &__instagram-list {
+        margin-top: 41px;
+        border: none;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+    }
+
+    &__instagram-item {
+    }
+
+    &__container {
+    }
+
+    &__body {
+        margin: 138px 0 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: start;
+        row-gap: 50px;
+
+        @include breakpoint-custom(1024px) {
+            padding: 0 30px;
+            margin: 138px auto 0;
+            max-width: 768px;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 40px;
+        }
+
+        @include breakpoint-down-7 {
+            padding: 0 10px;
+            max-width: 600px;
+            margin: 90px auto 0;
+        }
+
+        @include breakpoint-custom(680px) {
+            max-width: 420px;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+    }
+
+    &__info {
+        padding-right: 40px;
+
+        @include breakpoint-custom(1024px) {
+            padding-right: 0;
+        }
+    }
+
+    &__logo {
+        width: auto;
+        height: 78px;
+    }
+
+    &__description {
+        margin-top: 22px;
+        font-family: $font-secondary;
+        font-size: $font-size - 1px;
+        font-weight: 200;
+        line-height: 24px;
+        letter-spacing: .2px;
+        color: $color-white;
+    }
+
+    &__social {
+        margin-top: 34px;
+    }
+
+    &__blog {
+        padding: 0 33px;
+
+        @include breakpoint-custom(1024px) {
+            padding: 0;
+        }
+    }
+
+    &__blog-list {
+        margin-top: 36px;
+    }
+
+    &__blog-item {
+        &:not(:first-child) {
+            margin-top: 24px;
+        }
+    }
+
+    &__blog-title {
+        font-size: $font-size - 1px;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: .8px;
+        text-transform: uppercase;
+        color: $color-white;
+    }
+
+    &__blog-date {
+        margin-top: 8px;
+        font-size: $font-size - 5px;
+        font-weight: 300;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        color: #999;
+    }
+
+    &__location {
+        padding: 0 40px 0 15px;
+
+        @include breakpoint-custom(1024px) {
+            padding: 0;
+        }
+    }
+
+    &__location-map {
+        margin-top: 36px;
+    }
+
+    &__location-address {
+        margin-top: 13px;
+        font-family: $font-secondary;
+        font-size: $font-size - 1px;
+        font-weight: 300;
+        line-height: 24px;
+        letter-spacing: .1px;
+        color: $color-white;
+    }
+
+    &__hours {
+        padding-left: 48px;
+
+        @include breakpoint-custom(1024px) {
+            padding-left: 0;
+        }
+    }
+
+    &__hours-list {
+        margin-top: 36px;
+        list-style: none;
+        font-family: $font-secondary;
+        font-size: $font-size - 1px;
+        font-weight: 300;
+        line-height: 24px;
+        letter-spacing: .1px;
+        color: $color-white;
+    }
+
+    &__hours-item {
+
+        &:not(:first-child) {
+            margin-top: 23px;
+        }
+    }
+
+    &__btn {
+        margin-top: 32px;
+    }
+
+    &__copyright-box {
+        margin-top: 160px;
+        padding: 29px 0 30px;
+        background-color: #090909;
+    }
+
+    &__copyright {
+        padding: 0 40px;
+
+        font-family: $font-secondary;
+        font-size: $font-size - 1px;
+        font-weight: 300;
+        line-height: 1.6;
+        letter-spacing: .9px;
+        text-align: center;
+        color: $color-white;
+
+        img {
+            margin: 0 5px;
+            display: inline-block;
+            vertical-align: text-top;
+        }
+    }
+}
+
+
+.social {
+
+    &__heading {
+        font-size: $font-size - 1px;
+        font-weight: 800;
+        letter-spacing: .32px;
+        text-transform: uppercase;
+        color: $color-white;
+    }
+
+    &__list {
+        margin-top: 22px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+
+        &:hover,
+        &:active {
+            .social__icon {
+                stroke-width: 1px;
+                fill: $color-white;
+
+                &--instagram-1 {
+                    fill: $color-black;
+                }
+
+                &--instagram-2 {
+                    stroke: $color-black;
+                }
+            }
+        }
+
+        &:first-child {
+            margin-right: 25px;
+        }
+
+        &:last-child {
+            margin-left: 18px;
+        }
+    }
+
+    &__icon {
+        transition: all .3s ease-out;
+    }
+}
