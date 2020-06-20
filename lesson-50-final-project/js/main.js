@@ -7,20 +7,50 @@ $(document).ready(function() {
 const header = $('.header__box');
 let scrollPrev = 0;
 
-$(window).scroll(function() {
-	var scrolled = $(window).scrollTop();
- 
-	if (scrolled > 100 && scrolled > scrollPrev) {
-        header.addClass('header__sticky--out');
-	} else if (scrolled <= 100) {
-        header.removeClass('header__sticky');
-        header.removeClass('header__sticky--out');
-    } else {
-        header.addClass('header__sticky');
-		header.removeClass('header__sticky--out');
-	}
-	scrollPrev = scrolled;
-});
+if (document.documentElement.clientWidth > 1024) {
+    $(window).scroll(function() {
+        const scrolled = $(window).scrollTop();
+
+        if (scrolled > 100 && scrolled > scrollPrev) {
+                header.addClass('header__sticky--out');
+        } else if (scrolled <= 100) {
+                header.removeClass('header__sticky');
+                header.removeClass('header__sticky--out');
+        } else {
+            header.addClass('header__sticky');
+            header.removeClass('header__sticky--out');
+        }
+        scrollPrev = scrolled;
+    });
+}
+
+
+
+// ================================================
+//   FIXED INFO ITEM MENU
+// ================================================
+
+const popupInfo = $('.popup-info');
+
+if (document.documentElement.clientWidth > 1024) {
+    $('.menu__info').click(function(event) {
+        event.preventDefault()
+        popupInfo.addClass('visible-popup-info');
+        popupInfo.removeClass('hide-popup-info');
+    });
+
+    $('.popup-info__close').click(function() {
+        popupInfo.removeClass('visible-popup-info');
+    });
+
+    $(window).scroll(function() {
+        const scrolled = $(window).scrollTop();
+
+        if (scrolled > 300) {
+            popupInfo.addClass('hide-popup-info');
+        }
+    });
+}
 
 
 
@@ -28,11 +58,16 @@ $(window).scroll(function() {
 //   ICON MENU
 // ================================================
 
+const headerSticky = $('.header__box');
 const iconMenu = document.querySelector('.icon-menu');
 const menuBody = document.querySelector('.menu');
 
 iconMenu.addEventListener('click', () => {
     menuBody.classList.toggle('active-icon-menu');
+
+    if (document.documentElement.clientWidth <= 1024) {
+        headerSticky.addClass('header__sticky-white');
+    }
 });
 
 
@@ -80,12 +115,55 @@ $('.reviews__body').slick({
 
 
 // ================================================
+//   FOOTER INSTAGRAM SLIDER
+// ================================================
+
+$('.footer__instagram-list').slick({
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  arrows: false,
+  pauseOnHover:false,
+  speed: 500,
+  responsive: [
+    {
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 4
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 479,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+
+
+// ================================================
 //   PARALLAX VIDEO
 // ================================================
 
-$('.parallaxie').parallaxie();
-
-
+if (document.documentElement.clientWidth > 767) {
+    $('.parallaxie').parallaxie();
+}
 
 // ================================================
 //   CALCULATOR BMI
@@ -371,24 +449,25 @@ function initMap() {
 
 
 
+// ================================================
+//   OPEN POPUP. Event function in html
+// ================================================
 
-
-// Open popup. Event function in html
 function openPopup() {
-  const popupBg = document.querySelector('.parallax-video__bg');
-  const popup = document.querySelector('.parallax-video__video');
-  popupBg.classList.toggle('visible');
-  popup.classList.toggle('visible');
+    const popupBg = document.querySelector('.parallax-video__bg');
+    const popup = document.querySelector('.parallax-video__video');
+    popupBg.classList.toggle('visible');
+    popup.classList.toggle('visible');
 }
-
+  
 // Close pop up
 const closePopupBg = document.querySelector('.parallax-video__bg');
+
 closePopupBg.addEventListener('click', function(event) {
-  const close = !event.target.closest('.parallax-video__video');
-  closePopupBg.style.cursor = 'url(../img/icons/cursor.svg), auto';
+    const close = !event.target.closest('.parallax-video__video');
+    closePopupBg.style.cursor = 'url(../img/icons/cursor.svg), auto';
 
-  if (close) {
-      openPopup();
-  }
+    if (close) {
+        openPopup();
+    }
 });
-
