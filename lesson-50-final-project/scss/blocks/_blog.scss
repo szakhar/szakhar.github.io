@@ -1,10 +1,10 @@
 .blog {
+    position: relative;
     padding: 109px 0;
 
-    &__heading-box {
-    }
-
-    &__heading-2 {
+    &__vertical-text {
+        position: absolute;
+        top: 42.5%; left: -11.3%;
     }
 
     &__subtitle {
@@ -33,10 +33,6 @@
         @include breakpoint-custom(680px) {
             grid-template-columns: minmax(200px, 400px);
         }
-    }
-
-    &__post {
-        // padding: 0 15px;
     }
 }
 
@@ -71,9 +67,6 @@
         letter-spacing: 2.4px;
         text-transform: uppercase;
         color: $color-white;
-    }
-
-    &__img {
     }
 
     &__body {

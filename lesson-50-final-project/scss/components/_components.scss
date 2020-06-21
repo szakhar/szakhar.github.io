@@ -31,7 +31,6 @@
 .heading-3 {
     @extend %heading;
     font-size: $font-size + 24px;
-    // line-height: .9;
     letter-spacing: .32px;
     color: $color-black;
 
@@ -106,7 +105,6 @@ select {
     line-height: 21px;
     color: $color-black;
     background-color: transparent;
-    // cursor: pointer;
     transition: border-color .2s ease-in-out;
 
     &:focus {
@@ -167,7 +165,6 @@ select {
         }
 
         &--light {
-
             &::after {
                 content: '';
                 margin-left: 4px;
@@ -230,12 +227,10 @@ select {
         }
 
         .btn__bottom-line {
-            // width: 0;
             transform: scaleX(0);
         }
 
         .btn__top-line {
-            // width: 100%;
             transform: scaleX(1);
             transition-delay: .3s;
         }
@@ -245,7 +240,6 @@ select {
 
 .btn-big {
     position: relative;
-    // padding: 19px 0;
     margin: 0 auto;
     max-width: 243px;
     width: 100%;
@@ -374,4 +368,18 @@ select {
 .visible {
     opacity: 1 !important;
     visibility: visible !important;
+}
+
+.vertical-text {
+    font-size: 140px;
+    font-weight: 800;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(104,104,104,0.4);
+    text-transform: uppercase;
+    color: transparent;
+    transform: rotate(-90deg);
+
+    &--light {
+        -webkit-text-stroke-color: rgba(104,104,104,0.2);
+    }
 }

@@ -1,5 +1,11 @@
 .bmi {
+    position: relative;
     padding: 135px 0 208px;
+
+    &__vertical-text {
+        position: absolute;
+        top: 34%; left: -12%;
+    }
 
     &__container {
         max-width: 1140px;
@@ -30,9 +36,6 @@
         }
     }
 
-    &__heading-2 {
-    }
-
     &__subtitle {
         margin-top: 27px;
         line-height: 24px;
@@ -54,7 +57,6 @@
     }
 
     &__select {
-
         @include breakpoint-custom(530px) {
             grid-column: 1 / span 2;
         }
@@ -91,6 +93,7 @@
                 margin-left: 0;
             }
         }
+        
         th, td {
             padding: 17px 32px;
             border: none;

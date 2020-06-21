@@ -9,9 +9,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    &__popup-info {
-    }
-
     &__topline {
         position: relative;
         padding: 5px 5px 0 67px;
@@ -80,10 +77,6 @@
         background-color: $color-white;
     }
 
-    &__text-box {
-
-    }
-
     &__text-m {
         display: block;
         position: absolute;
@@ -106,12 +99,6 @@
         width: 100%;
         height: auto;
         z-index: 5;
-    }
-
-    &__logo,
-    &__menu {
-        // position: relative;
-        // z-index: 10;
     }
 
     &__logo {
@@ -140,8 +127,6 @@
             visibility: hidden;
             opacity: 0;
             height: 0;
-            // transition: height .2s ease-in-out,
-            //             opacity .2s ease-in-out;
         }
     }
 
@@ -272,10 +257,6 @@
                 background-color: red;
             }
         }
-
-        // &:not(:last-child) {
-        //     margin-right: 84px;
-        // }
 
         /* Underlink link */
         &::after {
@@ -449,7 +430,6 @@
         text-transform: uppercase;
         color: transparent;
         transform: rotate(90deg) translateY(-50%);
-        transition: .7s .2s;
     }
 
     &__close {

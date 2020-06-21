@@ -1,4 +1,5 @@
 .contact {
+    position: relative;
 
     &__map {
         width: 100%;
@@ -6,7 +7,10 @@
         background-color: #ccc;
     }
 
-    &__container
+    &__vertical-text {
+        position: absolute;
+        top: 61.5%; left: -7.5%;
+    }
 
     &__box {
         padding: 136px 0 139px;
@@ -32,10 +36,6 @@
         }
     }
 
-    &__info {
-        // padding-right: 15px;
-    }
-
     &__inner {
         width: 85%;
         margin-left: auto;
@@ -56,10 +56,6 @@
         @include breakpoint-down-7 {
             max-width: 100%
         }
-    }
-    
-    &__heading-2 {
-
     }
 
     &__subtitle {
@@ -100,8 +96,6 @@
 
     &__form {
         max-width: 797px;
-        // padding-left: 15px;
-        // flex-basis: 50%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;

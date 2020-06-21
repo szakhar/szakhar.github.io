@@ -1,6 +1,12 @@
 .team {
+    position: relative;
     background-color: #141414;
     padding: 134px 0 142px;
+
+    &__vertical-text {
+        position: absolute;
+        top: 40%; left: -13%;
+    }
 
     &__subtitle {
         margin-top: 22px;
