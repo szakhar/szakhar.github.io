@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon/favicon-32x32.jpg" sizes="32x32">
+    <link rel="icon" href="img/favicon/favicon-192x192.jpg" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon/favicon-192x192.jpg">
     <link rel="stylesheet" type="text/css" href="js/slick/slick.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <title>Gym - Final Project</title>
@@ -12,6 +15,47 @@
 <header class="header">
     <div class="header__text-m"></div>
     <img class="header__text" src="img/slider-text.png" alt="Not your typical fitness">
+
+    <div class="header__popup-info popup-info">
+        <div class="popup-info__vertical-text">About</div>
+        <div class="popup-info__close">
+            <span>Close</span>
+            <img src="img/icons/cursor.svg" alt="CLOSE">
+        </div>
+        <a href=""><img src="img/logo-light.png" alt="" class="popup-info__logo"></a>
+        <p class="popup-info__description">Lorem ipsum dolor sit amet, consectetur<br>
+            adipiscing elit. Pellentesque vitae nunc ut<br>
+            dolor sagittis euismod eget sit amet erat.<br>
+            Mauris porta. Lorem ipsum dolor.</p>
+        <h4 class="popup-info__heading-4 heading-4 heading-4--light">Working hours</h4>
+        <p class="popup-info__hours">Monday – Friday:<br>
+            07:00 – 21:00</p>
+        <p class="popup-info__hours">Saturday:<br>
+            07:00 – 16:00</p>
+        <p class="popup-info__closed">Sunday Closed</p>
+        <h4 class="popup-info__heading-4 heading-4 heading-4--light">Our socials</h4>
+        <div class="popup-info__social-list">
+            <a href="#" class="popup-info__social-link">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32">
+                    <path class="popup-info__icon" stroke="#fff" stroke-width="1px" fill="transparent" d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                </svg>
+            </a>
+            <a href="#" class="popup-info__social-link">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32">
+                    <path class="popup-info__icon" stroke="#fff" stroke-width="1px" fill="transparent" d="M22.5,31h-13C4.8,31,1,27.2,1,22.5v-13C1,4.8,4.8,1,9.5,1h13C27.2,1,31,4.8,31,9.5v13C31,27.2,27.2,31,22.5,31z M22.5,31
+                        h-13C4.8,31,1,27.2,1,22.5v-13C1,4.8,4.8,1,9.5,1h13C27.2,1,31,4.8,31,9.5v13C31,27.2,27.2,31,22.5,31z"/>
+                    <path class="popup-info__icon--instagram-1" fill="#fff" d="M25.8,7.5c0,0.7-0.6,1.2-1.2,1.2s-1.2-0.6-1.2-1.2s0.6-1.2,1.2-1.2S25.8,6.8,25.8,7.5z"/>
+                    <circle class="popup-info__icon--instagram-2" stroke="#fff" stroke-width="1px" fill="transparent" cx="16" cy="16" r="7.2"/>
+                </svg>
+            </a>
+            <a href="#" class="popup-info__social-link">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32">
+                    <path class="popup-info__icon" stroke="#fff" stroke-width="1px" fill="transparent" d="M19.3,6.6H24V1h-4.7c-3.6,0-6.6,2.9-6.6,6.6v2.8H9V16h3.7v15h5.6V16h4.7l0.9-5.6h-5.6V7.6 C18.4,7,18.8,6.6,19.3,6.6z"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+
     <div class="header__topline">
         <div class="header__box">
             <div class="header__box-inner">
@@ -319,7 +363,7 @@
         <div class="parallax-video__video-box">
             <div class="parallax-video__bg"></div>
             <div class="parallax-video__video">
-                <iframe src="https://player.vimeo.com/video/302154751?color=000&title=0&byline=0&portrait=0" width="900" height="375" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/302154751?autoplay=0&color=000&title=0&byline=0&portrait=0" width="900" height="375" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
         </div>
         <button onclick="openPopup()" class="parallax-video__btn-play">
@@ -1606,13 +1650,88 @@
 <footer class="footer">
     <p class="footer__instagram">Follow US ON <a href="#">@GYMFITNESSBOX</a></p>
 
-    <!-- <ul class="footer__instagram-list">
-        <li class="footer__instagram-item"></li>
-        <li class="footer__instagram-item"></li>
-        <li class="footer__instagram-item"></li>
-        <li class="footer__instagram-item"></li>
-    </ul> -->
-    <hr class="footer__instagram-list">
+    <ul class="footer__instagram-list">
+        <li class="footer__instagram-item">
+            <a href="https://www.instagram.com/p/By2FOF8hTWS/?_ga=2.168142561.1186612072.1592347498-1530076567.1588452052" target="_blank">
+                <img src="img/instagram/instagram-01.jpg" alt="@GYMFITNESSBOX">
+                <div class="footer__instagram-arrow-box">
+                    <div class="footer__instagram-arrow"><img src="img/icons/gallery-link-arrow.svg" alt="Link arrow"></div>
+                </div>
+            </a>
+        </li>
+        <li class="footer__instagram-item">
+            <a href="https://www.instagram.com/p/By2FK8tBsbh/?_ga=2.168142561.1186612072.1592347498-1530076567.1588452052" target="_blank">
+                <img src="img/instagram/instagram-02.jpg" alt="@GYMFITNESSBOX">
+                <div class="footer__instagram-arrow-box">
+                    <div class="footer__instagram-arrow"><img src="img/icons/gallery-link-arrow.svg" alt="Link arrow"></div>
+                </div>
+            </a>
+        </li>
+        <li class="footer__instagram-item">
+            <a href="https://www.instagram.com/p/By2FJLMhJus/?_ga=2.168142561.1186612072.1592347498-1530076567.1588452052" target="_blank">
+                <img src="img/instagram/instagram-03.jpg" alt="@GYMFITNESSBOX">
+                <div class="footer__instagram-arrow-box">
+                    <div class="footer__instagram-arrow"><img src="img/icons/gallery-link-arrow.svg" alt="Link arrow"></div>
+                </div>
+            </a>
+        </li>
+        <li class="footer__instagram-item">
+            <a href="https://www.instagram.com/p/By2FGtFBgVT/?_ga=2.168142561.1186612072.1592347498-1530076567.1588452052" target="_blank">
+                <img src="img/instagram/instagram-04.jpg" alt="@GYMFITNESSBOX">
+                <div class="footer__instagram-arrow-box">
+                    <div class="footer__instagram-arrow"><img src="img/icons/gallery-link-arrow.svg" alt="Link arrow"></div>
+                </div>
+            </a>
+        </li>
+        <li class="footer__instagram-item">
+            <a href="https://www.instagram.com/p/By2E_dQhNWM/?_ga=2.168142561.1186612072.1592347498-1530076567.1588452052" target="_blank">
+                <img src="img/instagram/instagram-05.jpg" alt="@GYMFITNESSBOX">
+                <div class="footer__instagram-arrow-box">
+                    <div class="footer__instagram-arrow"><img src="img/icons/gallery-link-arrow.svg" alt="Link arrow"></div>
+                </div>
+            </a>
+        </li>
+        <li class="footer__instagram-item">
+            <a href="https://www.instagram.com/p/By2E7glBJ83/?_ga=2.168142561.1186612072.1592347498-1530076567.1588452052" target="_blank">
+                <img src="img/instagram/instagram-06.jpg" alt="@GYMFITNESSBOX">
+                <div class="footer__instagram-arrow-box">
+                    <div class="footer__instagram-arrow"><img src="img/icons/gallery-link-arrow.svg" alt="Link arrow"></div>
+                </div>
+            </a>
+        </li>
+        <li class="footer__instagram-item">
+            <a href="https://www.instagram.com/p/By2E5lIhydy/?_ga=2.168142561.1186612072.1592347498-1530076567.1588452052" target="_blank">
+                <img src="img/instagram/instagram-07.jpg" alt="@GYMFITNESSBOX">
+                <div class="footer__instagram-arrow-box">
+                    <div class="footer__instagram-arrow"><img src="img/icons/gallery-link-arrow.svg" alt="Link arrow"></div>
+                </div>
+            </a>
+        </li>
+        <li class="footer__instagram-item">
+            <a href="https://www.instagram.com/p/By2E3itBl8o/?_ga=2.168142561.1186612072.1592347498-1530076567.1588452052" target="_blank">
+                <img src="img/instagram/instagram-08.jpg" alt="@GYMFITNESSBOX">
+                <div class="footer__instagram-arrow-box">
+                    <div class="footer__instagram-arrow"><img src="img/icons/gallery-link-arrow.svg" alt="Link arrow"></div>
+                </div>
+            </a>
+        </li>
+        <li class="footer__instagram-item">
+            <a href="https://www.instagram.com/p/By2E1SchccC/?_ga=2.168142561.1186612072.1592347498-1530076567.1588452052" target="_blank">
+                <img src="img/instagram/instagram-09.jpg" alt="@GYMFITNESSBOX">
+                <div class="footer__instagram-arrow-box">
+                    <div class="footer__instagram-arrow"><img src="img/icons/gallery-link-arrow.svg" alt="Link arrow"></div>
+                </div>
+            </a>
+        </li>
+        <li class="footer__instagram-item">
+            <a href="https://www.instagram.com/p/By2EzKzhBJd/?_ga=2.53455208.1186612072.1592347498-1530076567.1588452052" target="_blank">
+                <img src="img/instagram/instagram-10.jpg" alt="@GYMFITNESSBOX">
+                <div class="footer__instagram-arrow-box">
+                    <div class="footer__instagram-arrow"><img src="img/icons/gallery-link-arrow.svg" alt="Link arrow"></div>
+                </div>
+            </a>
+        </li>
+    </ul>
 
     <div class="footer__container container">
         <div class="footer__body">

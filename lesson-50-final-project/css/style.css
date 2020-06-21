@@ -499,6 +499,8 @@ img {
 input,
 textarea,
 select {
+  -webkit-appearance: none;
+  border: none;
   outline: 0;
   border-radius: 0;
   padding: 14px 20px;
@@ -827,6 +829,12 @@ select {
     background-color: #fff;
   }
 }
+.header__sticky-white {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+}
 .header__text-m {
   display: block;
   position: absolute;
@@ -1107,6 +1115,120 @@ select {
   visibility: visible;
   opacity: 1;
   height: auto;
+}
+
+.popup-info {
+  transform: translateX(130%);
+  z-index: 70;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  padding: 35px 65px 0;
+  width: 550px;
+  height: auto;
+  background-color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+.popup-info::-webkit-scrollbar {
+  width: 0;
+}
+@media only screen and (max-width: 1024px) {
+  .popup-info {
+    display: none;
+  }
+}
+.popup-info__vertical-text {
+  position: absolute;
+  top: 61.5%;
+  right: -44.3%;
+  font-size: 180px;
+  font-weight: 800;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(104, 104, 104, 0.4);
+  text-transform: uppercase;
+  color: transparent;
+  transform: rotate(90deg) translateY(-50%);
+  transition: 0.7s 0.2s;
+}
+.popup-info__close {
+  position: relative;
+  padding: 6px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: #fff;
+  z-index: 10;
+  cursor: pointer;
+}
+.popup-info__close:hover img {
+  transform: rotate(90deg);
+}
+.popup-info__close img {
+  margin-left: 16px;
+  width: 25px;
+  height: 25px;
+  transition: transform 0.2s;
+}
+.popup-info__logo {
+  height: 101px;
+  margin-bottom: 28px;
+}
+.popup-info__description {
+  margin-bottom: 58px;
+}
+.popup-info__heading-4 {
+  margin-bottom: 26px;
+  font-size: 20px;
+}
+.popup-info__hours {
+  margin-bottom: 15px;
+}
+.popup-info__closed {
+  margin-bottom: 221px;
+}
+.popup-info__social-list {
+  margin-bottom: 71px;
+}
+.popup-info__social-link {
+  margin-right: 15px;
+}
+.popup-info__social-link:nth-child(2) {
+  margin-right: 10px;
+}
+.popup-info__social-link:hover .popup-info__icon, .popup-info__social-link:active .popup-info__icon {
+  stroke-width: 1px;
+  fill: #fff;
+}
+.popup-info__social-link:hover .popup-info__icon--instagram-1, .popup-info__social-link:active .popup-info__icon--instagram-1 {
+  fill: #000;
+}
+.popup-info__social-link:hover .popup-info__icon--instagram-2, .popup-info__social-link:active .popup-info__icon--instagram-2 {
+  stroke: #000;
+}
+.popup-info__icon {
+  transition: all 0.3s ease;
+}
+
+.visible-popup-info {
+  transform: translateX(0);
+}
+
+.hide-popup-info {
+  opacity: 0;
+  transform: translateX(130%);
 }
 
 .about-fitness {
@@ -1522,6 +1644,11 @@ select {
   background-size: cover;
   background-attachment: fixed;
 }
+@media only screen and (max-width: 767px) {
+  .parallax-video {
+    background-attachment: scroll;
+  }
+}
 .parallax-video__video {
   padding: 20px;
   opacity: 0;
@@ -1550,8 +1677,6 @@ select {
   fill: #fff;
   background-color: transparent;
   cursor: pointer;
-}
-.parallax-video__btn-play:link, .parallax-video__btn-play:visited {
   transition: all 0.2s ease-out;
 }
 .parallax-video__btn-play:hover, .parallax-video__btn-play:active {
@@ -2480,11 +2605,44 @@ select {
   margin-right: 12px;
 }
 .footer__instagram-list {
+  list-style: none;
   margin-top: 41px;
-  border: none;
   width: 100%;
-  height: 1px;
-  background-color: #fff;
+  height: auto;
+}
+.footer__instagram-item {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.footer__instagram-item:hover .footer__instagram-arrow-box {
+  visibility: visible;
+  opacity: 1;
+}
+.footer__instagram-item:hover .footer__instagram-arrow {
+  transform: translate(2px, -2px);
+}
+.footer__instagram-arrow-box {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  height: 37px;
+  background-color: #000;
+  transition: all 0.2s ease-in-out;
+  z-index: 20;
+}
+.footer__instagram-arrow {
+  fill: #fff;
+  width: 18px;
+  height: 17px;
+  transition: transform 0.2s 0.1s;
 }
 .footer__body {
   margin: 138px 0 0;
