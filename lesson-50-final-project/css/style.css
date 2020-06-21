@@ -510,7 +510,7 @@ select {
   font-weight: inherit;
   line-height: 21px;
   color: #000;
-  background-color: transparent;
+  background-color: #fff;
   transition: border-color 0.2s ease-in-out;
 }
 input:focus,
@@ -748,6 +748,11 @@ select {
   text-transform: uppercase;
   color: transparent;
   transform: rotate(-90deg);
+}
+@media only screen and (max-width: 1024px) {
+  .vertical-text {
+    display: none;
+  }
 }
 .vertical-text--light {
   -webkit-text-stroke-color: rgba(104, 104, 104, 0.2);
@@ -1249,8 +1254,8 @@ select {
 }
 .about-fitness__vertical-text {
   position: absolute;
-  top: 10.5%;
-  left: -9%;
+  top: 120px;
+  left: -124px;
 }
 .about-fitness__gallery {
   width: 100%;
@@ -1355,8 +1360,8 @@ select {
 }
 .team__vertical-text {
   position: absolute;
-  top: 40%;
-  left: -13%;
+  top: 365px;
+  left: -184px;
 }
 .team__subtitle {
   margin-top: 22px;
@@ -1713,16 +1718,18 @@ select {
 }
 .bmi__vertical-text {
   position: absolute;
-  top: 34%;
-  left: -12%;
+  top: 295px;
+  left: -170px;
 }
 .bmi__container {
+  position: relative;
   max-width: 1140px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: end;
   padding: 0 25px;
+  z-index: 10;
 }
 @media only screen and (max-width: 900px) {
   .bmi__container {
@@ -2104,8 +2111,8 @@ select {
 }
 .classes__vertical-text {
   position: absolute;
-  top: 44%;
-  left: -26.3%;
+  top: 590px;
+  left: -380px;
 }
 .classes__container {
   position: relative;
@@ -2331,8 +2338,8 @@ select {
 }
 .blog__vertical-text {
   position: absolute;
-  top: 42.5%;
-  left: -11.3%;
+  top: 360px;
+  left: -164px;
 }
 .blog__subtitle {
   margin-top: 23px;
@@ -2523,8 +2530,8 @@ select {
 }
 .contact__vertical-text {
   position: absolute;
-  top: 61.5%;
-  left: -7.5%;
+  top: 730px;
+  left: -110px;
 }
 .contact__box {
   padding: 136px 0 139px;

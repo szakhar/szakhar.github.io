@@ -104,7 +104,7 @@ select {
     font-weight: inherit;
     line-height: 21px;
     color: $color-black;
-    background-color: transparent;
+    background-color: $color-white;
     transition: border-color .2s ease-in-out;
 
     &:focus {
@@ -378,6 +378,10 @@ select {
     text-transform: uppercase;
     color: transparent;
     transform: rotate(-90deg);
+
+    @include breakpoint-custom(1024px) {
+        display: none;
+    }
 
     &--light {
         -webkit-text-stroke-color: rgba(104,104,104,0.2);
