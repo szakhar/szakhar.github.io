@@ -68,9 +68,6 @@
         transition: transform .2s .1s;
     }
 
-    &__container {
-    }
-
     &__body {
         margin: 138px 0 0;
         display: grid;
@@ -96,9 +93,6 @@
             max-width: 420px;
             grid-template-columns: 1fr;
         }
-    }
-
-    &__item {
     }
 
     &__info {

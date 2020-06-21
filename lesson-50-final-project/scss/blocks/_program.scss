@@ -5,8 +5,6 @@
 .program {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // display: flex;
-    // flex-wrap: wrap;
     @include breakpoint-down-9 {
         grid-template-columns: 1fr;
     }
@@ -14,7 +12,6 @@
     &__item {
         position: relative;
         padding: 99px 0 122px;
-        // flex-basis: 50%;
         overflow: hidden;
 
         &:hover {

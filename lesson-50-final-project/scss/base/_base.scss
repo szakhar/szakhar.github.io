@@ -84,14 +84,8 @@ a:link,
 a:visited {
     color: inherit;
     text-decoration: none;
-    // transition: text-decoration .3s;
     transition: color .2s ease-out;
 }
-
-// a:hover,
-// a:active {
-//     color: darken($color-grey-dark-1, 20%);
-// }
 
 .container {
     max-width: $container + 60px;
@@ -102,7 +96,6 @@ a:visited {
 
 img {
     max-width: 100%;
-    // width: 100%;
 	height: auto;
 	display: block;
 }

@@ -1,19 +1,14 @@
 .about-fitness {
+    position: relative;
     padding-top: 130px;
 
-    &__heading-box {
-        
-    }
-
-    &__heading-2 {
-    }
-
-    &__subtitle {
+    &__vertical-text {
+        position: absolute;
+        top: 10.5%; left: -9%;
     }
 
     &__gallery {
         width: 100%;
-        // height: 100%;
         margin-top: 92px;
     }
 }

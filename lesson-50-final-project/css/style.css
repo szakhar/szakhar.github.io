@@ -740,6 +740,19 @@ select {
   visibility: visible !important;
 }
 
+.vertical-text {
+  font-size: 140px;
+  font-weight: 800;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(104, 104, 104, 0.4);
+  text-transform: uppercase;
+  color: transparent;
+  transform: rotate(-90deg);
+}
+.vertical-text--light {
+  -webkit-text-stroke-color: rgba(104, 104, 104, 0.2);
+}
+
 /* Slider Image Transition */
 @keyframes ProgressSlide {
   from {
@@ -1158,7 +1171,6 @@ select {
   text-transform: uppercase;
   color: transparent;
   transform: rotate(90deg) translateY(-50%);
-  transition: 0.7s 0.2s;
 }
 .popup-info__close {
   position: relative;
@@ -1232,7 +1244,13 @@ select {
 }
 
 .about-fitness {
+  position: relative;
   padding-top: 130px;
+}
+.about-fitness__vertical-text {
+  position: absolute;
+  top: 10.5%;
+  left: -9%;
 }
 .about-fitness__gallery {
   width: 100%;
@@ -1331,8 +1349,14 @@ select {
 }
 
 .team {
+  position: relative;
   background-color: #141414;
   padding: 134px 0 142px;
+}
+.team__vertical-text {
+  position: absolute;
+  top: 40%;
+  left: -13%;
 }
 .team__subtitle {
   margin-top: 22px;
@@ -1684,7 +1708,13 @@ select {
 }
 
 .bmi {
+  position: relative;
   padding: 135px 0 208px;
+}
+.bmi__vertical-text {
+  position: absolute;
+  top: 34%;
+  left: -12%;
 }
 .bmi__container {
   max-width: 1140px;
@@ -2068,8 +2098,18 @@ select {
 }
 
 .classes {
+  position: relative;
   padding: 135px 0;
   background-color: #141414;
+}
+.classes__vertical-text {
+  position: absolute;
+  top: 44%;
+  left: -26.3%;
+}
+.classes__container {
+  position: relative;
+  z-index: 5;
 }
 .classes__tabs {
   text-align: center;
@@ -2284,8 +2324,15 @@ select {
 .table-small__title:hover, .table-small__title:active {
   text-decoration: underline;
 }
+
 .blog {
+  position: relative;
   padding: 109px 0;
+}
+.blog__vertical-text {
+  position: absolute;
+  top: 42.5%;
+  left: -11.3%;
 }
 .blog__subtitle {
   margin-top: 23px;
@@ -2314,6 +2361,7 @@ select {
     grid-template-columns: minmax(200px, 400px);
   }
 }
+
 .post {
   width: 100%;
 }
@@ -2465,12 +2513,20 @@ select {
   margin-top: 39px;
 }
 
+.contact {
+  position: relative;
+}
 .contact__map {
   width: 100%;
   height: 436px;
   background-color: #ccc;
 }
-.contact__container .contact__box {
+.contact__vertical-text {
+  position: absolute;
+  top: 61.5%;
+  left: -7.5%;
+}
+.contact__box {
   padding: 136px 0 139px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2480,18 +2536,18 @@ select {
   row-gap: 60px;
 }
 @media only screen and (max-width: 1150px) {
-  .contact__container .contact__box {
+  .contact__box {
     grid-template-columns: 1fr;
   }
 }
 @media only screen and (max-width: 860px) {
-  .contact__container .contact__box {
+  .contact__box {
     grid-template-columns: 1fr;
     padding: 136px 30px 139px;
   }
 }
 @media only screen and (max-width: 479px) {
-  .contact__container .contact__box {
+  .contact__box {
     padding: 136px 15px 139px;
   }
 }

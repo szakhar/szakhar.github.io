@@ -1,12 +1,16 @@
 .classes {
+    position: relative;
     padding: 135px 0;
     background-color: $color-grey-dark-3;
 
-    &__heading-2 {
-        
+    &__vertical-text {
+        position: absolute;
+        top: 44%; left: -26.3%;
     }
 
     &__container {
+        position: relative;
+        z-index: 5;
     }
 
     &__tabs {
@@ -147,10 +151,6 @@
         }
     }
 
-    &__table-small {
-
-    }
-
     &__header {
         font-size: $font-size - 1px;
         font-weight: 800;
@@ -260,9 +260,5 @@
         &:active {
             text-decoration: underline;
         }
-    }
-
-    &__time {
-        
     }
 }
