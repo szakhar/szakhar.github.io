@@ -35,21 +35,33 @@
 
 .posts {
     max-width: 117rem;
+    margin: 0 auto 4rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto 4rem;
+    justify-content: flex-start;
+
+    @media only screen and (max-width: 1020px) { // 400px
+        justify-content: center;
+    }
 
     &__item {
-        flex-basis: 37rem;
+        flex-basis: 31.6%;
         flex-shrink: 0;
         height: 31rem;
         position: relative;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         margin: 1rem;
 
-        @media only screen and (max-width: 25em) { // 400px
-            flex-basis: 100%;
+        @media only screen and (max-width: 1172px) { // 400px
+            flex-basis: 48%;
+        }
+
+        @media only screen and (max-width: 1020px) { // 400px
+            flex-basis: 70%;
+        }
+
+        @media only screen and (max-width: 767px) { // 400px
+            flex-basis: 90%;
         }
 
         &--1 {

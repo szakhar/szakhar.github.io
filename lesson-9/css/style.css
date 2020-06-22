@@ -8,16 +8,19 @@
   margin: 0;
   padding: 0;
   line-height: 1;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  /* 1rem = 10px */ }
+  /* 1rem = 10px */
+}
 
 ::selection {
   background-color: #fff;
-  color: #212121; }
+  color: #212121;
+}
 
 body {
   font-family: "Raleway", sans-serif;
@@ -25,35 +28,44 @@ body {
   font-size: 1.7rem;
   font-weight: 300;
   background-color: #b07cf7;
-  padding: 0 1rem; }
-  @media only screen and (max-width: 25em) {
-    body {
-      padding: 0; } }
+  padding: 0 1rem;
+}
+@media only screen and (max-width: 25em) {
+  body {
+    padding: 0;
+  }
+}
 
 /* ================================================
      TYPOGRAPHY
    ================================================ */
-.heading-1, .heading-2 {
+.heading-2, .heading-1 {
   font-family: "Raleway", sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 .heading-1 {
   font-size: 9rem;
   font-weight: 700;
   color: #fff;
   text-align: center;
-  margin-bottom: 3.1rem; }
-  @media only screen and (max-width: 43.75em) {
-    .heading-1 {
-      font-size: 7rem; } }
+  margin-bottom: 3.1rem;
+}
+@media only screen and (max-width: 43.75em) {
+  .heading-1 {
+    font-size: 7rem;
+  }
+}
 
 .heading-2 {
   font-size: 2rem;
   font-weight: 700;
-  line-height: 2.5rem; }
+  line-height: 2.5rem;
+}
 
 .paragraph {
-  line-height: 2.5rem; }
+  line-height: 2.5rem;
+}
 
 .btn {
   border: none;
@@ -65,87 +77,127 @@ body {
   font-size: 2rem;
   font-weight: 300;
   color: #fff;
-  letter-spacing: .06rem;
+  letter-spacing: 0.06rem;
   text-transform: uppercase;
-  transition: background-color .3s, transform .3s; }
-  .btn:hover {
-    background-color: #f1091c;
-    transform: translateY(-3px); }
+  transition: background-color 0.3s, transform 0.3s;
+}
+.btn:hover {
+  background-color: #f1091c;
+  transform: translateY(-3px);
+}
 
 .container {
-  margin: 10rem auto; }
-  @media only screen and (max-width: 53.125em) {
-    .container {
-      margin: 6rem auto; } }
-  @media only screen and (max-width: 37.5em) {
-    .container {
-      margin: 4rem auto; } }
+  margin: 10rem auto;
+}
+@media only screen and (max-width: 53.125em) {
+  .container {
+    margin: 6rem auto;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .container {
+    margin: 4rem auto;
+  }
+}
 
 .description {
   max-width: 50%;
   margin: 0 auto 3.4rem auto;
-  text-align: center; }
-  @media only screen and (max-width: 65.625em) {
-    .description {
-      max-width: 60%; } }
-  @media only screen and (max-width: 56.25em) {
-    .description {
-      max-width: 75%; } }
-  @media only screen and (max-width: 43.75em) {
-    .description {
-      max-width: 85%; } }
+  text-align: center;
+}
+@media only screen and (max-width: 65.625em) {
+  .description {
+    max-width: 60%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .description {
+    max-width: 75%;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .description {
+    max-width: 85%;
+  }
+}
 
 /* ================================================
      POSTS
    ================================================ */
 .posts {
   max-width: 117rem;
+  margin: 0 auto 4rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto 4rem; }
+  justify-content: flex-start;
+}
+@media only screen and (max-width: 1020px) {
+  .posts {
+    justify-content: center;
+  }
+}
+.posts__item {
+  flex-basis: 31.6%;
+  flex-shrink: 0;
+  height: 31rem;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  margin: 1rem;
+}
+@media only screen and (max-width: 1172px) {
   .posts__item {
-    flex-basis: 37rem;
-    flex-shrink: 0;
-    height: 31rem;
-    position: relative;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    margin: 1rem; }
-    @media only screen and (max-width: 25em) {
-      .posts__item {
-        flex-basis: 100%; } }
-    .posts__item--1 {
-      background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.65)), url(../img/post-1.jpg);
-      background-size: cover;
-      background-position: center center; }
-    .posts__item--2 {
-      background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.65)), url(../img/post-2.jpg);
-      background-size: cover;
-      background-position: center center; }
-    .posts__item--3 {
-      background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.65)), url(../img/post-3.jpg);
-      background-size: cover;
-      background-position: center center; }
-    .posts__item .heading-2 {
-      position: absolute;
-      bottom: 5.6rem;
-      left: 2rem; }
-  .posts__date {
-    position: absolute;
-    top: 3rem;
-    left: 3rem;
-    background-color: rgba(38, 38, 38, 0.5);
-    border-radius: .5rem;
-    padding: .2rem .8rem .5rem;
-    font-size: 3.2rem;
-    font-weight: 700;
-    text-align: center; }
-    .posts__date span {
-      display: block;
-      font-size: 2.1rem;
-      text-transform: uppercase; }
-  .posts__author {
-    position: absolute;
-    bottom: 2.4rem;
-    left: 2rem;
-    font-size: 1.3rem; }
+    flex-basis: 48%;
+  }
+}
+@media only screen and (max-width: 1020px) {
+  .posts__item {
+    flex-basis: 70%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .posts__item {
+    flex-basis: 90%;
+  }
+}
+.posts__item--1 {
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.65)), url(../img/post-1.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.posts__item--2 {
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.65)), url(../img/post-2.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.posts__item--3 {
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.65)), url(../img/post-3.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.posts__item .heading-2 {
+  position: absolute;
+  bottom: 5.6rem;
+  left: 2rem;
+}
+.posts__date {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  background-color: rgba(38, 38, 38, 0.5);
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.8rem 0.5rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.posts__date span {
+  display: block;
+  font-size: 2.1rem;
+  text-transform: uppercase;
+}
+.posts__author {
+  position: absolute;
+  bottom: 2.4rem;
+  left: 2rem;
+  font-size: 1.3rem;
+}
