@@ -12,6 +12,11 @@ html {
   /* 1rem = 10px */
 }
 
+::-moz-selection {
+  background-color: #1d1d1d;
+  color: #fff;
+}
+
 ::selection {
   background-color: #1d1d1d;
   color: #fff;
@@ -61,6 +66,7 @@ body {
 }
 
 .blog {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 2rem;
@@ -70,6 +76,7 @@ body {
 }
 @media only screen and (max-width: 767px) {
   .blog {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     padding: 0;
   }
@@ -127,6 +134,8 @@ body {
   }
 }
 .post--1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-column: 1/span 2;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.95)), url(../img/photo-1.jpg);
   background-size: cover;
@@ -144,6 +153,8 @@ body {
 }
 @media only screen and (max-width: 767px) {
   .post--1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1/span 1;
   }
 }
@@ -180,12 +191,21 @@ body {
   border-top: 4px solid #808f9d;
   width: 20px;
   height: 20px;
+  -webkit-animation: spin 2s linear infinite;
   /* Safari */
   animation: spin 2s linear infinite;
   margin-right: 1.3rem;
 }
 
 /* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
