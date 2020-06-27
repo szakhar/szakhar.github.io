@@ -8,10 +8,12 @@
   margin: 0;
   padding: 0;
   border: 0;
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -86,6 +88,10 @@ h1, h2, h3, h4, h5, h6 {
 /* ================================================
      BASE AND CSS RESET
    ================================================ */
+::-moz-selection {
+  background-color: royalblue;
+  color: #fff;
+}
 ::selection {
   background-color: royalblue;
   color: #fff;
@@ -119,29 +125,27 @@ body {
 
 .gallery-1 {
   margin-top: 80px;
+  display: -ms-grid;
   display: grid;
-  -ms-grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  -ms-gap: 56px;
   gap: 56px;
 }
 @media only screen and (max-width: 767px) {
   .gallery-1 {
     margin-top: 60px;
-    -ms-grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: 1fr 30px 1fr;
     grid-template-columns: repeat(2, 1fr);
-    -ms-gap: 30px;
     gap: 30px;
   }
 }
 @media only screen and (max-width: 479px) {
   .gallery-1 {
     margin-top: 40px;
-    -ms-grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -ms-column-gap: 0;
-    column-gap: 0;
-    -ms-row-gap: 30px;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
     row-gap: 30px;
   }
 }
@@ -149,27 +153,32 @@ body {
   width: 100%;
 }
 .gallery-1__item--1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-column: 1/span 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   grid-row: 1/span 2;
 }
 
 .gallery-2 {
   margin-top: 82px;
+  display: -ms-grid;
   display: grid;
-  -ms-grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   background-color: #1a1a1a;
   cursor: pointer;
 }
 @media only screen and (max-width: 991px) {
   .gallery-2 {
-    -ms-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 .gallery-2__item {
   width: 100%;
   opacity: 0.3;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 .gallery-2__item:hover {

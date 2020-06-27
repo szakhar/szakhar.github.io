@@ -1,27 +1,19 @@
 .gallery-1 {
     margin-top: 80px;
-    display: -ms-grid;
     display: grid;
-    -ms-grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    -ms-gap: 56px;
     gap: 56px;
 
     @include viewport-7 {
         margin-top: 60px;
-        -ms-grid-template-columns: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
-        -ms-gap: 30px;
         gap: 30px;
     }
 
     @include viewport-4 {
         margin-top: 40px;
-        -ms-grid-template-columns: 1fr;
         grid-template-columns: 1fr;
-        -ms-column-gap: 0;
         column-gap: 0;
-        -ms-row-gap: 30px;
         row-gap: 30px;
     }
 
@@ -29,24 +21,19 @@
         width: 100%;
 
         &--1 {
-            -ms-grid-column: 1 / span 2;
             grid-column: 1 / span 2;
-            -ms-grid-row: 1 / span 2;
             grid-row: 1 / span 2;
         }
     }
 }
 .gallery-2 {
     margin-top: 82px;
-    display: -ms-grid;
     display: grid;
-    -ms-grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     background-color: #1a1a1a;
     cursor: pointer;
 
     @include viewport-9 {
-        -ms-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
