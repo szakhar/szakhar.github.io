@@ -178,19 +178,19 @@ function calculateBMI(height, weight, age, gender, activity) {
         let text = '';
 
         if (bmi < 18.5) {
-            text += `<img class="bmi__icon" src="../img/bmi/underweight.png" alt="Underweight">
+            text += `<img class="bmi__icon" src="img/bmi/underweight.png" alt="Underweight">
                      <span class="bmi__result-text">You are Underweight!<span>
                      <span class="bmi__your-bmi">Your BMI is ${bmi}</span>`;
         } else if (bmi >= 18.5 && bmi <= 24.9) {
-            text += `<img class="bmi__icon" src="../img/bmi/normal.png" alt="Healthy">
+            text += `<img class="bmi__icon" src="img/bmi/normal.png" alt="Healthy">
                      <span class="bmi__result-text">You are Healthy!<span>
                      <span class="bmi__your-bmi">Your BMI is ${bmi}</span>`;
         } else if (bmi >= 25 && bmi <= 29.9) {
-            text += `<img class="bmi__icon" src="../img/bmi/overweight.png" alt="Overweight">
+            text += `<img class="bmi__icon" src="img/bmi/overweight.png" alt="Overweight">
                      <span class="bmi__result-text">You are Overweight!<span>
                      <span class="bmi__your-bmi">Your BMI is ${bmi}</span>`;
         } else {
-            text += `<img class="bmi__icon" src="../img/bmi/obese.png" alt="Obese">
+            text += `<img class="bmi__icon" src="img/bmi/obese.png" alt="Obese">
                      <span class="bmi__result-text">You are Obese!<span>
                      <span class="bmi__your-bmi">Your BMI is ${bmi}</span>`;
         }
