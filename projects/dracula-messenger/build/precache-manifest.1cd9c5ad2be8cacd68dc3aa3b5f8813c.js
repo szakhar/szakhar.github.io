@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "591924d36a0bd933a9f8169f8929ca08",
+    "revision": "e58039092be31ff779a6a26cf478a619",
     "url": "/projects/dracula-messenger/build/index.html"
   },
   {

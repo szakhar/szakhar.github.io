@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/projects/dracula-messenger/build/precache-manifest.ed7c84a5cda54be0d6b71214041cc1ca.js"
+  "/projects/dracula-messenger/build/precache-manifest.1cd9c5ad2be8cacd68dc3aa3b5f8813c.js"
 );
 
 self.addEventListener('message', (event) => {
