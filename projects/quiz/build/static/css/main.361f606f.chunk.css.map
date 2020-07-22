@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA,KACE,oEAAwE,CACxE,kCAAmC,CACnC,iCAAkC","file":"main.361f606f.chunk.css","sourcesContent":["body {\n  background: center/cover no-repeat url(/projects/quiz/build/img/bg.jpeg);\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}"]}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA,KACE,sDAA0D,CAC1D,kCAAmC,CACnC,iCAAkC","file":"main.c7d7eeb0.chunk.css","sourcesContent":["body {\n  background: center/cover no-repeat url(/build/img/bg.jpeg);\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}"]}
