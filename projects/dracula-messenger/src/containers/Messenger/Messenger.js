@@ -241,7 +241,7 @@ class Messenger extends Component {
       <div className={classes.root}>
         <Header
           avatarName={this.state.people[5].name}
-          avatarUrl={this.state.people[5].avatar}
+          avatarUrl={process.env.PUBLIC_URL + this.state.people[5].avatar}
         />
         <LeftSidebar
           channels={this.state.channels}
@@ -250,11 +250,11 @@ class Messenger extends Component {
           inputTextChange={event => this.inputTextChangeHandler(event.target.value)}
         />
 
-        <Route path="/" exact component={chatProps} />
-        <Route path="/channel/" exact component={chatProps} />
-        <Route path="/channel/:channelName" exact component={chatProps} />
-        <Route path="/user/" exact component={chatProps} />
-        <Route path="/user/:userName" exact component={chatProps} />
+        <Route path={process.env.PUBLIC_URL + "/"} exact component={chatProps} />
+        <Route path={process.env.PUBLIC_URL + "/channel/"} exact component={chatProps} />
+        <Route path={process.env.PUBLIC_URL + "/channel/:channelName"} exact component={chatProps} />
+        <Route path={process.env.PUBLIC_URL + "/user/"} exact component={chatProps} />
+        <Route path={process.env.PUBLIC_URL + "/user/:userName"} exact component={chatProps} />
         {/* <Chat
           data={this.state}
           addMessage={this.addMessageHandler}

@@ -19,7 +19,7 @@ const Messages = props => {
             ? <React.Fragment key={id + Date.now().toString()}>
                 <ListItem button>
                   <ListItemAvatar>
-                    <Avatar alt={people[userId - 1].name} src={people[userId - 1].avatar} />
+                    <Avatar alt={people[userId - 1].name} src={process.env.PUBLIC_URL + people[userId - 1].avatar} />
                   </ListItemAvatar>
                   <ListItemText primary={people[userId - 1].name} secondary={message} />
                 </ListItem>
