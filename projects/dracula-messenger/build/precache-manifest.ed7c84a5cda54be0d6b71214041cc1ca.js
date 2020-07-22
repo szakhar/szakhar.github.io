@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3b5ac90990c9f2e794de87a5e75e76ab",
+    "revision": "591924d36a0bd933a9f8169f8929ca08",
     "url": "/projects/dracula-messenger/build/index.html"
   },
   {
-    "revision": "cae60c5e0d3b0e204779",
+    "revision": "4692615b34d2a1a6fad4",
     "url": "/projects/dracula-messenger/build/static/css/main.dbf5d755.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/projects/dracula-messenger/build/static/js/2.a4a4b2ae.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cae60c5e0d3b0e204779",
-    "url": "/projects/dracula-messenger/build/static/js/main.62217f17.chunk.js"
+    "revision": "4692615b34d2a1a6fad4",
+    "url": "/projects/dracula-messenger/build/static/js/main.8a2f2ce9.chunk.js"
   },
   {
     "revision": "f2f9e6bffff48c363a08",

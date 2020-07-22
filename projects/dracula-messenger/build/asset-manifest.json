@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/projects/dracula-messenger/build/static/css/main.dbf5d755.chunk.css",
-    "main.js": "/projects/dracula-messenger/build/static/js/main.62217f17.chunk.js",
-    "main.js.map": "/projects/dracula-messenger/build/static/js/main.62217f17.chunk.js.map",
+    "main.js": "/projects/dracula-messenger/build/static/js/main.8a2f2ce9.chunk.js",
+    "main.js.map": "/projects/dracula-messenger/build/static/js/main.8a2f2ce9.chunk.js.map",
     "runtime-main.js": "/projects/dracula-messenger/build/static/js/runtime-main.2211c1f8.js",
     "runtime-main.js.map": "/projects/dracula-messenger/build/static/js/runtime-main.2211c1f8.js.map",
     "static/js/2.a4a4b2ae.chunk.js": "/projects/dracula-messenger/build/static/js/2.a4a4b2ae.chunk.js",
     "static/js/2.a4a4b2ae.chunk.js.map": "/projects/dracula-messenger/build/static/js/2.a4a4b2ae.chunk.js.map",
     "index.html": "/projects/dracula-messenger/build/index.html",
-    "precache-manifest.cef48c02b4faad927d6441c0c018854f.js": "/projects/dracula-messenger/build/precache-manifest.cef48c02b4faad927d6441c0c018854f.js",
+    "precache-manifest.ed7c84a5cda54be0d6b71214041cc1ca.js": "/projects/dracula-messenger/build/precache-manifest.ed7c84a5cda54be0d6b71214041cc1ca.js",
     "service-worker.js": "/projects/dracula-messenger/build/service-worker.js",
     "static/css/main.dbf5d755.chunk.css.map": "/projects/dracula-messenger/build/static/css/main.dbf5d755.chunk.css.map",
     "static/js/2.a4a4b2ae.chunk.js.LICENSE.txt": "/projects/dracula-messenger/build/static/js/2.a4a4b2ae.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.2211c1f8.js",
     "static/js/2.a4a4b2ae.chunk.js",
     "static/css/main.dbf5d755.chunk.css",
-    "static/js/main.62217f17.chunk.js"
+    "static/js/main.8a2f2ce9.chunk.js"
   ]
 }

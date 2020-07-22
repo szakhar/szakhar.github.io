@@ -61,7 +61,7 @@ const LeftSidebar = props => {
           {channels.map((channel, index) => (
             <ListItem button key={channel.name}>
               <div className={classes.sharp}>#</div>
-              <NavLink to={`/build/channel/${channel.url}`} className={classes.navLink}><ListItemText primary={channel.name} /></NavLink>
+              <NavLink to={`${process.env.PUBLIC_URL}/channel/${channel.url}`} className={classes.navLink}><ListItemText primary={channel.name} /></NavLink>
             </ListItem>
           ))}
         </List>
@@ -74,7 +74,7 @@ const LeftSidebar = props => {
             people.map(({userName, name, avatar, myProfile}, index) => {
               return (
                 !myProfile
-                ? <NavLink to={`/build/user/${userName}`} className={classes.navLink} key={name + index}>
+                ? <NavLink to={`${process.env.PUBLIC_URL}/user/${userName}`} className={classes.navLink} key={name + index}>
                     <ListItem button>
                       <ListItemAvatar>
                         <Avatar
