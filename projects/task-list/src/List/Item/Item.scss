@@ -1,0 +1,41 @@
+.Item {
+    font-size: 15px;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    transition: background-color .2s;
+
+    &:hover {
+        background-color: #f4f4f4;
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+
+.Complete {
+    span:first-child {
+        text-decoration: line-through;
+    }
+}
+
+.Trash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: all .3s;
+
+    &:hover {
+        background-color: #ccc;
+        // color: #fff;
+    }
+}
