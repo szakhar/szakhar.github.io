@@ -1,0 +1,116 @@
+.extra {
+    font-size: $font-size - 3px;
+    margin-bottom: 75px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: $container - 30px;
+
+        @include tablet-port {
+            flex-direction: column;
+        }
+    }
+}
+
+.bread-crumbs {
+
+    &__list {
+        display: flex;
+        list-style: none;
+
+        @include tablet-port {
+            margin-bottom: 28px;
+        }
+
+        @include phone {
+            display: none;
+        }
+
+        li:not(:last-child) {
+            position: relative;
+            margin-right: 45px;
+            color: #ccc;
+  
+            &::after {
+                content: "";
+                display: block;
+                width: 5px;
+                height: 8px;
+                position: absolute;
+                top: 2.5px; right: -24px;
+                background: url(../img/icons/arrow-right.svg) center/cover no-repeat;
+            }
+        }
+
+    }
+}
+
+.share {
+    display: flex;
+    align-items: center;
+    color: #B3B3B3;
+
+    @include tablet-port {
+        margin-bottom: -28px;
+    }
+
+    &__heading {
+        margin-right: 30px;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-right: 26px;
+        }
+    }
+
+    &__icon {
+
+        &--facebook {
+            margin-right: 21px;
+        }
+
+        &--twitter {
+            margin-right: 16px;
+        }
+    }
+
+    &__count {
+        padding: 5.7px 9px 7.3px 8.4px;
+        background-color: $color-grey-light-2;
+        border: 2px solid $color-grey-light-1;
+        border-radius: 4px;
+        position: relative;
+
+        // Triangle Arrow
+        &::before {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: $color-grey-light-1;
+            position: absolute;
+            top: 50%; left: -5.5px;
+            transform: translateY(-50%) rotate(135deg);
+            z-index: -5;
+        }
+
+        // Triangle Bg
+        &::after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: $color-grey-light-2;
+            position: absolute;
+            top: 50%; left: -4px;
+            transform: translateY(-50%) ;
+            clip-path: polygon(50% 0, 0 50%, 50% 100%);
+        }
+    }
+}
