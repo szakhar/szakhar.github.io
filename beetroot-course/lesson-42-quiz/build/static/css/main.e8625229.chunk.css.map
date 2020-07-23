@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA,KACE,qEAAyE,CACzE,kCAAmC,CACnC,iCAAkC","file":"main.e8625229.chunk.css","sourcesContent":["body {\n  background: center/cover no-repeat url(/lesson-42-quiz/build/img/bg.jpeg);\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}"]}
