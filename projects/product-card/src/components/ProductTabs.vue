@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Якщо selectedTab === tab дає true то додається сюди новий клас тобто activeTab -->
     <span
       class="tab uppercase text-sm font-semibold mr-4"
       :class="{ activeTab: selectedTab === tab }"
@@ -24,9 +23,6 @@
 
     <ProductReview
       v-show="selectedTab === 'Make a Review'"></ProductReview>
-    <!-- <ProductReview
-      v-show="selectedTab === 'Make a Review'"
-      @review-submitted="addReview"></ProductReview> -->
   </div>
 </template>
 
@@ -51,7 +47,6 @@ export default {
   components: {
     ProductReview
   },
-  // Сортує у зворотньому напрямку масив reviews, задається вижче у v-for
   computed: {
     orderedReview: function () {
     return orderBy(this.reviews, 'date', 'desc')

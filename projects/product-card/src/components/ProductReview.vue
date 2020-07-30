@@ -48,7 +48,6 @@ export default {
   },
   methods: {
     onSubmit() {
-      // Перевірка на пусті поля
       if (this.name && this.review && this.rating) {
         let productReview = {
           name: this.name,
@@ -57,7 +56,6 @@ export default {
           date: Date.now().toString(),
         }
 
-        // this.$emit('review-submitted', productReview)
         eventBus.$emit('review-submitted', productReview)
         eventBus.$emit('review-selected', 'Reviews')
 
